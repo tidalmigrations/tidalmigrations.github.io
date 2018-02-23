@@ -22,16 +22,20 @@ entries:
   - title: Overview
     output: web, pdf
     folderitems:
-
-    - title: Get started
-      url: /index.html
-      output: web, pdf
-      type: homepage
-
+    
     - title: Authentication
       url: /authentication.html
       output: web, pdf
+      type: homepage
       
     - title: Using with Postman
       url: /postman_docs.html
+      output: web, pdf
+  
+  - title: Discover
+    output: web, pdf
+    folderitems:
+      
+    - title: Importing Applications
+      url: /importapps.html
       output: web, pdf

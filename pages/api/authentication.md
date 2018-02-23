@@ -1,6 +1,5 @@
 ---
 title: Authentication
-tags: [authentication]
 keywords: authentication, login
 last_updated: Feb 13, 2018
 summary: "Easily authenticate with the Tidal Migrations API"
@@ -8,9 +7,7 @@ sidebar: main_sidebar
 permalink: authentication.html
 ---
 
-# Authentication Guide
-
-## Authorizing a request
+## Authenticating a request
 
 
 The purpose of this document is to show you how to modify HTTP requests
@@ -30,7 +27,7 @@ You will need:
 
 ```
   curl -X POST \
-  https://{your subdomain}.tidalmg.com/api/v1/authenticate \
+  https://[your subdomain].tidalmg.com/api/v1/authenticate \
   -H 'content-type: application/json' \
   -d '{"username":"[insert your email]",
 "password": "[insert your password]"}'
