@@ -12,7 +12,7 @@ permalink: index.html
 
 The purpose of this document is to show you how to modify HTTP requests
 to send authorized requests to the Tidal Migrations API.
-However, to send these requests, you must authenticate into the Tidal Migrations
+However, to send these requests, you must authenticate with the Tidal Migrations
 API.
 
 In order to authenticate with the Tidal Migrations API, you must provide your
@@ -53,7 +53,7 @@ The lifetime of `access_token` and `refresh_token` token is 8 hours. The `expire
 Once the token is expired, you must re-authenticate. However, it is possible to have permanent access to the API with the use of `refresh_token`.
 The Refresh Token can be used to retrieve a brand new Access Token by utilising the [*api/v1/refresh*](#getrefresh) endpoint. 
 
-Auth0 generates the access token in *JSON Web Tokens (JWTs)* format. It is used to obtain the user's resources.
+The Access Token is generated in *JSON Web Tokens (JWTs)* format. It is used to obtain the user's resources.
 
 The response of the request is:
 
