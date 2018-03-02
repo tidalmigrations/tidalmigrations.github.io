@@ -36,7 +36,7 @@ You will need:
 ```
 
 
-This should provide you with an access token. Tidal Migrations's implementation
+This should provide you with an access token and a refresh token. Tidal Migrations's implementation
 requires that requests needing authorization contain an additional HTTP `Authorization`
 header. There should be two headers present: `Authorization` and `Content-Type`.
 
@@ -48,6 +48,12 @@ header. There should be two headers present: `Authorization` and `Content-Type`.
 
 
 `Content-Type` should be included when performing any request that includes a body in JSON format.
+
+The lifetime of `access_token` and `refresh_token` token is 8 hours. The `expires_in` parameter tells you the token expiration time in seconds.
+Once the token is expired, you must re-authenticate. However, it is possible to have permanent access to the API with the use of `refresh_token`.
+The Refresh Token can be used to retrieve a brand new Access Token by utilising the [*api/v1/refresh*](#getrefresh) endpoint. 
+
+Auth0 generates the access token in *JSON Web Tokens (JWTs)* format. It used to obtain the user's resources.
 
 The response of the request is:
 
@@ -61,7 +67,7 @@ The response of the request is:
 ## Utilising the Ping Endpoint
 <font size="3"> <i> /ping </i> </font> <br>
 
-Varify that your computer is connected to the Tidal API server utlising the `/ping` endpoint.
+Verify that your computer is connected to the Tidal API server utlising the `/ping` endpoint.
 This endpoint can also be used to ensure you are authenticated.
 
 You will need:
@@ -87,8 +93,8 @@ The response of the above request should be the following:
 ```
 
 
-## Refresing your token
-<font size="3"> <i> api/v1/refresh </i> </font> <br>
+## Refresing your token {#getrefresh}
+<font size="3"> <i> api/v1/refresh </i> </font> <br> 
 
 Refresh the Tidal API.
 
