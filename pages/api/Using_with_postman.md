@@ -28,6 +28,8 @@ This will allow you to access the swagger documentation of the Tidal Migrations 
 
 Paste the documentation and you now have access to all the requests that can be performed in the Tidal Migrations API!
 
+{% include image.html file="postman.png" caption="Importing API requests in Postman" %}
+
 
 
 
