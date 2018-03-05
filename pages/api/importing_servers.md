@@ -38,19 +38,29 @@ curl -X POST \
   https://[insert your subdomain].tidalmg.com/api/v1/servers/import \
   -H 'authorization: bearer [insert your access_token]' \
   -H 'content-type: application/json' \
-  -d '{"servers":[{"custom_fields": {"Technologies": "Python"}
-,"description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well."
-,"fqdn": "dnstools.ninja"
-,"host_name":"trpewrcapbiz02"
-,"operating_system":"Windows Server"
-,"operating_system_version": "Windows 10"
-,"ram_allocated_gb": 3
-,"ram_used_gb": 6
-,"role": "The role"
-,"storage_allocated_gb": 5
-,"storage_used_gb": 6
-,"virtual": "true"
-,"zone": "Datacenter 1"}]}'
+  -d '{
+  "servers": [
+    {
+      "custom_fields": {
+        "Technologies": "Python"
+      },
+      "description": "This is a general purpose server that has several functionalities. 
+      The first functionality is that it is a demo server. 
+      The second functionality is that it could be a real server as well.",
+      "fqdn": "dnstools.ninja",
+      "host_name": "trpewrcapbiz02",
+      "operating_system": "Windows Server",
+      "operating_system_version": "Windows 10",
+      "ram_allocated_gb": 3,
+      "ram_used_gb": 6,
+      "role": "The role",
+      "storage_allocated_gb": 5,
+      "storage_used_gb": 6,
+      "virtual": "true",
+      "zone": "Datacenter 1"
+    }
+  ]
+}'
   
 ```
 
@@ -65,7 +75,9 @@ The response of the above request should be the following:
         "host_name": "trpewrcapbiz02",
         "created_at": "2018-02-27T14:52:28.127Z",
         "updated_at": "2018-02-27T14:52:28.127Z",
-        "description": "This is a general purpose server that has serveral functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well.",
+        "description": "This is a general purpose server that has serveral functionalities. 
+        The first functionality is that it is a demo server. 
+        The second functionality is that it could be a real server as well.",
         "custom_fields": {
             "Technologies": "Approval Management System DB"
         },
@@ -105,34 +117,47 @@ curl -X POST \
   https://[insert your subdomain].tidalmg.com/api/v1/servers/import \
   -H 'authorization: bearer [insert your access_token]' \
   -H 'content-type: application/json' \
-  -d '{"servers":
-	[{"custom_fields": {"Technologies": "Python"}
-		,"description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well."
-		,"fqdn": "dnstools.ninja"
-		,"host_name":"trpewrcapbiz02"
-		,"operating_system":"Windows Server"
-		,"operating_system_version": "Windows 10"
-		,"ram_allocated_gb": 3
-		,"ram_used_gb": 6
-		,"role": "The role"
-		,"storage_allocated_gb": 5
-		,"storage_used_gb": 6
-		,"virtual": "true"
-		,"zone": "Datacenter 1"}
-	,{"custom_fields": {"Technologies": "Ruby"}
-		,"description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well."
-		,"fqdn": "dnstools.ninja"
-		,"host_name":"trpewrcapbiz02"
-		,"operating_system":"Windows Server"
-		,"operating_system_version": "Windows 7"
-		,"ram_allocated_gb": 3
-		,"ram_used_gb": 6
-		,"role": "The role"
-		,"storage_allocated_gb": 5
-		,"storage_used_gb": 6
-		,"virtual": "false"
-		,"zone": "Datacenter 1"}]
-	
+  -d '{
+  "servers": [
+    {
+      "custom_fields": {
+        "Technologies": "Python"
+      },
+      "description": "This is a general purpose server that has several functionalities. 
+      The first functionality is that it is a demo server. 
+      The second functionality is that it could be a real server as well.",
+      "fqdn": "dnstools.ninja",
+      "host_name": "trpewrcapbiz02",
+      "operating_system": "Windows Server",
+      "operating_system_version": "Windows 10",
+      "ram_allocated_gb": 3,
+      "ram_used_gb": 6,
+      "role": "The role",
+      "storage_allocated_gb": 5,
+      "storage_used_gb": 6,
+      "virtual": "true",
+      "zone": "Datacenter 1"
+    },
+    {
+      "custom_fields": {
+        "Technologies": "Ruby"
+      },
+      "description": "This is a general purpose server that has several functionalities. 
+      The first functionality is that it is a demo server. 
+      The second functionality is that it could be a real server as well.",
+      "fqdn": "dnstools.ninja",
+      "host_name": "trpewrcapbiz02",
+      "operating_system": "Windows Server",
+      "operating_system_version": "Windows 7",
+      "ram_allocated_gb": 3,
+      "ram_used_gb": 6,
+      "role": "The role",
+      "storage_allocated_gb": 5,
+      "storage_used_gb": 6,
+      "virtual": "false",
+      "zone": "Datacenter 1"
+    }
+  ]
 }
 '
 ```
@@ -148,7 +173,9 @@ The response of the above request should be the following:
         "host_name": "trpewrcapbiz02",
         "created_at": "2018-02-28T17:28:53.322Z",
         "updated_at": "2018-02-28T17:28:53.322Z",
-        "description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well.",
+        "description": "This is a general purpose server that has several functionalities. 
+        The first functionality is that it is a demo server. 
+        The second functionality is that it could be a real server as well.",
         "custom_fields": {
             "Technologies": "Python"
         },
@@ -175,7 +202,9 @@ The response of the above request should be the following:
         "host_name": "trpewrcapbiz02",
         "created_at": "2018-02-28T17:28:53.540Z",
         "updated_at": "2018-02-28T17:28:53.540Z",
-        "description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well.",
+        "description": "This is a general purpose server that has several functionalities. 
+        The first functionality is that it is a demo server. 
+        The second functionality is that it could be a real server as well.",
         "custom_fields": {
             "Technologies": "Ruby"
         },
