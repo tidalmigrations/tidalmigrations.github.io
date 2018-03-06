@@ -3,9 +3,9 @@ toc: false
 title: Getting Apps and Resources within your Move Group
 keywords: databases, server, apps, movegroups
 last_updated: Feb 22, 2018
-summary: "Getting all Applications, Databases and Servers in the Move Groups with the Tidal Migrations API."
+summary: "Get all your Move Groups and their associated Applications, Databases and Servers."
 sidebar: main_sidebar
-permalink: getall.html
+permalink: getallmovegroups.html
 ---
 
 Before using each endpoint, you must authenticate to the Tidal Migrations API: 
@@ -18,7 +18,7 @@ For any additional details regarding the endpoint, checkout the Tidal API docume
 ## Getting all the Move Groups:
 #### GET api/v1/move_groups {#getallmg}
 
-Returns a collection of all the move groups and its applications, database instances, and servers that are created by the authenticating user.
+Returns a collection of all the move groups and its applications, database instances, and servers of the application.
 
 ### Example Request
 
@@ -31,7 +31,6 @@ You will need:
 curl -X GET \
   https://[insert your subdomain].tidalmg.com/api/v1/move_groups \
   -H 'authorization: bearer [insert your access_token]' \
-  -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
 ```
 ### Example Response
@@ -189,7 +188,7 @@ You can access your Applications, Database Instances and Serves within all the m
 
 #### GET api/v1/move_groups/[id] 
 
-Returns the selected move group and its applications, database instances, and servers that is created by the authenticating user.
+Returns the selected move group and its applications, database instances, and servers of the application.
 
 ### Example Request
 
@@ -203,7 +202,6 @@ You will need:
 curl -X GET \
   https://[insert your subdomain].tidalmg.com/api/v1/move_groups/[insert move_group id] \
   -H 'authorization: bearer [insert your access_token]' \
-  -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
 ```
 
