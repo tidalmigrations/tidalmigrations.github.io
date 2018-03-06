@@ -18,7 +18,7 @@ For any additional details regarding the endpoint, checkout the Tidal API docume
 ## Getting all the Move Groups:
 #### GET api/v1/move_groups {#getallmg}
 
-Returns a collection of all the move groups and its applications, database instances, and servers of the application.
+Returns a collection of all the move groups and its applications, database instances, and servers.
 
 ### Example Request
 
@@ -188,7 +188,7 @@ You can access your Applications, Database Instances and Serves within all the m
 
 #### GET api/v1/move_groups/[id] 
 
-Returns the selected move group and its applications, database instances, and servers of the application.
+Returns the selected move group and its applications, database instances, and servers.
 
 ### Example Request
 
