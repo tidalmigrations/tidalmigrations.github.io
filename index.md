@@ -53,7 +53,7 @@ The lifetime of `access_token` and `refresh_token` token is 8 hours. The `expire
 Once the token is expired, you must re-authenticate. However, it is possible to have permanent access to the API with the use of `refresh_token`.
 The Refresh Token can be used to retrieve a brand new Access Token by utilising the [*api/v1/refresh*](#getrefresh) endpoint. 
 
-Auth0 generates the access token in *JSON Web Tokens (JWTs)* format. It used to obtain the user's resources.
+Auth0 generates the access token in *JSON Web Tokens (JWTs)* format. It is used to obtain the user's resources.
 
 The response of the request is:
 
@@ -102,7 +102,7 @@ You will need:
 
 1. Subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
 2. Your access token -> Refer: [api/v1/authenticate](#getaccess)
-3. Your refresh_token -> Refer: [api/v1/authenticate](#getaccess)
+3. Your refresh token -> Refer: [api/v1/authenticate](#getaccess)
 
 ```
 curl -X POST \
