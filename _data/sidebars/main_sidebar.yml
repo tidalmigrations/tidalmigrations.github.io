@@ -24,13 +24,14 @@ entries:
     folderitems:
     
     - title: Authentication
-      url: /authentication.html
+      url: /index.html
       output: web, pdf
       type: homepage
       
     - title: Using with Postman
       url: /postman_docs.html
       output: web, pdf
+  
   
   - title: Discover
     output: web, pdf
