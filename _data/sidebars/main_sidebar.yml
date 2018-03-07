@@ -40,3 +40,7 @@ entries:
     - title: Importing Applications
       url: /importapps.html
       output: web, pdf
+    
+    - title: Importing Servers
+      url: /import_servers.html
+      output: web, pdf
