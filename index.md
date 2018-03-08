@@ -5,6 +5,7 @@ last_updated: Feb 13, 2018
 summary: "Easily authenticate with the Tidal Migrations API"
 sidebar: main_sidebar
 permalink: index.html
+---
 
 ## Authenticating a request {#getaccess}
 <font size="3"> <i> api/v1/authenticate </i> </font> <br>
@@ -65,9 +66,9 @@ The response of the request is:
 ```
 
 ## Utilising the Ping Endpoint
-<font size="3"> <i> /ping </i> </font> <br>
+<font size="3"> <i> api/v1/ping </i> </font> <br>
 
-Verify that your computer is connected to the Tidal API server utlising the `/ping` endpoint.
+Verify that you are able to connect to the Tidal Migrations API utilising the `api/v1/ping` endpoint.
 This endpoint can also be used to ensure you are authenticated.
 
 You will need:
@@ -93,7 +94,7 @@ The response of the above request should be the following:
 ```
 
 
-## Refresing your token {#getrefresh}
+## Refreshing your token {#getrefresh}
 <font size="3"> <i> api/v1/refresh </i> </font> <br> 
 
 Refresh the Tidal API.
