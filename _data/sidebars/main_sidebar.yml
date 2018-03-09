@@ -44,3 +44,11 @@ entries:
     - title: Importing Servers
       url: /import_servers.html
       output: web, pdf
+  
+  - title: Plan
+    output: web, pdf
+    folderitems:
+      
+    - title: Getting Apps and Resources within your Move Group
+      url: /getallmovegroups.html
+      output: web, pdf
