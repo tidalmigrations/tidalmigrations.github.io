@@ -44,7 +44,7 @@ header. There should be two headers present: `Authorization` and `Content-Type`.
 
 | Key                 | Value                  | 
 | --------------------|:----------------------:|
-| `Authorization`     | `bearer` [acess_token] |
+| `Authorization`     | `bearer` [access_token]|
 | `Content-Type`      | `application/json`     |
 
 
@@ -97,7 +97,7 @@ The response of the above request should be the following:
 ## Refreshing your token {#getrefresh}
 <font size="3"> <i> api/v1/refresh </i> </font> <br> 
 
-Refresh the Tidal API.
+Refresh your access token and generate a new one.
 
 You will need:
 
