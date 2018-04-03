@@ -27,12 +27,12 @@ entries:
     folderitems:
     
     - title: Getting Started
-      url: /overview.html
+      url: /index.html
       output: web, pdf
       type: homepage
       
     - title: Authentication
-      url: /index.html
+      url: /authenticate.html
       output: web, pdf
       type: homepage
       

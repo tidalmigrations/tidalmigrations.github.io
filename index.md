@@ -1,125 +1,40 @@
 ---
-title: Authentication
-keywords: authentication, login
-last_updated: Feb 13, 2018
-summary: "Easily authenticate with the Tidal Migrations API"
+toc: false
+title: Getting Started
+keywords: databases, server, apps, movegroups
+last_updated: Feb 22, 2018
+summary: "Get started on operating the Tidal API"
 sidebar: main_sidebar
 permalink: index.html
 ---
 
-## Authenticating a request {#getaccess}
-<font size="3"> <i> api/v1/authenticate </i> </font> <br>
+## Tidal API
 
+The guides are designed to help you get familiarized with the necessities of the Tidal API, giving you a quick and clean approach on getting started.
+They will help you in understanding the fundamental components the API offers and how to use them.
+Our guides are split up into the following sections:
 
-The purpose of this document is to show you how to modify HTTP requests
-to send authorized requests to the Tidal Migrations API.
-However, to send these requests, you must authenticate with the Tidal Migrations
-API.
+## What the guides cover
 
-In order to authenticate with the Tidal Migrations API, you must provide your
-username and password in the body.
+These guides cover common tasks that we find users use the API to complete. If there is something you are looking to do with the API and you are having trouble send us a message at support@tidalmigrations.com and we'll help you.
 
-A request to authenticate into the Tidal Migrations API looks like this:
+## Tools
 
-You will need:
+You will need to have access to a software that will allow you to make HTTP requests to the API. There are many different tools to choose from. The main functionality you will need is the ability to change the HTTP request method type (`GET`, `POST`, `PUT`, etc), and specifying Headers for the request.
 
-1. Subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
-2. Username
-3. Password
+Two tools that we would recommend are either cURL or Postman.
 
-```
-  curl -X POST \
-  https://[your subdomain].tidalmg.com/api/v1/authenticate \
-  -H 'content-type: application/json' \
-  -d '{"username":"[insert your email]",
-"password": "[insert your password]"}'
+- [cURL](https://curl.haxx.se/download.html) is a CLI utility that is preinstalled on most Linux and macOS OSs, and is also available for Windows. cURL is fully CLI driven, if you are comfortable on the command line then this is a good option.
+- [Postman](https://www.getpostman.com/docs/v6/postman/launching_postman/installation_and_updates) is a GUI based application that can run on most major OSs. If APIs are new to you and you aren't comfortable on the command line, this is a better option than cURL.
 
-```
+## Your First (and second) API Request
 
+- The first request you should make is the `/ping` request. Checkout the [Authentication guide](authenticate.html/#ping) to try the ping request.
 
-This should provide you with an access token and a refresh token. Tidal Migrations's implementation
-requires that requests needing authorization contain an additional HTTP `Authorization`
-header. There should be two headers present: `Authorization` and `Content-Type`.
+- Once you can ping the API. Give the `/authenticate` request a [try](authenticate.html/#getaccess) and authenticate with the API.
 
+## Full API Documentation
 
-| Key                 | Value                  | 
-| --------------------|:----------------------:|
-| `Authorization`     | `bearer` [access_token]|
-| `Content-Type`      | `application/json`     |
-
-
-`Content-Type` should be included when performing any request that includes a body in JSON format.
-
-The lifetime of `access_token` and `refresh_token` token is 8 hours. The `expires_in` parameter tells you the token expiration time in seconds.
-Once the token is expired, you must re-authenticate. However, it is possible to have permanent access to the API with the use of `refresh_token`.
-The Refresh Token can be used to retrieve a brand new Access Token by utilising the [*api/v1/refresh*](#getrefresh) endpoint. 
-
-The Access Token is generated in *JSON Web Tokens (JWTs)* format. It is used to obtain the user's resources.
-
-The response of the request is:
-
-```
-{"access_token":"[access_token]",
-"refresh_token":"[refresh_token]",
-"expires_in":28800,
-"token_type":"Bearer"}
-```
-
-## Utilising the Ping Endpoint
-<font size="3"> <i> api/v1/ping </i> </font> <br>
-
-Verify that you are able to connect to the Tidal Migrations API utilising the `api/v1/ping` endpoint.
-This endpoint can also be used to ensure you are authenticated.
-
-You will need:
-
-1. Subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
-2. Your access token -> Refer: [api/v1/authenticate](#getaccess)
-
-```
-curl -X GET \
-  https://[insert your subdomain].tidalmg.com/ping \
-  -H 'authorization: bearer [insert your access token]' \
-  -H 'content-type: application/json' \
-```
-
-This will allow you to successfully connect to the Tidal API!
-
-The response of the above request should be the following:
-
-```
-{
-    "authenticated": true
-}
-```
-
-
-## Refreshing your token {#getrefresh}
-<font size="3"> <i> api/v1/refresh </i> </font> <br> 
-
-Refresh your access token and generate a new one.
-
-You will need:
-
-1. Subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
-2. Your access token -> Refer: [api/v1/authenticate](#getaccess)
-3. Your refresh token -> Refer: [api/v1/authenticate](#getaccess)
-
-```
-curl -X POST \
-  https://[insert your subdomain].tidalmg.com/api/v1/refresh \
-  -H 'authorization: bearer [insert your access token]' \
-  -H 'content-type: application/json' \
-  -d '{"refresh_token":"[insert your refresh token]"}'
-```
-
-The response of the request is:
-
-```
-{
-    "access_token": "[acess_token]",
-    "scope": "offline_access",
-    "expires_in": 28800,
-    "token_type": "Bearer"
-}
-```
+You can access all of the API documents via https://[your_subdomain].tidalmg.com/docs/ 
+Replace start of the address above with your Tidal Migrations subdomain.
+For additional help on getting your subdomain, refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
