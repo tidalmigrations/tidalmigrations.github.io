@@ -1,9 +1,9 @@
 ---
 toc: false
 title: Getting Started
-keywords: databases, server, apps, movegroups
+keywords: starting introduction
 last_updated: Feb 22, 2018
-summary: "Get started on operating the Tidal API"
+summary: "Get started using the Tidal Migrations API"
 sidebar: main_sidebar
 permalink: index.html
 ---
@@ -12,7 +12,7 @@ permalink: index.html
 
 The guides are designed to help you get familiarized with the necessities of the Tidal API, giving you a quick and clean approach on getting started.
 They will help you in understanding the fundamental components the API offers and how to use them.
-Our guides are split up into the following sections:
+
 
 ## What the guides cover
 
