@@ -19,12 +19,20 @@ entries:
       output: pdf
       type: frontmatter
 
+  
+  
+  
   - title: Overview
     output: web, pdf
     folderitems:
     
-    - title: Authentication
+    - title: Getting Started
       url: /index.html
+      output: web, pdf
+      type: homepage
+      
+    - title: Authentication
+      url: /authenticate.html
       output: web, pdf
       type: homepage
       
