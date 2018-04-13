@@ -25,4 +25,6 @@ topnav_dropdowns:
     - title: Products
       folderitems:
         - title: Tidal Tools
-          url: /p1_landing_page.html
+          url: /getstarted.html
+        - title: Tidal API
+          url: /index.html
