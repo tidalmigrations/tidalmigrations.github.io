@@ -24,7 +24,7 @@ topnav_dropdowns:
           external_url: http://idratherbewriting.com/category-jekyll/
     - title: Products
       folderitems:
-        - title: Tidal Tools
-          url: /getstarted.html
         - title: Tidal API
           url: /index.html
+        - title: Tidal Tools
+          url: /getstarted.html
