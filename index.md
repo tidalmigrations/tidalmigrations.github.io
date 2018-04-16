@@ -29,9 +29,9 @@ Two tools that we would recommend are either cURL or Postman.
 
 ## Your First (and second) API Request
 
-- The first request you should make is the `/ping` request. Checkout the [Authentication guide](authenticate.html/#ping) to try the ping request.
+- The first request you should make is the `/ping` request. Checkout the [Authentication guide](http://guides.tidalmg.com/authenticate.html#ping) to try the ping request.
 
-- Once you can ping the API. Give the `/authenticate` request a [try](authenticate.html/#getaccess) and authenticate with the API.
+- Once you can ping the API. Give the `/authenticate` request a [try](http://guides.tidalmg.com/authenticate.html#getaccess) and authenticate with the API.
 
 ## Full API Documentation
 
