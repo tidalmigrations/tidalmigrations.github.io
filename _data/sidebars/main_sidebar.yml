@@ -2,8 +2,7 @@
 
 entries:
 - title: sidebar
-  product: Tidal Migrations API
-  version: 1.0
+  product: Tidal Migrations
   folders:
 
   - title:
