@@ -22,10 +22,11 @@ This will download the latest copy of tidal CLI and install it for you.
 If you would like to see what the installation script is doing you can visit [here](https://get.tidal.sh/unix) and read the script in your browser first. If you would like to download a copy to install manually, perhaps on an air gapped machine you can visit [here](https://get.tidal.sh) and download them directly. Be sure to select the correct OS and architecture (32/64bit).
 
 ### Windows
-Download the latest version for 64bit Windows here. For 32bit Windows download this version here.
-Run the downloaded file and follow the prompts to install.
-N.B.: 
-<br> After installation you need to open a new terminal or Powershell window in order to begin using the tools. If that does not work, logging off and on again will reset your environment to include the newly installed tools.
+
+- Download the latest version for 64bit Windows here. For 32bit Windows download this version here.
+- Run the downloaded file and follow the prompts to install.
+
+**N.B.** After installation you need to open a new terminal or Powershell window in order to begin using the tools. If that does not work, logging off and on again will reset your environment to include the newly installed tools.
 
 ## Using Tidal Tools
 To get started, from a new terminal or Powershell prompt, simply run:
@@ -67,8 +68,10 @@ tidal:
   ```
 
 On macOS the config file is located: ```Library/Preferences/tidal/config.yaml```
-<br> On Linux systems it is: ```$HOME/.config/tidal/config.yaml```
-<br> And on Windows it is: ```%AppData%\tidal\config.yaml```
+
+On Linux systems it is: ```$HOME/.config/tidal/config.yaml```
+
+And on Windows it is: ```%AppData%\tidal\config.yaml```
 
 ### Environment Variables
 If you use environment variables these variables need to be set:
