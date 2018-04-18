@@ -5,14 +5,7 @@ topnav:
   items:
     - title: Homepage
       external_url: https://tidalmigrations.com
-
-#Topnav dropdowns
-topnav_dropdowns:
-- title: Topnav dropdowns
-  folders:
-    - title: Products
-      folderitems:
-        - title: Tidal API
-          url: /index.html
-        - title: Tidal Tools
-          url: /getstarted.html
+    - title: Tidal API
+      url: /index.html
+    - title: Tidal Tools
+      url: /getstarted.html
