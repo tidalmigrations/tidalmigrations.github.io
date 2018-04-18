@@ -89,5 +89,5 @@ You can easily split this into two commands to allow you to inject other metadat
 
 ## Repeat
 
-You can easily set this to run periodically. The integration creates or update records if they already exist. Look at setting this command up as a cron job, [here is a great resource on how to do that](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps).
+You can easily set this to run periodically. The integration updates records if they already exist, or creates new records if they don't. Look at setting this command up as a cron job, [here is a great resource on how to do that](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps).
 
