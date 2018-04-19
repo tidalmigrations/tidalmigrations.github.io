@@ -3,10 +3,10 @@ repository: tomjoht/documentation-theme-jekyll
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Tidal Migrations API Guide
+topnav_title: Tidal Migrations
 # this appears on the top navigation bar next to the home button
 
-site_title: Tidal Migrations API Guide
+site_title: Tidal Migrations
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Tidal Migrations
@@ -44,7 +44,7 @@ feedback_email: support@tidalmigrations.com
 # feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
-feedback_text: "Need help?"
+feedback_text: "Email Us"
 # if you uncomment the previous line, it changes the Feedback text
 
 # feedback_link: "http://helpy.io/"

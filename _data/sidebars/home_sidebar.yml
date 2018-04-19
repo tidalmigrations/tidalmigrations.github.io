@@ -1,0 +1,14 @@
+entries:
+- title: sidebar
+  levels: one
+  folders:
+
+  - title: Products
+    output: web
+    folderitems:
+    - title: Tidal API
+      url: /index.html
+      output: web
+    - title: Tidal Tools
+      url: /getstarted.html
+      output: web

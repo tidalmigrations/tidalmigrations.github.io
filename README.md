@@ -1,3 +1,3 @@
-# Tidal Migrations API Guides
+# Tidal Migrations
 
-A set of guides on how to use the Tidal Migrations API.
+A set of guides on how to use the Tidal Migrations API and Tidal Tools.

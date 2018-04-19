@@ -1,0 +1,25 @@
+entries:
+- title: Tidal Tools
+  product: Tidal Tools
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Introduction
+    output: web, pdf
+    folderitems:
+
+    - title: Get Started
+      url: getstarted.html
+      output: web
