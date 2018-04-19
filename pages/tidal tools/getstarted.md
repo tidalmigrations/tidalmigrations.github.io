@@ -23,7 +23,7 @@ If you would like to see what the installation script is doing you can visit [he
 
 ### Windows
 
-- Download the latest version for 64bit Windows here. For 32bit Windows download this version here.
+- Download the latest version for 64bit Windows [here](https://get.tidal.sh/tidal-win-64-latest). For 32bit Windows download this version [here](https://get.tidal.sh/tidal-win-32-latest).
 - Run the downloaded file and follow the prompts to install.
 
 **N.B.** After installation you need to open a new terminal or Powershell window in order to begin using the tools. If that does not work, logging off and on again will reset your environment to include the newly installed tools.
