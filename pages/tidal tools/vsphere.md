@@ -35,7 +35,7 @@ You can set your vSphere credentials with the following commands:
 
 ``` tidal config set vsphere.password [your password] ```
 
-tidal config set vsphere.server 192.168.1.12
+``` tidal config set vsphere.server 192.168.1.12 ```
 
  
 
