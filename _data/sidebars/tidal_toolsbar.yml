@@ -23,3 +23,11 @@ entries:
     - title: Get Started
       url: getstarted.html
       output: web
+  
+  - title: vSphere
+    output: web, pdf
+    folderitems:
+    
+    - title: Integrating with vSphere
+      url: vsphere.html
+      output: web
