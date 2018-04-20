@@ -24,6 +24,10 @@ entries:
       url: getstarted.html
       output: web
   
+    - title: Tidal Analyze
+      url: analyze.html
+      output: web, pdf
+  
   - title: vSphere
     output: web, pdf
     folderitems:
@@ -31,3 +35,4 @@ entries:
     - title: Integrating with vSphere
       url: vsphere.html
       output: web
+      
