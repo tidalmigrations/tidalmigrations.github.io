@@ -50,42 +50,6 @@ As it happens, most folks have multiple applications in their environment that t
 
     `` tidal discover [urls output] | tidal analyze ``
 
-- Scan multiple networks and DNS services with a "discovery plan"
-
-    `` tidal analyze --plan my_plan.yml ``
-
-<br>
-The file *my_plan.yml* must be of the following format:
-
-```
-discovery:
-  - networks: 10.83.2.0/24
-    name: My Datacenter front-end
-    tcp_ports:
-      - 80
-      - 443
-    dns_service: aws
-
-  - networks: 10.83.3.0/24
-    name: My Other Datacenter front-end
-    tcp_ports:
-      - 80
-      - 443
-    path_to_bind: "/etc/bind"
-
-```
-
-It consists of the following fields.
-
-
-| Field               | Information                                                                                                                                            | Format                      |
-| --------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| `networks`          | One or more subnets that you want to include in the process.                                                                                           | [Cidr block notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)       
-| `name`              | Arbitrary name of the network.                                                                                                                         | Text                      
-| `tcp_ports`         | One or more ports used on any of the networks that you want to include.                                                                                | Integer             
-| `path_to_bind`      | The location of a [named.conf file](https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-bind-namedconf.html) for a bind server configuration.                                                                 | File Path         
-| `dns_service`       | Name of a DNS service to be analyzed with DNS tools, currently only "aws" service is avaliable which extracts information from route53 zones.          | "aws"                  
-
 
 ## Importing to Tidal Migrations
 
