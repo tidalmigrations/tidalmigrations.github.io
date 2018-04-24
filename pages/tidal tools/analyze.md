@@ -1,8 +1,8 @@
 ---
 title: Tidal Analyze
-keywords: install, login
-last_updated: Feb 13, 2018
-summary: "Analyze Tidal Tools"
+keywords: analyze, applications
+last_updated: April 24, 2018
+summary: "Analyze your applications and determine their technologies and network data."
 sidebar: tidal_toolsbar
 permalink: analyze.html
 folder: tidaltools
@@ -11,9 +11,23 @@ folder: tidaltools
 ## Analyze Applications
 Rapidly capture what technologies are in use, on which networks and with what DNS configuration.
 
-Tidal analyze will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, without needing to install agents. Whether you have 1 or 1 million end points, tidal-tools will centralize the data gathered in our platform for you to analyze.
+Tidal analyze will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, without needing to install agents. Whether you have 1 or 1 million end points, Tidal Tools will centralize the data gathered in our platform for you to analyze.
 
 Simplify your application centric discovery.
+
+## Analyzing more than one URL
+
+As it happens, most folks have multiple applications in their environment that they would like to assess and migrate to the cloud. There are a couple of ways to assess multiple applications, depending on what data you have, you might try these options:
+
+ 
+- Simply save a list of URLs in a text file and use that as input.
+
+    `` tidal analyze my_urls.txt --upload ``
+
+- You can also utlize [(link to tidal discover - which will output the urls )] as input.
+
+    `` tidal discover [urls output] | tidal analyze ``
+
 
 ## Basic Usage
 
@@ -35,29 +49,13 @@ If you want to import this application to your Tidal Migrations instance, just a
 You will see the same results, followed by the happy word "Complete!".
 
 
-
-## Analyzing more than one URL
-
-As it happens, most folks have multiple applications in their environment that they would like to assess and migrate to the cloud. There are a couple of ways to assess multiple applications, depending on what data you have, you might try these options:
-
- 
-
-- Simply save a list of URLs in a text file and use that as input.
-
-    `` tidal analyze my_urls.txt --upload ``
-
-- You can also utlise [(link to tidal discover - which will output the urls )] as input.
-
-    `` tidal discover [urls output] | tidal analyze ``
-
-
 ## Importing to Tidal Migrations
 
-After recieving the results, you can import it to the Tidal Migrations isntance with the following flag:
+After recieving the results, you can import it to your Tidal Migrations account with the following flag:
 
-`--upload `
+`tidal analyze my_urls.txt --upload `
 
 You also have the option to save the results in a JSON file to import at a later time. This can be done with the flag:
 
-`--upload-file string`
+`tidal analyze my_urls.txt --upload-file results.txt`
 
