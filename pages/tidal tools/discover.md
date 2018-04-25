@@ -9,12 +9,18 @@ folder: tidaltools
 
 ## Discover Your Applications
 
-The first step in your cloud migration project is discovering what you have.
+The first step in your cloud migration project is discovering what you have. Thousands of domains are registered on a daily basis and it can be hard to remain
+informed. Utlize the `tidal discover` tool with your customized Discovery Plan to obtain both private and public domains registered for your given datacentres. 
 
 - Scan multiple networks and DNS services with a *discovery plan*
 
     `` tidal discover --plan my_plan.yml ``
 
+<br>
+*Your* Discovery plan can include three different ways that you want to scan your networks and DNS services. You may choose to provide a DNS service to extract information, a *named.conf* file for binary configuration, or a zone file to get a representation of all the records of a particular domain.
+
+## via DNS Service
+An example of a discovery plan to obtain FQDNs by specifying a DNS Service.
 <br>
 The file *my_plan.yml* must be of the following format:
 
@@ -26,7 +32,13 @@ discovery:
       - 80
       - 443
     dns_service: aws
+```
+## via Binary Configuration
+An example of a discovery plan to obtain FQDNs by specifying a named.conf file.
+<br>
+The file *my_plan.yml* must be of the following format:
 
+```
   - name: NYC Datacenter front-ends
     networks: 
       - 10.83.3.0/24
@@ -35,7 +47,13 @@ discovery:
       - 80
       - 443
     path_to_bind: "/etc/bind/named.conf"
+```
+## via Zone files
+An example of a discovery plan to obtain FQDNs by specifying a named.conf file.
+<br>
+The file *my_plan.yml* must be of the following format:
 
+```  
   - name: Tokyo flat-network
     networks: 192.168.0.0/16
     tcp_ports:
@@ -47,7 +65,7 @@ discovery:
 
 ```
 
-It consists of the following keys:
+Here is some brief information regarding the keys defined in the *my_plan.yaml* file:
 
 
 | Key               | Information                                                                                                                                            | Format                      |
@@ -66,4 +84,4 @@ Once you have verified the list of FQDNs, you have the option to save the result
 
 ## Next Step
 
-Having discovered your applications, here is a [guide](analyze.html) on analyzing your FQDNs.
+Having discovered your applications, here is a [guide](analyze.html) on analyzing your FQDNs. Tidal Analyze will review the outputted FQDNs and give you a detailed analysis on what technologies are being in use for each domain.
