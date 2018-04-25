@@ -64,7 +64,8 @@ The file *my_plan.yml* must be of the following format:
     path_to_zone_files: "~/tokyo_zones/*/**"
 
 ```
-
+You may also choose to include all three of the ways in your Discovery plan.
+<br>
 Here is some brief information regarding the keys defined in the *my_plan.yaml* file:
 
 
