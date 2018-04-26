@@ -40,7 +40,7 @@ Once you have Tidal Tools installed you need to configure access to the API.
 The credentials can be defined via a config file or via environment variables. If a config file is present it will be used, if it is not present environment variables will be used.
 You can also utlise the `tidal login` command.
 
-### Tidal Login command
+### Tidal Login command {#login}
 You can authenticate with the API using the command: `tidal login`. The login command varifies the user's identity using the authentication methods. This should provide and store an access token for you. 
 The lifetime of the access token is 8 hours. Once it is expired, the user must login again. 
 
