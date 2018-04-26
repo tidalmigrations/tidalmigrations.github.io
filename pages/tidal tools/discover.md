@@ -14,14 +14,16 @@ informed. Utlize the `tidal discover` tool with your customized Discovery Plan t
 
 - Scan multiple networks and DNS services with a *discovery plan*
 
-    `` tidal discover --plan my_plan.yml ``
+    `` tidal discover --plan my_plan.yml -f my_urls.txt``
 
-<br>
-*Your* Discovery plan can include three different ways that you want to scan your networks and DNS services. You may choose to provide a DNS service to extract information, a *named.conf* file for binary configuration, or a zone file to get a representation of all the records of a particular domain.
+With this command, Tidal Discover will output a set of <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.FQDNs}}">FQDNs</a> for your defined discovery plan and store it in the file *my_urls.txt*.
+
+*Your* Discovery plan can include three different ways that you want to scan your networks and DNS services. You may choose to provide a DNS service to extract information, a *named.conf* file for binary configuration, or a collection of zone files to be scanned and generate all the affected domains.
 
 ### via DNS Service
 An example of a discovery plan to obtain FQDNs by specifying a DNS Service.
-<br>
+
+
 The file *my_plan.yml* must be of the following format:
 
 ```
@@ -33,9 +35,10 @@ discovery:
       - 443
     dns_service: aws
 ```
-### via Binary Configuration
+### via Bind Configuration
 An example of a discovery plan to obtain FQDNs by specifying a named.conf file.
-<br>
+
+
 The file *my_plan.yml* must be of the following format:
 
 ```
@@ -50,7 +53,8 @@ The file *my_plan.yml* must be of the following format:
 ```
 ### via Zone files
 An example of a discovery plan to obtain FQDNs by specifying a zone file.
-<br>
+
+
 The file *my_plan.yml* must be of the following format:
 
 ```  
@@ -64,8 +68,37 @@ The file *my_plan.yml* must be of the following format:
     path_to_zone_files: "~/tokyo_zones/*/**"
 
 ```
-You may also choose to include all three of the ways in your Discovery plan.
-<br>
+You may also choose to include all three of the ways in your Discovery plan like so:
+
+```
+  - name: Tokyo flat-network
+    networks: 192.168.0.0/16
+    tcp_ports:
+      - 80
+      - 443
+      - 8080
+      - 8443
+    path_to_zone_files: "~/tokyo_zones/*/**"
+    
+  - name: NYC Datacenter front-ends
+    networks: 
+      - 10.83.3.0/24
+      - 10.130.241.0/24 
+    tcp_ports:
+      - 80
+      - 443
+    path_to_bind: "/etc/bind/named.conf"
+    
+  - name: NYC Datacenter front-ends
+    networks: 
+      - 10.83.3.0/24
+      - 10.130.241.0/24 
+    tcp_ports:
+      - 80
+      - 443
+    path_to_bind: "/etc/bind/named.conf"
+
+```
 
 ## Creating your Discovery Plan {#plan}
 
@@ -83,10 +116,7 @@ Here is some brief information regarding the keys defined in the *my_plan.yaml* 
 
 {% include note.html content="`networks`, `name` and `tcp_ports` are required keys that you must include. <br/><br/> Either `path_to_bind`, `path_to_zone_files` **or** `dns_service` must be defined." %}
 
-<br><br>
-Tidal Discover will output a set of <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.FQDNs}}">FQDNs</a> for your defined discovery plan. Be sure to verify the outputted FQDNs that you'd want to analyze.
-Once you have verified the list of FQDNs, you have the option to save the results to a file with the flag: `-f my_urls.txt`.
-
+Be sure to verify the outputted FQDNs that you'd want to analyze.
 
 ## Next Step
 
