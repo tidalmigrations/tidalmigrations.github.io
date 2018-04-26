@@ -19,7 +19,7 @@ informed. Utlize the `tidal discover` tool with your customized Discovery Plan t
 <br>
 *Your* Discovery plan can include three different ways that you want to scan your networks and DNS services. You may choose to provide a DNS service to extract information, a *named.conf* file for binary configuration, or a zone file to get a representation of all the records of a particular domain.
 
-## via DNS Service
+### via DNS Service
 An example of a discovery plan to obtain FQDNs by specifying a DNS Service.
 <br>
 The file *my_plan.yml* must be of the following format:
@@ -33,7 +33,7 @@ discovery:
       - 443
     dns_service: aws
 ```
-## via Binary Configuration
+### via Binary Configuration
 An example of a discovery plan to obtain FQDNs by specifying a named.conf file.
 <br>
 The file *my_plan.yml* must be of the following format:
@@ -48,8 +48,8 @@ The file *my_plan.yml* must be of the following format:
       - 443
     path_to_bind: "/etc/bind/named.conf"
 ```
-## via Zone files
-An example of a discovery plan to obtain FQDNs by specifying a named.conf file.
+### via Zone files
+An example of a discovery plan to obtain FQDNs by specifying a zone file.
 <br>
 The file *my_plan.yml* must be of the following format:
 
@@ -66,6 +66,9 @@ The file *my_plan.yml* must be of the following format:
 ```
 You may also choose to include all three of the ways in your Discovery plan.
 <br>
+
+## Creating your Discovery Plan {#plan}
+
 Here is some brief information regarding the keys defined in the *my_plan.yaml* file:
 
 
@@ -78,10 +81,12 @@ Here is some brief information regarding the keys defined in the *my_plan.yaml* 
 | `dns_service`       | Name of a DNS service to be analyzed with DNS tools, currently only "aws" service is avaliable which extracts information from route53 zones.          | "aws"                  
 | `path_to_zone_files`| The location of a [zone file](https://help.dyn.com/how-to-format-a-zone-file/) which contains a list of DNS records with mappings between domain names and IP addresses. | File Path
 
-{% include note.html content="`networks`, `name` and `tcp_ports` are required keys. <br/><br/> Either `path_to_bind`, `path_to_zone_files` **or** `dns_service` must be defined." %}
+{% include note.html content="`networks`, `name` and `tcp_ports` are required keys that you must include. <br/><br/> Either `path_to_bind`, `path_to_zone_files` **or** `dns_service` must be defined." %}
 
-This will output a set of FQDNs for your defined discovery plan. Be sure to verify the outputted FQDNs that you'd want to analyze.
+<br><br>
+Tidal Discover will output a set of <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.FQDNs}}">FQDNs</a> for your defined discovery plan. Be sure to verify the outputted FQDNs that you'd want to analyze.
 Once you have verified the list of FQDNs, you have the option to save the results to a file with the flag: `-f my_urls.txt`.
+
 
 ## Next Step
 
