@@ -14,11 +14,11 @@ informed. Utlize the `tidal discover` tool with your customized Discovery Plan t
 
 - Scan multiple networks and DNS services with a *discovery plan*
 
-    `` tidal discover --plan my_plan.yml -f my_urls.txt``
+    `` tidal discover my_plan.yml > my_urls.txt``
 
 With this command, Tidal Discover will output a set of <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.FQDNs}}">FQDNs</a> for your defined discovery plan and store it in the file *my_urls.txt*.
 
-*Your* Discovery plan can include three different ways that you want to scan your networks and DNS services. You may choose to provide a DNS service to extract information, a *named.conf* file for binary configuration, or a collection of zone files to be scanned and generate all the affected domains.
+*Your* Discovery plan is a [YAML](http://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) file which can include three different ways that you want to scan your networks and DNS services. You may choose to provide a DNS service to extract information, a *named.conf* file for binary configuration, or a collection of zone files to be scanned and generate all the affected domains.
 
 ### via DNS Service
 An example of a discovery plan to obtain FQDNs by specifying a DNS Service.
@@ -65,7 +65,7 @@ The file *my_plan.yml* must be of the following format:
       - 443
       - 8080
       - 8443
-    path_to_zone_files: "~/tokyo_zones/*/**"
+    zonefiles: "~/tokyo_zones/*/**"
 
 ```
 You may also choose to include all three of the ways in your Discovery plan like so:
@@ -78,7 +78,7 @@ You may also choose to include all three of the ways in your Discovery plan like
       - 443
       - 8080
       - 8443
-    path_to_zone_files: "~/tokyo_zones/*/**"
+    zonefiles: "~/tokyo_zones/*/**"
     
   - name: NYC Datacenter front-ends
     networks: 
@@ -96,25 +96,39 @@ You may also choose to include all three of the ways in your Discovery plan like
     tcp_ports:
       - 80
       - 443
-    path_to_bind: "/etc/bind/named.conf"
+    dns_service: aws
 
+```
+You can also combine all as the following:
+
+```
+  - name: NYC Datacenter front-ends
+    networks: 
+      - 10.83.3.0/24
+      - 10.130.241.0/24 
+    tcp_ports:
+      - 80
+      - 443
+    path_to_bind: "/etc/bind/named.conf"
+    zonefiles: "~/path/to/my/zonefiles"
+    dns_service: aws
 ```
 
 ## Creating your Discovery Plan {#plan}
 
-Here is some brief information regarding the keys defined in the *my_plan.yaml* file:
+Here is some brief information regarding the keys defined in the *my_plan.yaml* file: 
 
 
 | Key               | Information                                                                                                                                            | Format                      |
 | --------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | `networks`          | One or more subnets that you want to include in the process.                                                                                           | [Cidr block notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)       
-| `name`              | Arbitrary name of the network.                                                                                                                         | Text                      
-| `tcp_ports`         | One or more ports used on any of the networks that you want to include.                                                                                | Integer             
+| `name`              | A friendly name for your network, e.g. "Tokyo DC-1 Front-End"                                                                                                                         | Text                      
+| `tcp_ports`         | One or more TCP Ports that you frequently run web servers on and would like to interrogate: e.g. 80,443,8080,8443 etc.                                  | Integer             
 | `path_to_bind`      | The location of a [named.conf file](https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-bind-namedconf.html) for a bind server configuration. | File Path         
-| `dns_service`       | Name of a DNS service to be analyzed with DNS tools, currently only "aws" service is avaliable which extracts information from route53 zones.          | "aws"                  
+| `dns_service`       | Name of a DNS service to be analyzed with DNS tools, currently only "aws" service is avaliable which extracts information from Amazon Route 53 zones.          | "aws"                  
 | `path_to_zone_files`| The location of a [zone file](https://help.dyn.com/how-to-format-a-zone-file/) which contains a list of DNS records with mappings between domain names and IP addresses. | File Path
 
-{% include note.html content="`networks`, `name` and `tcp_ports` are required keys that you must include. <br/><br/> Either `path_to_bind`, `path_to_zone_files` **or** `dns_service` must be defined." %}
+{% include note.html content="`networks`, `name` and `tcp_ports` are required keys that you must include. <br/><br/> Specify one or more of `path_to_bind`, `path_to_zone_files` **or** `dns_service` in your Discovery file." %}
 
 Be sure to verify the outputted FQDNs that you'd want to analyze.
 
