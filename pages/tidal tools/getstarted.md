@@ -11,8 +11,9 @@ folder: tidaltools
 Here we outline how to get started working with Tidal Tools via the command line.
 
 ## Downloading & Installing
-Tidal Tools is a CLI utility.
-For more information on installing Tidal-Tools, visit this [guide](https://get.tidal.sh.) to getting setup quickly.
+
+Tidal Tools is a cross platform CLI utility that you can use to discover and analyze your applications.
+[Easily install Tidal](https://get.tidal.sh.) Tools on your operating system.
 
 ## Using Tidal Tools
 To get started, from a new terminal or Powershell prompt, simply run:
