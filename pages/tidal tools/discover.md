@@ -42,6 +42,7 @@ An example of a discovery plan to obtain FQDNs by specifying a named.conf file.
 The file *my_plan.yml* must be of the following format:
 
 ```
+discovery:
   - name: NYC Datacenter front-ends
     networks: 
       - 10.83.3.0/24
@@ -58,6 +59,7 @@ An example of a discovery plan to obtain FQDNs by specifying a zone file.
 The file *my_plan.yml* must be of the following format:
 
 ```  
+discovery:
   - name: Tokyo flat-network
     networks: 192.168.0.0/16
     tcp_ports:
@@ -71,6 +73,7 @@ The file *my_plan.yml* must be of the following format:
 You may also choose to include all three of the ways in your Discovery plan like so:
 
 ```
+discovery:
   - name: Tokyo flat-network
     networks: 192.168.0.0/16
     tcp_ports:
@@ -102,6 +105,7 @@ You may also choose to include all three of the ways in your Discovery plan like
 You can also combine all as the following:
 
 ```
+discovery:
   - name: NYC Datacenter front-ends
     networks: 
       - 10.83.3.0/24
