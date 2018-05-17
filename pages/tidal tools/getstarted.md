@@ -11,22 +11,9 @@ folder: tidaltools
 Here we outline how to get started working with Tidal Tools via the command line.
 
 ## Downloading & Installing
-Tidal Tools is a CLI utility that can be downloaded [here](https://get.tidal.sh.) See below for getting setup quickly.
 
-### macOS/Linux
-Open a terminal and run the following command:
-
-``curl https://get.tidal.sh/unix | bash``
-This will download the latest copy of tidal CLI and install it for you.
-
-If you would like to see what the installation script is doing you can visit [here](https://get.tidal.sh/unix) and read the script in your browser first. If you would like to download a copy to install manually, perhaps on an air gapped machine you can visit [here](https://get.tidal.sh) and download them directly. Be sure to select the correct OS and architecture (32/64bit).
-
-### Windows
-
-- Download the latest version for 64bit Windows [here](https://get.tidal.sh/tidal-win-64-latest). For 32bit Windows download this version [here](https://get.tidal.sh/tidal-win-32-latest).
-- Run the downloaded file and follow the prompts to install.
-
-**N.B.** After installation you need to open a new terminal or Powershell window in order to begin using the tools. If that does not work, logging off and on again will reset your environment to include the newly installed tools.
+Tidal Tools is a cross platform CLI utility that you can use to discover and analyze your applications.
+[Easily install Tidal Tools](https://get.tidal.sh.) on your operating system.
 
 ## Using Tidal Tools
 To get started, from a new terminal or Powershell prompt, simply run:
