@@ -15,6 +15,9 @@ informed. Utlize the `tidal discover` tool with your customized Discovery Plan t
 - Scan multiple networks and DNS services with a *discovery plan*
 
     `` tidal discover my_plan.yml > my_urls.txt``
+    
+{% include note.html content="In order to utilize this command, [install DNS Tools](https://tidalmigrations.com/integrations/)." %}
+
 
 With this command, Tidal Discover will output a set of <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.FQDNs}}">FQDNs</a> for your defined discovery plan and store it in the file *my_urls.txt*.
 
