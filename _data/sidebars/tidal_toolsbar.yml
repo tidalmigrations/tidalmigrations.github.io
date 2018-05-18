@@ -28,6 +28,10 @@ entries:
     output: web, pdf
     folderitems:
     
+    - title: Tidal Discover
+      url: discover.html
+      output: web, pdf
+      
     - title: Tidal Analyze
       url: analyze.html
       output: web, pdf
