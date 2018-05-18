@@ -21,7 +21,7 @@ entries:
     folderitems:
 
     - title: Get Started
-      url: getstarted.html
+      url: tidal-tools.html
       output: web
   
   - title: Discover and Analyze
