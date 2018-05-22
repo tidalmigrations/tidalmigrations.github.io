@@ -4,7 +4,7 @@ keywords: install, login
 last_updated: Feb 13, 2018
 summary: "Get started working with Tidal Tools"
 sidebar: tidal_toolsbar
-permalink: getstarted.html
+permalink: tidal-tools.html
 folder: tidaltools
 ---
 
