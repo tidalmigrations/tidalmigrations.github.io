@@ -2,7 +2,7 @@
 title: Sync your Server Inventory (and other resources)
 keywords: servers, sync
 last_updated: May 25, 2018
-summary: "Sync any data source with Tidal Migrations"
+summary: "Sync your data with Tidal Migrations"
 sidebar: tidal_toolsbar
 permalink: sync-servers.html
 folder: tidaltools
@@ -14,18 +14,10 @@ VMWare, HyperV, Active Directory connected inventory and more.
 ## What is Syncing
 
 Syncing is a process that transfers your inventories to your Tidal Migrations account.
-When importing your servers to the API, Tidal Migrations's sync tool will check for existing servers 
+When importing your servers to the API, Tidal Migrations's sync tool will check for existing servers, existing servers, based on their hostname
 and update the changed data for those servers.
 If the given server to sync does not exist already, it will add that server to the Tidal Migrations API.
 
-The syncronization of your servers to Tidal Migrations can be performed with the following command:
-
-`` cat some_file.json | tidal sync servers ``
-
-
-You can easily set this to run periodically so that your servers are synced on a daily basis and the data is up to date.
-This is a [geat resource](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps)
-on setting the command as a cron job.
 
 ## How do I manually sync my servers?
 
@@ -63,12 +55,7 @@ You can also include any other arbitrary fields in the key "custom_fields".
         "cpu_count": 4,
         "ram_used_gb": 2,
         "virtual": null,
-        "environment": {
-          "id": 2,
-          "name": "Test",
-          "created_at": "2018-01-02T16:19:45.213Z",
-          "updated_at": "2018-01-02T16:19:45.213Z"
-        },
+        "environment": "Production",
         "cluster": {
           "host_name": "rrfedfds"
         }
@@ -77,9 +64,16 @@ You can also include any other arbitrary fields in the key "custom_fields".
 }
 
 ```
+The syncronization of your servers to Tidal Migrations can be performed with the following command:
+
+`` cat some_file.json | tidal sync servers ``
 
 
-### Alternative
+You can easily set this to run periodically so that your servers are synced on a daily basis and the data is up to date.
+This is a [great resource](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps)
+on setting the command as a cron job.
+
+### Transforming your data
 
 If your JSON document is not formatted as the above, not to worry. Below is a **sample** Ruby script _transform.rb_ that will read the data
 from standard input, transform it to the JSON format above and display it to standard output.
@@ -121,7 +115,9 @@ Change the file permissions to make the script executable using:
 
 ``` chmod +x ./transform.rb ```
 
-You can now utlise your script with a given JSON file and it will be synced to your account via the API.
+You can now utlise your script with a given JSON file and it will be synced to your account via the API. Utlise the command below:
+
+``` cat some_file.json | ./transform.rb | tidal sync servers ```
 
 ## How do I sync other resources?
 
@@ -179,9 +175,8 @@ The syncronization of your Database Instances can be performed by following the 
     }
   }
 ]
-
 ```
 
+Sync your Database Instances with the following command:
 
-
-
+`` cat some_file.json | tidal sync database-instances ``
