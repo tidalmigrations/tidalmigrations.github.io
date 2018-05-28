@@ -75,8 +75,38 @@ on setting the command as a cron job.
 
 ### Transforming your data
 
-If your JSON document is not formatted as the above, not to worry. Below is a **sample** Ruby script _transform.rb_ that will read the data
+If your document is not formatted as the above, not to worry. 
+
+Suppose you have a **csv** file: {% include servers.csv %}
+
+
+Below is a **sample** Ruby script _transform.rb_ that will read the data
 from standard input, transform it to the JSON format above and display it to standard output.
+
+```
+
+#!/usr/bin/env ruby
+
+
+require 'json'
+require 'csv'
+
+def transform()
+    #file = ARGV[0]
+    File.open("servers.csv").each do |line|
+        puts line
+    end
+    csv = CSV.table("servers.csv")
+    puts csv
+    json = csv.map { |row| row.to_hash }
+    File.open('servers.json', 'w') do |file|
+        file.puts JSON.pretty_generate({"servers"=>json})
+    end
+end
+
+transform()
+
+```
 
 The script can be altered and written in any language of your choice.
 
@@ -148,10 +178,13 @@ The syncronization of your Applications can be performed by following the above 
     }
   ]
 ```
+Sync your Database Instances with the following command:
+
+`` cat some_file.json | tidal sync apps ``
+
 #### Sync your Database Instances
 
 The syncronization of your Database Instances can be performed by following the above procedure with a simple JSON document of the following data:
-
 ```
 "database_instances" : [
   {
