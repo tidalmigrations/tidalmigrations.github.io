@@ -81,76 +81,36 @@ Suppose you have a **csv** file: {% include servers.csv %}
 
 
 Below is a **sample** Ruby script _transform.rb_ that will read the data
-from standard input, transform it to the JSON format above and display it to standard output.
+of your specified CSV file, transform it to the JSON format above and output it to a JSON file.
 
 ```
-
 #!/usr/bin/env ruby
-
 
 require 'json'
 require 'csv'
 
 def transform()
-    #file = ARGV[0]
-    File.open("servers.csv").each do |line|
-        #puts line
-    end
     csv = CSV.table("servers.csv")
-    #puts csv
     json = csv.map { |row| row.to_hash }
     File.open('servers.json', 'w') do |file|
         puts json.class
         json.each{|h| 
             h.merge!(key: "cluster")
             h[:cluster] = {:host_name => h[:cluster_host_name]}
+            h.delete(:cluster_host_name)
+            h.merge!(key: "custom_fields")
+            h[:custom_fields] = {:tcp_port => h[:custom_fields_tcp_port],
+            :database_software => h[:custom_fields_database_software],
+            :database_version => h[:custom_fields_version]}
         }
         file.puts JSON.pretty_generate(json)
     end
 end
 
 transform()
-
-
-
-
 ```
 
 The script can be altered and written in any language of your choice.
-
-```
-require 'json'
-
-def transform(input)
- json = JSON.parse(input)
- data = {servers: []}
- json.each do |vm|
-   props = {}
-   config = vm["Summary"]["Config"]
-   run = vm["Runtime"]
-   props[:host_name] = config["Name"]
-   props[:assigned_id] = config["InstanceUuid"]
-   props[:ram_allocated_gb] = config["MemorySizeMB"] / 1024
-   props[:cpu_count] = config["NumCpu"]
-   props[:ram_used_gb] = run["MaxMemoryUsage"] / 1024
-   props[:virtual] = true
-   # You can pull in data from other sources here
-   # or you can generate it conditionally based on the input data
-   custom = {:owner "John"}
-   props[:custom_fields] = custom
-   props[:cluster] = {host_name: "cls1"}
-   data[:servers].push props
- end
- puts JSON.generate data
-end
-
-data = STDIN.read
-transform data
-
-```
-
-```
-
 
 Change the file permissions to make the script executable using:
 
