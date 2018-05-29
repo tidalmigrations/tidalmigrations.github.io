@@ -94,17 +94,25 @@ require 'csv'
 def transform()
     #file = ARGV[0]
     File.open("servers.csv").each do |line|
-        puts line
+        #puts line
     end
     csv = CSV.table("servers.csv")
-    puts csv
+    #puts csv
     json = csv.map { |row| row.to_hash }
     File.open('servers.json', 'w') do |file|
-        file.puts JSON.pretty_generate({"servers"=>json})
+        puts json.class
+        json.each{|h| 
+            h.merge!(key: "cluster")
+            h[:cluster] = {:host_name => h[:cluster_host_name]}
+        }
+        file.puts JSON.pretty_generate(json)
     end
 end
 
 transform()
+
+
+
 
 ```
 
@@ -140,6 +148,9 @@ data = STDIN.read
 transform data
 
 ```
+
+```
+
 
 Change the file permissions to make the script executable using:
 
