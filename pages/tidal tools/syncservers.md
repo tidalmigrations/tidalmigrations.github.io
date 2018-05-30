@@ -11,10 +11,10 @@ folder: tidaltools
 After having [installed](tidal-tools.html#install) Tidal Tools, begin to sync your inventories with `tidal sync servers`. Tidal sync supports many server inventory management tools such as 
 VMWare, HyperV, Active Directory connected inventory and more.
 
-## What is Syncing
+## What is Syncing?
 
 Syncing is a process that transfers your inventories to your Tidal Migrations account.
-When importing your servers to the API, Tidal Migrations's sync tool will check for existing servers, existing servers, based on their hostname
+When importing your servers to the API, Tidal Migrations's sync tool will check for existing servers, based on their hostname
 and update the changed data for those servers.
 If the given server to sync does not exist already, it will add that server to the Tidal Migrations API.
 
@@ -23,7 +23,7 @@ If the given server to sync does not exist already, it will add that server to t
 
 You can sync any data source with Tidal Migrations by generating a simple JSON document of the data.
 
-This data can be passed as standard imput to the `tidal sync servers` command and the records will be
+This data can be passed as standard imput to `tidal sync servers` command and your records will be
 synchronized on the Tidal API.
 
 
@@ -51,10 +51,10 @@ You can also include any other arbitrary fields in the key "custom_fields".
         "storage_allocated_gb": 83.8,
         "storage_used_gb": 52.06,
         "cluster_id": 48337,
-        "role": null,
+        "role": Administrator,
         "cpu_count": 4,
         "ram_used_gb": 2,
-        "virtual": null,
+        "virtual": true,
         "environment": "Production",
         "cluster": {
           "host_name": "rrfedfds"
@@ -77,7 +77,7 @@ on setting the command as a cron job.
 
 If your document is not formatted as the above, not to worry. 
 
-Suppose you have a **csv** file: {% include servers.csv %}
+Suppose you have a [**csv** file](servers.csv).
 
 
 Below is a **sample** Ruby script _transform.rb_ that will read the data
@@ -85,7 +85,6 @@ of your specified CSV file, transform it to the JSON format above and output it 
 
 ```
 #!/usr/bin/env ruby
-
 require 'json'
 require 'csv'
 
@@ -102,13 +101,18 @@ def transform()
             h[:custom_fields] = {:tcp_port => h[:custom_fields_tcp_port],
             :database_software => h[:custom_fields_database_software],
             :database_version => h[:custom_fields_version]}
+            h.delete(:custom_fields_tcp_port)
+            h.delete(:custom_fields_database_software)
+            h.delete(:custom_fields_version)
         }
-        file.puts JSON.pretty_generate(json)
+        file.puts JSON.pretty_generate("servers"=>json)
     end
 end
 
 transform()
 ```
+
+The following script should output the desired [**JSON** file](servers.json).
 
 The script can be altered and written in any language of your choice.
 
@@ -126,7 +130,11 @@ You also have the option of syncing your **Applications** and **Database Instanc
 
 #### Sync your Applications
 
-The syncronization of your Applications can be performed by following the above procedure with a simple JSON document of the following data:
+You can sync your Applications with the following command:
+
+`` cat some_file.json | tidal sync apps ``
+
+The syncronization of your Applications can be performed by following the above procedure with a simple JSON document of the data:
 
 ```
 "apps": [
@@ -149,18 +157,20 @@ The syncronization of your Applications can be performed by following the above 
     }
   ]
 ```
-Sync your Database Instances with the following command:
-
-`` cat some_file.json | tidal sync apps ``
 
 #### Sync your Database Instances
 
-The syncronization of your Database Instances can be performed by following the above procedure with a simple JSON document of the following data:
+
+You can sync your Database Instances with the following command:
+
+`` cat some_file.json | tidal sync database-instances ``
+
+The syncronization of your Database Instances can be performed by following the above procedure with a simple JSON document of the data:
 ```
 "database_instances" : [
   {
     "id": 13748,
-    "database_id": null,
+    "database_id": 2,
     "server_id": 48287,
     "created_at": "2018-05-25T05:01:48.533Z",
     "updated_at": "2018-05-25T05:01:48.588Z",
@@ -168,9 +178,11 @@ The syncronization of your Database Instances can be performed by following the 
     "database_size_mb": 1870,
     "database_path": "C:\\system\\databases\\720_TASK_DB",
     "description": "This is a general description for this database instance. This database primarily purpose it to server an application that needs this data.",
-    "custom_fields": null,
+    "custom_fields": {
+            "Technologies": "Approval Management System DB"
+      },
     "environment_id": 2,
-    "move_group_id": null,
+    "move_group_id": 3,
     "environment": {
       "id": 2,
       "name": "Test",
@@ -180,7 +192,3 @@ The syncronization of your Database Instances can be performed by following the 
   }
 ]
 ```
-
-Sync your Database Instances with the following command:
-
-`` cat some_file.json | tidal sync database-instances ``
