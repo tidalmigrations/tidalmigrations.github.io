@@ -36,6 +36,14 @@ entries:
       url: analyze.html
       output: web, pdf
   
+  - title: Tidal Sync
+    output: web, pdf
+    folderitems:
+    
+    - title: Sync your Server Inventory
+      url: sync-servers.html
+      output: web, pdf
+  
   - title: vSphere
     output: web, pdf
     folderitems:

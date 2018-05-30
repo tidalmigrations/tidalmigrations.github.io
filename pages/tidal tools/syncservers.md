@@ -128,7 +128,7 @@ You can now utlise your script with a given JSON file and it will be synced to y
 
 You also have the option of syncing your **Applications** and **Database Instances**.
 
-#### Sync your Applications
+### Sync your Applications
 
 You can sync your Applications with the following command:
 
@@ -158,7 +158,7 @@ The syncronization of your Applications can be performed by following the above 
   ]
 ```
 
-#### Sync your Database Instances
+### Sync your Database Instances
 
 
 You can sync your Database Instances with the following command:
