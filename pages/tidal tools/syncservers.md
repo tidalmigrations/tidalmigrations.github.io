@@ -41,8 +41,10 @@ You can also include any other arbitrary fields in the key "custom_fields".
         "updated_at": "2018-05-25T05:00:48.615Z",
         "description": "This is a general description for this server. The server has several functions. One function is to serve serveral applications. Another is to store some databases.",
         "custom_fields": {
-            "Technologies": "Approval Management System DB"
-        },
+          "tcp_port": 11441,
+          "database_software": "SQL 2008 SP3",
+          "database_version": "10.0.5538.0"
+         },
         "fqdn": "ewrfceapcfg03.com",
         "environment_id": 2,
         "assigned_id": "198",
@@ -73,6 +75,8 @@ You can easily set this to run periodically so that your servers are synced on a
 This is a [great resource](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps)
 on setting the command as a cron job.
 
+We recommend that you setup your inventories to sync *every 24 hours*, this will keep your resource inventory up to date and accurate over time.
+
 ### Transforming your data
 
 If your document is not formatted as the above, not to worry. 
@@ -88,28 +92,42 @@ of your specified CSV file, transform it to the JSON format above and output it 
 require 'json'
 require 'csv'
 
-def transform()
-    csv = CSV.table("servers.csv")
-    json = csv.map { |row| row.to_hash }
-    File.open('servers.json', 'w') do |file|
-        puts json.class
-        json.each{|h| 
-            h.merge!(key: "cluster")
-            h[:cluster] = {:host_name => h[:cluster_host_name]}
-            h.delete(:cluster_host_name)
-            h.merge!(key: "custom_fields")
-            h[:custom_fields] = {:tcp_port => h[:custom_fields_tcp_port],
-            :database_software => h[:custom_fields_database_software],
-            :database_version => h[:custom_fields_version]}
-            h.delete(:custom_fields_tcp_port)
-            h.delete(:custom_fields_database_software)
-            h.delete(:custom_fields_version)
-        }
-        file.puts JSON.pretty_generate("servers"=>json)
+def to_bool(str)
+    
+    if str =="true"
+        str = true
+    else
+        str = false
     end
+    return str
 end
-
-transform()
+def transform(input)
+    # convert input to proper csv format
+    csv = CSV.parse(input,{ encoding: "UTF-8", headers: true, header_converters: :symbol, converters: :all} )
+    # convert csv to hashmap with key value pairs
+    json = csv.map { |row| row.to_hash }
+    data = {servers: []}
+    json.each do |vm|
+        props = {}
+        props[:cluster] = {:host_name => vm[:cluster_host_name]}
+        props[:custom_fields] = {:tcp_port => vm[:custom_fields_tcp_port],
+            :database_software => vm[:custom_fields_database_software],
+            :database_version => vm[:custom_fields_version]}
+        
+        props[:assigned_id]  = vm[:assigned_id].to_s
+        props[:virtual] = to_bool(vm[:virtual])
+        c = vm.merge(props)
+        data[:servers].push c
+        
+        
+        
+    end
+    # display data in pretty json format
+    puts JSON.pretty_generate(data)
+    
+end
+data = STDIN.read
+transform data
 ```
 
 The following script should output the desired [**JSON** file](servers.json).
@@ -134,6 +152,8 @@ You can sync your Applications with the following command:
 
 `` cat some_file.json | tidal sync apps ``
 
+# COULDNT RESOLVE THE ERROR MESSAGE WHEN INCLUDING SERVES
+
 The syncronization of your Applications can be performed by following the above procedure with a simple JSON document of the data:
 
 ```
@@ -143,7 +163,7 @@ The syncronization of your Applications can be performed by following the above 
       "custom_fields": {
         "Technologies": "Approval Management System DB"
       },
-      "description": "This is a general purpose application that has serveral functionalities. 
+      "description": "This is a general purpose application that has several functionalities. 
       The first functionality is that it is a demo application. The second functionality is 
       that it could be a real application as well.",
       "servers": {
@@ -163,7 +183,9 @@ The syncronization of your Applications can be performed by following the above 
 
 You can sync your Database Instances with the following command:
 
-`` cat some_file.json | tidal sync database-instances ``
+`` cat some_file.json | tidal sync databases ``
+
+# IT DOESNT DISPLAY ERROR MESSAGES, DOES IT DISPLAY SUCESS MESSAGE?
 
 The syncronization of your Database Instances can be performed by following the above procedure with a simple JSON document of the data:
 ```
