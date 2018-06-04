@@ -9,7 +9,7 @@ folder: tidaltools
 ---
 
 After having [installed](tidal-tools.html#install) Tidal Tools, begin to sync your inventories with `tidal sync servers`. Tidal sync supports many server inventory management tools such as 
-VMWare, HyperV, Active Directory connected inventory and more.
+VMWare, HyperV, and more.
 
 ## What is Syncing?
 
@@ -23,7 +23,7 @@ If the given server to sync does not exist already, it will add that server to t
 
 You can sync any data source with Tidal Migrations by generating a simple JSON document of the data.
 
-This data can be passed as standard imput to `tidal sync servers` command and your records will be
+This data can be passed as standard input to `tidal sync servers` command and your records will be
 synchronized on the Tidal API.
 
 
@@ -35,10 +35,7 @@ You can also include any other arbitrary fields in the key "custom_fields".
 {
   "servers": [
     {
-        "id": 48719,
         "host_name": "ewrfceapcfg03",
-        "created_at": "2018-05-25T05:00:48.521Z",
-        "updated_at": "2018-05-25T05:00:48.615Z",
         "description": "This is a general description for this server. The server has several functions. One function is to serve serveral applications. Another is to store some databases.",
         "custom_fields": {
           "tcp_port": 11441,
@@ -136,9 +133,9 @@ Change the file permissions to make the script executable using:
 
 ``` chmod +x ./transform.rb ```
 
-You can now utlise your script with a given JSON file and it will be synced to your account via the API. Utlise the command below:
+You can now utlise your script with a given CSV file and it will be synced to your account via the API. Utlise the command below:
 
-``` cat some_file.json | ./transform.rb | tidal sync servers ```
+``` cat some_file.csv | ./transform.rb | tidal sync servers ```
 
 ## How do I sync other resources?
 
@@ -150,11 +147,14 @@ You can sync your Applications with the following command:
 
 `` cat some_file.json | tidal sync apps ``
 
-# COULDNT RESOLVE THE ERROR MESSAGE WHEN INCLUDING SERVES, DBs within the APP
+When importing your applications to the API, Tidal Migrations's sync tool will check for existing applications, based on the data provided 
+and update the changed data for those applications.
+If the given application to sync does not exist already, it will add that application to the Tidal Migrations API.
 
 The syncronization of your Applications can be performed by following the above procedure with a simple JSON document of the data:
 
 ```
+{
 "apps": [
     {
       "name": "App_name",
@@ -174,6 +174,7 @@ The syncronization of your Applications can be performed by following the above 
       "transition_plan_complete": true
     }
   ]
+}
 ```
 
 ### Sync your Database Instances
@@ -181,17 +182,17 @@ The syncronization of your Applications can be performed by following the above 
 
 You can sync your Database Instances with the following command:
 
-`` cat some_file.json | tidal sync databases ``
+`` cat some_file.json | tidal sync dbs ``
 
-# IT DOESNT DISPLAY ERROR MESSAGES, DOES IT DISPLAY SUCESS MESSAGE?
+When importing your database instances to the API, Tidal Migrations's sync tool will check for existing database instances, based on the data provided
+and update the changed data for those database instances.
+If the given database instance to sync does not exist already, it will add it to the Tidal Migrations API.
 
 The syncronization of your Database Instances can be performed by following the above procedure with a simple JSON document of the data:
 ```
-"database_instances" : [
+{
+  "database_instances" : [
   {
-    "id": 13748,
-    "database_id": 2,
-    "server_id": 48287,
     "created_at": "2018-05-25T05:01:48.533Z",
     "updated_at": "2018-05-25T05:01:48.588Z",
     "name": "720 TASK DB",
@@ -202,13 +203,9 @@ The syncronization of your Database Instances can be performed by following the 
             "Technologies": "Approval Management System DB"
       },
     "environment_id": 2,
-    "move_group_id": 3,
-    "environment": {
-      "id": 2,
-      "name": "Test",
-      "created_at": "2018-01-02T16:19:45.213Z",
-      "updated_at": "2018-01-02T16:19:45.213Z"
-    }
+    "move_group_id": 3
   }
 ]
+}
+
 ```
