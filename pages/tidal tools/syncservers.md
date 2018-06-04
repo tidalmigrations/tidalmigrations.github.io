@@ -82,7 +82,7 @@ Suppose you have a [**csv** file](servers.csv).
 
 
 Below is a **sample** Ruby script _transform.rb_ that will read the data within the file
-passed in as standard input, transform it to the JSON format above and output it as standard output.
+passed in as standard input, transform it to the JSON format above and output it as [standard output](serv.json).
 
 ```
 #!/usr/bin/env ruby
