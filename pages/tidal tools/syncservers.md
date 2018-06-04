@@ -53,7 +53,7 @@ You can also include any other arbitrary fields in the key "custom_fields".
         "storage_allocated_gb": 83.8,
         "storage_used_gb": 52.06,
         "cluster_id": 48337,
-        "role": Administrator,
+        "role": "Administrator",
         "cpu_count": 4,
         "ram_used_gb": 2,
         "virtual": true,
@@ -84,8 +84,8 @@ If your document is not formatted as the above, not to worry.
 Suppose you have a [**csv** file](servers.csv).
 
 
-Below is a **sample** Ruby script _transform.rb_ that will read the data
-of your specified CSV file, transform it to the JSON format above and output it to a JSON file.
+Below is a **sample** Ruby script _transform.rb_ that will read the data within the file
+passed in as standard input, transform it to the JSON format above and output it as standard output.
 
 ```
 #!/usr/bin/env ruby
@@ -94,7 +94,7 @@ require 'csv'
 
 def to_bool(str)
     
-    if str =="true"
+    if str =="true" || str =="yes"
         str = true
     else
         str = false
@@ -130,9 +130,7 @@ data = STDIN.read
 transform data
 ```
 
-The following script should output the desired [**JSON** file](servers.json).
-
-The script can be altered and written in any language of your choice.
+The script above is an example of how to easily transform your data into the necessary JSON object. It can be altered to work with your data or it could be rewritten in any language of your choice.
 
 Change the file permissions to make the script executable using:
 
@@ -152,7 +150,7 @@ You can sync your Applications with the following command:
 
 `` cat some_file.json | tidal sync apps ``
 
-# COULDNT RESOLVE THE ERROR MESSAGE WHEN INCLUDING SERVES
+# COULDNT RESOLVE THE ERROR MESSAGE WHEN INCLUDING SERVES, DBs within the APP
 
 The syncronization of your Applications can be performed by following the above procedure with a simple JSON document of the data:
 
