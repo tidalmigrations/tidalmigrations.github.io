@@ -90,14 +90,14 @@ require 'json'
 require 'csv'
 
 def to_bool(str)
-    
-    if str =="true" || str =="yes"
-        str = true
-    else
-        str = false
-    end
-    return str
+  if str == "true" || str == "yes"
+    str = true
+  else
+    str = false
+  end
+  str
 end
+
 def transform(input)
     # convert input to proper csv format
     csv = CSV.parse(input,{ encoding: "UTF-8", headers: true, header_converters: :symbol, converters: :all} )
@@ -107,21 +107,17 @@ def transform(input)
     json.each do |vm|
         props = {}
         props[:cluster] = {:host_name => vm[:cluster_host_name]}
-        props[:custom_fields] = {:tcp_port => vm[:custom_fields_tcp_port],
-            :database_software => vm[:custom_fields_database_software],
-            :database_version => vm[:custom_fields_version]}
+        props[:custom_fields] = {:tcp_port          => vm[:custom_fields_tcp_port],
+                                 :database_software => vm[:custom_fields_database_software],
+                                 :database_version  => vm[:custom_fields_version]}
         
         props[:assigned_id]  = vm[:assigned_id].to_s
         props[:virtual] = to_bool(vm[:virtual])
         c = vm.merge(props)
-        data[:servers].push c
-        
-        
-        
+        data[:servers].push c   
     end
     # display data in pretty json format
     puts JSON.pretty_generate(data)
-    
 end
 data = STDIN.read
 transform data
