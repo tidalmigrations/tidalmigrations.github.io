@@ -1,7 +1,7 @@
 ---
 title: Sync your Server Inventory (and other resources)
 keywords: servers, sync
-last_updated: May 25, 2018
+last_updated: June 5, 2018
 summary: "Sync your data with Tidal Migrations"
 sidebar: tidal_toolsbar
 permalink: sync-servers.html
