@@ -16,19 +16,19 @@ VMWare, HyperV, and more.
 Syncing is a process that transfers your inventories to your Tidal Migrations account.
 When importing your servers to the API, Tidal Migrations's sync tool will check for existing servers, based on their hostname
 and update the changed data for those servers.
-If the given server to sync does not exist already, it will add that server to the Tidal Migrations API.
+If the given server to sync does not exist already, it will add that server to the Tidal Migrations platform.
 
 
 ## How do I manually sync my servers?
 
 You can sync any data source with Tidal Migrations by generating a simple JSON document of the data.
 
-This data can be passed as standard input to `tidal sync servers` command and your records will be
-synchronized on the Tidal API.
+This data can be passed as standard input to the `tidal sync servers` command and your servers data will be
+synchronized via the API.
 
 
 The JSON document must be created in the specified format. The top-level key must be "servers",
-with a value of an array. The array can consist of various keys describing the server to be synced, as shown.
+with a value of an array. The array can consist of the various keys as shown below, describing the server to be synced.
 You can also include any other arbitrary fields in the key "custom_fields".
 
 ```
@@ -147,8 +147,7 @@ You can sync your Applications with the following command:
 
 `` cat some_file.json | tidal sync apps ``
 
-When importing your applications to the API, Tidal Migrations's sync tool will check for existing applications, based on the data provided 
-and update the changed data for those applications.
+When importing your applications to the API, Tidal Migrations's sync tool will check for existing applications, based on their name, and update the changed data for those applications.
 If the given application to sync does not exist already, it will add that application to the Tidal Migrations API.
 
 The syncronization of your Applications can be performed by following the above procedure with a simple JSON document of the data:
@@ -184,8 +183,7 @@ You can sync your Database Instances with the following command:
 
 `` cat some_file.json | tidal sync dbs ``
 
-When importing your database instances to the API, Tidal Migrations's sync tool will check for existing database instances, based on the data provided
-and update the changed data for those database instances.
+When importing your database instances to the API, Tidal Migrations's sync tool will check for existing database instances, based on their name, and update the changed data for those database instances.
 If the given database instance to sync does not exist already, it will add it to the Tidal Migrations API.
 
 The syncronization of your Database Instances can be performed by following the above procedure with a simple JSON document of the data:
@@ -205,7 +203,6 @@ The syncronization of your Database Instances can be performed by following the 
     "environment_id": 2,
     "move_group_id": 3
   }
-]
+ ]
 }
-
 ```
