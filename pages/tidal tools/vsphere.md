@@ -10,7 +10,7 @@ folder: tidaltools
 
 
 ## Getting Started
-To get started you will need to have Tidal Tools installed. You can download a copy from https://get.tidal.sh and check out this [article](getstarted.html) on how to install.
+To get started you will need to have Tidal Tools installed. You can download a copy from https://get.tidal.sh and check out this [article](tidal-tools.html) on how to install.
 
  
 
