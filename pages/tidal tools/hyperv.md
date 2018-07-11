@@ -27,7 +27,7 @@ Start syncing your HyperV with Tidal Migrations, by running the script: `runner.
 Prior to these steps, you must have [Dos2Unix](https://waterlan.home.xs4all.nl/dos2unix.html) installed.
 
 1. It will prompt you to set your username.
-2. Be sure to run the script: `save_password.ps1` and enter your password when prompted. It will then save your credentials securely in a text file.
+2. Be sure to run the script: `save_password.ps1` and enter your password when prompted. This will save your credentials securely in a text file.
 
     _Note that this is specific to the machine where you encrypted it, therefore, you cannot decrypt with the same account from another machine._
 
