@@ -55,6 +55,7 @@ curl -X POST \
       "transition_overview": "this is the transition_overview of the application",
       "transition_type": 3,
       "transition_plan_complete": true
+      "source_code_location": ["/filepath/location", "folder1/file1"]
     }
   ]
 }'
@@ -81,7 +82,11 @@ The response of the above request should be the following:
         "transition_plan_complete": null,
         "business_owner_id": null,
         "technical_lead_id": null,
-        "transition_type": null
+        "transition_type": null,
+        "source_code_location": [
+            "/filepath/location",
+            "folder1/file1"
+        ]
     }
 ]
  ```

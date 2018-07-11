@@ -97,6 +97,10 @@ You can access your Applications, Database Instances and Serves within all the m
                     "created_at": "2018-01-03T05:04:14.970Z",
                     "updated_at": "2018-01-03T05:04:14.970Z"
                 }
+            ],
+            "source_code_location": [
+                "/filepath/location",
+                "folder1/file1"
             ]
         }
     ],
@@ -176,6 +180,10 @@ You can access your Applications, Database Instances and Serves within all the m
                         "created_at": "2018-01-03T05:04:14.970Z",
                         "updated_at": "2018-01-03T05:04:14.970Z"
                     }
+                ],
+                "source_code_location": [
+                    "/filepath/location",
+                    "folder1/file1"
                 ]
             }
             
@@ -269,6 +277,10 @@ You can access your Applications, Database Instances and Serves within the selec
                     "created_at": "2018-01-03T05:04:14.970Z",
                     "updated_at": "2018-01-03T05:04:14.970Z"
                 }
+            ]
+            "source_code_location": [
+                "/filepath/location",
+                "folder1/file1"
             ]
         }
     ],
