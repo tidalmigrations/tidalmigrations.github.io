@@ -1,6 +1,6 @@
 ---
 title: Gather Windows Machine Statistics
-keywords: hyperv, password
+keywords: hyperv, windows, hypervisor
 last_updated: July, 2018
 summary: "Gather windows machine statistics from a Windows Server environment"
 sidebar: tidal_toolsbar
@@ -18,24 +18,28 @@ Tidal sync supports many server inventory management tools such as VMWare, Hyper
 This is a simple and effective way to gather machine statistics (RAM, Storage, CPU) from a Windows Server environment. 
 It uses WinRM to Invoke-Command across your servers, creating a JSON file to securely send to your Tidal Migrations instance using the tidal command.
 
+## Requirements and Dependencies
+
+Prior to the steps on syncing your hypervisors, be sure to have the below dependencies installed:
+
+- [Dos2Unix](https://waterlan.home.xs4all.nl/dos2unix.html) is used to convert line breaks in a text file from Unix format to DOS format.
+- You will also need [WinRM enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring) across your environment for this.
+- The scripts needed for this process can be found in [this github repository](https://github.com/tidalmigrations/machine_stats).
+
 ## Running the Script
 
 Start syncing your HyperV with Tidal Migrations, by running the script: `runner.ps1`.
 
-{% include note.html content="Be sure to set the permission of this script to be executable before running it." %}
+{% include note.html content="Be sure to set PowerShell's Execution policy to execute this script before running it. [This guide](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) will help you in doing so." %}
 
-Prior to these steps, you must have [Dos2Unix](https://waterlan.home.xs4all.nl/dos2unix.html) installed.
 
 1. It will prompt you to set your username.
-2. Be sure to run the script: `save_password.ps1` and enter your password when prompted. This will save your credentials securely in a text file.
 
-    _Note that this is specific to the machine where you encrypted it, therefore, you cannot decrypt with the same account from another machine._
+2. Then, run the script: `save_password.ps1` and enter your password when prompted. This will save your credentials securely in a text file.
 
 3. Save a list of the server hostnames that you would like to sync in a file called: _servers.txt_. 
-The data of these servers will be showed in a table, with numerical values rounded to the nearest second decimal.?
+The data of these servers will be shown in a table, with numerical values rounded to the nearest second decimal.
 
-4. This script is set to run periodically so that your HyperV servers are synced on a daily basis and the data is up to date. The integration updates records if they already exist, or creates new records if they don't. ?
+{% include note.html content="This script is set to run periodically so that your HyperV servers are synced on a daily basis and the data is up to date. The integration updates records if they already exist, or creates new records if they don't." %}
 
 And there you have it! Your HyperV servers will be synced to Tidal Migrations.
-
-{% include note.html content="You do need [WinRM enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring) across your environment for this." %}
