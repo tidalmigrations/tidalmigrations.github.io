@@ -44,9 +44,7 @@ curl -X POST \
       "custom_fields": {
         "Technologies": "Approval Management System DB"
       },
-      "description": "This is a general purpose application that has serveral functionalities. 
-      The first functionality is that it is a demo application. The second functionality is 
-      that it could be a real application as well.",
+      "description": "This is a general purpose application that has serveral functionalities.The first functionality is that it is a demo application. The second functionality is that it could be a real application as well.",
       "servers": {
         "host_name": "trpewrcapbiz02"
       },
@@ -54,7 +52,8 @@ curl -X POST \
       "urls": "https://approvalmanagementsystem.com",
       "transition_overview": "this is the transition_overview of the application",
       "transition_type": 3,
-      "transition_plan_complete": true
+      "transition_plan_complete": true,
+      "source_code_location": "filepath1, filepath2"
     }
   ]
 }'
@@ -81,7 +80,11 @@ The response of the above request should be the following:
         "transition_plan_complete": null,
         "business_owner_id": null,
         "technical_lead_id": null,
-        "transition_type": null
+        "transition_type": null,
+        "source_code_location": [
+            "filepath1",
+            "filepath2"
+        ]
     }
 ]
  ```
