@@ -40,6 +40,6 @@ Start syncing your HyperV with Tidal Migrations, by running the script: `runner.
 3. Save a list of the server hostnames that you would like to sync in a file called: _servers.txt_. 
 The data of these servers will be shown in a table, with numerical values rounded to the nearest second decimal.
 
-{% include note.html content="We reccoment that you set this script to run periodically so that your HyperV servers are synced on a daily basis and the data is up to date. Here is an [example]( https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example--scripting-) of a scripting task in powershell that runs daily."%}
+{% include note.html content="We recommend that you set this script to run periodically so that your HyperV servers are synced on a daily basis and the data is up to date. Here is an [example]( https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example--scripting-) of a scripting task in powershell that runs daily."%}
 
 And there you have it! Your HyperV servers will be synced to Tidal Migrations.
