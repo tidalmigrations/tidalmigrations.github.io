@@ -47,8 +47,8 @@ If you aren't connected to the internet, you also have the option to save the re
 
     ``tidal analyze my_urls.txt --type json > analyze_output.json ``
 
-2. Copy the file, *analyze_output.json* and install [Tidal Tools](getstarted.html), on a computer with internet access.
-3. [Login to Tidal Tools](getstarted.html#login) with `tidal login`
+2. Copy the file, *analyze_output.json* and install [Tidal Tools](tidal-tools.html), on a computer with internet access.
+3. [Login to Tidal Tools](tidal-tools.html#login) with `tidal login`
 4. Run this command to upload your previously generated data to your Tidal Migrations account: 
 
 
