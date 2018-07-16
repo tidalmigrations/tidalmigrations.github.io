@@ -22,7 +22,12 @@ NB: When you set the vsphere.server you will likely need to include the default 
 
 ## vSphere Login
 
-After logging into Tidal Tools using the [`tidal login` command](#login) you will be prompted to login into your vSphere account.
+If you have not logged on to the Tidal API yet, the [`tidal login` command](#login) will prompt you to login to the *Tidal API*  with your credentials, and
+then it will also prompt you to login to *vSphere*.
+
+However, if you are already logged on to the Tidal API, you can skip to execute the `tidal login vsphere` command, which will _only_ prompt you to 
+login to vSphere.
+
 If you do wish to login to your vSphere account, you can select the option `y`:
 
 After which, a set of prompts will appear to help you connect to your vSphere account:
