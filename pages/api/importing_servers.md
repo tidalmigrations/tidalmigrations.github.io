@@ -16,7 +16,7 @@ Before using the endpoint, you must authenticate to the Tidal Migrations API:
 
 Once you have authenticated with the Tidal API, utilising the endpoint is super simple.
 For any additional details regarding the endpoint, checkout the Tidal API documentation.
-(http://[your subdomain].tidalmg.com/docs/)
+(https://[your subdomain].tidalmg.com/docs/)
 
 There are various parameters you can define about your server in the body:
 

@@ -47,7 +47,7 @@ For example, you can set your username and password with the two following comma
 
 And you can set the URL with the following command:
 
-``` tidal config set tidal.url https:://demo.tidalmg.com ```
+``` tidal config set tidal.url https://demo.tidalmg.com ```
 
 Your credentials will be stored in a configuration file such as:
 
@@ -55,7 +55,7 @@ Your credentials will be stored in a configuration file such as:
 tidal: 
   email: my_user_name_here 
   password: my_secure_password_here 
-  url: http://my_instance_name_here.tidalmg.com
+  url: https://my_instance_name_here.tidalmg.com
   ```
 
 On macOS the config file is located: ```Library/Preferences/tidal/config.yaml```
