@@ -1,7 +1,7 @@
 ---
 title: Tidal Tools Autocompletion
 last_updated: April 24, 2018
-summary: "Setting up autocompletion for tidal tools"
+summary: "Setting up autocompletion for Tidal Tools"
 sidebar: tidal_toolsbar
 permalink: autocompletion.html
 folder: tidaltools
