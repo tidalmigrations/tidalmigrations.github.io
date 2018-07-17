@@ -20,6 +20,28 @@ NB: When you set the vsphere.server you will likely need to include the default 
 
 ### vSphere 6.0
 
+## vSphere Login
+
+If you have not logged on to the Tidal API yet, the [`tidal login` command](#login) will prompt you to login to the *Tidal API*  with your credentials, and
+then it will also prompt you to login to *vSphere*.
+
+However, if you are already logged on to the Tidal API, you can skip to execute the `tidal login vsphere` command, which will _only_ prompt you to 
+login to vSphere.
+
+If you do wish to login to your vSphere account, you can select the option `y`:
+
+After which, a set of prompts will appear to help you connect to your vSphere account:
+
+1. vSphere Server
+2. vSphere Username
+3. vSphere Password
+4. vSphere API Endpoint
+5. Use SSL/TLS? 
+6. Skip HTTPS certificate checks?
+
+After answering the above prompts, you will see the message _"Login to vSphere successful. Saving config file...Done!"_
+
+
 ## Configure 
 Once you have Tidal Tools installed you need to configure access to vSphere and Tidal Migrations.
 
