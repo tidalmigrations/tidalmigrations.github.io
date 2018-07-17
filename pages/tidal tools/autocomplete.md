@@ -18,12 +18,10 @@ Tidal Tools's autocompletion feature can be very useful! For more details, consu
 
 # Setting up Autocompletion
 
-Currently, Tidal Tools's autocompletion feature is supported for two command line interpreters: Bash and Zsh.
+Currently, Tidal Tools's autocompletion feature is supported for Bash.
 Follow the instructions below on setting up autocompletion for your operating system.
 
 ## Linux
-
-### bash
 
 Before enabling tidal autocompletion, be sure to install bash completion with the following command:
 
@@ -41,9 +39,7 @@ The following command will set up Tidal autocompletion to your profile, so that 
 echo "source <(tidal completion bash)" >> ~/.bashrc 
 ```
 
-## macOs
-
-### bash
+## macOS
 
 On macOS, you must have bash-completion support installed.
 
@@ -66,10 +62,3 @@ brew install bash-completion@2
 After installing bash-completion support or have already installed it, you can add *Tidal* autocompletion to the bash-completion:
 
 `tidal completion bash > $(brew --prefix)/etc/bash_completion.d/tidal`
-
-### zsh
-
-If you are using oh-my-zsh, run the following command to install Tidal autocompletion:
-
-`tidal completion zsh > "${fpath[1]}/_tidal"`
-
