@@ -13,7 +13,7 @@ Before using each endpoint, you must authenticate to the Tidal Migrations API:
 
 Once you have authenticated with the Tidal API, utilising each endpoint is super simple.
 For any additional details regarding the endpoint, checkout the Tidal API documentation.
-(http://[your subdomain].tidalmg.com/docs/)
+(https://[your subdomain].tidalmg.com/docs/)
 
 ## Getting all the Move Groups:
 #### GET api/v1/move_groups {#getallmg}

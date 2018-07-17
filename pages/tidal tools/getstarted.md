@@ -55,7 +55,7 @@ Your credentials will be stored in a configuration file such as:
 tidal: 
   email: my_user_name_here 
   password: my_secure_password_here 
-  url: http://my_instance_name_here.tidalmg.com
+  url: https://my_instance_name_here.tidalmg.com
   ```
 
 On macOS the config file is located: ```Library/Preferences/tidal/config.yaml```
