@@ -24,7 +24,14 @@ Follow the instructions below on setting up autocompletion for your operating sy
 ## Linux
 
 ### bash
-To enable the autocompletion feature to your *current* shell, run:
+
+Before enabling tidal autocompletion, be sure to install bash completion with the following command:
+
+```
+sudo apt install bash-completion
+```
+
+Now, to enable the autocompletion feature to your *current* shell, run:
 ```
 source <(tidal completion bash) 
 ```
