@@ -49,4 +49,17 @@ domains registered for your given datacentres in under 60 seconds.
 
 
 
-## 5) tidal analyze source code
+## 5) Tidal analyze source code
+
+The following step in your cloud journey is to analyze the domains ontained from `tidal discover`
+Tidal Analyze will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, without needing to install agents. Whether you have 1 or 1 million end points, Tidal Tools will centralize the data gathered in our platform for you to analyze.
+
+Simplify your application centric discovery with Tidal Analyze.
+
+You then have the option to import these results to the Tidal API, where your domains will appear on the right hand side navigation bar under
+
+Assess -> URLs.
+
+For detailed information on analyzing your FQDNs, be sure to checkout this [guide](analyze.html)
+
+
