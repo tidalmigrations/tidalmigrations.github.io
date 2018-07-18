@@ -84,7 +84,7 @@ If you would like to set these credentials and settings via environment variable
 - VSPHERE_TLS
 - VSPHERE_INSECURE
 
-## Sync
+## Sync {#vsphere-sync}
 Syncronizing your vSphere inventory with Tidal Migrations is simple with:
 
 `` tidal sync vsphere ``
