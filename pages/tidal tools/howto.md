@@ -1,6 +1,6 @@
 ---
 toc: false
-title: How to Assess... (title placeholder)
+title: Layering Discovery Techniques
 keywords: sync, import
 last_updated: July, 2018
 summary: "Layering discovery techniques to show value in 60sec, and dig deeper if/when needed"
@@ -8,9 +8,9 @@ sidebar: main_sidebar
 permalink: discovery-techniques.html
 ---
 
-... Consisting of 5 different layers: 
+Cloud migration is the process of moving data, applications, or other elements to the cloud. However, the path to the cloud can be long and painful without proper planning and execution.
+By following Tidal Migration's five different layering techniques, we can help you migrate to the cloud with ease!
 
-#### [ insert introduction ]
 
 ## 1) Import spreadsheet 
 
