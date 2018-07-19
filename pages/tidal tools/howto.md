@@ -39,7 +39,7 @@ Checkout this [guide](sync_hyper-v.html) for a quick and clean approach on synci
 
 ## 4) Tidal discovery_plan - fingerprint web applications 
 
-The innitial step in your cloud journey is discovering what you have.
+**a.)** The innitial step in your cloud journey is discovering what you have.
 Thousands of domains are registered on a daily basis 
 and it can be hard to remain informed. Utlize the `tidal discover` tool 
 with your customized Discovery Plan to obtain both private and public 
@@ -47,11 +47,7 @@ domains registered for your given datacentres in under 60 seconds.
 
 [This](discover.html) will provide you guidance on creating your own Discovery Plan to scan multiple networks and DNS services.
 
-
-
-## 5) Tidal analyze source code
-
-The following step in your cloud journey is to analyze the domains obtained from `tidal discover`.
+**b.)** The following step in your cloud journey is to analyze the domains obtained from `tidal discover`.
 Tidal Analyze will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, without needing to install agents. 
 Whether you have 1 or 1 million end points, Tidal Tools will centralize the data gathered in our platform for you to analyze.
 
@@ -61,5 +57,9 @@ After doing so, you have the option to import these results to the Tidal API, wh
 hand side navigation bar under _Assess -> URLs_.
 
 For detailed information and steps on analyzing your FQDNs, be sure to checkout this [guide](analyze.html).
+
+## 5) Tidal analyze source code
+
+
 
 
