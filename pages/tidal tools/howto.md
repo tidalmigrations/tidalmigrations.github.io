@@ -3,7 +3,7 @@ toc: false
 title: Layering Discovery Techniques
 keywords: sync, import
 last_updated: July, 2018
-summary: "Layering discovery techniques to show value in 60sec, and dig deeper if/when needed"
+summary: "A quick guide on the various discovery techniques and how to layer them together to quickly and accurately discover your environment"
 sidebar: main_sidebar
 permalink: discovery-techniques.html
 ---
@@ -14,7 +14,7 @@ By following Tidal Migration's five different layering techniques, we can help y
 
 ## 1) Import spreadsheet 
 
-The first step to begin your cloud migration project is importing a spreadsheet of Servers,
+The first step to begin your cloud migration project is importing a spreadsheet of Servers, Virtualization Clusters,
 Databases Instances and Applications. Tidal Migration's importer will guide you through mapping your columns to our fields, 
 and even create the associations between dependencies if you have captured these.
 
@@ -37,11 +37,10 @@ It uses WinRM to Invoke-Command across your servers, creating a JSON file to sec
 
 Checkout this [guide](sync_hyper-v.html) for a quick and clean approach on syncing your hypervisors.
 
-## 4) Tidal discovery_plan - fingerprint web applications 
+## 4) Tidal Discovery Plan - fingerprint web applications 
 
-**a.)** The innitial step in your cloud journey is discovering what you have.
-Thousands of domains are registered on a daily basis 
-and it can be hard to remain informed. Utlize the `tidal discover` tool 
+**a.)** The initial step in your cloud journey is discovering what you have.
+It can be hard to remain informed about all the domains registered. Utlize the `tidal discover` tool 
 with your customized Discovery Plan to obtain both private and public 
 domains registered for your given datacentres in under 60 seconds.
 
@@ -58,7 +57,6 @@ hand side navigation bar under _Assess -> URLs_.
 
 For detailed information and steps on analyzing your FQDNs, be sure to checkout this [guide](analyze.html).
 
-## 5) Tidal analyze source code
 
 
 
