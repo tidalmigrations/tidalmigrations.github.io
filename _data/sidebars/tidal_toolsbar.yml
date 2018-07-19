@@ -23,6 +23,10 @@ entries:
     - title: Get Started
       url: tidal-tools.html
       output: web
+      
+    - title: Layering Discovery Techniques
+      url: discovery-techniques.html
+      output: web
   
   - title: Discover
     output: web, pdf
@@ -38,6 +42,10 @@ entries:
   
     - title: Sync your Server Inventory
       url: sync-servers.html
+      output: web, pdf
+      
+    - title: Sync your Hypervisors
+      url: sync_hyper-v.html
       output: web, pdf
   
   - title: vSphere
