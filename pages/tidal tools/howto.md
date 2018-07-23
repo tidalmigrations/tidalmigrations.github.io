@@ -8,56 +8,94 @@ sidebar: main_sidebar
 permalink: discovery-techniques.html
 ---
 
-Cloud migration is the process of moving data, applications, or other elements to the cloud. However, the path to the cloud can be long and painful without proper planning and execution.
-By following Tidal Migration's five different layering techniques, we can help you migrate to the cloud with ease!
+Cloud migration is the process of moving your data, applications, and other elements to the cloud. However, the path to the cloud can be long and painful without proper planning and execution.
+By following Tidal Migration's five discovery layering techniques, you will be migrating to the cloud with ease!
 
 
-## 1) Import spreadsheet 
+## 1) Import Your Spreadsheets
 
-The first step to begin your cloud migration project is importing a spreadsheet of Servers, Virtualization Clusters,
-Databases Instances and Applications. Tidal Migration's importer will guide you through mapping your columns to our fields, 
-and even create the associations between dependencies if you have captured these.
+If your already have some data collected in spreadsheets, the first step to begin your cloud migration project is importing a spreadsheet of Servers, Virtualization Clusters, Databases Instances and Applications. Tidal Migration's importer will guide you through mapping your columns to our fields, create your own fields and even make associations between dependencies if you have captured these.
 
-Find here additional ways on importing your [applications](importapps.html) and [servers](import_servers.html).
+_NB: See additional ways on importing your [applications](importapps.html) and [servers](import_servers.html)._
 
-## 2) Tidal sync servers/vsphere
+## 2) Integrate Your Hypervisors
 
-Once you have imported your data, you can begin to sync your inventories via [`tidal sync servers`](syncservers.html).
-Tidal sync supports many server inventory management tools such as VMWare, HyperV, and more.
+Once you have imported your data, you can begin to synchronize your inventories via [`tidal sync servers`](syncservers.html).
+Tidal sync supports many server inventory management tools such as VMWare and HyperV with more possible via scripting ([ask us](https://tidalmigrations.com/contact)).
 
-If you have inventory within vSphere that you would like to sync, [`tidal sync vsphere`](#vsphere-sync) will do its job for you.
+If you have VM Ware's vSphere, [`tidal sync vsphere`](#vsphere-sync) will handle everying with just read-only credentials required.
 
-It is useful to setup this process of syncing your inventories on a daily basis, this will keep your resource inventory up to date and accurate over time.
+### Scheduling your sync:
+It is useful to setup a cron job or Windows Scheduled Task for this process, and we recommend synchronizing your inventories no more than once per day. 
+
+This will keep your resource inventory up to date and show you usage trends over time in the _Analyze_ feature.
 
 
-## 3) Tidal sync servers with the machine_stats repo for windows server statistics
+## 3) Aggregate Server Usage Statistics
 
-Tidal Migrations provides you with a simple and effective way to gather machine statistics (RAM, Storage, CPU) from a Windows Server environment.
-It uses WinRM to Invoke-Command across your servers, creating a JSON file to securely send to your Tidal Migrations instance using the tidal command.
+Tidal Migrations provides you with a simple and effective way to gather machine statistics (RAM, Storage, CPU allocations and usage) from a Windows Server environment.
+We use WinRM to Invoke-Command across your servers, creating a JSON file which is securely sent to your Tidal Migrations instance using the tidal command.
 
-Checkout this [guide](sync_hyper-v.html) for a quick and clean approach on syncing your hypervisors.
+Checkout this [guide](sync_hyper-v.html) for a quick and clean approach to gathering server usage statistics. 
 
-## 4) Tidal Discovery Plan - fingerprint web applications 
+_NB: Feel free to fork the repo and modify the PowerShell to suit your needs or show your security team.  This extensibility and transparency is core to our approach._
+
+
+## 4) Fingerprint Web Applications 
 
 **a.)** The initial step in your cloud journey is discovering what you have.
-It can be hard to remain informed about all the domains registered. Utlize the `tidal discover` tool 
-with your customized Discovery Plan to obtain both private and public 
-domains registered for your given datacentres in under 60 seconds.
+It can be hard to remain informed about all the domains and applications 
+hosted in your environment, which is why we created the `tidal discover` command. 
+With your customized _Discovery Plan_ you can obtain both private and public domains
+within your datacentres in under 60 seconds.
 
-[This](discover.html) will provide you guidance on creating your own Discovery Plan to scan multiple networks and DNS services.
+[This tidal-tools guide](discover.html) contains examples for creating your own _Discovery Plan_ to scan multiple networks and DNS services.
 
-**b.)** The following step in your cloud journey is to analyze the domains obtained from `tidal discover`.
-Tidal Analyze will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, without needing to install agents. 
-Whether you have 1 or 1 million end points, Tidal Tools will centralize the data gathered in our platform for you to analyze.
+**b.)** With a list of domains in hand, the next step is to _analyze_ the applications hosted on these domains.
 
-Simplify your application centric discovery with Tidal Analyze.
+`tidal analyze` will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, _without needing to install agents._ 
+Whether you have 1 or 1 million end points, Tidal Tools centralizes the data gathered into our platform for you to analyze further and plan with, simplifying your application centric cloud migration.
 
-After doing so, you have the option to import these results to the Tidal API, where your domains will appear on the right 
-hand side navigation bar under _Assess -> URLs_.
-
-For detailed information and steps on analyzing your FQDNs, be sure to checkout this [guide](analyze.html).
+For detailed information and steps on analyzing your domains, be sure to checkout this [guide](analyze.html).
 
 
+## 5) Analyze Your Source Code
+
+Finally, to find the applications which will migrate more easily to
+cloud-native technologies you can analyze your source code and rank
+your applications by _Cloud Readiness_.
+
+Doing this for each of your custom applications which have a _Transition
+Type_ of Refactor or Replatform will give you the data needed to prioritize your
+application migrations.  To analyze your source code, you need the
+`Application ID`, to be logged in with tidal-tools and a copy of the
+source code checked out.
+
+You can find the `Application ID` in the URL bar when looking at an
+application.  e.g. if I'm loking at an application in Tidal Migrations,
+the URL will show `https://demo2.tidalmg.com/#/apps/111`  Here, `111` is
+my `Application ID`.
+
+I can now analyze the source code with:
+
+```
+cd /path/to/source-code
+tidal analyze --app-id 111 .
+```
 
 
+## Conclusion
+Immediately getting an idea of the size and scope of your migration is
+critical to successful cloud migration planning.
+
+Our goal at Tidal Migrations is to provide you with useful information
+within 60 seconds of signup, and letting you layer in additional
+information from discovery sources as needed.  
+
+_You do not need to spend weeks and months installing discovery systems
+to start planning your cloud migration any more._
+
+
+---
+Not yet a customer?  See [tidalmigrations.com](https://tidalmigrations.com) and [Try For Free](https://get.tidalmg.com).
 
