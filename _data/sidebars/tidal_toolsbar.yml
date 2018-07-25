@@ -23,6 +23,10 @@ entries:
     - title: Get Started
       url: tidal-tools.html
       output: web
+    
+    - title: Tidal Autocompletion
+      url: autocompletion.html
+      output: web
   
   - title: Discover
     output: web, pdf
