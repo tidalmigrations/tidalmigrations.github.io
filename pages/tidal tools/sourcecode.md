@@ -21,16 +21,28 @@ your path to the cloud by identifying the difficulty to migrate your application
 Blockers slow down your Cloud Migration journey, by identifying the percentage of blockers
 in your source code, you are able to instantly determine which applications should be prioritized over others from a technical difficulty perspective.
 
-#### Boosters
-Boosters are those applications that are the best candidates to move to the Cloud. By identifying
-the percentage of boosters can help you determine your current state in the cloud journey.**...**
-
 #### Cloud Readiness
 Clour readiness tracks each application's readiness for both now and in the future. This percentage lets
 you acknowledge which applications are becoming more cloud-ready while also keeping track of those that
 behave has roadblocks in your cloud journey.
 
 
-With these 4 key numbers, stay alert and build the smartest roadmap to the cloud.
+With these 2 key numbers, stay alert and build the smartest roadmap to the cloud.
 
-## Example/Steps (later on...)
+## Getting Started
+
+After having [installed](tidal-tools.html#install) Tidal Tools, begin to analyze your source code and rank your applications by *Cloud Readiness*.
+
+Prior to these steps, be sure to have [logged in](tidal-tools.html#login) to Tidal Tools.
+Firstly, you will need the `application ID` and a copy of the source code checked out.
+
+You can find the Application ID in the URL bar when looking at an application. e.g. if I’m loking at an application in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/apps/111 Here, 111 is my Application ID.
+
+I can now analyze the source code with:
+
+```
+cd /path/to/source-code
+tidal analyze --app-id 111 .
+```
+
+##### after it is relase, try it out and add the example
