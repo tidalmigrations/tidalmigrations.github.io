@@ -17,11 +17,11 @@ your path to the cloud by identifying the difficulty to migrate your application
 
 ## Analytics
 
-#### Blockers
+### Blockers
 Blockers slow down your Cloud Migration journey, by identifying the percentage of blockers
 in your source code, you are able to instantly determine which applications should be prioritized over others from a technical difficulty perspective.
 
-#### Cloud Readiness
+### Cloud Readiness
 Clour readiness tracks each application's readiness for both now and in the future. This percentage lets
 you acknowledge which applications are becoming more cloud-ready while also keeping track of those that
 behave has roadblocks in your cloud journey.
@@ -45,4 +45,6 @@ cd /path/to/source-code
 tidal analyze --app-id 111 .
 ```
 
-##### after it is relase, try it out and add the example
+Try it out!
+
+{% include image.html file="carbon_source.png" caption="Analyze your source code" %}
