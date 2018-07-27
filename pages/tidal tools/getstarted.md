@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Tidal-Tools
-keywords: install, login
+keywords: install, login, connect, configuration, proxy, environment
 last_updated: Feb 13, 2018
 summary: "Get started working with Tidal Tools"
 sidebar: tidal_toolsbar

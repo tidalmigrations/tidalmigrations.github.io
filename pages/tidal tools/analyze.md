@@ -1,6 +1,6 @@
 ---
 title: Tidal Analyze
-keywords: analyze, applications
+keywords: analyze, applications, domains, URLs, upload
 last_updated: April 24, 2018
 summary: "Analyze your applications and determine their technologies and network data."
 sidebar: tidal_toolsbar

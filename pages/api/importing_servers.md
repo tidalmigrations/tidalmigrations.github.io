@@ -1,7 +1,7 @@
 ---
 
 title: Importing Servers
-keywords: servers,import
+keywords: servers, import, multiple, endpoint, zone
 last_updated: Feb 22, 2018
 summary: "Importing Servers with the Tidal Migrations API"
 sidebar: main_sidebar

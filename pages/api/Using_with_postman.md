@@ -1,7 +1,7 @@
 ---
 toc: false
 title: Using Tidal Migrations API with Postman
-keywords: postman, swagger, docs
+keywords: postman, swagger, docs, requests, routes
 last_updated: Feb 22, 2018
 summary: "Accessing all the requests in the Tidal Migrations API with Postman"
 sidebar: main_sidebar
