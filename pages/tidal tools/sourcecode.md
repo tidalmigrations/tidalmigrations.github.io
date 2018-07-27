@@ -1,6 +1,6 @@
 ---
 title: Analyze your Source Code
-keywords: source-code, assessment, cloud-readiness
+keywords: source, assessment, readiness, analyze, code, application
 last_updated: July, 2018
 summary: "Use Tidal Tools source code analysis feature to measure your application code bases for cloud PaaS migration difficulty."
 sidebar: tidal_toolsbar
@@ -17,33 +17,34 @@ your path to the cloud by identifying the difficulty to migrate your application
 
 ## Analytics
 
-### Blockers
-Blockers slow down your Cloud Migration journey, by identifying the percentage of blockers
+### Roadblocks
+Roadblocks slow down your cloud migration journey, by identifying the total number of roadblocks
 in your source code, you are able to instantly determine which applications should be prioritized over others from a technical difficulty perspective.
 
-### Cloud Readiness
-Clour readiness tracks each application's readiness for both now and in the future. This percentage lets
-you acknowledge which applications are becoming more cloud-ready while also keeping track of those that
-behave has roadblocks in your cloud journey.
+### Migration Difficulty
+Migration difficulty tracks each application's readiness for a Paas system in the cloud. This percentage lets
+you identify which applications are easier or harder based on the implementation details and application structure.
 
 
 With these 2 key numbers, stay alert and build the smartest roadmap to the cloud.
 
 ## Getting Started
 
-After having [installed](tidal-tools.html#install) Tidal Tools, begin to analyze your source code and rank your applications by *Cloud Readiness*.
+After having [installed](tidal-tools.html#install) Tidal Tools,  analyze your source code and rank your applications by *Migration Difficulty*.
 
-Prior to these steps, be sure to have [logged in](tidal-tools.html#login) to Tidal Tools.
-Firstly, you will need the `application ID` and a copy of the source code checked out.
+- Be sure to have [logged in](tidal-tools.html#login) to Tidal Tools.
+- You will need the application ID - You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/apps/111 in this case 111 is the application ID.
+- You will also need a local copy of the source code.
 
-You can find the Application ID in the URL bar when looking at an application. e.g. if I’m loking at an application in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/apps/111 Here, 111 is my Application ID.
 
-I can now analyze the source code with:
+You are all set, you can now analyze the source code with:
 
 ```
 cd /path/to/source-code
-tidal analyze --app-id 111 .
+tidal analyze code --app-id 111 .
 ```
+
+Once it is complete you can view your application and the newly updated data in Tidal Migrations, it can take a couple minutes for the data to be processed and uploaded.
 
 Try it out!
 
