@@ -12,8 +12,7 @@ folder: tidaltools
 Not sure how ready you are to move to the cloud? With Tidal Migrations you have 
 the option to analyze your specified source code associated with the applications.
 
-The analysis will automatically strategize
-your path to the cloud by identifying the difficulty to migrate your applications to the cloud, including the number of blocking issues identified.
+The analysis will identify the difficulty to migrate your applications to the cloud, including the number of blocking issues identified.
 
 ## Analytics
 
