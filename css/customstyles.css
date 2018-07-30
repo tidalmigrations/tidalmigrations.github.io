@@ -203,7 +203,7 @@ p.post-meta {font-size: 80%; color: #777;}
     position: absolute;
     top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
     left: 20px;
-    z-index: -1;
+    z-index: 0 !important;
     width:223px;
     border-left: 1px solid #dedede;
 }
@@ -288,6 +288,7 @@ li.dropdownActive a {
 .navbar-inverse .navbar-nav > li > a {
     background-color: transparent;
     margin-top:10px;
+    z-index: -1;
 }
 
 .post-content .rssfeedLink {
