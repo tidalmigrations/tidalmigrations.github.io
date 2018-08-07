@@ -1,6 +1,6 @@
 ---
 title: Sync your Server Inventory (and other resources)
-keywords: servers, sync
+keywords: servers, sync, transform, apps, database instances
 last_updated: June 5, 2018
 summary: "Sync your data with Tidal Migrations"
 sidebar: tidal_toolsbar

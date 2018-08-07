@@ -1,6 +1,6 @@
 ---
 title: Authentication
-keywords: authentication, login
+keywords: authentication, login, ping, refresh, token, subdomain
 last_updated: Feb 13, 2018
 summary: "Easily authenticate with the Tidal Migrations API"
 sidebar: main_sidebar

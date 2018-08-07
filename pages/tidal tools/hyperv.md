@@ -1,6 +1,6 @@
 ---
 title: Gather Windows Machine Statistics
-keywords: hyperv, windows, hypervisor
+keywords: hyperv, windows, hypervisor, powershell, servers
 last_updated: July, 2018
 summary: "Gather windows machine statistics from a Windows Server environment"
 sidebar: tidal_toolsbar

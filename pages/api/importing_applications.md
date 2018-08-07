@@ -1,7 +1,7 @@
 ---
 toc: false
 title: Importing Applications
-keywords: apps, import
+keywords: apps, import, request, data
 last_updated: Feb 13, 2018
 summary: "Easily import your applications with the Tidal Migrations API"
 sidebar: main_sidebar
