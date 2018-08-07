@@ -44,7 +44,7 @@ entries:
       url: sync-servers.html
       output: web, pdf
       
-    - title: Sync your Hypervisors
+    - title: Integrating with Hyper-V
       url: sync_hyper-v.html
       output: web, pdf
     
