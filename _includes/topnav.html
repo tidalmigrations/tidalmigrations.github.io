@@ -40,10 +40,8 @@
                 </li>
 {% assign topnav_dropdowns = site.data[page.topnav].topnav_dropdowns %}
 
-
                 {% for entry in topnav.topnav %}
                 {% for item in entry.items %}
-                
                 {% if item.external_url %}
                 <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
                 {% elsif page.url contains item.url %}
@@ -76,7 +74,6 @@
                 {% if site.feedback_disable == null or site.feedback_disable == false %}
 			{% include feedback.html %}
 		{% endif %}
-                
             </ul>
         </div>
         </div>
