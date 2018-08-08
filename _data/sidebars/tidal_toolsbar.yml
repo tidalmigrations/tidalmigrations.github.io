@@ -20,8 +20,12 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Get Started
+    - title: Installation
       url: tidal-tools.html
+      output: web
+      
+    - title: Overview
+      url: discovery-techniques.html
       output: web
     
     - title: Tidal Autocompletion
@@ -43,10 +47,10 @@ entries:
     - title: Sync your Server Inventory
       url: sync-servers.html
       output: web, pdf
-  
-  - title: vSphere
-    output: web, pdf
-    folderitems:
+      
+    - title: Integrating with Hyper-V
+      url: sync_hyper-v.html
+      output: web, pdf
     
     - title: Integrating with vSphere
       url: vsphere.html
