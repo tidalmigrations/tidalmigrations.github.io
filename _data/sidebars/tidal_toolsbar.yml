@@ -27,6 +27,10 @@ entries:
     - title: Overview
       url: discovery-techniques.html
       output: web
+    
+    - title: Tidal Autocompletion
+      url: autocompletion.html
+      output: web
   
   - title: Discover
     output: web, pdf

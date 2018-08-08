@@ -1,6 +1,6 @@
 ---
 title: Integrate Tidal Migrations with vSphere
-keywords: install, login
+keywords: vsphere, login, configure, sync, environment
 last_updated: Feb 13, 2018
 sidebar: tidal_toolsbar
 permalink: vsphere.html
@@ -84,7 +84,7 @@ If you would like to set these credentials and settings via environment variable
 - VSPHERE_TLS
 - VSPHERE_INSECURE
 
-## Sync
+## Sync {#vsphere-sync}
 Syncronizing your vSphere inventory with Tidal Migrations is simple with:
 
 `` tidal sync vsphere ``

@@ -1,6 +1,6 @@
 ---
 title: Tidal Analyze
-keywords: analyze, applications
+keywords: analyze, applications, domains, URLs, upload
 last_updated: April 24, 2018
 summary: "Analyze your applications and determine their technologies and network data."
 sidebar: tidal_toolsbar
@@ -26,7 +26,7 @@ Or use the [discovery command](discover.html) to scan your network and DNS to ga
 ## Analyzing FQDNs and URLs
 Now that we have our relevant domains and URLs in *my_urls.txt*, we can analyze them with:
 
-    `` tidal analyze my_urls.txt --upload `
+    `` tidal analyze my_urls.txt --upload ``
 
 {% include tip.html content="You can also utilize the standard output of URLs and FQDNs from [Tidal Discover](discover.html) as input.<br/><br/> `` tidal discover --plan my_plan.yml  | tidal analyze --upload``"  %}
 
