@@ -7,6 +7,7 @@ search: exclude
 [
 {% for page in site.pages %}
 {% unless page.search == "exclude" %}
+{% unless page.title == nil %}
 {
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
@@ -16,7 +17,7 @@ search: exclude
 "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' | replace: '	', '    '}}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}
-{% endunless %}
+{% endunless %}{% endunless %}
 {% endfor %}
 
 {% for post in site.posts %}
