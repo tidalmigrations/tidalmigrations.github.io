@@ -24,6 +24,3 @@ entries:
       url: discovery-techniques.html
       output: web
     
-    - title: Overview
-      url: discovery-techniques.html
-      output: web
