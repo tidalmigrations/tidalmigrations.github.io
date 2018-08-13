@@ -4,7 +4,8 @@ title: Layering Discovery Techniques
 keywords: sync, import, discover, analyze, source code, discovery plan
 last_updated: July, 2018
 summary: "A quick guide on the various discovery techniques and how to layer them together to quickly and accurately discover your environment"
-sidebar: main_sidebar
+sidebar: user_guidesbar
+folder: userguides
 permalink: discovery-techniques.html
 ---
 
@@ -16,7 +17,7 @@ By following Tidal Migration's five discovery layering techniques, you will be m
 
 If your already have some data collected in spreadsheets, the first step to begin your cloud migration project is importing a spreadsheet of Servers, Virtualization Clusters, Databases Instances and Applications. Tidal Migration's importer will guide you through mapping your columns to our fields, create your own fields and even make associations between dependencies if you have captured these.
 
-_NB: See additional ways on importing your [applications](importapps.html) and [servers](import_servers.html)._
+NB: See additional ways on importing your [applications](importapps.html) and [servers](import_servers.html).
 
 ## 2) Integrate Your Hypervisors
 
