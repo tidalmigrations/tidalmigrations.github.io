@@ -429,6 +429,10 @@ span.projectTitle {
 .footer {
     text-align: right;
 }
+.footer-logo {
+    position: relative;
+    right: -65px;
+}
 
 .footerMeta {
     background-color: whitesmoke;
