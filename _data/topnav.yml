@@ -5,7 +5,9 @@ topnav:
   items:
     - title: Homepage
       external_url: https://tidalmigrations.com
-    - title: Tidal API
-      url: /index.html
+    - title: User Guides
+      url: /discovery-techniques.html
     - title: Tidal Tools
       url: /tidal-tools.html
+    - title: Tidal API
+      url: /index.html

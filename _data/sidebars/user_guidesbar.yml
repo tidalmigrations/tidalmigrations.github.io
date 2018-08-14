@@ -1,0 +1,26 @@
+entries:
+- title: User Guides
+  product: User Guides
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Introduction
+    output: web, pdf
+    folderitems:
+    
+    - title: Layering Discovery Techniques
+      url: discovery-techniques.html
+      output: web
+    
