@@ -3,7 +3,9 @@
 topnav:
 - title: Topnav
   items:
-    - title: Tidal API
-      url: /index.html
+    - title: User Guides
+      url: /discovery-techniques.html
     - title: Tidal Tools
       url: /tidal-tools.html
+    - title: Tidal API
+      url: /index.html

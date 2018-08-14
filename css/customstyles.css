@@ -203,7 +203,7 @@ p.post-meta {font-size: 80%; color: #777;}
     position: absolute;
     top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
     left: 20px;
-    z-index: -1;
+    z-index: 10 !important;
     width:223px;
     border-left: 1px solid #dedede;
 }
@@ -363,7 +363,8 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .nav > li.active > a  {
-background-color: #347DBE;
+    background-color: #347DBE;
+    z-index: -1;
 }
 
 .nav li a {
@@ -711,6 +712,7 @@ ol.series li {
 /* not sure if using this ...*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color: #248ec2 !important;
+    overflow: visible;
 }
 
 #mysidebar .nav ul {
