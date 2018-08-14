@@ -37,9 +37,6 @@ There are several default columns included for each record type,
 however if you have additional information you can add fields for a record and also track those. 
 If this is the case you should do this before you import your data. 
 
-
-You can read more about how to do this here. < CANT ACCESS LINK FROM ZENDESK
-
 ## Importing your data
 
 - Select the data type you wish to import.
