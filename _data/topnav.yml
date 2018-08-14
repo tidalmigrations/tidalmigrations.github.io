@@ -3,8 +3,6 @@
 topnav:
 - title: Topnav
   items:
-    - title: Homepage
-      external_url: https://tidalmigrations.com
     - title: Tidal API
       url: /index.html
     - title: Tidal Tools
