@@ -42,17 +42,19 @@ You can read more about how to do this here. < CANT ACCESS LINK FROM ZENDESK
 
 ## Importing your data
 
-- Select the data type from the dropdown you wish to import.
+- Select the data type you wish to import.
 
-{% include image.html file="selectdata.png" %}
+{% include image.html file="step0.PNG" %}
 
 - Select the sheet in your file that you want to import data from.
 
-{% include image.html file="selectsheet.png" %}
+{% include image.html file="step1.PNG" %}
+
 
 - Map the columns of your sheet to the fields from the drop down. If you have a column that is not present as a field and you want to import it, you can add that field.
 
-{% include image.html file="mapdata.png" %}
+{% include image.html file="step2.PNG" %}
+
 
 - Click submit to import the data.
 
