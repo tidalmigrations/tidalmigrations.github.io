@@ -56,6 +56,9 @@ If this is the case you should do this before you import your data.
 {% include tip.html content="There are several 'fields' that will map to other resources in Tidal. To find more about what fields Tidal Migrations supports checkout [Importing Servers, Importing Databases](import_servers.html) or [Importing Applications](importapps.html)" %}
 {% include tip.html content="The Tags option can be used to generate multiple tags and associate them with the record. You can use this track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)" %}
 
+### Importing Virtualization Clusters
+
+Tidal Migration uses the following fields to map a virtualization cluster to other resources: _Hypervisor Technology, Servers_. For this field, you must select the property that the column will correspond to, generally this is _Name_.
 
 ### Importing Servers
 
