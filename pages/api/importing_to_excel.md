@@ -50,18 +50,14 @@ You can read more about how to do this here. < CANT ACCESS LINK FROM ZENDESK
 
 {% include image.html file="step1.PNG" %}
 
-
 - Map the columns of your sheet to the fields from the drop down. If you have a column that is not present as a field and you want to import it, you can add that field.
 
 {% include image.html file="step2.PNG" %}
 
-
 - Click submit to import the data.
-
 
 {% include tip.html content="There are several 'fields' that will map to other resources in Tidal. To find more about what fields Tidal Migrations supports checkout [Importing Servers, Importing Databases](import_servers.html) or [Importing Applications](importapps.html)" %}
 {% include tip.html content="The Tags option can be used to generate multiple tags and associate them with the record. You can use this track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)" %}
-
 
 
 ### Importing Servers
