@@ -3,7 +3,7 @@ title: Importing Data from Excel
 keywords: excel, import, apps, data, servers, clusters, database instances
 last_updated: August, 2018
 summary: "Easily import your Excel spreadsheets into Tidal Migrations"
-sidebar: main_sidebar
+sidebar: user_guidesbar
 permalink: import-from-excel.html
 ---
 
