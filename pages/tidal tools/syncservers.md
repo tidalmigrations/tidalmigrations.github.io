@@ -159,9 +159,9 @@ The syncronization of your Applications can be performed by following the above 
       "description": "This is a general purpose application that has several functionalities. 
       The first functionality is that it is a demo application. The second functionality is 
       that it could be a real application as well.",
-      "servers": {
+      "servers": [{
         "host_name": "trpewrcapbiz02"
-      },
+      }],
       "host_name": "trpewrcapbiz02",
       "urls": "https://approvalmanagementsystem.com",
       "transition_overview": "this is the transition_overview of the application",
