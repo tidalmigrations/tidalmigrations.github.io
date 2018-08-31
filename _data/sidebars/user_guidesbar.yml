@@ -27,4 +27,8 @@ entries:
     - title: Importing Data From Excel
       url: import-from-excel.html
       output: web
+      
+    - title: Troubleshooting Ansible Tower Integration
+      url: troubleshoot-ansible.html
+      output: web
     
