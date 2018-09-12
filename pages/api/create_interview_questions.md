@@ -8,25 +8,34 @@ sidebar: main_sidebar
 permalink: createinterviewquestions.html
 ---
 
+Before using each endpoint, you must authenticate to the Tidal Migrations API:
+[Authentication Guide](index.html)
+
+Once you have authenticated with the Tidal API, utilising each endpoint is simple.
+For any additional details regarding the endpoint, checkout the Tidal API documentation.
+(https://[your subdomain].tidalmg.com/docs/)
 # Creating Interview Questions
+
+Our interview questions are tightly coupled with our application fields. So, before we can create an interview question we need to have an application field we want to associate with a particular question.
 
 ## Custom Field
 
-Our interview questions are tightly coupled with our application fields. So before we can create an interview question, it needs to have an associated field on applications.
-
 ### Create a custom field
 
-You can create a custom field for an application by going to https://\<domain\>.tidalmg.com/#/admin and clicking on the 'New Application Field' button. Note, we don't limit the type of field that can be used in interview questions.
-
+You can create a custom field for an application by going to https://[your subdomain].tidalmg.com/#/admin and clicking on the 'New Application Field' button. Note: we don't limit the type of field (dropdown, text, number, currency, checkbox) that can be used in interview questions.
 
 ### Get a custom field id
 
-Once a field has been created, we need to get the field id. To start we need to get a list of all fields for applications
+Once we have created a custom field, we need to get its field id. So, to start we need to get a list of all fields for applications:
 
-    curl -H Authorization\:\ \"Bearer\ <auth token>\" -H Content-Type\:\ application/json\
-         -XGET https\://<domain>.tidalmg.com/api/v1/fields\?model_type\=applications -o fields.json
+    curl -X GET \
+      https\://[your subdomain].tidalmg.com/api/v1/fields\?model_type\=applications \
+      -H authorization\:\ \"Bearer\ [auth token]\" \
+      -H Content-Type\:\ application/json \
+      -o fields.json
 
-Then we need to search for our newly created field name, if you have 'jq' installed you can use it to query the json file for your field name
+
+Once we have that, we need to search for our newly created field name. If you have 'jq' installed you can use it to query the json file for your field name
 
     jq '.[] | select(.name=="Your Field Name")' fields.json
 
@@ -53,16 +62,19 @@ Which should give you an output similiar to
 
 ### Get a question number
 
-Before we can create our question we need to know what number to give our question. To find out what number we should use, we can either look at our interview questions in our web app, or we can query the API for all questions
+Before we can create our question we need to know what number to give our question. To find out what number we should use, we can either look at our interview questions in our web app, or we can query the API for all questions:
 
-    curl -H Authorization\:\ \"Bearer\ <auth token>\"\ -H Content-Type\:\ application/json\
-    -XGET https\://<domain>.tidalmg.com/api/v1/questions -o questions.json
+    curl -X GET \
+      https\://[your subdomain].tidalmg.com/api/v1/questions \
+      -H authorization\:\ \"Bearer\ [auth token]\" \
+      -H Content-Type\:\ application/json \
+      -o questions.json
 
-Now because our api returns all questions, in order based on their number we can use 'jq' again to quickly find the last question.
+Now, because our api returns all questions in order based on their number, we can use 'jq' again to quickly find the last question.
 
     jq '.[-1]' questions.json
 
-This will return us something like the question below, where you can see the number that this question has is 21.
+This will return us something like the question below. Note: this question has the number 21, so we are going to create a new question with a number of 22.
 
     {
       "id": 22,
@@ -103,12 +115,19 @@ To start off with all POST request to the Tidal API need to have the model type 
 
 Putting this all together we can then post this request to our API
 
-    curl -i -H Authorization\:\ \"Bearer\ <auth token>\"\ -H Content-Type\:\ application/json\
-         -XPOST https\://<domain>.tidalmg.com/api/v1/questions -d \{\"question\"\:\ \{\ \"text\"\:\ \"How\ many\ users\ does\ this\ application\ have\?\"\,\ \"number\"\:\ 23\,\ \"field_id\"\:\ 1\}\}
+    curl - X POST \
+      https\://[your subdomain].tidalmg.com/api/v1/questions
+      -H authorization\:\ \"Bearer\ [auth token]\" \
+      -H Content-Type\:\ application/json \
+      -d \{\"question\"\:\ \{\ \"text\"\:\ \"How\ many\ users\ does\ this\ application\ have\?\"\,\ \"number\"\:\ 22\,\ \"field_id\"\:\ 1\}\}
+
 
 ### Updating an existing quesiton
 
 If you have an interview question already and you want to change the number or change what field it applies to you can do a put request
 
-    curl -i -H Authorization\:\ \"Bearer\ <auth token>\" -H Content-Type\:\ application/json
-    -XPUT http\://<domain>.tidalmg.com/api/v1/questions/22 -d \{\"question\"\:\ \{\ \"field_id\"\:\ <set id>\,\ \"number\"\:\ <set number>\}\}
+    curl -X PUT \
+      http\://[your subdomain].tidalmg.com/api/v1/questions/22
+      -H authorization\:\ \"Bearer\ [auth token]\" \
+      -H Content-Type\:\ application/json \
+      -d \{\"question\"\:\ \{\ \"field_id\"\:\ 2\,\ \"number\"\:\ 22\}\}
