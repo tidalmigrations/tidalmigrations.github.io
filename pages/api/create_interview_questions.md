@@ -11,9 +11,19 @@ permalink: createinterviewquestions.html
 Before using each endpoint, you must authenticate to the Tidal Migrations API:
 [Authentication Guide](index.html)
 
-Once you have authenticated with the Tidal API, utilising each endpoint is simple.
+Once you have authenticated with the Tidal API, utilising each endpoint simply requires sending your token as an HTTP request header with each request. For example, with curl this looks like
+
+    curl -X GET \
+      https\://[your subdomain].tidalmg.com/api/v1/ping \
+      -H authorization\:\ \"Bearer\ [auth token]\" \
+
 For any additional details regarding the endpoint, checkout the Tidal API documentation.
 (https://[your subdomain].tidalmg.com/docs/)
+
+# Tools
+
+ * [jq](https://stedolan.github.io/jq/) - `jq` is a CLI that allows us quickly parse and filter JSON.
+
 # Creating Interview Questions
 
 Our interview questions are tightly coupled with our application fields. So, before we can create an interview question we need to have an application field we want to associate with a particular question.
