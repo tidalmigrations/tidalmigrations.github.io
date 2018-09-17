@@ -177,7 +177,7 @@ The syncronization of your Applications can be performed by following the above 
 ```
 
 {% include note.html content="[This](https://github.com/tidalmigrations/data-transform/blob/master/scripts/csv_transform.rb) is a similar script as the one above to transform your data into the necessary JSON object for applications." %}
-{% include note.html content = "You can find [here](https://github.com/tidalmigrations/data-transform/blob/master/data/apps.csv) sample data for a few applications." %}
+{% include note.html content = "There is also [sample data](https://github.com/tidalmigrations/data-transform/blob/master/data/apps.csv) for applications." %}
 
 ### Sync your Database Instances
 
