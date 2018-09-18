@@ -31,4 +31,8 @@ entries:
     - title: Integrating with Ansible Tower
       url: ansible-tower.html
       output: web
+      
+    - title: Troubleshooting Ansible Tower Integration
+      url: troubleshoot-ansible.html
+      output: web
     

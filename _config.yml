@@ -113,4 +113,4 @@ description: "Getting started guides for using Tidal Migrations API."
 
 # needed for sitemap.xml file only
 url: http://idratherbewriting.com
-baseurl: /documentation-theme-jekyll
+baseurl:  

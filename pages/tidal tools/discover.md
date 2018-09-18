@@ -11,7 +11,7 @@ folder: tidaltools
 ## Discover Your Applications
 
 The first step in your cloud migration project is discovering what you have. Thousands of domains are registered on a daily basis and it can be hard to remain
-informed. Utlize the `tidal discover` tool with your customized Discovery Plan to obtain both private and public domains registered for your given datacentres. 
+informed. Utilize the `tidal discover` tool with your customized Discovery Plan to obtain both private and public domains registered for your given datacentres. 
 
 - Scan multiple networks and DNS services with a *discovery plan*
 
