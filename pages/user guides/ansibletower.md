@@ -206,4 +206,4 @@ This parameter is optional, if there is no key then all servers will be returned
 
 ## Summary
 
-Hopefully at this point you are able to run a sync job that will pull data from your Tidal Migrations API into Ansible Tower. If you are still having trouble getting setup, checkout this troubleshooting article here with some more tips on common issues.
+Hopefully at this point you are able to run a sync job that will pull data from your Tidal Migrations API into Ansible Tower. If you are still having trouble getting setup, checkout the [troubleshooting article](https://guides.tidalmg.com/troubleshoot-ansible.html) with some more tips on common issues.
