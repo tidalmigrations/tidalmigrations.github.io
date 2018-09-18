@@ -31,11 +31,11 @@ Ensure you set the credentials correctly via the environment variables.
 
 ### Proxy
 
-Does Ansible Tower need to use a proxy to reach the Flow Migration Suite? If so you need to set the environment variables for the proxy.
+Does Ansible Tower need to use a proxy to reach the Tidal Migrations, ie. the internet? If so you need to set the environment variables for the proxy.
 
 ### License
 
-In order to import servers you need a valid license from Ansible. When viewing the job status, under the standard output it will say if the license has expired. If so contact ansible at here to extend your license with them.
+In order to import servers you need a valid license for Ansible. When viewing the job status, under the standard output it will say if the license has expired. If so contact Red Hat to extend your license with them.
 
 ## Sync runs
 
@@ -48,7 +48,7 @@ If you are using a configuration file and have specified either the 'filter-tags
 - Ensure you have spelt the tag names correctly, they are case sensitive.
 - Ensure you are using the correct logic methodology.
 
-To do a sanity check, you can do a similar query via the Flow Migration Suite directly for the tags and logic you have specified to ensure that the correct number of results are being returned.
+To do a sanity check, you can do a similar query via the Tidal Migrations API directly for the tags and logic you have specified to ensure that the correct number of results are being returned.
 
 ### Servers added do not match the configuration file criteria
 
