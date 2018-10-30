@@ -93,12 +93,6 @@ Once you have set your credentials you can test your connectivity and authentica
 tidal ping
 ```
 
-If you receive an error you can use the --debug flag to see what the issue is:
-
-```
-tidal ping --debug
-```
-
 ### Using a Proxy
 If you need to use a proxy, you can specify it with the https_proxy variable.
 
