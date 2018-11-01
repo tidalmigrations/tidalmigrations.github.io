@@ -9,7 +9,7 @@ folder: tidaltools
 ---
 ## Tidal Analyze Source Code
 
-Not sure how ready you are to move to the cloud? With Tidal Migrations you have 
+Not sure how ready you are to move to the cloud? With Tidal Migrations you have
 the option to analyze your specified source code associated with the applications.
 
 The analysis will identify the difficulty to migrate your applications to the cloud, including the number of blocking issues identified. It is able to analyze source code written in C#, VB/VB.net, Java or T-SQL, with support for Python and PHP coming soon. 
