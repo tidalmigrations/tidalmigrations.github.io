@@ -31,7 +31,7 @@ With these 2 key numbers, stay alert and build the smartest roadmap to the cloud
 
 ### Criteria
 
-To determine how ready an application is for a cloud migration there are over 190 different factors across all the languages (C#, VB/VB.net, Java and T-SQL) that are considered.
+To determine how ready an application is for a cloud migration there are **over 190 different factors** across all the languages (C#, VB/VB.net, Java, T-SQL, Python and PHP) that are considered.
 An example of some of the criteria that are considered include:
   - Using the file system
   - Using system DLLs
