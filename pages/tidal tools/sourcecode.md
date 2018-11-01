@@ -29,6 +29,17 @@ you identify which applications are easier or harder based on the implementation
 
 With these 2 key numbers, stay alert and build the smartest roadmap to the cloud.
 
+### Criteria
+
+To determine how ready an application is for a cloud migration there are over 190 different factors across all the languages (C#, VB/VB.net, Java and T-SQL) that are considered.
+An example of some of the criteria that are considered include:
+  - Using the file system
+  - Using system DLLs
+  - Using hardcoded IP addresses
+  - Using Access Control Lists
+
+The analysis will look at all of these factors and determine an overall migration difficulty.
+
 ## Getting Started
 
 After having [installed](tidal-tools.html#install) Tidal Tools,  analyze your source code and rank your applications by *Migration Difficulty*.
