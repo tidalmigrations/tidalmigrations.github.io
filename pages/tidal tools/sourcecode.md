@@ -49,4 +49,4 @@ Once it is complete you can view your application and the newly updated data in 
 
 Try it out!
 
-{% include image.html file="carbon_source.png" caption="Analyze your source code" %}
+{% include image.html file="source_code_analyze.png" caption="Analyze your source code" %}
