@@ -45,6 +45,7 @@ The analysis will look at all of these factors and determine an overall migratio
 After having [installed](tidal-tools.html#install) Tidal Tools,  analyze your source code and rank your applications by *Migration Difficulty*.
 
 - Be sure to have [logged in](tidal-tools.html#login) to Tidal Tools.
+- Install [Docker CE](https://docs.docker.com/v17.12/install/), it is compatible with most OSs, select the one you need. Version 17.12 or later will work with Tidal Tools. 
 - You will need the application ID - You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/apps/111 in this case 111 is the application ID.
 - You will also need a local copy of the source code.
 
