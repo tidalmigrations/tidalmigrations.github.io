@@ -25,7 +25,7 @@ tidal
 To see what you can do with the tidal checkout some of our other articles about creating sync jobs or analyzing your applications via their URLs.
 
 ## Connecting to the API
-Once you have Tidal Tools installed you need to configure access to the API.
+Once you have Tidal Tools installed you need to configure access to the API. [Register for a free account](https://get.tidalmg.com/) with Tidal Migrations to get the connection details.
 
 The credentials can be defined via a config file or via environment variables. If a config file is present it will be used, if it is not present environment variables will be used.
 You can also utlise the `tidal login` command.
