@@ -46,7 +46,7 @@ After having [installed](tidal-tools.html#install) Tidal Tools,  analyze your so
 
 - Enable the Source Code Analysis feature for your account - https://yoursubdomainhere.tidalmg.com/#/settings - at the bottom.
 - Be sure to have [logged in](tidal-tools.html#login) to your Tidal Migrations account via Tidal Tools.
-- Install [Docker CE](https://docs.docker.com/v17.12/install/), it is compatible with most OSs, select the one you need. Version 17.12 or later will work with Tidal Tools. 
+- Install [Docker CE](https://docs.docker.com/v17.12/install/), it is compatible with most OSs, select the one you need. Version 17.12 or later will work with Tidal Tools. [Why Docker?](#why-docker)
 - You will need the application ID - You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/apps/111 in this case 111 is the application ID.
 - You will also need a local copy of the source code.
 
@@ -63,3 +63,11 @@ Once it is complete you can view your application and the newly updated data in 
 Try it out!
 
 {% include image.html file="source_code_analyze.png" caption="Analyze your source code" %}
+
+### Why Docker?
+
+You need to install Docker in order to complete the source code analysis. This is because the analysis uses several system dependent software libraries so by using Docker the analysis can use those libraries without you requiring to install the correct versions and dependencies.
+
+### What about security?
+
+The entire analysis takes place _locally on your machine_. The **only** data that is captured and sent from the analysis are the results of the analysis and metadata. **No source code, files or the contents of any files on your machine are ever copied or sent anywhere.**
