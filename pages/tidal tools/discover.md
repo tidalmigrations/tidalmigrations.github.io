@@ -17,7 +17,7 @@ informed. Utilize the `tidal discover` tool with your customized Discovery Plan 
 
     `` tidal discover my_plan.yml > my_urls.txt``
     
-{% include note.html content="In order to utilize this command, [install DNS Tools](https://tidalmigrations.com/integrations/)." %}
+{% include note.html content="In order to utilize this command, [install DNS Tools](https://dnstools.ninja/download/)." %}
 
 
 With this command, Tidal Discover will output a set of <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.FQDNs}}">FQDNs</a> for your defined discovery plan and store it in the file *my_urls.txt*.
