@@ -134,9 +134,9 @@ Here is some brief information regarding the keys defined in the *my_plan.yaml* 
 | `tcp_ports`         | One or more TCP Ports that you frequently run web servers on and would like to interrogate: e.g. 80,443,8080,8443 etc.                                  | Integer             
 | `path_to_bind`      | The location of a [named.conf file](https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-bind-namedconf.html) for a bind server configuration. | File Path         
 | `dns_service`       | Name of a DNS service to be analyzed with DNS tools, currently only "aws" service is avaliable which extracts information from Amazon Route 53 zones.          | "aws"                  
-| `path_to_zone_files`| The location of a [zone file](https://help.dyn.com/how-to-format-a-zone-file/) which contains a list of DNS records with mappings between domain names and IP addresses. | File Path
+| `zonefiles`| The location of a [zone file](https://help.dyn.com/how-to-format-a-zone-file/) which contains a list of DNS records with mappings between domain names and IP addresses. | File Path
 
-{% include note.html content="`networks`, `name` and `tcp_ports` are required keys that you must include. <br/><br/> Specify one or more of `path_to_bind`, `path_to_zone_files` **or** `dns_service` in your Discovery file." %}
+{% include note.html content="`networks`, `name` and `tcp_ports` are required keys that you must include. <br/><br/> Specify one or more of `path_to_bind`, `zonefiles` **or** `dns_service` in your Discovery file." %}
 
 Be sure to verify the outputted FQDNs that you'd want to analyze.
 
