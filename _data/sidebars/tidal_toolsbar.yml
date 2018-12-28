@@ -59,4 +59,11 @@ entries:
     - title: Source Code Analysis
       url: analyze-source-code.html
       output: web
-      
+
+  - title: Troubleshooting
+    output: web, pdf
+    folderitems:
+
+    - title: Troubleshooting
+      url: troubleshooting.html
+      output: web, pdf
