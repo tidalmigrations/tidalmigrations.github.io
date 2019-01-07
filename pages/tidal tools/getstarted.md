@@ -27,31 +27,22 @@ To see what you can do with the tidal checkout some of our other articles about 
 ## Connecting to the API
 Once you have Tidal Tools installed you need to configure access to the API. [Register for a free account](https://get.tidalmg.com/) with Tidal Migrations to get the connection details.
 
-The credentials can be defined via a config file or via environment variables. If a config file is present it will be used, if it is not present environment variables will be used.
-You can also utlise the `tidal login` command.
+There are several ways to authenticate with the Tidal Migrations API, we recommend the first one, `tidal login`, because your password is never persisted to disk.
 
 ### Tidal Login command {#login}
-You can authenticate with the API using the command: `tidal login`. The login command verifies the user's identity using the authentication methods. This should provide and store an access token for you. 
-The lifetime of the access token is 8 hours. Once it is expired, the user must login again. 
+To authenticate with the API type `tidal login` and follow the prompts. This should provide and store an access token for you that gives you access for 8 hours. Once it is expired, the user must login again and obtain another token. 
 
-We recommend that you utilise this command as it doesn't store your password. If you must the store the password, you can authenticate using the methods below.
-
-
+**We recommend that you utilise this command because it doesn't store your password.** If you must store the password, you can authenticate using the methods below.
 
 ### Configuration file
 
-Alternatively, you can use the `tidal config` command to interactively set your credentials.
+Alternatively, you can use the `tidal config` command to manually set your credentials.
 
-For example, you can set your username and password with the two following commands:
+For example, you can set your username, password and URL with the three following commands:
 
 ```
 tidal config set tidal.email [set your email]
 tidal config set tidal.password [set your password]
-```
-
-And you can set the URL with the following command:
-
-```
 tidal config set tidal.url https://demo.tidalmg.com
 ```
 
@@ -62,7 +53,7 @@ tidal:
   email: my_user_name_here 
   password: my_secure_password_here 
   url: https://my_instance_name_here.tidalmg.com
-  ```
+```
 
 On macOS the config file is located: `$HOME/Library/Preferences/tidal/config.yaml`
 
@@ -71,7 +62,7 @@ On Linux systems it is: `$HOME/.config/tidal/config.yaml`
 And on Windows it is: `%AppData%\tidal\config.yaml`
 
 ### Environment Variables
-If you use environment variables these variables need to be set:
+You can specify your credentials as environment variables. If so, these variables need to be set:
 
 - `TIDAL_EMAIL`
 - `TIDAL_PASSWORD`
