@@ -67,7 +67,7 @@ To perform better diagnosis of any issues with Tidal Tools, some of the
 underlying activities performed by Tidal Tools are written to the log file. If
 you are having trouble with one of the Tidal Tools commands, you can reach us
 at [support@tidalmigrations.com](mailto:support@tidalmigrations.com) and send
-us your log file for us to investigate. 
+us your log file for us to investigate.
 
 The default locations of the log file are:
 
