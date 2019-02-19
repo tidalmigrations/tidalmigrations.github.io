@@ -15,6 +15,10 @@ Here we outline how to get started working with Tidal Tools via the command line
 Tidal Tools is a cross platform CLI utility that you can use to discover and analyze your applications.
 [Easily install Tidal Tools](https://get.tidal.sh) on your operating system.
 
+### Dependencies
+
+If you plan to use the `tidal analyze` command to analyze your source code (or soon your databases!) You will need to install Docker Community Edition. To install Docker on your system you can check [Docker's documentation directly](https://docs.docker.com/install/). Once installed you can [verify it is installed and working correctly](/troubleshooting.html) with the command `tidal doctor`.
+
 ## Using Tidal Tools
 To get started, from a new terminal or Powershell prompt, simply run:
 
