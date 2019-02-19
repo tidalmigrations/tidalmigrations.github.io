@@ -108,9 +108,9 @@ sidebars:
 - product2_sidebar
 - other
 
-description: "Getting started guides for using Tidal Migrations API."
 # the description is used in the feed.xml file
+description: "Guides for using and working with Tidal Migrations."
 
 # needed for sitemap.xml file only
 url: http://idratherbewriting.com
-baseurl:  
+baseurl:
