@@ -38,7 +38,9 @@ To authenticate with the API type `tidal login` and follow the prompts. This sho
 
 **We recommend that you utilise this command because it doesn't store your password.** If you must store the password, you can authenticate using the methods below.
 
-### Configuration file
+### Alternative authentication methods
+
+#### Configuration file
 
 Alternatively, you can use the `tidal config` command to manually set your credentials.
 
@@ -65,14 +67,14 @@ On Linux systems it is: `$HOME/.config/tidal/config.yaml`
 
 And on Windows it is: `%AppData%\tidal\config.yaml`
 
-### Environment Variables
+#### Environment Variables
 You can specify your credentials as environment variables. If so, these variables need to be set:
 
 - `TIDAL_EMAIL`
 - `TIDAL_PASSWORD`
 - `TIDAL_URL`
 
-### Dynamically
+#### Dynamically
 Alternatively you can pass in your credentials on each request as command line arguments using the following flags:
 
 ```
