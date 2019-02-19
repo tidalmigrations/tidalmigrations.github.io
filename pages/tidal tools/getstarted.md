@@ -34,7 +34,7 @@ Once you have Tidal Tools installed you need to configure access to the API. [Re
 There are several ways to authenticate with the Tidal Migrations API, we recommend the first one, `tidal login`, because your password is never persisted to disk.
 
 ### Tidal Login command {#login}
-To authenticate with the API type `tidal login` and follow the prompts. This should provide and store an access token for you that gives you access for 8 hours. Once it is expired, the user must login again and obtain another token. 
+To authenticate with the API type `tidal login` and follow the prompts. This should provide and store an access token for you that gives you access for 8 hours. Once it is expired, the user must login again and obtain another token.
 
 **We recommend that you utilise this command because it doesn't store your password.** If you must store the password, you can authenticate using the methods below.
 
@@ -53,9 +53,9 @@ tidal config set tidal.url https://demo.tidalmg.com
 Your credentials will be stored in a configuration file such as:
 
 ```
-tidal: 
-  email: my_user_name_here 
-  password: my_secure_password_here 
+tidal:
+  email: my_user_name_here
+  password: my_secure_password_here
   url: https://my_instance_name_here.tidalmg.com
 ```
 
@@ -82,7 +82,7 @@ Alternatively you can pass in your credentials on each request as command line a
 ```
 
 ## Testing connectivity and authentication
-Once you have set your credentials you can test your connectivity and authentication to the API with the ping command: 
+Once you have set your credentials you can test your connectivity and authentication to the API with the ping command:
 
 ```
 tidal ping
