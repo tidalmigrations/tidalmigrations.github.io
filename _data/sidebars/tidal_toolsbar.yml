@@ -60,6 +60,10 @@ entries:
       url: analyze-source-code.html
       output: web
 
+    - title: Database Analysis
+      url: analyze_database.html
+      output: web
+
   - title: Troubleshooting
     output: web, pdf
     folderitems:
