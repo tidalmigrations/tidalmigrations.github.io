@@ -63,11 +63,6 @@ GRANT SELECT ON SCHEMA::INFORMATION_SCHEMA TO [user_name]
 GRANT SELECT ON tempdb..sysobjects to [user_name]
 ```
 
-
-With your user and password, you can define all these values in a YAML configuration file:
-config.yml:
-
-
 You’re all set! You can now analyze the database with:
 
 ```
