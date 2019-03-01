@@ -9,12 +9,21 @@ folder: tidaltools
 ---
 # Analyze your Database
 Not sure how ready you are to move to the cloud? With Tidal Migrations you have the option to analyze the databases associated with your applications.
+
 The analysis will calculate the difficulty of migrating your databases to each target platform, and give details on database features that may complicate the migration.
-Capable of analyzing both Oracle and SQL Server databases. Providing analysis on migrating a database to a variety of services on AWS, Azure and Google Cloud.
-The entire analysis never queries or reads user or application data and does not collect database source code.
+
+Capable of analyzing both **Oracle and SQL Server databases**. Providing analysis on migrating a database to a **variety of services on AWS, Azure and Google Cloud**.
+
+> NB: The entire analysis never queries or reads user or application data and does not collect database source code.
 
 ## Migration Complexity
-The databases are analyzed to look for patterns and feature usage that may be difficult to migrate due to lack of support or compatibility in their new environment. They databases are analyzed based on their metadata, looking at specific schema objects that are used and the usage of proprietary features that will not be available in the target platforms. For example, in Oracle databases, the Data Dictionary and AWS repository tables are read and analyzed. The scoring is calculated based on the type of attribute, feature or schema object that is used and the frequency it is used throughout the database. For Oracle databases over 100 unique characteristics are considered. The difficulty is then calculated based on the identification of these characteristics in comparison with what is supported by each specific target database platform.
+The databases are analyzed to look for patterns and feature usage that may be difficult to migrate due to lack of support or compatibility in their new environment. The databases are analyzed based on their metadata, looking at specific schema objects that are used within your databases as well as the usage of proprietary features that will not be available in the target platforms.
+
+For example, in Oracle databases, the Data Dictionary and AWR repository tables are read and analyzed. The scoring is calculated based on the type of attributes, features or schema objects that are used and the frequency of use throughout the database.
+
+ - Over 100 unique characteristics are considered
+ - Feature-fit is executed against all supported cloud data platforms.
+ - Migration difficulty score is calculated based on a weighted model
 
 ## Getting Started
 - Be sure to have [logged in](tidal-tools.html#login) to your Tidal Migrations account via Tidal Tools.
