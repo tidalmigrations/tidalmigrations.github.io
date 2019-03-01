@@ -129,6 +129,17 @@ Hello from Tidal Migrations!
 
 Another option is to run `tidal doctor` and check the Docker section of the output.
 
+### Docker networking issues {#docker-networking}
+
+Sometimes [Docker has issues with DNS](https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues) and you may see an error like:
+
+```
+Error response from daemon: Get https://gcr.io/v2/: proxyconnect tcp: dial tcp: lookup http on 192.168.65.1:53: no such host
+```
+
+If so you can [update the DNS server used by docker](https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues) to `8.8.8.8`, as Docker recommends, to solve the issue.
+
+
 ## Windows specific troubleshooting {#windows}
 
 ### Setting up Docker for Windows to use Linux containers {#docker-linux-containers}
