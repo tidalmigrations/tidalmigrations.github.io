@@ -140,6 +140,20 @@ Error response from daemon: Get https://gcr.io/v2/: proxyconnect tcp: dial tcp: 
 If so you can [update the DNS server used by docker](https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues) to `8.8.8.8`, as Docker recommends, to solve the issue.
 
 
+### Specifying Docker Proxy
+
+If you need a proxy to access the internet and see an error that looks similar this:
+
+```
+Error response from daemon: Get https://gcr.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+```
+
+You may need to [configure Docker to use the proxy server](https://docs.docker.com/docker-for-windows/#proxies).
+
+**NB: If you need to authenticate with the proxy, be sure to include the username and password in the value, ie. 'http://proxy_userid:proxy_password@proxy_ip:proxy_port'**
+
+
+
 ## Windows specific troubleshooting {#windows}
 
 ### Setting up Docker for Windows to use Linux containers {#docker-linux-containers}
