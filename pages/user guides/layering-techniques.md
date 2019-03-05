@@ -10,14 +10,19 @@ permalink: discovery-techniques.html
 ---
 
 Cloud migration is the process of moving your data, applications, and other elements to the cloud. However, the path to the cloud can be long and painful without proper planning and execution.
-By following Tidal Migration's five discovery layering techniques, you will be migrating to the cloud with ease!
+By following Tidal Migration's six discovery layering techniques, you will be migrating to the cloud with ease!
 
+{% include image.html file="layered_discovery.png" caption="Tidal Migrations' layered approach to application discovery, for cloud migration." %}
+
+# Six Steps To Discovery Bliss
 
 ## 1) Import Your Spreadsheets
 
-If your already have some data collected in spreadsheets, the first step to begin your cloud migration project is importing a spreadsheet of Servers, Virtualization Clusters, Databases Instances and Applications. Tidal Migration's importer will guide you through mapping your columns to our fields, create your own fields and even make associations between dependencies if you have captured these.
+If your already have some data collected in spreadsheets, the first step to begin your cloud migration project is importing a spreadsheet of Virtualization Clusters, Servers, Databases Instances and Applications. Tidal Migration's importer will guide you through mapping your columns to our fields, create your own fields and even make associations between dependencies if you have captured these.
 
-_NB: See additional ways on importing your [applications](importapps.html) and [servers](import_servers.html)._
+_NB: See additional ways on importing your [applications](importapps.html) and [servers](import_servers.html) in the API docs._
+
+<hr />
 
 ## 2) Integrate Your Hypervisors
 
@@ -26,21 +31,24 @@ Tidal sync supports many server inventory management tools such as VMWare and Hy
 
 If you have VM Ware's vSphere, [`tidal sync vsphere`](#vsphere-sync) will handle everying with just read-only credentials required.
 
+
 ### Scheduling your sync:
 It is useful to setup a cron job or Windows Scheduled Task for this process, and we recommend synchronizing your inventories no more than once per day. 
 
 This will keep your resource inventory up to date and show you usage trends over time in the _Analyze_ feature.
 
+<hr />
 
 ## 3) Aggregate Server Usage Statistics
 
-Tidal Migrations provides you with a simple and effective way to gather machine statistics (RAM, Storage, CPU allocations and usage) from a Windows Server environment.
-We use WinRM to Invoke-Command across your servers, creating a JSON file which is securely sent to your Tidal Migrations instance using the tidal command.
+Tidal Migrations provides you with a simple and effective way to [gather machine statistics](https://github.com/tidalmigrations/machine_stats) (RAM, Storage, CPU allocations and usage) from Windows and UNIX/Linux server environmens.
+In Windows, we use WinRM to Invoke-Command across your servers, and for *NIX we leverage ansible. Both of these approaches output JSON which is securely sent to your Tidal Migrations instance using the tidal command.
 
-Checkout this [guide](sync_hyper-v.html) for a quick and clean approach to gathering server usage statistics. 
+Checkout this [guide](sync_hyper-v.html) for a quick and clean approach to gathering server usage statistics. See the [machine_stats](https://github.com/tidalmigrations/machine_stats) repository for more implementation details.
 
-_NB: Feel free to fork the repo and modify the PowerShell to suit your needs or show your security team.  This extensibility and transparency is core to our approach._
+_NB: Feel free to fork the repo and modify to suit your needs, or to show your security team and give them comfort.  This extensibility and transparency is core to our approach._
 
+<hr />
 
 ## 4) Fingerprint Web Applications 
 
@@ -59,8 +67,23 @@ Whether you have 1 or 1 million end points, Tidal Tools centralizes the data gat
 
 For detailed information and steps on analyzing your domains, be sure to checkout this [guide](analyze.html).
 
+<hr />
 
-## 5) Analyze Your Source Code
+## 5) Analyze Your Databases
+Analyze all of your databases in minutes and _measure_ the migration difficulty.
+
+After running `tidal analyze db your_config.yml` against your databases ([see guide](/analyze_database.html)), you will understand which database features in your Oracle or SQL Server installations make it difficult to adopt cloud-native database offerings and also identify which applications are connecting to your databases. 
+
+With over 100 unique characteristics considered, comparisons are made with the data platforms available in the cloud(s) you are migrating to which provide you with _data-driven insights_ for planning your cloud migration.
+
+Follow the steps in [the guide](/analyze_database.html), and you will be
+able to quantify the difficulty in migrating your database from Oracle
+to PostreSQL; or from SQL Server to AWS Aurora etc.
+
+<hr />
+
+
+## 6) Analyze Your Source Code
 
 Finally, to find the applications which will migrate more easily to
 cloud-native technologies you can analyze your source code and rank
@@ -85,8 +108,9 @@ tidal analyze --app-id 111 .
 ```
 To find additional information about this feature, visit the [guide](analyze-source-code.html) on analyzing your source code.
 
+<hr />
 
-## Conclusion
+# Conclusion
 Immediately getting an idea of the size and scope of your migration is
 critical to successful cloud migration planning.
 
