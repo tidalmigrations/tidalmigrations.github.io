@@ -112,5 +112,10 @@ sidebars:
 description: "Guides for using and working with Tidal Migrations."
 
 # needed for sitemap.xml file only
-url: http://idratherbewriting.com
-baseurl:
+url: "https://guides.tidalmg.com"
+baseurl: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
