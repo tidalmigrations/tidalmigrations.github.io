@@ -34,7 +34,7 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 - You will also need a few authentication and configuration details for the database:
   - id - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
   - engine - The database vendor, either `Oracle` or `SQL Server`, it is not case sensitive.
-  - host - The host that the database is running on and is accessible to access.
+  - host - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
   - port - The port that the host has open and the database can accept connections on, the default for Oracle is 1521, and for SQL Server it is 1433.
   - db_name - The name of the database that will be analyzed, as it is defined within the database engine itself. ie. the value that is used by applications to connect to the database by name.
   - user - A username to authenticate with the database with, see below for more details.
