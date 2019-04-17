@@ -7,7 +7,6 @@ sidebar: tidal_toolsbar
 permalink: analyze_database.html
 folder: tidaltools
 ---
-# Analyze your Database
 Not sure how ready you are to move to the cloud? With Tidal Migrations you have the option to analyze the databases associated with your applications.
 
 The analysis will calculate the difficulty of migrating your databases to each target platform, and give details on database features that may complicate the migration.
