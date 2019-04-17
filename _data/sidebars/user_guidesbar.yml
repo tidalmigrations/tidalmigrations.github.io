@@ -35,4 +35,7 @@ entries:
     - title: Troubleshooting Ansible Tower Integration
       url: troubleshoot-ansible.html
       output: web
-    
+
+    - title: Exporting Servers From A Move Group
+      url: exporting-servers-to-csv.html
+      output: web
