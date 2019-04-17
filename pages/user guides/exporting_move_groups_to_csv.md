@@ -18,6 +18,7 @@ This guides assumes you have access to a Linux like environment, you will need:
 -   Posix compliant shell
 -   [Curl](https://curl.haxx.se/download.html)
 -   [jq](https://stedolan.github.io/jq/)
+-   [A copy of our move group script](https://github.com/tidalmigrations/gists/blob/master/move_group_to_csv.sh)
 
 
 # Steps
