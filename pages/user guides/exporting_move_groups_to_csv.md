@@ -55,4 +55,4 @@ You're ready to run the script and export this information to a CSV. Now that yo
 
     ./move_group_to_csv.sh > move_group.csv
 
-Now the data you need for your server migration is in the file move_group.csv.
+Now the data you need for your server migration is in the file move_group.csv and can be imported into Rivermeadow.
