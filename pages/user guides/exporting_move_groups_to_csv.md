@@ -33,10 +33,11 @@ To authenticate to your account, we'll need to collect the subdomain, username, 
 
 Once you have gathered this information, you'll need set it as an environment variable, substitute in your information to the commands below and run them in your shell:
 
+```
     export username="<your username>"
     export password="<your password>"
     export subdomain="<your subdomain>"
-
+```
 
 ## 2. Gather Move Group ID
 
