@@ -51,7 +51,7 @@ Once you have this number, like you did in step 1, export the `move_group_id` as
 
 ## 3. Run the script
 
-Finally, you're ready to run the script and export this information to a CSV. Now that you have gathered the required informaiton and saved it in `move_group_to_csv.sh`, you will need to run script and pipe the output to a csv file. An example of this can be found below.
+You're ready to run the script and export this information to a CSV. Now that you have gathered the required information and saved it in `move_group_to_csv.sh`, you will need to run script and pipe the output to a CSV file:
 
     ./move_group_to_csv.sh > move_group.csv
 
