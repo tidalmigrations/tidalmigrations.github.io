@@ -29,7 +29,6 @@ This guides assumes you have access to a Linux like environment, you will need:
 To authenticate to your account, we'll need to collect the subdomain, username, password. If you don't know what your subdomain is you can find it here:
 
 {% include image.html file="subdomain.png" caption="An image highlighting how to find your organization's subdomain." %}
-![img](./subdomain.png)
 
 Once you have gathered this information, you'll need set it as an environment variable, substitute in your information to the commands below and run them in your shell:
 
