@@ -12,7 +12,7 @@ folder: tidaltools
 Not sure how ready you are to move to the cloud? With Tidal Migrations you have
 the option to analyze your specified source code associated with the applications.
 
-The analysis will identify the difficulty to migrate your applications to the cloud, including the number of blocking issues identified. It is able to analyze source code written in C#, VB/VB.net, Java or T-SQL, Python and PHP.
+The analysis will identify the difficulty to migrate your applications to the cloud, including the number of blocking issues identified. It is able to analyze source code written in C#, VB/VB.net, Java or T-SQL, Python, PHP, JavaScript and TypeScript.
 
 If you are interested in a deeper dive source code assessment, an analysis on code written in Java, COBOL, SAP (Abap), C/C++, C#, Objective-C, PHP, Javascript, Python, JSP, Oracle PL/SQL, Microsoft Transact-SQL, Visual Basic, VB.Net, VB6, PL1 or Shell/BASH scripts can be done, if you are interested let us know at info@tidalmigrations.com.
 
