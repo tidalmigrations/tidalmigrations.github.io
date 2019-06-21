@@ -3,7 +3,7 @@ title: Troubleshooting Ansible Tower Integration
 keywords: ansible tower, troubleshoot, integration
 last_updated: August, 2018
 summary: "Troubleshoot any issues that arise when configuring Ansible Tower"
-sidebar: user_guidesbar
+sidebar: main_sidebar
 permalink: troubleshoot-ansible.html
 ---
 
@@ -11,7 +11,7 @@ Here we outline some issues that can arise when configuring Ansible Tower to int
 
 ## Troubleshooting Sync Jobs
 
-When a sync job is running you can easily check the status of it from the Jobs tab. 
+When a sync job is running you can easily check the status of it from the Jobs tab.
 Navigate to the Jobs page and click on the job you are interested in.
 
 {% include image.html file="troubleshoot1.png" %}

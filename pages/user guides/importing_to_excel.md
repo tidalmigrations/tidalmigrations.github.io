@@ -3,12 +3,12 @@ title: Importing Data from Excel
 keywords: excel, import, apps, data, servers, clusters, database instances
 last_updated: August, 2018
 summary: "Easily import your Excel spreadsheets into Tidal Migrations"
-sidebar: user_guidesbar
+sidebar: main_sidebar
 permalink: import-from-excel.html
 ---
 
-Tidal Migration's importer will guide you through mapping your columns to our fields, 
-create your own fields and even make associations between dependencies 
+Tidal Migration's importer will guide you through mapping your columns to our fields,
+create your own fields and even make associations between dependencies
 if you have captured these.
 
 You can import your Excel spreadsheets into Tidal Migrations by visiting:
@@ -26,16 +26,16 @@ You should import your data in the following order:
 4. Applications
 
 This order is especially important if you are planning to import dependencies for your Databases and Applications.
-Ie. If your Application has a dependency on a server, you need to have that server imported first for the dependency to be imported correctly. 
+Ie. If your Application has a dependency on a server, you need to have that server imported first for the dependency to be imported correctly.
 
 
 {% include note.html content="You can always update a dependency after importing too."  %}
 
 You should have one sheet or file per type of record.
 
-There are several default columns included for each record type, 
-however if you have additional information you can add fields for a record and also track those. 
-If this is the case you should do this before you import your data. 
+There are several default columns included for each record type,
+however if you have additional information you can add fields for a record and also track those.
+If this is the case you should do this before you import your data.
 
 ## Importing your data
 

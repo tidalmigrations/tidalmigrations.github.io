@@ -3,7 +3,7 @@ title: Analyze your Source Code
 keywords: source, assessment, readiness, analyze, code, application
 last_updated: July, 2018
 summary: "Use Tidal Tools source code analysis feature to measure your application code bases for cloud PaaS migration difficulty."
-sidebar: tidal_toolsbar
+sidebar: main_sidebar
 permalink: analyze-source-code.html
 folder: tidaltools
 ---

@@ -4,9 +4,9 @@ title: Layering Discovery Techniques
 keywords: sync, import, discover, analyze, source code, discovery plan
 last_updated: July, 2018
 summary: "A quick guide on the various discovery techniques and how to layer them together to quickly and accurately discover your environment"
-sidebar: user_guidesbar
+sidebar: main_sidebar
 folder: userguides
-permalink: discovery-techniques.html
+permalink: index.html
 ---
 
 Cloud migration is the process of moving your data, applications, and other elements to the cloud. However, the path to the cloud can be long and painful without proper planning and execution.
@@ -33,7 +33,7 @@ If you have VM Ware's vSphere, [`tidal sync vsphere`](#vsphere-sync) will handle
 
 
 ### Scheduling your sync:
-It is useful to setup a cron job or Windows Scheduled Task for this process, and we recommend synchronizing your inventories no more than once per day. 
+It is useful to setup a cron job or Windows Scheduled Task for this process, and we recommend synchronizing your inventories no more than once per day.
 
 This will keep your resource inventory up to date and show you usage trends over time in the _Analyze_ feature.
 
@@ -50,11 +50,11 @@ _NB: Feel free to fork the repo and modify to suit your needs, or to show your s
 
 <hr />
 
-## 4) Fingerprint Web Applications 
+## 4) Fingerprint Web Applications
 
 **a.)** The initial step in your cloud journey is discovering what you have.
-It can be hard to remain informed about all the domains and applications 
-hosted in your environment, which is why we created the `tidal discover` command. 
+It can be hard to remain informed about all the domains and applications
+hosted in your environment, which is why we created the `tidal discover` command.
 With your customized _Discovery Plan_ you can obtain both private and public domains
 within your datacentres in under 60 seconds.
 
@@ -62,7 +62,7 @@ within your datacentres in under 60 seconds.
 
 **b.)** With a list of domains in hand, the next step is to _analyze_ the applications hosted on these domains.
 
-`tidal analyze` will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, _without needing to install agents._ 
+`tidal analyze` will fingerprint the technology on both your internet sites and intranet applications behind your firewall in seconds, _without needing to install agents._
 Whether you have 1 or 1 million end points, Tidal Tools centralizes the data gathered into our platform for you to analyze further and plan with, simplifying your application centric cloud migration.
 
 For detailed information and steps on analyzing your domains, be sure to checkout this [guide](analyze.html).
@@ -72,7 +72,7 @@ For detailed information and steps on analyzing your domains, be sure to checkou
 ## 5) Analyze Your Databases
 Analyze all of your databases in minutes and _measure_ the migration difficulty.
 
-After running `tidal analyze db your_config.yml` against your databases ([see guide](/analyze_database.html)), you will understand which database features in your Oracle or SQL Server installations make it difficult to adopt cloud-native database offerings and also identify which applications are connecting to your databases. 
+After running `tidal analyze db your_config.yml` against your databases ([see guide](/analyze_database.html)), you will understand which database features in your Oracle or SQL Server installations make it difficult to adopt cloud-native database offerings and also identify which applications are connecting to your databases.
 
 With over 100 unique characteristics considered, comparisons are made with the data platforms available in the cloud(s) you are migrating to which provide you with _data-driven insights_ for planning your cloud migration.
 
@@ -116,7 +116,7 @@ critical to successful cloud migration planning.
 
 Our goal at Tidal Migrations is to provide you with useful information
 within 60 seconds of signup, and letting you layer in additional
-information from discovery sources as needed.  
+information from discovery sources as needed.
 
 _You do not need to spend weeks and months installing discovery systems
 to start planning your cloud migration any more._

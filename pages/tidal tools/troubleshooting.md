@@ -4,7 +4,7 @@ keywords: tidal doctor, yaml, docker, linux, windows, log, log file, powershell,
 last_updated: Dec 13, 2018
 summary: |
     If you are having problems related to Tidal Tools, the following tips should help you getting things working.
-sidebar: tidal_toolsbar
+sidebar: main_sidebar
 permalink: troubleshooting.html
 folder: tidaltools
 ---

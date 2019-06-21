@@ -3,7 +3,7 @@ title: Tidal Tools Autocompletion
 keywords: autocomplete, tab, linux, macos, bash
 last_updated: April 24, 2018
 summary: "Setting up autocompletion for Tidal Tools"
-sidebar: tidal_toolsbar
+sidebar: main_sidebar
 permalink: autocompletion.html
 folder: tidaltools
 ---
@@ -32,12 +32,12 @@ sudo apt install bash-completion
 
 Now, to enable the autocompletion feature to your *current* shell, run:
 ```
-source <(tidal completion bash) 
+source <(tidal completion bash)
 ```
 
 The following command will set up Tidal autocompletion to your profile, so that it is automatically enabled for any new shell session you open.
 ```
-echo "source <(tidal completion bash)" >> ~/.bashrc 
+echo "source <(tidal completion bash)" >> ~/.bashrc
 ```
 
 ## macOS
@@ -49,7 +49,7 @@ If not, you can install bash-completion via [Homebrew](https://brew.sh/).
 
 Next, if you are running *Bash 3.2*, run:
 ```
-brew install bash-completion 
+brew install bash-completion
 
 ```
 or if you are running *Bash 4.1+*

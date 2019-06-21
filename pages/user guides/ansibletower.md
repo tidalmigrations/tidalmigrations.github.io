@@ -4,16 +4,16 @@ title: Integrating with Ansible Tower
 keywords: sync, import, discover, analyze, source code, discovery plan
 last_updated: July, 2018
 summary: "A walk through on how to integrate Tidal Migrations with Ansible Tower."
-sidebar: user_guidesbar
+sidebar: main_sidebar
 folder: userguides
 permalink: ansible-tower.html
 ---
 
-Here we will walk through how to integrate Tidal Migrations with Ansible Tower. 
-This will allow your Ansible Tower instance to use any servers from Tidal Migrations as possible targets to launch jobs against. 
-It will also allow us to completely synchronize the available servers in our environment between the two 
-applications so our Ansible Tower inventory is always up to date. 
-Further, we are able to specify and segregate our hosts into discrete groups based 
+Here we will walk through how to integrate Tidal Migrations with Ansible Tower.
+This will allow your Ansible Tower instance to use any servers from Tidal Migrations as possible targets to launch jobs against.
+It will also allow us to completely synchronize the available servers in our environment between the two
+applications so our Ansible Tower inventory is always up to date.
+Further, we are able to specify and segregate our hosts into discrete groups based
 on their categorization of tags from the Tidal Migrations API.
 
 
@@ -48,10 +48,10 @@ See [here](https://docs.ansible.com/ansible-tower/latest/html/administration/cus
 
 ## Add an Inventory
 
-An [Inventory](https://docs.ansible.com/ansible-tower/3.0.3/html/installandreference/glossary.html#term-inventory) is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. 
-Inventories are divided into groups and these groups contain the actual hosts. 
-Groups may be sourced manually, by entering host names into Tower, from one of Ansible Tower’s supported cloud providers or from a custom inventory script. 
-In this case we will be setting up an inventory and a group to populate hosts from the custom inventory script we have just added. 
+An [Inventory](https://docs.ansible.com/ansible-tower/3.0.3/html/installandreference/glossary.html#term-inventory) is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file.
+Inventories are divided into groups and these groups contain the actual hosts.
+Groups may be sourced manually, by entering host names into Tower, from one of Ansible Tower’s supported cloud providers or from a custom inventory script.
+In this case we will be setting up an inventory and a group to populate hosts from the custom inventory script we have just added.
 If you already have an inventory setup you can skip this step and continue below by adding a group.
 
 
@@ -84,14 +84,14 @@ in Ansible that can be addressed as a set, of which many may exist within a sing
 
 4. You must specify the Source to be 'Custom Script' and select the script you have previously added under Custom Inventory Script.
 
-5. Now specify the following environment variables for the script to use: 
+5. Now specify the following environment variables for the script to use:
 
     - TIDAL_DOMAIN
     - TIDAL_EMAIL
     - TIDAL_PASSWORD
 
 
-These are needed to allow the script to locate and authenticate your Tidal Migrations API. 
+These are needed to allow the script to locate and authenticate your Tidal Migrations API.
 If the environment the script is running in will need a proxy to access your Tidal Migrations API you can set two environment variables for the proxy address with:
 
 - HTTP_PROXY
@@ -104,7 +104,7 @@ Also see [here](https://docs.ansible.com/ansible-tower/latest/html/userguide/inv
 
 ## Setting a Sync Schedule
 
-You can specify a schedule for the inventory script to run on automatically. 
+You can specify a schedule for the inventory script to run on automatically.
 This allows Ansible Tower to automatically sync and update the available hosts.
 
 1. Begin by locating the inventory and the group we want to schedule.
@@ -117,18 +117,18 @@ This allows Ansible Tower to automatically sync and update the available hosts.
 3. Click the 'Add' button to add a new schedule.
 
     {% include image.html file="Ansible9.png" %}
-    
+
 4. Fill out all the needed criteria for the schedule and click save.
-    
+
     {% include image.html file="Ansible10.png" %}
-    
+
 See [here](https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html#add-a-new-schedule) for the latest instructions on creating a Schedule.
 
 ## Custom Configuration
 
-A configuration file can optionally be provided to customize the results returned by the script. 
-This configuration allows your to filter the servers that are returned from the Tidal Migrations API based on their tags. 
-This allows you to create groups within Ansible Tower that correspond to specific sets of servers from your Tidal Migrations Application. Additionally, you are able to specify the property used to represent the host name in Ansible Tower. 
+A configuration file can optionally be provided to customize the results returned by the script.
+This configuration allows your to filter the servers that are returned from the Tidal Migrations API based on their tags.
+This allows you to create groups within Ansible Tower that correspond to specific sets of servers from your Tidal Migrations Application. Additionally, you are able to specify the property used to represent the host name in Ansible Tower.
 If no configuration file is provided the script will use the default values specified below.
 
 To use the configuration file:
@@ -138,29 +138,29 @@ To use the configuration file:
 
 `CONFIG_PATH: /opt/tidal/tidal_config.yml`
 
-This environment variable is set in the same manner as the other environment variables above. 
+This environment variable is set in the same manner as the other environment variables above.
 
 An example configuration file could look like this:
 
 ```
 property: "fqdn"
 
-groups: 
-  non-test: 
-    logic: None 
-    tags: 
-      - TEST 
-  production: 
+groups:
+  non-test:
+    logic: None
+    tags:
+      - TEST
+  production:
     logic: Any
-    tags: 
+    tags:
       - PROD
       - Production
 
-filter-tags: 
-  logic: Any 
-  tags: 
+filter-tags:
+  logic: Any
+  tags:
     - TEST
-    
+
 ```
 
 All three keys; property, groups and filter-tags are optional. The groups key has precedence over the filter-tags key, and therefore filter-tags will be ignored if groups is present.
@@ -175,7 +175,7 @@ Note that this property must be unique across all servers.
 
 The default value for property is 'fqdn' when it is not specified.
 
- 
+
 **groups**
 
 The groups key can be used to specify sets of tags to define one or more groups of servers. The tags correspond to tags from the Tidal Migrations Application.
@@ -189,8 +189,8 @@ Each key for groups is any arbitrary name that will define the group in Ansible 
 - Options:
     - **Any**: specifies that an application is included when it has one of listed tags.
     - **All**: specifies that an application is included when it has all of the listed tags.
-    - **None**: specifies that an application is included when it has none of the tags specified. 
-  
+    - **None**: specifies that an application is included when it has none of the tags specified.
+
 
 **filter-tags**
 
@@ -202,7 +202,7 @@ The accepted keys and structure for this tag is identical to the 'groups', just 
 
 This parameter is optional, if there is no key then all servers will be returned.
 
- 
+
 
 ## Summary
 

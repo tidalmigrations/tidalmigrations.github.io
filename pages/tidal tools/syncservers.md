@@ -3,12 +3,12 @@ title: Sync your Server Inventory (and other resources)
 keywords: servers, sync, transform, apps, database instances
 last_updated: June 5, 2018
 summary: "Sync your data with Tidal Migrations"
-sidebar: tidal_toolsbar
+sidebar: main_sidebar
 permalink: sync-servers.html
 folder: tidaltools
 ---
 
-After having [installed](tidal-tools.html#install) Tidal Tools, begin to sync your inventories with `tidal sync servers`. Tidal sync supports many server inventory management tools such as 
+After having [installed](tidal-tools.html#install) Tidal Tools, begin to sync your inventories with `tidal sync servers`. Tidal sync supports many server inventory management tools such as
 VMWare, HyperV, and more.
 
 ## What is Syncing?
@@ -76,7 +76,7 @@ We recommend that you setup your inventories to sync *every 24 hours*, this will
 
 ### Transforming your data
 
-If your document is not formatted as the above, not to worry. 
+If your document is not formatted as the above, not to worry.
 
 Suppose you have a [**csv** file](servers.csv).
 
@@ -110,11 +110,11 @@ def transform(input)
         props[:custom_fields] = {:tcp_port          => vm[:custom_fields_tcp_port],
                                  :database_software => vm[:custom_fields_database_software],
                                  :database_version  => vm[:custom_fields_version]}
-        
+
         props[:assigned_id]  = vm[:assigned_id].to_s
         props[:virtual] = to_bool(vm[:virtual])
         c = vm.merge(props)
-        data[:servers].push c   
+        data[:servers].push c
     end
     # display data in pretty json format
     puts JSON.pretty_generate(data)
@@ -156,8 +156,8 @@ The syncronization of your Applications can be performed by following the above 
       "custom_fields": {
         "Technologies": "Approval Management System DB"
       },
-      "description": "This is a general purpose application that has several functionalities. 
-      The first functionality is that it is a demo application. The second functionality is 
+      "description": "This is a general purpose application that has several functionalities.
+      The first functionality is that it is a demo application. The second functionality is
       that it could be a real application as well.",
       "servers": [{
         "host_name": "trpewrcapbiz02"

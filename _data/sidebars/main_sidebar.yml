@@ -1,68 +1,92 @@
-# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
-
 entries:
 - title: sidebar
-  product: Tidal Migrations API
-  version: 1.0
+  product: Tidal Migrations Guides
   folders:
+  - title: Introduction
+    output: web
+    folderitems:
+    - title: Layering Discovery Techniques
+      output: web
+      url: index.html
+    - title: Setup Tidal Tools
+      output: web
+      url: tidal-tools.html
+    - title: Tidal Tools Autocompletion
+      output: web
+      url: autocompletion.html
 
-  - title:
-    output: pdf
-    type: frontmatter
-    folderitems:
-    - title:
-      url: /titlepage.html
-      output: pdf
-      type: frontmatter
-    - title:
-      url: /tocpage.html
-      output: pdf
-      type: frontmatter
-  
-  
-  - title: Overview
-    output: web, pdf
-    folderitems:
-    
-    - title: Getting Started
-      url: /index.html
-      output: web, pdf
-      type: homepage
-      
-    - title: Authentication
-      url: /authenticate.html
-      output: web, pdf
-      type: homepage
-      
-    - title: Using with Postman
-      url: /postman_docs.html
-      output: web, pdf
-  
-  
   - title: Discover
-    output: web, pdf
+    output: web
     folderitems:
-      
-    - title: Importing Applications
-      url: /importapps.html
-      output: web, pdf
-    
-    - title: Importing Servers
-      url: /import_servers.html
-      output: web, pdf
+    - title: Importing Data From Excel
+      output: web
+      url: import-from-excel.html
+    - title: Tidal Discover
+      output: web
+      url: discover.html
+    - title: Tidal Analyze
+      output: web
+      url: analyze.html
+    - title: Sync your Server Inventory
+      output: web
+      url: sync-servers.html
+    - title: Integrating with Hyper-V
+      output: web
+      url: sync_hyper-v.html
+    - title: Integrating with vSphere
+      output: web
+      url: vsphere.html
+    - title: Integrating with Ansible Tower
+      output: web
+      url: ansible-tower.html
 
   - title: Assess
-    output: web, pdf
+    output: web
     folderitems:
-
+    - title: Source Code Analysis
+      output: web
+      url: analyze-source-code.html
+    - title: Database Analysis
+      output: web
+      url: analyze_database.html
     - title: Creating interview questions
+      output: web
       url: /createinterviewquestions.html
-      output: web, pdf
 
   - title: Plan
-    output: web, pdf
+    output: web
     folderitems:
-      
     - title: Getting Apps and Resources within your Move Group
+      output: web
       url: /getallmovegroups.html
-      output: web, pdf
+
+  - title: API
+    output: web
+    folderitems:
+    - title: Getting Started
+      output: web
+      url: /api_getting_started.html
+      type: homepage
+    - title: Authentication
+      output: web
+      url: /authenticate.html
+      type: homepage
+    - title: Importing Applications
+      output: web
+      url: /importapps.html
+    - title: Importing Servers
+      output: web
+      url: /import_servers.html
+    - title: Using with Postman
+      output: web
+      url: /postman_docs.html
+
+  - title: Troubleshooting
+    output: web
+    folderitems:
+    - title: Troubleshooting
+      output: web
+      url: troubleshooting.html
+    - title: Troubleshooting Ansible Tower Integration
+      output: web
+      url: troubleshoot-ansible.html
