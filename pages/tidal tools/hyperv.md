@@ -3,7 +3,7 @@ title: Gather Windows Machine Statistics
 keywords: hyperv, windows, hypervisor, powershell, servers
 last_updated: July, 2018
 summary: "Gather windows machine statistics from a Windows Server environment"
-sidebar: tidal_toolsbar
+sidebar: main_sidebar
 permalink: sync_hyper-v.html
 folder: tidaltools
 ---
@@ -15,7 +15,7 @@ Tidal sync supports many server inventory management tools such as VMWare, Hyper
 
 ## Introduction
 
-This is a simple and effective way to gather machine statistics (RAM, Storage, CPU) from a Windows Server environment. 
+This is a simple and effective way to gather machine statistics (RAM, Storage, CPU) from a Windows Server environment.
 It uses WinRM to Invoke-Command across your servers, creating a JSON file to securely send to your Tidal Migrations instance using the tidal command.
 
 ## Requirements and Dependencies
@@ -37,7 +37,7 @@ Start syncing your HyperV with Tidal Migrations, by running the script: `runner.
 
 2. Then, run the script: `save_password.ps1` and enter your password when prompted. This will save your credentials securely in a text file.
 
-3. Save a list of the server hostnames that you would like to sync in a file called: _servers.txt_. 
+3. Save a list of the server hostnames that you would like to sync in a file called: _servers.txt_.
 The data of these servers will be shown in a table, with numerical values rounded to the nearest second decimal.
 
 {% include note.html content="We recommend that you set this script to run periodically so that your HyperV servers are synced on a daily basis and the data is up to date. Here is an [example]( https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example--scripting-) of a scripting task in powershell that runs daily."%}
