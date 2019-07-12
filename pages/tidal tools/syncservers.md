@@ -1,7 +1,7 @@
 ---
 title: Sync your Server Inventory (and other resources)
 keywords: servers, sync, transform, apps, database instances
-last_updated: June 5, 2018
+last_updated: July 12, 2019
 summary: "Sync your data with Tidal Migrations"
 sidebar: main_sidebar
 permalink: sync-servers.html
@@ -132,6 +132,10 @@ Change the file permissions to make the script executable using:
 You can now utlise your script with a given CSV file and it will be synced to your account via the API. Utlise the command below:
 
 ``` cat some_file.csv | ./transform.rb | tidal sync servers ```
+
+## How do I sync my servers in more automated fashion?
+
+Instead of manually providing all of your servers details, you can utilize [Machine Status](https://github.com/tidalmigrations/machine_stats) utility to gather all the stats from your servers environment. Follow the Machine Stats installation and configuration steps available on the tool's [GitHub page](https://github.com/tidalmigrations/machine_stats).
 
 ## How do I sync other resources?
 
