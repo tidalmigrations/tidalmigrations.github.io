@@ -423,7 +423,7 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     font-weight: bold;
 }
 
