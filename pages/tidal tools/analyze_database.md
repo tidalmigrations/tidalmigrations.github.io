@@ -70,12 +70,12 @@ config.yml:
 databases:
   - id: 111
     engine: Oracle
-    host: ‘my-db-host.com’
+    host: 'my-db-host.com'
     port: 1521
-    db_name: ‘orcl’
-    user: ‘tidal’
-    password: ‘yoursecurepassword1234!’
-    name: ‘My-Test-DB’
+    db_name: 'orcl'
+    user: 'tidal'
+    password: 'yoursecurepassword1234!'
+    name: 'My-Test-DB'
 ```
 
 {% include note.html content="It is best to use quotations, either double or single, around the values in the configuration file. To avoid special characters, : { } [ ] , & * # ? | - < > = ! % @ \ \n from being interpreted. Single quotes are safest, if the value has a single quote within it, you can include it by using a two single quotations, ie. `'my''string'` - will become `my'string`." %}
