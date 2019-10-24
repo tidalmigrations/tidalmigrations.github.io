@@ -58,6 +58,8 @@ cd /path/to/source-code
 tidal analyze code --app-id 111
 ```
 
+**You can get the ID for _your_ application from the end of the URL, in the address bar in your browser, when viewing the application in Tidal Migrations online.**
+
 Once it is complete you can view your application and the newly updated data in Tidal Migrations, it can take a couple minutes for the data to be processed and uploaded.
 
 Try it out!
