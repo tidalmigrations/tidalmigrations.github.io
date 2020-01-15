@@ -19,7 +19,7 @@ Tidal Tools is a cross platform CLI utility that you can use to discover and ana
 
 If you plan to use the `tidal analyze` command to analyze your source code (or soon your databases!) You will need to install Docker Community Edition. To install Docker on your system you can check [Docker's documentation directly](https://docs.docker.com/install/). Once installed you can [verify it is installed and working correctly](/troubleshooting.html) with the command `tidal doctor`.
 
-Docker for Windows supports both Linux containers and Windows containers, however **Tidal Tools work only if your Docker installation was switched to Linux containers**. [Set up Docker for Windows to use Linux containers](/troubleshooting.html#docker-linux-containers).
+Docker for Windows supports both Linux containers and Windows containers, however **Tidal Tools works when your Docker installation is set to to use Linux containers**. [Set up Docker for Windows to use Linux containers](/troubleshooting.html#docker-linux-containers).
 
 ## Using Tidal Tools
 To get started, from a new terminal or Powershell prompt, simply run:
