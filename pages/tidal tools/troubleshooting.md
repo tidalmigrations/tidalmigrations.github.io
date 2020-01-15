@@ -159,7 +159,7 @@ You may need to [configure Docker to use the proxy server](https://docs.docker.c
 ### Setting up Docker for Windows to use Linux containers {#docker-linux-containers}
 
 Docker for Windows supports both Linux containers and Windows containers,
-however Tidal Tools work only if your Docker installation was switched to Linux
+however Tidal Tools works when your Docker installation is set to to use Linux
 containers.
 
 To check if your Docker installation was configured to use Linux containers
