@@ -16,3 +16,7 @@ permalink: source_code_insights.html
  - Once access has been enabled for your account. For any application that you have analyzed the source code, you can find full set of analysis results for that application from the 'Source Code Insights' menu item:
 
 <img src="images/access_source_code_insights.png">
+
+- You should see a window like this:
+
+<img src="images/view_source_code_insights.png" >
