@@ -55,7 +55,9 @@ entries:
     - title: Creating interview questions
       output: web
       url: /createinterviewquestions.html
-
+    - title: Exporting IP Addresses
+      output: web
+      url: /export_ip_addresses.html
   - title: Plan
     output: web
     folderitems:
