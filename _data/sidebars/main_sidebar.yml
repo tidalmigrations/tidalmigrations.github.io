@@ -13,7 +13,7 @@ entries:
       url: tidal-tools.html
     - title: Setup Tidal Tools on AWS
       output: web
-      url: aws.html
+      url: tidal-tools-aws.html
     - title: Tidal Tools Autocompletion
       output: web
       url: autocompletion.html
