@@ -28,7 +28,7 @@ To summarize,
 * Signing up and using the API is optional when using Tidal Tools;
 * Tidal Tools can be used independently of the API for some features, while some features do require access to the API to be used.
 
-To see what you can do with the `tidal` checkout some of our other articles about [creating sync jobs](sync-servers.html) or[ analyzing your applications](analyze.html) via their URLs.
+To see what you can do with `tidal`, checkout some of our other articles about [creating sync jobs](sync-servers.html) or[ analyzing your applications](analyze.html) via their URLs.
 
 ## Troubleshooting
 
