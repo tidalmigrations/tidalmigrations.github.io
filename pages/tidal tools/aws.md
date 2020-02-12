@@ -20,7 +20,7 @@ tidal
 
 The optput from the above command should list all the available Tidal Tools subcommands. Running `tidal help <subcommand>` or `tidal <subcommand> --help` (change `<subcommand>` with the actual subcommand from the list) will show more information about that subcommand.
 
-Some of the subcommands, for example `tidal analyze`, work independently and immediately procive results. While some other subcommands, for example `tidal analyze code` require API subscription.
+Some of the subcommands, for example `tidal analyze`, work independently and immediately provide results. While some other subcommands, for example `tidal analyze code`, require access to the Tidal Migrations API.
 
 To summarize,
 
