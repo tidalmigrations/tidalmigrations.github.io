@@ -25,8 +25,8 @@ Some of the subcommands, for example `tidal analyze`, work independently and imm
 To summarize,
 
 * Tidal Tools seamlessly integrates with the [Tidal Migrations API](tidal-tools.html#connecting-to-the-api) and SaaS platform;
-* Signing up and using the API is optional when using Tidal Tools;
-* Tidal Tools can be used independently of the API for some features, while some features do require access to the API to be used.
+* Tidal Tools can be used independently of the API for some features, while some features do require access to the API to be used;
+* Signing up and using the API is optional when using Tidal Tools.
 
 To see what you can do with `tidal`, checkout some of our other articles about [creating sync jobs](sync-servers.html) or[ analyzing your applications](analyze.html) via their URLs.
 
