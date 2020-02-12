@@ -12,7 +12,7 @@ folder: tidaltools
 
 ## Using Tidal Tools
 
-Tidal Tools is a command-line application. Such applications are also called CLI (command-line interface) applications. To operate it needs to be run from terminal or command-line prompt. Connect to your Tidal Tools AWS virtual machine (VM) and run the following command (i.e type the text written with monospaced font and press Enter key):
+Tidal Tools is a command-line application. Such applications are also called CLI (command-line interface) applications. To operate it needs to be run from a terminal or command-line prompt. Connect to your Tidal Tools AWS virtual machine (VM) and run the following command (i.e type the text written with monospaced font and press Enter key):
 
 ```
 tidal
