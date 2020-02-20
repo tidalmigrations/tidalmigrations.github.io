@@ -61,6 +61,9 @@ entries:
     - title: Exporting IP Addresses
       output: web
       url: /export_ip_addresses.html
+    - title: Get IP Addresses by Application Tag
+      output: web
+      url: /tag-to-ip-addresses.html
   - title: Plan
     output: web
     folderitems:
