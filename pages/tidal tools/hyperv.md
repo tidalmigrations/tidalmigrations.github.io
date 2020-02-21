@@ -20,10 +20,9 @@ It uses WinRM to Invoke-Command across your servers, creating a JSON file to sec
 
 ## Requirements and Dependencies
 
-Prior to the steps on syncing your hypervisors, be sure to have the below dependencies installed:
+Prior to the steps on syncing your hypervisors, be sure to have the below dependencies setup:
 
-- [Dos2Unix](https://waterlan.home.xs4all.nl/dos2unix.html) is used to convert line breaks in a text file from Unix format to DOS format.
-- You will also need [WinRM enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring) across your environment for this.
+- You will need [WinRM enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring) across your environment for this.
 - The scripts needed for this process can be found in [this github repository](https://github.com/tidalmigrations/machine_stats).
 
 ## Running the Script
