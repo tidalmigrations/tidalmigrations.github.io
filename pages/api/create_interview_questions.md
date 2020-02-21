@@ -9,7 +9,7 @@ permalink: createinterviewquestions.html
 ---
 
 Before using each endpoint, you must authenticate to the Tidal Migrations API:
-[Authentication Guide](index.html)
+[Authentication Guide](authenticate.html)
 
 Once you have authenticated with the Tidal API, utilising each endpoint simply requires sending your token as an HTTP request header with each request. For example, with curl this looks like
 
