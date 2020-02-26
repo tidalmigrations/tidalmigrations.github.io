@@ -11,7 +11,7 @@ permalink: postman-docs.html
 
 After you have authenticated with the Tidal Migrations API, you can easily
 access all the requests that can be performed with the Tidal Migrations API using [Postman](https://www.getpostman.com/).
-You will need: 
+You will need:
 1. Your Subdomain
 2. Your Access Token
 
@@ -19,7 +19,7 @@ You will need:
 curl -X GET \
   https://[your subdomain].tidalmg.com/api_docs \
   -H 'authorization: bearer [insert your access_token] \
-  
+
 ```
 This will allow you to access the swagger documentation of the Tidal Migrations API.
 

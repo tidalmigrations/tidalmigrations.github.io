@@ -10,7 +10,7 @@ permalink: import-apps.html
 ---
 
 Tidal Migrations's API includes the import endpoint to help you import your applications.
-Before using the endpoint, you must authenticate to the Tidal Migrations API: 
+Before using the endpoint, you must authenticate to the Tidal Migrations API:
 [Authentication Guide](index.html)
 
 ## Start using the endpoint!
