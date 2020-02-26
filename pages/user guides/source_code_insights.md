@@ -4,7 +4,8 @@ keywords: source, code, insights
 last_updated: February 2020
 summary: "How to access Source Code Premium Insights from within Tidal Migartions"
 sidebar: main_sidebar
-permalink: source_code_insights.html
+redirect_from: source_code_insights.html
+permalink: source-code-insights.html
 ---
 
 ## Request Access

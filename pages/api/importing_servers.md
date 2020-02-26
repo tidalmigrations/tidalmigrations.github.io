@@ -5,7 +5,8 @@ keywords: servers, import, multiple, endpoint, zone
 last_updated: Feb 22, 2018
 summary: "Importing Servers with the Tidal Migrations API"
 sidebar: main_sidebar
-permalink: import_servers.html
+redirect_from: import_servers.html
+permalink: import-servers.html
 ---
 
 Tidal Migrations's API includes the import endpoint to help you import your servers.

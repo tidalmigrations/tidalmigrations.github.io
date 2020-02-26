@@ -5,7 +5,8 @@ keywords: databases, server, apps, movegroups
 last_updated: Feb 22, 2018
 summary: "Get all your Move Groups and their associated Applications, Databases and Servers."
 sidebar: main_sidebar
-permalink: getallmovegroups.html
+redirect_from: getallmovegroups.html
+permalink: get-all-move-groups.html
 ---
 
 Before using each endpoint, you must authenticate to the Tidal Migrations API: 

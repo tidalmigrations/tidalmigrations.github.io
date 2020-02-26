@@ -4,7 +4,8 @@ keywords: source, assessment, readiness, analyze
 last_updated: July, 2018
 summary: "Use the Tidal Tools database analyzer to measure your databases’ cloud migration difficulty."
 sidebar: main_sidebar
-permalink: analyze_database.html
+redirect_from: analyze_database.html
+permalink: analyze-database.html
 folder: tidaltools
 ---
 Not sure how ready you are to move to the cloud? With Tidal Migrations you have the option to analyze the databases associated with your applications.

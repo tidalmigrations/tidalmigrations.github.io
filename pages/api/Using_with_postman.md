@@ -5,7 +5,8 @@ keywords: postman, swagger, docs, requests, routes
 last_updated: Feb 22, 2018
 summary: "Accessing all the requests in the Tidal Migrations API with Postman"
 sidebar: main_sidebar
-permalink: postman_docs.html
+redirect_from: postman_docs.html
+permalink: postman-docs.html
 ---
 
 After you have authenticated with the Tidal Migrations API, you can easily

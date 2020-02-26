@@ -62,19 +62,19 @@ entries:
       url: analyze-source-code.html
     - title: Accessing Source Code Premium Insights
       output: web
-      url: /source_code_insights.html
+      url: /source-code-insights.html
     - title: Database Analysis
       output: web
-      url: analyze_database.html
+      url: analyze-database.html
     - title: Application Interview Best Practices
       output: web
       url: interviews.html
     - title: Creating interview questions
       output: web
-      url: /createinterviewquestions.html
+      url: /create-interview-questions.html
     - title: Exporting IP Addresses
       output: web
-      url: /export_ip_addresses.html
+      url: /export-ip-addresses.html
     - title: Get IP Addresses by Application Tag
       output: web
       url: /tag-to-ip-addresses.html
@@ -83,7 +83,7 @@ entries:
     folderitems:
     - title: Getting Apps and Resources within your Move Group
       output: web
-      url: /getallmovegroups.html
+      url: /get-all-move-groups.html
     - title: Exporting Servers from Move Groups
       output: web
       url: /exporting-servers-to-csv.html
@@ -93,7 +93,7 @@ entries:
     folderitems:
     - title: Getting Started
       output: web
-      url: /api_getting_started.html
+      url: /api-getting-started.html
       type: homepage
     - title: Authentication
       output: web
@@ -101,13 +101,13 @@ entries:
       type: homepage
     - title: Importing Applications
       output: web
-      url: /importapps.html
+      url: /import-apps.html
     - title: Importing Servers
       output: web
-      url: /import_servers.html
+      url: /import-servers.html
     - title: Using with Postman
       output: web
-      url: /postman_docs.html
+      url: /postman-docs.html
     - title: Using with Nmap
       output: web
       url: /nmap-api.html

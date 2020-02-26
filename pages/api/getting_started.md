@@ -5,7 +5,8 @@ keywords: starting introduction
 last_updated: Feb 22, 2018
 summary: "Get started using the Tidal Migrations API"
 sidebar: main_sidebar
-permalink: api_getting_started.html
+redirect_from: api_getting_started.html
+permalink: api-getting-started.html
 ---
 
 ## Tidal API
