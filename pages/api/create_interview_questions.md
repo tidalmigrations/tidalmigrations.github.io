@@ -5,7 +5,8 @@ keywords: apps, interview, questions
 last_updated: Sep 11, 2018
 summary: "Create new interview questions with the Tidal API"
 sidebar: main_sidebar
-permalink: createinterviewquestions.html
+redirect_from: createinterviewquestions.html
+permalink: create-interview-questions.html
 ---
 
 Before using each endpoint, you must authenticate to the Tidal Migrations API:

@@ -5,7 +5,8 @@ keywords: apps, import, request, data
 last_updated: Feb 13, 2018
 summary: "Easily import your applications with the Tidal Migrations API"
 sidebar: main_sidebar
-permalink: importapps.html
+redirect_from: importapps.html
+permalink: import-apps.html
 ---
 
 Tidal Migrations's API includes the import endpoint to help you import your applications.

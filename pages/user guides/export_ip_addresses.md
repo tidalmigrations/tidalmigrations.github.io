@@ -4,7 +4,8 @@ keywords: export, ip, address, api
 last_updated: February 2020
 summary: "How to export all your IP addresses"
 sidebar: main_sidebar
-permalink: export_ip_addresses.html
+redirect_from: export_ip_addresses.html
+permalink: export-ip-addresses.html
 ---
 
 ## Using the API
