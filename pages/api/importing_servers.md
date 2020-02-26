@@ -10,7 +10,7 @@ permalink: import-servers.html
 ---
 
 Tidal Migrations's API includes the import endpoint to help you import your servers.
-Before using the endpoint, you must authenticate to the Tidal Migrations API: 
+Before using the endpoint, you must authenticate to the Tidal Migrations API:
 [Authentication Guide](index.html)
 
 ## Start using the endpoint!
@@ -53,8 +53,8 @@ The response of the above request should be the following:
         "host_name": "trpewrcapbiz02",
         "created_at": "2018-02-27T14:52:28.127Z",
         "updated_at": "2018-02-27T14:52:28.127Z",
-        "description": "This is a general purpose server that has serveral functionalities. 
-        The first functionality is that it is a demo server. 
+        "description": "This is a general purpose server that has serveral functionalities.
+        The first functionality is that it is a demo server.
         The second functionality is that it could be a real server as well.",
         "custom_fields": {
             "Technologies": "Approval Management System DB"
@@ -101,8 +101,8 @@ curl -X POST \
       "custom_fields": {
         "Technologies": "Python"
       },
-      "description": "This is a general purpose server that has several functionalities. 
-      The first functionality is that it is a demo server. 
+      "description": "This is a general purpose server that has several functionalities.
+      The first functionality is that it is a demo server.
       The second functionality is that it could be a real server as well.",
       "fqdn": "dnstools.ninja",
       "host_name": "trpewrcapbiz02",
@@ -120,8 +120,8 @@ curl -X POST \
       "custom_fields": {
         "Technologies": "Ruby"
       },
-      "description": "This is a general purpose server that has several functionalities. 
-      The first functionality is that it is a demo server. 
+      "description": "This is a general purpose server that has several functionalities.
+      The first functionality is that it is a demo server.
       The second functionality is that it could be a real server as well.",
       "fqdn": "dnstools.ninja",
       "host_name": "trpewrcapbiz02",
@@ -151,8 +151,8 @@ The response of the above request should be the following:
         "host_name": "trpewrcapbiz02",
         "created_at": "2018-02-28T17:28:53.322Z",
         "updated_at": "2018-02-28T17:28:53.322Z",
-        "description": "This is a general purpose server that has several functionalities. 
-        The first functionality is that it is a demo server. 
+        "description": "This is a general purpose server that has several functionalities.
+        The first functionality is that it is a demo server.
         The second functionality is that it could be a real server as well.",
         "custom_fields": {
             "Technologies": "Python"
@@ -180,8 +180,8 @@ The response of the above request should be the following:
         "host_name": "trpewrcapbiz02",
         "created_at": "2018-02-28T17:28:53.540Z",
         "updated_at": "2018-02-28T17:28:53.540Z",
-        "description": "This is a general purpose server that has several functionalities. 
-        The first functionality is that it is a demo server. 
+        "description": "This is a general purpose server that has several functionalities.
+        The first functionality is that it is a demo server.
         The second functionality is that it could be a real server as well.",
         "custom_fields": {
             "Technologies": "Ruby"

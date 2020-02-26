@@ -9,7 +9,7 @@ redirect_from: getallmovegroups.html
 permalink: get-all-move-groups.html
 ---
 
-Before using each endpoint, you must authenticate to the Tidal Migrations API: 
+Before using each endpoint, you must authenticate to the Tidal Migrations API:
 [Authentication Guide](index.html)
 
 Once you have authenticated with the Tidal API, utilising each endpoint is super simple.
@@ -40,7 +40,7 @@ You can access your Applications, Database Instances and Serves within all the m
 
 ```
 [
-  {   
+  {
     "id": 80,
     "communications": "This can be used to track the number of contacts that *have* and *need* to be contacted.",
     "notes": "Here is a sample note. It **is** markdown friendly!",
@@ -120,7 +120,7 @@ You can access your Applications, Database Instances and Serves within all the m
             "environment_id": 2,
             "move_group_id": 80
         }
-        
+
     ]
   },
   {
@@ -187,7 +187,7 @@ You can access your Applications, Database Instances and Serves within all the m
                     "folder1/file1"
                 ]
             }
-            
+
         ]
     }
 ]
@@ -195,7 +195,7 @@ You can access your Applications, Database Instances and Serves within all the m
 ```
 ## Getting a *specific* Move Group:
 
-#### GET api/v1/move_groups/[id] 
+#### GET api/v1/move_groups/[id]
 
 Returns the selected move group and its applications, database instances, and servers.
 
@@ -300,9 +300,9 @@ You can access your Applications, Database Instances and Serves within the selec
             "environment_id": 2,
             "move_group_id": 80
         }
-        
+
     ]
 }
-    
+
 ```
 
