@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot and diagnose Tidal Tools problems
-keywords: tidal doctor, yaml, docker, linux, windows, log, log file, powershell, powershell ise
-last_updated: Dec 13, 2018
+keywords: tidal doctor, yaml, docker, linux, windows, log, log file, powershell, powershell ise, fedora
+last_updated: Feb 27, 2020
 summary: |
     If you are having problems related to Tidal Tools, the following tips should help you getting things working.
 sidebar: main_sidebar
@@ -237,3 +237,19 @@ $ sudo usermod -aG docker $USER
 ```
 $ docker run hello-world
 ```
+
+### “docker: Error response from daemon: OCI runtime create failed” error message on Fedora 31 {#docker-fedora-31}
+
+Fedora 31 is the first major Linux dustribution that comes with cgroup v2 enabled by default.
+However, Docker still do not support cgroup v2.
+
+To start Docker on Fedora 31 run the following command and reboot:
+
+```
+$ sudo dnf install -y grubby && \
+  sudo grubby \
+  --update-kernel=ALL \
+  --args="systemd.unified_cgroup_hierarchy=0"
+```
+
+This command reverts the systemd configuration to use cgroup v1.
