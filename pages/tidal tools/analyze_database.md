@@ -91,6 +91,30 @@ tidal analyze db config.yml
 
 Try it out!
 
+## Running offline
+
+If you need to run the command from a computer without any internet access, either no download access to download the docker image necessary or no outbound access to upload the results of the analysis to the API then this is for you.
+
+First you will need to setup Tidal Tools on a machine with internet access. Next you can run:
+
+`tidal backup`
+
+This will create a tar file called `tidal-snapshot_DATE.tar`
+
+Moving to the air-gapped machine you will need to install Tidal Tools and Docker and transfer the tar file above, then run:
+
+`tidal restore tidal-snapshot_DATE.tar`
+
+This will load the docker image and all of existing Tidal Tools configurations from the original machine. You can now run the database analysis without any external network connectivity, except to your database host itself:
+
+`tidal analyze db --offline config.yml`
+
+This will output a zip file called, `tidal-dba-results_DATE.zip` that can then be uploaded to the application for a given database in order to complete the analysis:
+
+`tidal analyze db --upload tidal-dba-results_DATE.zip`
+
+You should recieve confirmation that the upload has completed and can navigate to Tidal Migrations to see the results.
+
 ## Why Docker?
 You need to install Docker in order to complete the database analysis. This is because the analysis uses several system dependent software libraries, so by using Docker the analysis can use those libraries without you requiring to install the correct dependencies with the correct versions.
 
