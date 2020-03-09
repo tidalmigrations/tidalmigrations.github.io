@@ -15,7 +15,19 @@ It is capable of analyzing both **Oracle and SQL Server databases**. Providing a
 
 > NB: The entire analysis never queries or reads user or application data and does not collect database source code.
 
-Currently, Oracle databases versioned 10.2 and newer can be analyzed. As well as SQL Server databases versioned 2008R2, 2016 and 2017. If you have a use case for a different version, definitely let us know at [info@tidalmigrations.com](mailto:info@tidalmigrations.com), we are always adding new capabilities.
+## Supported Database Versions
+
+Tidal Tools is able to analyze Oracle and SQL Server databases with the following versions:
+
+| Oracle                | SQL Server |
+|-----------------------|
+| Oracle Database 10g Release 2	(10.2) | SQL Server 2008R2 |
+| Oracle Database 11g Release 1	(11.1) | SQL Server 2016   |
+| Oracle Database 11g Release 2	(11.2) | SQL Server 2017   |
+| Oracle Database 12c Release 1	(12.1) |
+| Oracle Database 12c Release 2	(12.2) |
+
+If you have a use case for a different version, definitely let us know at [info@tidalmigrations.com](mailto:info@tidalmigrations.com), we are always adding new capabilities.
 
 ## Migration Complexity
 The databases are analyzed to look for patterns and feature usage that may be difficult to migrate due to lack of support or compatibility in their new environment. The databases are analyzed based on their metadata, looking at specific schema objects that are used within your databases as well as the usage of proprietary features that will not be available in the target platforms.
