@@ -132,7 +132,7 @@ Here is some brief information regarding the keys defined in the *my_plan.yaml* 
 | `networks`          | One or more subnets that you want to include in the process.                                                                                           | [Cidr block notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 | `name`              | A friendly name for your network, e.g. "Tokyo DC-1 Front-End"                                                                                                                         | Text
 | `tcp_ports`         | One or more TCP Ports that you frequently run web servers on and would like to interrogate: e.g. 80,443,8080,8443 etc.                                  | Integer
-| `path_to_bind`      | The location of a [named.conf file](https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-bind-namedconf.html) for a bind server configuration. | File Path
+| `path_to_bind`      | The location of a [named.conf file](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/deployment_guide/s1-bind-namedconf) for a bind server configuration. | File Path
 | `dns_service`       | Name of a DNS service to be analyzed with DNS tools, currently only "aws" service is avaliable which extracts information from Amazon Route 53 zones.          | "aws"
 | `zonefiles`| The location of a [zone file](https://help.dyn.com/how-to-format-a-zone-file/) which contains a list of DNS records with mappings between domain names and IP addresses. | File Path
 
