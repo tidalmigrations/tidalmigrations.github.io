@@ -95,7 +95,10 @@ entries:
   - title: Troubleshooting
     output: web
     folderitems:
-    - title: Troubleshooting
+    - title: General Troubleshooting
+      output: web
+      url: general-troubleshooting.html
+    - title: Tidal Tools Troubleshooting
       output: web
       url: troubleshooting.html
     - title: Troubleshooting Ansible Tower Integration
