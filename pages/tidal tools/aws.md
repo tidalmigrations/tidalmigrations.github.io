@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Tidal Tools on AWS
 keywords: aws, marketplace, tidal tools
-last_updated: February 11, 2020
+last_updated: April 23, 2020
 summary: Configure and use Tidal Tools on AWS
 sidebar: main_sidebar
 permalink: tidal-tools-aws.html
