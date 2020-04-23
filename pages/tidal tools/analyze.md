@@ -1,7 +1,7 @@
 ---
-title: Tidal Analyze
+title: Tidal Analyze Web
 keywords: analyze, applications, domains, URLs, upload
-last_updated: April 24, 2018
+last_updated: April 23, 2020
 summary: "Analyze your applications and determine their technologies and network data."
 sidebar: main_sidebar
 permalink: analyze.html
@@ -72,9 +72,9 @@ following steps:
 1. Run this command to run the analysis and save the results to the file
    *analyze_output.json*:
 
-```
-tidal analyze web my_urls.txt --type json > analyze_output.json
-```
+   ```
+   tidal analyze web my_urls.txt --type json > analyze_output.json
+   ```
 
 2. Copy the file, *analyze_output.json* and install [Tidal
    Tools](tidal-tools.html), on a computer with internet access.
@@ -82,9 +82,9 @@ tidal analyze web my_urls.txt --type json > analyze_output.json
 4. Run this command to upload your previously generated data to your Tidal
    Migrations account:
 
-```
-tidal analyze web --upload-file analyze_output.json
-```
+   ```
+   tidal analyze web --upload-file analyze_output.json
+   ```
 
 ### Accessing your domains in the Tidal API
 
