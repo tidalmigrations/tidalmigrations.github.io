@@ -70,9 +70,10 @@ GRANT SELECT_CATALOG_ROLE TO tidal;
 For SQL Server the access needed is specified in the `GRANT` commands below. If you have a user you would like to use you can run these commands and change the `[user_name]`. If you want to create a new user, [there a few options provided by Microsoft](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-user-transact-sql?view=sql-server-2017), which you can do and then run the following `GRANT` commands for the new user.
 
 ```
-GRANT SELECT ON SCHEMA::sys TO [user_name]
-GRANT SELECT ON SCHEMA::INFORMATION_SCHEMA TO [user_name]
-GRANT SELECT ON tempdb..sysobjects to [user_name]
+GRANT SELECT ON SCHEMA::sys TO [user_name];
+GRANT SELECT ON SCHEMA::INFORMATION_SCHEMA TO [user_name];
+GRANT SELECT ON tempdb..sysobjects to [user_name];
+GRANT VIEW SERVER STATE TO [user_name];
 ```
 
 With your user and password, you can define all these values in a YAML configuration file:
