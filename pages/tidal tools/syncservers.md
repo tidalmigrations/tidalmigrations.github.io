@@ -160,9 +160,7 @@ The syncronization of your Applications can be performed by following the above 
       "custom_fields": {
         "Technologies": "Approval Management System DB"
       },
-      "description": "This is a general purpose application that has several functionalities.
-      The first functionality is that it is a demo application. The second functionality is
-      that it could be a real application as well.",
+      "description": "This is a general purpose application that has several functionalities. The first functionality is that it is a demo application. The second functionality is that it could be a real application as well.",
       "servers": [{
         "host_name": "trpewrcapbiz02"
       }],
