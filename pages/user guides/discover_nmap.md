@@ -14,7 +14,7 @@ The way it works is very simple and with the full power of Nmap available to you
  
 Nmap has developed some powerful capabilities and good [documentation](https://nmap.org/book/host-discovery-find-ips.html) that will allow you to identify all the hosts you have running on your network, the ports and services that they have open and running. 
  
-Nmap is capable of producing its output in an XML file, allowing you to inspect the raw scan output before sending it to the Tidal Migrations API with our CLI,  [Tidal Tools](https://get.tidal.sh). Once uploaded to the Tidal Migrations Platform, you will be able to visualize your network devices, track your complete server inventory and build on this data with other discovery methods, allowing you to make informed decisions on your cloud migration path.
+Nmap is capable of producing its output in an XML file, allowing you to inspect the raw scan output before sending it to the Tidal Migrations API with [Tidal Tools](https://get.tidal.sh). Once uploaded to the Tidal Migrations Platform, you will be able to visualize your network devices, track your complete server inventory and build on this data with other discovery methods, allowing you to make informed decisions on your cloud migration path.
 
 
 ## Using Nmap with Tidal Tools
