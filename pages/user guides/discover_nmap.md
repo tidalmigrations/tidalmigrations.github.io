@@ -35,7 +35,7 @@ Note: the **-sS** flag will enable TCP SYN port scan and the **-oX** specifies t
 tidal sync nmap <filename.XML> 
 ``` 
  
-5. Head out to your Tidal account!
+5. Head over to your Tidal Migrations account!
  
 
 
