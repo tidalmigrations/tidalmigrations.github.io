@@ -10,7 +10,7 @@ permalink: discover-nmap.html
 
 
 As part of your cloud migration journey it is important to have all the tools at your disposal. In addition to [the other discovery methods](https://guides.tidalmg.com), you can use [Nmap](https://nmap.org/) to facilitate a part of the discovery process. 
-The way it works is very simple and with the full power of nmap available to you, discovery of even those hard to reach places is possible. 
+The way it works is very simple and with the full power of Nmap available to you, discovery of even those hard to reach places is possible. 
  
 Nmap has developed some powerful capabilities and good [documentation](https://nmap.org/book/host-discovery-find-ips.html) that will allow you to identify  all the hosts you have running on your network, the ports and services that they have exposed and even some vulnerabilities discovered by the open source community. 
  
