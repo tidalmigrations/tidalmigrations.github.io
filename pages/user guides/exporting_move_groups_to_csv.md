@@ -4,7 +4,7 @@ title: Exporting servers from a Move Group to CSV
 keywords: move_groups, servers, csv, rivermeadow, export
 last_updated: April 17, 2019
 summary: "Exporting servers from a move group to a format that can be used by Rivermeadow."
-sidebar: user_guidesbar
+sidebar: main_sidebar
 folder: userguides
 permalink: exporting-servers-to-csv.html
 ---
