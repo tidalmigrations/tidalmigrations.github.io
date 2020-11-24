@@ -3,13 +3,13 @@ toc: false
 title: Exporting servers from a Move Group to CSV
 keywords: move_groups, servers, csv, rivermeadow, export
 last_updated: April 17, 2019
-summary: "Exporting servers from a move group to a format that can be used by Rivermeadow."
+summary: "Exporting servers from a move group to a format that can be used by RiverMeadow."
 sidebar: main_sidebar
 folder: userguides
 permalink: exporting-servers-to-csv.html
 ---
 
-Here we will show how to take an entire migration wave of servers from Tidal Migrations and export them for direct ingestion into Rivermeadow, to perform a VM migration.
+Here we will show how to take an entire migration wave of servers from Tidal Migrations and export them for direct ingestion into RiverMeadow, to perform a VM migration.
 
 # Requirements
 
@@ -18,7 +18,7 @@ This guides assumes you have access to a Linux like environment, you will need:
 -   Posix compliant shell
 -   [Curl](https://curl.haxx.se/download.html)
 -   [jq](https://stedolan.github.io/jq/)
--   [A copy of our move group script](https://github.com/tidalmigrations/gists/blob/master/move_group_to_csv.sh)
+-   [A copy of the move group script](https://github.com/tidalmigrations/gists/blob/master/move_group_to_csv.sh)
 
 
 # Steps
@@ -55,4 +55,4 @@ You're ready to run the script and export this information to a CSV. Now that yo
 
     ./move_group_to_csv.sh > move_group.csv
 
-Now the data you need for your server migration is in the file move_group.csv and can be imported into Rivermeadow.
+Now the data you need for your server migration is in the file move_group.csv and can be imported into RiverMeadow.
