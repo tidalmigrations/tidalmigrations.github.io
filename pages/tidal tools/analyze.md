@@ -43,7 +43,7 @@ tidal analyze web my_urls.txt --upload
 You can also utilize the standard output of URLs
 and FQDNs from [Tidal Discover](discover.html) as input.
 ```
-tidal discover --plan my_plan.yml  | tidal analyze web --upload
+tidal discover my_plan.yml | tidal analyze web --upload
 ```
 " %}
 
