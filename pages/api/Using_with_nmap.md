@@ -29,7 +29,7 @@ This is the shape of the expected payload.
    "hosts": [
      {
        "ip_address" : "32.199.2.33",
-	      “ptr_record”: “abc-32-199-2-33.cloudfront.net”,
+	      "ptr_record": "abc-32-199-2-33.cloudfront.net",
         "ports": [
           {
             "port": 22,
