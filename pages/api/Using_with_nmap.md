@@ -53,10 +53,10 @@ You could also use cURL, a request would look similar to this:
 ```
 export API_TOKEN=PUT_YOUR_TOKEN_HERE
 export SUBDOMAIN=PUT_YOUR_SUBDOMAIN_HERE
- 
+
 curl -H "Authorization: Bearer $API_TOKEN"  --header "Content-Type: application/json" \
 --request POST \
---data nmap_out.json \
+--data @nmap_out.json \
 "https://$SUBDOMAIN.tidalmg.com/api/v1/nmap"
 ```
  
