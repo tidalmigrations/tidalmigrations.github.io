@@ -14,7 +14,7 @@ elements to the cloud. However, the path to the cloud can be long and painful
 without proper planning and execution.  By following Tidal Migration's six
 discovery layering techniques, you will be migrating to the cloud with ease!
 
-{% include image.html file="layered_discovery.png" caption="Tidal Migrations'
+{% include image.html file="layered_discovery_expanded.png" caption="Tidal Migrations'
 layered approach to application discovery, for cloud migration." %}
 
 # Six Steps To Discovery Bliss
