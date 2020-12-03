@@ -36,7 +36,7 @@ This is the shape of the expected payload.
             "protocol": "tcp",
             "status": "open",
             "service": {
-              "name": "openssh"
+              "name": "openssh",
               "version": "1.1"
             }
           }
