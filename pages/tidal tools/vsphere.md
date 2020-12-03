@@ -1,13 +1,13 @@
 ---
 title: Integrate Tidal Migrations with vSphere
 keywords: vsphere, login, configure, sync, environment
-last_updated: Feb 13, 2018
+last_updated: Dec 2, 2020
 sidebar: main_sidebar
 permalink: vsphere.html
 folder: tidaltools
 ---
 ## Getting Started
-To get started you will need make sure you have a copy of [Tidal Tools](https://get.tidal.sh) and it is [installed](tidal-tools.html).
+To get started you will need to make sure you have a copy of [Tidal Tools](https://get.tidal.sh) and it is [installed](tidal-tools.html).
 
 ## Supported Versions
 ### vSphere 5.5
@@ -24,11 +24,11 @@ A set of prompts will appear to help you connect to your vSphere account:
 1. vSphere Server - Either an IP address or a FQDN that resolves to the correct IP for the ESXi or vCenter instance
 2. vSphere Username - A username that has read access to the vCenter or ESXi instance.
 3. vSphere Password - Corresponding password for the user.
-4. vSphere API Endpoint - The default is `/sdk`, unless you know it is not this default, it can left as is.
+4. vSphere API Endpoint - The default is `/sdk`, It can be left as is, unless you know your setup does not use the default.
 5. Use SSL/TLS? - The default is to use SSL (y), which can be left unless you know you can't use it.
-6. Skip HTTPS certificate checks? - The deafult is to not skip (n), which can be left unless you know they need to be skipped.
+6. Skip HTTPS certificate checks? - The default is to not skip (n), which can be left unless you know they need to be skipped.
 
-After answering the above prompts, you will see the message
+After answering the above prompts, you will see the message:
 
 ```
 Login to vSphere successful. Saving config file...Done!
@@ -66,17 +66,23 @@ tidal get vsphere | ./modify_script.rb | tidal sync servers
 
 ## Repeat
 You can easily set this to run periodically. The integration updates records if they already exist, or creates new records if they don't.
-Look at [setting this command up as a cron job](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps) that once per day.
+Look at [setting this command up as a cron job](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps) that runs once per day.
 
 ## Additional Configuration Options
 The integration can be configured with several other methods besides `tidal login`.
 You can use these alternate approaches if they better suite your use case.
 
-The other options are to use, the `tidal config` command, a config file via `--config` or via environment variables.
-If a config file is present it will be used, if it is not present environment variables will be used.
-If neither are present, you will be prompted to enter the required details.
+The other configuration options available are to set values in the configuration file (either interactively or manually) or set environment variables.
 
-### 1) Set interactively
+The credentials and configuration settings take precedence in the following order:
+
+1. [Environment Variables](#2-environment-variables)
+2. [Configuration file](#1-configuration-file)
+3. [Prompt in the terminal](#vsphere-login) - If neither are present, you will be prompted to enter the required details and they are stored in the [default configuration file](/tidal-tools.html#configuration-file).
+
+### 1) Configuration File
+
+#### Set Interactively
 You can set your vSphere credentials with the following commands:
 
 `tidal config set vsphere.username [your username]`
@@ -85,8 +91,10 @@ You can set your vSphere credentials with the following commands:
 
 `tidal config set vsphere.server 192.168.1.12`
 
-### 2) Config file
-A file that has similar content to below, called `config.yml`:
+The set values are stored in the [default configuration file](/tidal-tools.html#configuration-file).
+
+#### Set Manually
+You can create a file, for example `config.yml`, with content similar to this:
 
 ```
 vsphere:
@@ -98,10 +106,11 @@ tidal:
   password: my_secure_password_here
   url: https://my_instance_name_here.tidalmg.com
 ```
-Could be used with a command: `tidal sync vsphere --config config.yml`
+That can be used with a command: `tidal sync vsphere --config config.yml`
 
-### 3) Environment Variables
-To configure with environment variables, you can use these variables to set the values and Tidal Tools will use them.
+### 2) Environment Variables
+
+Another alternative is to set the following environment variables with the needed values and Tidal Tools will use them:
 
 - VSPHERE_USERNAME
 - VSPHERE_PASSWORD
