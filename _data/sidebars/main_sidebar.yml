@@ -70,6 +70,9 @@ entries:
     - title: Getting Apps and Resources within your Move Group
       output: web
       url: /getallmovegroups.html
+    - title: Exporting Servers from Move Groups
+      output: web
+      url: /exporting-servers-to-csv.html
 
   - title: API
     output: web
