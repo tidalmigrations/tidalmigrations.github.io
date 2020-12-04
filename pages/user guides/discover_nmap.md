@@ -4,7 +4,7 @@ keywords: nmap, ip, address, api, services
 last_updated: September 2020
 summary: "How to use nmap to scan your network"
 sidebar: main_sidebar
-permalink: discover-nmap.html
+permalink: host-discovery.html
 ---
 
 
