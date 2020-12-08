@@ -98,6 +98,9 @@ databases:
 
 {% include note.html content="It is best to use quotations, either double or single, around the values in the configuration file. To avoid special characters, : { } [ ] , & * # ? | - < > = ! % @ \ \n from being interpreted. Single quotes are safest, if the value has a single quote within it, you can include it by using a two single quotations, ie. `'my''string'` - will become `my'string`." %}
 
+{% include tip.html content="Are you analyzing an Oracle Stanard Edition (SE)
+database? Check out the [advanced configuration below](#advanced-configuration)." %}
+
 - You’re all set! You can now analyze the database with:
 
 ```
@@ -136,3 +139,25 @@ You need to install Docker in order to complete the database analysis. This is b
 
 ##  What about security?
 The entire analysis takes place locally on your machine. The only data that is captured and sent from the analysis are the results of the analysis and metadata. No application data, source code, files or the contents of any files on your machine are ever copied or sent anywhere.
+
+## Advanced Configuration
+
+To use Oracle features included only in the Oracle Standard Edition (SE) license, you
+can set the `analyze_workload` property to `false` in your configuration file. For example:
+
+```
+databases:
+  - id: 111
+    analyze_workload: false
+    engine: Oracle
+    host: 'my-db-host.com'
+    port: 1521
+    db_name: 'orcl'
+    user: 'tidal'
+    password: 'yoursecurepassword1234!'
+    name: 'My-Test-DB'
+```
+
+{% include note.html content="By setting this to `false`, some results from the
+analysis will not be available, including server metrics, connected applications,
+and the workload analysis ranking." %}
