@@ -21,11 +21,14 @@ Tidal Tools is able to analyze Oracle and SQL Server databases with the followin
 
 | Oracle                | SQL Server |
 |-----------------------|
-| Oracle Database 10g Release 2	(10.2) | SQL Server 2008R2 |
-| Oracle Database 11g Release 1	(11.1) | SQL Server 2016   |
-| Oracle Database 11g Release 2	(11.2) | SQL Server 2017   |
-| Oracle Database 12c Release 1	(12.1) |
-| Oracle Database 12c Release 2	(12.2) |
+| [Beta](mailto:info@tidalmigrations.com?subject=Interested in Oracle 8i Database Analysis) Oracle Database 8i (8.1) | SQL Server 2008R2 |
+| Oracle Database 9i Release 2 (9.2)   | SQL Server 2016 |
+| Oracle Database 10g Release 2 (10.2) | SQL Server 2017 |
+| Oracle Database 11g Release 1 (11.1) |
+| Oracle Database 11g Release 2 (11.2) |
+| Oracle Database 12c Release 1 (12.1) |
+| Oracle Database 12c Release 2 (12.2) |
+| Oracle Database 18c (18.1) |
 
 If you have a use case for a different version, definitely let us know at [info@tidalmigrations.com](mailto:info@tidalmigrations.com), we are always adding new capabilities.
 
