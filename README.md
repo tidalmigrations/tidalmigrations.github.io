@@ -57,7 +57,9 @@ Build the PDF with the following command:
 
 ```
 pandoc book/*.md \
+    --from markdown \
     --template book/template.latex \
-    --lua-filter=book/include-files.lua \
+    --lua-filter book/include-files.lua \
+    --lua-filter book/internal-links.lua \
     --file-scope --toc -o book/book.pdf
 ```
