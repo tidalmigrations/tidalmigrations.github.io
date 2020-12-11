@@ -25,3 +25,39 @@ To run [jekyll](https://jekyllrb.com/) and start hacking run:
 
 
 You should see the rendered site on http://localhost:4000
+
+## PDF generation
+
+You need to have `pandoc` and LaTeX installed.
+
+The following LaTeX packages need to be installed:
+
+- `koma-script`
+- `setspace`
+- `colortbl`
+- `footnotebackref`
+- `babel-english`
+- `csquotes`
+- `caption`
+- `mdframed`
+- `zref`
+- `needspace`
+- `sourcesanspro`
+- `ly1`
+- `sourcecodepro`
+- `titling`
+- `fancyhdr`
+- `bookmark`
+- `noto`
+- `fontaxes`
+- `listings`
+- `pagecolor`
+
+Build the PDF with the following command:
+
+```
+pandoc book/*.md \
+    --template book/template.latex \
+    --lua-filter=book/include-files.lua \
+    --file-scope --toc -o book/book.pdf
+```
