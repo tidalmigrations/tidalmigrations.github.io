@@ -1,11 +1,11 @@
 ---
 title: "The Big Book of Tidal Migrations"
-author: "[guides.tidalmg.com](https://guides.tidalmg.com/)"
 titlepage: true
 titlepage-color: "4ABFD3"
 titlepage-rule-color: "ffD04E"
 titlepage-text-color: "ffffff"
 toc-own-page: true
+links-as-notes: true
 ---
 
 # Layering Discovery Techniques
