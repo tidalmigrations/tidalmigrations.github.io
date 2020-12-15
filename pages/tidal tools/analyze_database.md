@@ -79,10 +79,12 @@ GRANT SELECT ON tempdb..sysobjects to [user_name];
 GRANT VIEW SERVER STATE TO [user_name];
 ```
 
-With your user and password, you can define all these values in a YAML configuration file:
+With your user and password, you can define all these values in a YAML configuration file.
+
+The simplest way is to use `tidal analyze db init` and answer the questions. Or you can create the file manually:
 
 
-config.yml:
+databases.yaml:
 
 ```
 databases:
@@ -104,7 +106,7 @@ database? Check out the [advanced configuration below](#advanced-configuration).
 - You’re all set! You can now analyze the database with:
 
 ```
-tidal analyze db config.yml
+tidal analyze db databases.yaml
 
 ```
 
