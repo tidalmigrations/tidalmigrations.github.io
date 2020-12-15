@@ -79,10 +79,12 @@ GRANT SELECT ON tempdb..sysobjects to [user_name];
 GRANT VIEW SERVER STATE TO [user_name];
 ```
 
-With your user and password, you can define all these values in a YAML configuration file:
+With your user and password, you can define all these values in a YAML configuration file.
+
+The simplest way is to use `tidal analyze db init` and answer the questions. Or you can create the file manually:
 
 
-config.yml:
+databases.yaml:
 
 ```
 databases:
@@ -104,7 +106,7 @@ database? Check out the [advanced configuration below](#advanced-configuration).
 - You’re all set! You can now analyze the database with:
 
 ```
-tidal analyze db config.yml
+tidal analyze db databases.yaml
 
 ```
 
@@ -126,7 +128,7 @@ Moving to the air-gapped machine you will need to install Tidal Tools and Docker
 
 This will load the docker image and all of existing Tidal Tools configurations from the original machine. You can now run the database analysis without any external network connectivity, except to your database host itself:
 
-`tidal analyze db --offline config.yml`
+`tidal analyze db --offline databases.yaml`
 
 This will output a zip file called, `tidal-dba-results_DATE.zip` that can then be uploaded to the application for a given database in order to complete the analysis:
 
