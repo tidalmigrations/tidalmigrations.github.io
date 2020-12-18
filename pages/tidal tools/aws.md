@@ -8,11 +8,9 @@ permalink: tidal-tools-aws.html
 folder: tidaltools
 ---
 
-{% include note.html content="
-This page describes how to configure and use Tidal Tools on AWS. For general
-installation and configuration instructions please refer to [Getting Started
-with Tidal Tools](tidal-tools.html) guide.
-" %}
+{% include note.html content="This page describes how to configure and use
+Tidal Tools on AWS. For general installation and configuration instructions
+please refer to [Getting Started with Tidal Tools](tidal-tools.html) guide." %}
 
 ## Using Tidal Tools
 
