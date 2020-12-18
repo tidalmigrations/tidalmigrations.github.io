@@ -58,7 +58,7 @@ brew install bash-completion@2
 
 ```
 
-{% include note.html content="Follow the “caveats” section of brew’s output to add the appropriate bash completion path to your local .bashrc. to enable bash completion for any new shell session" %}
+{% include note.html content="Follow the *caveats* section of `brew`’s output to add the appropriate bash completion path to your local `.bashrc` to enable bash completion for any new shell session" %}
 
 After installing bash-completion support or have already installed it, you can add *Tidal* autocompletion to the bash-completion:
 
