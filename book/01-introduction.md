@@ -6,33 +6,74 @@ titlepage-rule-color: "ffD04E"
 titlepage-text-color: "ffffff"
 toc-own-page: true
 links-as-notes: true
+mainfont: NotoSans
+monofont: SourceCodePro
 ---
 
-# Layering Discovery Techniques
+# Layering discovery techniques
 
 ```{.include shift-heading-level-by=1}
 pages/user guides/discovery_techniques.md
 ```
 
-# Getting Started with Tidal Tools
+# Getting started with Tidal Tools
 
 ```{.include}
 pages/tidal tools/getstarted.md
 ```
 
-## Getting Started with Tidal Tools on AWS
+# Import data from Excel
 
-```{.include shift-heading-level-by=1}
-pages/tidal tools/aws.md
+```{.include}
+pages/user guides/importing_to_excel.md
 ```
 
-## Getting Started with Tidal Tools on Google Cloud Platform
+# Sync with your hypervisors
 
-```{.include shift-heading-level-by=1}
-pages/tidal tools/google.md
+```{.include}
+pages/tidal tools/vsphere.md
 ```
 
-## Tidal Tools Autocompletion
-```{.include shift-heading-level-by=2}
-pages/tidal tools/autocomplete.md
+```{.include}
+pages/tidal tools/syncservers.md
+```
+
+# Gather machine statistics from your inventories
+
+TODO
+
+# Web applications discovery, analysis and importing
+
+```{.include}
+pages/tidal tools/discover.md
+```
+
+```{.include}
+pages/tidal tools/analyze.md
+```
+
+# Database analysis
+
+```{.include}
+pages/tidal tools/analyze_database.md
+```
+
+# Source code analysis
+
+```{.include}
+pages/tidal tools/sourcecode.md
+```
+
+# Application interviews
+
+TODO
+
+# Discovery wrap up
+
+TODO
+
+# Technical troubleshooting
+
+```{.include}
+pages/tidal tools/troubleshooting.md
 ```
