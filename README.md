@@ -36,7 +36,6 @@ The following LaTeX packages need to be installed:
 - `setspace`
 - `colortbl`
 - `footnotebackref`
-- `babel-english`
 - `csquotes`
 - `caption`
 - `mdframed`
@@ -52,14 +51,16 @@ The following LaTeX packages need to be installed:
 - `fontaxes`
 - `listings`
 - `pagecolor`
+- `polyglossia`
 
 Build the PDF with the following command:
 
 ```
 pandoc book/*.md \
     --from markdown \
-    --template book/template.latex \
     --lua-filter book/include-files.lua \
     --lua-filter book/internal-links.lua \
+    --lua-filter book/template-blocks.lua \
+    --pdf-engine lualatex \
     --file-scope --toc -o book/book.pdf
 ```
