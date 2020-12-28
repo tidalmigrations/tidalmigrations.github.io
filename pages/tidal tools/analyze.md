@@ -92,3 +92,11 @@ Once you have imported the results to the Tidal API, your domains will appear
 on the right hand side navigation bar under
 
 **Assess** > **URLs**.
+
+## Troubleshooting
+
+### It looks like the server did not respond for 10 seconds
+
+If you got this error message you can try to increase the waiting time using the
+`--timeout` flag and the amount of seconds (default is `10`). For example,
+`--timeout 30` sets the time waiting for the server to respond to 30 seconds.
