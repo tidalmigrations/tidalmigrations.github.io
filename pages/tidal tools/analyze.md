@@ -99,4 +99,4 @@ on the right hand side navigation bar under
 
 If you got this error message you can try to increase the waiting time using the
 `--timeout` flag and the amount of seconds (default is `10`). For example,
-`--timeout 30` sets the time wiating for server to respond to 30 seconds.
+`--timeout 30` sets the time waiting for the server to respond to 30 seconds.
