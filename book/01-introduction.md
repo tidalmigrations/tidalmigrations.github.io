@@ -1,5 +1,5 @@
 ---
-title: "The Big Book of Tidal Migrations"
+title: "Tidal Migrations Layered Discovery Guide"
 titlepage: true
 titlepage-color: "4ABFD3"
 titlepage-rule-color: "ffD04E"
