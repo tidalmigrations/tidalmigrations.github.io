@@ -77,10 +77,10 @@ end
 
 -- Process callout template block
 function processCalloutTemplate (inlines)
-  return pandoc.BlockQuote {
-    pandoc.Para {
-      getContent(inlines)
-    }
+  return pandoc.Para {
+    pandoc.RawInline('latex', '\\begin{calloutbox}'),
+    getContent(inlines),
+    pandoc.RawInline('latex', '\\end{calloutbox}')
   }
 end
 
@@ -110,21 +110,19 @@ end
 
 -- Process note template block
 function processNoteTemplate (inlines)
-  return pandoc.BlockQuote {
-    pandoc.Para { pandoc.Strong 'NOTE:' },
-    pandoc.Para {
-      getContent(inlines)
-    }
+  return pandoc.Para {
+    pandoc.RawInline('latex', '\\begin{notebox}'),
+    getContent(inlines),
+    pandoc.RawInline('latex', '\\end{notebox}')
   }
 end
 
 -- Process tip template block
 function processTipTemplate (inlines)
-  return pandoc.BlockQuote {
-    pandoc.Para { pandoc.Strong 'TIP:' },
-    pandoc.Para {
-      getContent(inlines)
-    }
+  return pandoc.Para {
+    pandoc.RawInline('latex', '\\begin{tipbox}'),
+    getContent(inlines),
+    pandoc.RawInline('latex', '\\end{tipbox}')
   }
 end
 
