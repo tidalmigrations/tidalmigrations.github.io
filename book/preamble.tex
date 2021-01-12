@@ -1,4 +1,19 @@
+% Color boxes for notes, tips, and callouts
 \usepackage{tcolorbox}
 \newtcolorbox{notebox}{colback=teal!5!white,colframe=teal!75!black,fonttitle=\bfseries,title=Note}
 \newtcolorbox{tipbox}{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=Tip}
 \newtcolorbox{calloutbox}{colback=red!5!white,colframe=red!75!black}
+
+% Left and bottom graphics on every page
+\usepackage{tikz}
+\usepackage{everypage}
+
+\AddEverypageHook{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west,yshift=3pt,xshift=-3pt] at (current page.north west)
+      {\includegraphics{book/left}};
+    \node[anchor=south west,yshift=-3pt,xshift=-3pt] at (current page.south west)
+      {\includegraphics{book/left}};
+    \node[anchor=south west,yshift=1pt,xshift=50pt] at (current page.south west)
+      {\includegraphics[width = 6cm]{book/logo}};
+  \end{tikzpicture}}
