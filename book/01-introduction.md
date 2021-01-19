@@ -14,28 +14,20 @@ geometry: margin=20mm
 documentclass: report
 ---
 
-# Short intro to what the book will cover.
-ie. end to end discovery process for a new environment.
-
 # Layering discovery techniques
+This book will cover all the discovery steps you will need to perform for your cloud migration project.
 
 ```{.include shift-heading-level-by=1}
-pages/user guides/discovery_techniques.md
+pages/user guides/six_steps.md
 ```
-<!--  can we drop certain sections from existing guides easily or not?
-The conclusion section above, would be good to drop or replace it with something that make more sense to continue to the rest
-of the book.
-ie. we will now go through the discvory process for each layer, top to bottom. and starting with installing Tidal Tools.
--->
+
+The remaining will now go through the discvory process step by step. Starting with installing Tidal Tools.
 
 # Getting started with Tidal Tools
 
 ```{.include}
 pages/tidal tools/getstarted.md
 ```
-<!-- I think this guide should probaby include the oneliner on how to install for Unix at the top. and a link to the Windows installer.
-reason being, the rest of the book has all the commands (or should) needed, want the book to be inclusive of what to do, not link out to website. especially for 1 line-->
-
 # Import data from Excel
 
 ```{.include}
@@ -51,13 +43,6 @@ pages/tidal tools/vsphere.md
 ```{.include}
 pages/tidal tools/syncservers.md
 ```
-
-<!-- Lets do this one after initial release. It is key though, and ties into improving the documentation
-for the machine stats repo itself as well.
-# Gather machine statistics from your inventories
-
-TODO
--->
 
 # Web applications discovery, analysis and importing
 
@@ -81,15 +66,18 @@ pages/tidal tools/analyze_database.md
 pages/tidal tools/sourcecode.md
 ```
 
-<!-- we can do this after first release
-# Application interviews
-TODO
--->
-
 # Discovery wrap up
-A closing section on what they do with all of this data, next after this is needed.
-- determine and confirm the defined and discrete set of applications in the portfolio.
-- determine one of the 6 Rs for each of your applications. (Tidal will provide recomendations for you if it has the needed data from this process.)
+
+Now that you have completed your discovery across your portfolio. You are ready to do your asssessment.
+The first step is to make sure you have a set of discrete applications in scope for your migration project.
+Navigating to your list of `Applications` under the `ASSESS` section in the platform, you should be able to see a list of all your applications.
+From here, you can tag them with a specific tag for your project, and even create a dashboard tile that includes all the items in scope.
+
+With the list of applications and a full set of data from the discovery process, you can now perform an initial assessment and determine a transition
+strategy (one of the 6 Rs) for each application.
+
+As well with this data, you can generate a report, from the `Portfolio Reports` section under `PLAN`, in order to get a full report on your assessment.
+This report can be shared with other parties and people interested in the project progress.
 
 # Technical troubleshooting
 
