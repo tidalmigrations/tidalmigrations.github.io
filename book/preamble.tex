@@ -1,8 +1,24 @@
 % Color boxes for notes, tips, and callouts
 \usepackage{tcolorbox}
-\newtcolorbox{notebox}{colback=teal!5!white,colframe=teal!75!black,fonttitle=\bfseries,title=Note}
-\newtcolorbox{tipbox}{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=Tip}
-\newtcolorbox{calloutbox}{colback=red!5!white,colframe=red!75!black}
+% Define new colors
+\definecolor{note-frame}{HTML}{4D908E}
+\definecolor{tip-frame}{HTML}{5192AE}
+\definecolor{callout-frame}{HTML}{F0B7A4}
+% Define color boxes
+\newtcolorbox{notebox}{colback=note-frame!10!white,
+                       colframe=note-frame,
+                       fonttitle=\bfseries,
+                       toptitle=3pt,
+                       bottomtitle=3pt,
+                       title=Note}
+\newtcolorbox{tipbox}{colback=tip-frame!10!white,
+                      colframe=tip-frame,
+                      fonttitle=\bfseries,
+                      toptitle=3pt,
+                      bottomtitle=3pt,
+                      title=Tip}
+\newtcolorbox{calloutbox}{colback=callout-frame!10!white,
+                          colframe=callout-frame}
 
 % Left and bottom graphics on every page
 \usepackage{tikz}
