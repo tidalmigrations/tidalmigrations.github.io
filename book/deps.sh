@@ -8,4 +8,4 @@ sudo dpkg -i pandoc-2.11.2-1-amd64.deb
 wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh
 
 # Install needed latex packages for our use
-tlmgr install koma-script setspace colortbl footnotebackref babel-english csquotes caption mdframed zref needspace sourcesanspro ly1 sourcecodepro titling fancyhdr bookmark noto fontaxes listings pagecolor
+tlmgr install koma-script setspace colortbl footnotebackref babel-english csquotes caption mdframed zref needspace sourcesanspro ly1 sourcecodepro titling fancyhdr bookmark noto fontaxes listings pagecolor tcolorbox pgf environ everypage selnolig
