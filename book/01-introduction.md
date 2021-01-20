@@ -1,9 +1,5 @@
 ---
 title: "Tidal Migrations Layered Discovery Guide"
-titlepage: true
-titlepage-color: "4ABFD3"
-titlepage-rule-color: "ffD04E"
-titlepage-text-color: "ffffff"
 toc-own-page: true
 links-as-notes: true
 mainfont: NotoSans
