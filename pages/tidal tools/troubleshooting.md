@@ -75,7 +75,7 @@ The default locations of the log file are:
 * `/home/tidaluser/.local/share/tidal/tidal.log` on *Linux*
 * `/Users/tidaluser/Library/tidal/tidal.log` on *macOS*
 
-Please note that log files are tuncated by default before the `tidal`
+Please note that log files are truncated by default before the `tidal`
 invocation. That means that the default log file contains entries specific to
 the one particular `tidal` run.
 
