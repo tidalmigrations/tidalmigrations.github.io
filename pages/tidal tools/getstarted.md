@@ -33,7 +33,7 @@ installed you can [verify it is installed and working
 correctly](/troubleshooting.html) with the command `tidal doctor`.
 
 Docker for Windows supports both Linux containers and Windows containers,
-however **Tidal Tools works when your Docker installation is set to to use
+however **Tidal Tools works when your Docker installation is set to use
 Linux containers**. [Set up Docker for Windows to use Linux
 containers](/troubleshooting.html#docker-linux-containers).
 
