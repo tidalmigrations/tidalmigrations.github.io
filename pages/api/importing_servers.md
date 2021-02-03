@@ -38,30 +38,7 @@ curl -X POST \
   https://[insert your subdomain].tidalmg.com/api/v1/servers/import \
   -H 'authorization: bearer [insert your access_token]' \
   -H 'content-type: application/json' \
-  -d '{
-  "servers": [
-    {
-      "custom_fields": {
-        "Technologies": "Python"
-      },
-      "description": "This is a general purpose server that has several functionalities. 
-      The first functionality is that it is a demo server. 
-      The second functionality is that it could be a real server as well.",
-      "fqdn": "dnstools.ninja",
-      "host_name": "trpewrcapbiz02",
-      "operating_system": "Windows Server",
-      "operating_system_version": "Windows 10",
-      "ram_allocated_gb": 3,
-      "ram_used_gb": 6,
-      "role": "The role",
-      "storage_allocated_gb": 5,
-      "storage_used_gb": 6,
-      "virtual": "true",
-      "zone": "Datacenter 1"
-    }
-  ]
-}'
-  
+  -d '{"servers": [{"custom_fields": {"Technologies": "Python"},"description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well.","fqdn": "dnstools.ninja","host_name": "trpewrcapbiz02","operating_system": "Windows Server","operating_system_version": "Windows 10","ram_allocated_gb": 3,"ram_used_gb": 6,"role": "The role","storage_allocated_gb": 5,"storage_used_gb": 6,"virtual": "true","zone": "Datacenter 1"}]}'
 ```
 
 This will allow you to import your server to the Tidal Migrations API!
