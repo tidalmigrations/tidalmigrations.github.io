@@ -78,7 +78,7 @@ You will need:
 
 ```
 curl -X GET \
-  https://[insert your subdomain].tidalmg.com/ping \
+  https://[insert your subdomain].tidalmg.com/api/v1/ping \
   -H 'authorization: bearer [insert your access token]' \
   -H 'content-type: application/json' \
 ```
