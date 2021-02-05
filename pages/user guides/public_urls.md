@@ -20,6 +20,8 @@ You can start with a top level domain that your company owns. For example, canad
 [Analyze the domain with Tidal Tools](https://guides.tidalmg.com/analyze.html). - `tidal analyze web canadiantire.ca`
 
 {% include image.html file="analyze.png" %}
+<br>
+<br>
 
 Check if you own this domain. The organization name in the top right of the table states who owns it.
 If you do own it, take a look at the AS number in the results and note down the IP address from the DNS A results.
@@ -35,6 +37,8 @@ Go to https://whois.com/whois and search the IP you found above, in this case, `
 From the results you should see a `CIDR` value, note this down. In this case it is `205.210.17.0/24`
 
 {% include image.html file="whois.png" %}
+<br>
+<br>
 
 ## Step 3
 Go to ipinfo.io and search for the AS number from above. Note down any CIDR ranges that are labelled as netblock ranges.
@@ -42,6 +46,8 @@ In this case the range is `104.194.16.0/22`. There can be many `netblock` values
 If there are more you can note down all of them here.
 
 {% include image.html file="ipinfo.png" %}
+<br>
+<br>
 
 ## Step 4
 Go to your account on Tidal Migrations my_domain.tidalmg.com/#/discover/public_urls.
@@ -49,8 +55,9 @@ Enter the CIDR range you found above, from the whois command or any labelled as 
 In this case that is `104.194.16.0/22` and `205.210.17.0/24`.
 
 {% include image.html file="search1.png" %}
+<br>
+<br>
 
 You should now see a list of domains that belong to your organization.
 With this list you can now continue your discovery by assigning them to applications within Tidal,
 either applications you already have identified or by creating new applications with these URLs as the initial data points.
-
