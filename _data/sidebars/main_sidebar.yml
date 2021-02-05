@@ -30,6 +30,9 @@ entries:
     - title: Tidal Discover
       output: web
       url: discover.html
+    - title: Public URL Discovery
+      output: web
+      url: public-urls.html
     - title: Tidal Analyze
       output: web
       url: analyze.html
@@ -58,6 +61,9 @@ entries:
     - title: Database Analysis
       output: web
       url: analyze_database.html
+    - title: Application Interview Best Practices
+      output: web
+      url: interviews.html
     - title: Creating interview questions
       output: web
       url: /createinterviewquestions.html
