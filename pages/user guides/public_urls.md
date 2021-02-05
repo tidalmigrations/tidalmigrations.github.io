@@ -14,7 +14,8 @@ We will start with a single domain that you know of for your organization, and i
 and capture a new set of other domains and URLs that are publicly available for your organization.
 The entire process should only take a couple of minutes and does not require any private network access.
 
-1. You can start with a top level domain that your company owns. For example, canadiantire.ca.
+## Step 1
+You can start with a top level domain that your company owns. For example, canadiantire.ca.
 
 [Analyze the domain with Tidal Tools](https://guides.tidalmg.com/analyze.html). - `tidal analyze web canadiantire.ca`
 
@@ -29,18 +30,21 @@ If you don’t own it, you can try analyzing another domain.
 {% include tip.html content="If you don’t own any domains directly yourself, you can skip to the last step here and
 try simply searching the domain name in the Public URLs search in Tidal Migrations." %}
 
-2. Go to https://whois.com/whois and search the IP you found above, in this case, `205.210.17.179`.
+## Step 2
+Go to https://whois.com/whois and search the IP you found above, in this case, `205.210.17.179`.
 From the results you should see a `CIDR` value, note this down. In this case it is `205.210.17.0/24`
 
 {% include image.html file="whois.png" %}
 
-3. Go to ipinfo.io and search for the AS number from above. Note down any CIDR ranges that are labelled as netblock ranges.
+## Step 3
+Go to ipinfo.io and search for the AS number from above. Note down any CIDR ranges that are labelled as netblock ranges.
 In this case the range is `104.194.16.0/22`. There can be many `netblock` values listed here, in this case there is only 1.
 If there are more you can note down all of them here.
 
 {% include image.html file="ipinfo.png" %}
 
-4. Go to your account on tidal migrations my_domain.tidalmg.com/#/discover/public_urls.
+## Step 4
+Go to your account on Tidal Migrations my_domain.tidalmg.com/#/discover/public_urls.
 Enter the CIDR range you found above, from the whois command or any labelled as netblock from ipinfo.io.
 In this case that is `104.194.16.0/22` and `205.210.17.0/24`.
 
