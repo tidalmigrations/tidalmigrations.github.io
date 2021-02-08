@@ -55,7 +55,7 @@ dependencies setup:
 
 ### Running the Script
 
-Start syncing your Hyper-V with Tidal Migrations, by running the script:
+Start syncing your servers with Tidal Migrations, by running the script:
 `runner.ps1`.
 
 {% include note.html content="Be sure to set PowerShell's Execution policy to
