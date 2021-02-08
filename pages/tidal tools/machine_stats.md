@@ -73,7 +73,7 @@ will help you in doing so." %}
    with numerical values rounded to the nearest second decimal.
 
 {% include note.html content="We recommend that you set this script to run
-periodically so that your Hyper-V servers are synced on a daily basis and the
+periodically so that your servers are synced on a daily basis and the
 data is up to date. Here is an [example](
 https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example--scripting-)
 of a scripting task in PowerShell that runs daily."%}
