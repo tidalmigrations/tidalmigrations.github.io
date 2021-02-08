@@ -44,11 +44,13 @@ Prior to the steps on syncing your hypervisors, be sure to have the below
 dependencies setup:
 
 - To get started you will need to have Tidal Tools installed. You can check out
-  this [article](tidal-tools.html) on how to install it.
+  [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
+  it.
 - You will need [WinRM
   enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring)
   across your environment for this.
-- The scripts needed for this process can be found in [this github
+- The scripts needed for this process can be found in [Machine Stats for
+  Windows GitHub
   repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows).
 
 ### Running the Script
@@ -91,13 +93,15 @@ Prior to the steps on syncing your Unix/Linux machines, be sure to have the belo
 dependencies setup:
 
 - To get started you will need to have Tidal Tools installed. You can check out
-  this [article](tidal-tools.html) on how to install it.
+  [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
+  it.
 - You need to install Python on your local workstation and on the machines you
   need to gather stats from. Please refer to the Machine Stats for Unix-like
   systems [technical
   documentation](https://github.com/tidalmigrations/machine_stats/blob/master/unix/README.md)
   for installation instructions.
-- The scripts needed for this process can be found in [this github
+- The scripts needed for this process can be found in [Machine Stats for
+  Unix-like systems GitHub
   repository](https://github.com/tidalmigrations/machine_stats/tree/master/unix).
 
 ### Running the Script
