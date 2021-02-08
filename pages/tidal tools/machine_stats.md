@@ -78,7 +78,7 @@ data is up to date. Here is an [example](
 https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example--scripting-)
 of a scripting task in PowerShell that runs daily."%}
 
-And there you have it! Your Hyper-V servers will be synced to Tidal Migrations.
+And there you have it! Your servers will be synced to Tidal Migrations.
 
 ## Unix-like systems
 
