@@ -36,9 +36,9 @@ entries:
     - title: Sync your Server Inventory
       output: web
       url: sync-servers.html
-    - title: Integrating with Hyper-V
+    - title: Gathering Machine Stats
       output: web
-      url: sync_hyper-v.html
+      url: machine_stats.html
     - title: Integrating with vSphere
       output: web
       url: vsphere.html
