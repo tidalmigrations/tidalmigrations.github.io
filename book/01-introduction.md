@@ -62,9 +62,24 @@ pages/tidal tools/analyze_database.md
 pages/tidal tools/sourcecode.md
 ```
 
-# Discovery wrap up
+# Summary
 
-Now that you have completed your discovery across your portfolio. You are ready to do your asssessment.
+Congratulations! You have completed your discovery across your portfolio.
+
+We hope that this book helped you to get yourself familiar with **Layering Discovery Techniques**:
+
+1. Importing spreadsheets of applications, databases, servers, and virtualization clusters
+2. Scheduling synchronizations across your hypervisors such as VMWare or Hyper-V
+3. Server usage statistics aggregation
+4. Discovering and fingerprinting your running web applications
+5. Performing databases analysis
+6. Analyzing your source code
+
+That was the beginning of your journey towards the transformative cloud migrations. And now, we hope, you are ready to move forward!
+
+# Next Steps
+
+Now that you have completed your discovery across your portfolio, you are ready to do your assessment.
 The first step is to make sure you have a set of discrete applications in scope for your migration project.
 Navigating to your list of `Applications` under the `ASSESS` section in the platform, you should be able to see a list of all your applications.
 From here, you can tag them with a specific tag for your project, and even create a dashboard tile that includes all the items in scope.
@@ -75,7 +90,9 @@ strategy (one of the 6 Rs) for each application.
 As well with this data, you can generate a report, from the `Portfolio Reports` section under `PLAN`, in order to get a full report on your assessment.
 This report can be shared with other parties and people interested in the project progress.
 
-# Technical troubleshooting
+# Appendix
+
+## Technical troubleshooting
 
 ```{.include}
 pages/tidal tools/troubleshooting.md
