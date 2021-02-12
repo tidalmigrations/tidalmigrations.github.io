@@ -28,7 +28,10 @@ You should see the rendered site on http://localhost:4000
 
 ## PDF generation
 
-You need to have `pandoc` and LaTeX installed.
+You need to have [`pandoc`](https://pandoc.org/installing.html) and LaTeX
+(`lualatex`) installed. We suggest to use
+[TinyTex](https://yihui.name/tinytex/) because it is lightweight,
+cross-platform, portable, and easy-to-maintain.
 
 The following LaTeX packages need to be installed:
 
@@ -53,8 +56,10 @@ The following LaTeX packages need to be installed:
 - `pagecolor`
 - `polyglossia`
 
-Build the PDF with the following command:
+The above packages could be easily installed by running `./book/deps.sh` script.
+
+Build PDF files with the following command:
 
 ```
-make book
+make -j8 book
 ```
