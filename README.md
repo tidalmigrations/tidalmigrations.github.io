@@ -45,7 +45,7 @@ The following LaTeX packages need to be installed:
 - `sourcecodepro`
 - `tcolorbox`
 
-The above packages could be easily installed by running `./book/deps.sh` script.
+The above packages could be easily installed on Debian Stable by running `./book/deps.sh` script.
 
 Build PDF files with the following command:
 
