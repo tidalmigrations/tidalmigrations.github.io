@@ -29,7 +29,7 @@ You should see the rendered site on http://localhost:4000
 ## PDF generation
 
 You need to have [`pandoc`](https://pandoc.org/installing.html) and LaTeX
-(`lualatex`) installed. We suggest to use
+(`lualatex`) installed. We suggest using
 [TinyTex](https://yihui.name/tinytex/) because it is lightweight,
 cross-platform, portable, and easy-to-maintain.
 
