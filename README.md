@@ -35,26 +35,15 @@ cross-platform, portable, and easy-to-maintain.
 
 The following LaTeX packages need to be installed:
 
-- `koma-script`
-- `setspace`
-- `colortbl`
-- `footnotebackref`
-- `csquotes`
-- `caption`
-- `mdframed`
-- `zref`
-- `needspace`
-- `sourcesanspro`
-- `ly1`
-- `sourcecodepro`
-- `titling`
+- `environ`
+- `everypage`
 - `fancyhdr`
-- `bookmark`
+- `luatexbase`
 - `noto`
-- `fontaxes`
-- `listings`
-- `pagecolor`
-- `polyglossia`
+- `pgf`
+- `selnolig`
+- `sourcecodepro`
+- `tcolorbox`
 
 The above packages could be easily installed by running `./book/deps.sh` script.
 
