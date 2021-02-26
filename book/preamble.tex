@@ -1,0 +1,39 @@
+% Color boxes for notes, tips, and callouts
+\usepackage{tcolorbox}
+% Define new colors
+\definecolor{note-frame}{HTML}{4D908E}
+\definecolor{tip-frame}{HTML}{5192AE}
+\definecolor{callout-frame}{HTML}{F0B7A4}
+% Define color boxes
+\newtcolorbox{notebox}{colback=note-frame!10!white,
+                       colframe=note-frame,
+                       fonttitle=\bfseries,
+                       toptitle=3pt,
+                       bottomtitle=3pt,
+                       title=Note}
+\newtcolorbox{tipbox}{colback=tip-frame!10!white,
+                      colframe=tip-frame,
+                      fonttitle=\bfseries,
+                      toptitle=3pt,
+                      bottomtitle=3pt,
+                      title=Tip}
+\newtcolorbox{calloutbox}{colback=callout-frame!10!white,
+                          colframe=callout-frame}
+
+% Left and bottom graphics on every page
+\usepackage{tikz}
+\usepackage{everypage}
+
+\AddEverypageHook{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west,yshift=3pt,xshift=-3pt] at (current page.north west)
+      {\includegraphics{book/left}};
+    \node[anchor=south west,yshift=-3pt,xshift=-3pt] at (current page.south west)
+      {\includegraphics{book/left}};
+    \node[anchor=south west,yshift=1pt,xshift=50pt] at (current page.south west)
+      {\includegraphics[width = 6cm]{book/logo}};
+  \end{tikzpicture}}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}

@@ -8,11 +8,10 @@ permalink: tidal-tools.html
 folder: tidaltools
 ---
 
-{% include note.html content="
-This page describes general installation and configuration instructions for
-Tidal Tools. If you are looking for specific AWS usage instractions please
-refer to [Getting Started with Tidal Tools on AWS](tidal-tools-aws.html) guide.
-" %}
+{% include note.html content="This page describes general installation and
+configuration instructions for Tidal Tools. If you are looking for specific AWS
+usage instructions please refer to [Getting Started with Tidal Tools on
+AWS](tidal-tools-aws.html) guide." %}
 
 Here we outline how to get started working with Tidal Tools via the command
 line.

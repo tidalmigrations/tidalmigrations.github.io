@@ -98,7 +98,7 @@ databases:
     name: 'My-Test-DB'
 ```
 
-{% include note.html content="It is best to use quotations, either double or single, around the values in the configuration file. To avoid special characters, : { } [ ] , & * # ? | - < > = ! % @ \ \n from being interpreted. Single quotes are safest, if the value has a single quote within it, you can include it by using a two single quotations, ie. `'my''string'` - will become `my'string`." %}
+{% include note.html content="It is best to use quotations, either double or single, around the values in the configuration file. To avoid special characters, : `{ } [ ] , & * # ? | - < > = ! % @ \ \n` from being interpreted. Single quotes are safest, if the value has a single quote within it, you can include it by using a two single quotations, ie. `'my''string'` - will become `my'string`." %}
 
 {% include tip.html content="Are you analyzing an Oracle Stanard Edition (SE)
 database? Check out the [advanced configuration below](#advanced-configuration)." %}

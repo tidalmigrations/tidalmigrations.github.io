@@ -25,3 +25,30 @@ To run [jekyll](https://jekyllrb.com/) and start hacking run:
 
 
 You should see the rendered site on http://localhost:4000
+
+## PDF generation
+
+You need to have [`pandoc`](https://pandoc.org/installing.html) and LaTeX
+(`lualatex`) installed. We suggest using
+[TinyTex](https://yihui.name/tinytex/) because it is lightweight,
+cross-platform, portable, and easy-to-maintain.
+
+The following LaTeX packages need to be installed:
+
+- `environ`
+- `everypage`
+- `fancyhdr`
+- `luatexbase`
+- `noto`
+- `pgf`
+- `selnolig`
+- `sourcecodepro`
+- `tcolorbox`
+
+The above packages could be easily installed on Debian Stable by running `./book/deps.sh` script.
+
+Build PDF files with the following command:
+
+```
+make -j8 book
+```
