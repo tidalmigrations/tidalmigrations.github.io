@@ -59,14 +59,7 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 
 ### Oracle User
 
-You can either use the default `SYSDBA` user or you can create a user with the same set of permissions:
-
-```sql
-CREATE USER tidal IDENTIFIED BY replace_this_with_secure_password;
-GRANT CREATE SESSION TO tidal;
-GRANT SELECT ANY DICTIONARY TO tidal;
-GRANT SELECT_CATALOG_ROLE TO tidal;
-```
+You can can create a user with the [script and set of permissions defined in this script](/oracle_user.sql). You should provide a secure password on the first line.
 
 ### SQL Server User
 
