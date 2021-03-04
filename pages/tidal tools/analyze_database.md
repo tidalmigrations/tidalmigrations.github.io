@@ -13,7 +13,7 @@ The analysis will calculate the difficulty of migrating your databases to each t
 
 It is capable of analyzing both **Oracle and SQL Server databases**. Providing analysis on migrating a database to a **variety of services on AWS, Azure and Google Cloud**.
 
-> NB: The entire analysis never queries or reads user or application data and does not collect database source code.
+{% include note.html content="The entire analysis never queries or reads user or application data and does not collect database source code." %}
 
 ## Supported Database Versions
 
