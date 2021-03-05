@@ -19,14 +19,14 @@ It is capable of analyzing both **Oracle and SQL Server databases**. Providing a
 
 Tidal Tools is able to analyze Oracle and SQL Server databases with the following versions:
 
-| Oracle                | SQL Server |
-|-----------------------|
-| [Beta](mailto:info@tidalmigrations.com?subject=Interested in Oracle 8i Database Analysis) Oracle Database 8i (8.1) | SQL Server 2008R2 |
-| [Beta](mailto:info@tidalmigrations.com?subject=Interested in Oracle 9 Database Analysis) Oracle Database 9i Release 2 (9.2)   | SQL Server 2016 |
-| Oracle Database 10g Release 2 (10.2) | SQL Server 2017 |
-| Oracle Database 11g Release 1 (11.1) |
-| Oracle Database 11g Release 2 (11.2) |
-| Oracle Database 12c Release 1 (12.1) |
+| Oracle                | SQL Server | MySQL | PostgreSQL |
+|-----------------------|------------|-------|------------|
+| [Beta](mailto:info@tidalmigrations.com?subject=Interested in Oracle 8i Database Analysis) Oracle Database 8i (8.1) | SQL Server 2008R2 | 5.6 | 8 |
+| [Beta](mailto:info@tidalmigrations.com?subject=Interested in Oracle 9 Database Analysis) Oracle Database 9i Release 2 (9.2)   | SQL Server 2016 | 5.7 | 9 |
+| Oracle Database 10g Release 2 (10.2) | SQL Server 2017 | 8.0 | 10 |
+| Oracle Database 11g Release 1 (11.1) | | | 11 |
+| Oracle Database 11g Release 2 (11.2) | | | 12 |
+| Oracle Database 12c Release 1 (12.1) | | | 13 |
 | Oracle Database 12c Release 2 (12.2) |
 | Oracle Database 18c (18.1) |
 
@@ -48,20 +48,20 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
   Be sure to have [installed](tidal-tools.html) and [logged in](tidal-tools.html#login) to your Tidal Migrations account via Tidal Tools.
 - Install [Docker CE](https://docs.docker.com/v17.12/install/), it is compatible with most OSs, select the one you need. Version 17.12 or later will work with Tidal Tools. [Why Docker?](#why-docker)
 - You will also need a few authentication and configuration details for the database:
-  - id - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
-  - engine - The database vendor, either `Oracle` or `SQL Server`, it is not case sensitive.
-  - host - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
-  - port - The port that the host has open and the database can accept connections on, the default for Oracle is 1521, and for SQL Server it is 1433.
-  - db_name - The name of the database that will be analyzed, as it is defined within the database engine itself. ie. the value that is used by applications to connect to the database by name.
-  - user - A username to authenticate with the database with, see below for more details.
-  - password - A password for the corresponding user.
-  - name - A common name for your database could be the same or different from db_name, but this value is arbitrary and only for your reference.
+  - `id` - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
+  - `engine` - The database vendor, either `Oracle` or `SQL Server`, it is not case sensitive.
+  - `host` - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
+  - `port` - The port that the host has open and the database can accept connections on, the default for Oracle is `1521`, for SQL Server it is `1433`, for MySQL it is `3306`, and for PostgreSQL the default port is `5432`.
+  - `db_name` - The name of the database that will be analyzed, as it is defined within the database engine itself. ie. the value that is used by applications to connect to the database by name.
+  - `user` - A username to authenticate with the database with, see below for more details.
+  - `password` - A password for the corresponding user.
+  - `name` - A common name for your database could be the same or different from db_name, but this value is arbitrary and only for your reference.
 
 ### Oracle User
 
 You can either use the default `SYSDBA` user or you can create a user with the same set of permissions:
 
-```
+```sql
 CREATE USER tidal IDENTIFIED BY replace_this_with_secure_password;
 GRANT CREATE SESSION TO tidal;
 GRANT SELECT ANY DICTIONARY TO tidal;
@@ -72,12 +72,81 @@ GRANT SELECT_CATALOG_ROLE TO tidal;
 
 For SQL Server the access needed is specified in the `GRANT` commands below. If you have a user you would like to use you can run these commands and change the `[user_name]`. If you want to create a new user, [there a few options provided by Microsoft](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-user-transact-sql?view=sql-server-2017), which you can do and then run the following `GRANT` commands for the new user.
 
-```
+```sql
 GRANT SELECT ON SCHEMA::sys TO [user_name];
 GRANT SELECT ON SCHEMA::INFORMATION_SCHEMA TO [user_name];
 GRANT SELECT ON tempdb..sysobjects to [user_name];
 GRANT VIEW SERVER STATE TO [user_name];
 ```
+
+### MySQL Server User
+
+For MySQL you can create a user (`tidal`) with all the necessary permissions as the following:
+
+```sql
+CREATE USER 'tidal'@'%' IDENTIFIED BY 'replace_this_with_secure_password';
+GRANT PROCESS,REFERENCES, SHOW DATABASES, SHOW VIEW ON *.* TO 'tidal'@'%';
+GRANT SELECT ON sys.* TO 'tidal'@'%';
+GRANT SELECT ON performance_schema.* TO 'tidal'@'%';
+GRANT SELECT ON mysql.slave_master_info TO tidal;
+GRANT SELECT ON mysql.slave_relay_log_info TO tidal;
+GRANT SELECT ON mysql.user TO tidal;
+```
+
+Use the commands from the following sections according to the MySQL version used.
+
+#### MySQL 5.x
+
+```sql
+GRANT SELECT ON mysql.proc TO tidal;
+```
+
+#### MySQL 8.x
+
+```sql
+GRANT SHOW_ROUTINE ON *.* TO 'tidal'@'%';
+GRANT SELECT ON mysql.user TO 'tidal'@'%';
+```
+
+### PostgreSQL Server User
+
+Use the following commands to create a user (`tidal`) on PostgreSQL server.
+
+```sql
+CREATE USER tidal WITH PASSWORD 'replace_this_with_secure_password';
+
+DO $$ DECLARE comm_rec RECORD;
+BEGIN
+    FOR comm_rec IN
+		SELECT 'GRANT REFERENCES ON ALL TABLES IN SCHEMA '||schema_name||' TO tidal' AS comm FROM information_schema.schemata
+	LOOP
+        EXECUTE comm_rec.comm;
+    END LOOP;
+END;
+$$ LANGUAGE plpgsql;
+
+GRANT REFERENCES ON ALL TABLES IN SCHEMA public to tidal;
+```
+
+For PostgreSQL versions **higher than 9** the following `GRANT`s should be also applied:
+
+```sql
+GRANT SELECT ON pg_catalog.pg_config TO tidal;
+GRANT EXECUTE ON function pg_catalog.pg_config TO tidal;
+GRANT SELECT ON pg_catalog.pg_proc TO tidal;
+GRANT SELECT ON pg_catalog.pg_namespace TO tidal;
+```
+
+After creating the user you will need to add the appropriate entry to the [`pg_hba.conf`](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html). For example:
+
+```
+# TYPE  DATABASE    USER    ADDRESS     METHOD
+host    all         tidal   0.0.0.0/0   md5
+```
+
+To apply the configuration changes to the running PostgreSQL server you will need to run [`pg_ctl restart`](https://www.postgresql.org/docs/current/app-pg-ctl.html).
+
+## Perform the analysis
 
 With your user and password, you can define all these values in a YAML configuration file.
 
@@ -86,7 +155,7 @@ The simplest way is to use `tidal analyze db init` and answer the questions. Or 
 
 databases.yaml:
 
-```
+```yaml
 databases:
   - id: 111
     engine: Oracle
@@ -112,7 +181,7 @@ tidal analyze db databases.yaml
 
 Try it out!
 
-## Running offline
+### Running offline
 
 If you need to run the command from a computer without any internet access, either no download access to download the docker image necessary or no outbound access to upload the results of the analysis to the API then this is for you.
 
@@ -147,7 +216,7 @@ The entire analysis takes place locally on your machine. The only data that is c
 To use Oracle features included only in the Oracle Standard Edition (SE) license, you
 can set the `analyze_workload` property to `false` in your configuration file. For example:
 
-```
+```yaml
 databases:
   - id: 111
     analyze_workload: false
