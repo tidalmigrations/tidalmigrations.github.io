@@ -48,7 +48,9 @@ entries:
     - title: Integrating with Ansible Tower
       output: web
       url: ansible-tower.html
-
+    - title: Windows DNS Zonefile Export
+      output: web
+      url: windows-zone-export.html
   - title: Assess
     output: web
     folderitems:
