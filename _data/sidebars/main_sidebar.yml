@@ -116,3 +116,10 @@ entries:
     - title: Troubleshooting Ansible Tower Integration
       output: web
       url: troubleshoot-ansible.html
+
+  - title: Downloads
+    output: web
+    folderitems:
+    - title: Downloads
+      output: web
+      url: downloads.html
