@@ -25,4 +25,4 @@ This command will generate a file that is named, what you provided for `zoneexpo
 
 # DNS Discovery
 
-Once you have a zonefile generated. You can continue with your discovery by following the [DNS Discovery Guide](/discover.html).
+Once you have a zonefile generated, you can continue with your discovery by following the [DNS Discovery Guide](/discover.html).
