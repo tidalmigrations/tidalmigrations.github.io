@@ -21,7 +21,7 @@ The arguments for the command are:
 
 There is also the [offical documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dnscmd#dnscmd-zoneexport-command) from Microsoft.
 
-This command will generate a file that is named, what you provided for `zoneexportfile` and it will be located in the `%systemroot%/System32/Dns` directory by defaullt.
+This command will generate a file that is named what you provided for `zoneexportfile` and it will be located in the `%systemroot%/System32/Dns` directory by defaullt.
 
 # DNS Discovery
 
