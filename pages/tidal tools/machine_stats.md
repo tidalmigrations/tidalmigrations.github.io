@@ -123,7 +123,7 @@ dependencies setup:
 4. Execute `runner` and pipe its output to Tidal Tools:
 
     ```
-    $ ./runner | tidal sync servers
+    $ pipenv run stats | tidal sync servers
     ```
 
 For more details on configuration and usage, please check Machine Stats for
