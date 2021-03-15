@@ -95,8 +95,9 @@ dependencies setup:
 - To get started you will need to have Tidal Tools installed. You can check out
   [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
   it.
-- You need to install Python on your local workstation and on the machines you
-  need to gather stats from. Please refer to the Machine Stats for Unix-like
+- You need to install **Python 3.5+** on your local workstation (control node)
+  and **Python 2.6+** or **Python 3.5+** on the machines you need to gather
+  stats from (managed nodes). Please refer to the Machine Stats for Unix-like
   systems [technical
   documentation](https://github.com/tidalmigrations/machine_stats/blob/master/unix/README.md)
   for installation instructions.
