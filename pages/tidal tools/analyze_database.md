@@ -61,6 +61,18 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 
 You can can create a user with the [script and set of permissions defined in this script](/oracle_user.sql). You should provide a secure password on the first line.
 
+If you are using a CDB database you will also need to create a second user to access the CDB. You can do that with this script and also provide a secure password at the top:
+
+```
+CREATE USER c##tidal_comm_user IDENTIFIED BY "replace_this_with_secure_password" account unlock;
+GRANT CREATE SESSION to c##tidal_comm_user;
+GRANT SELECT ON gv_$archive_dest to c##tidal_comm_user;
+GRANT SELECT ON gv_$instance to c##tidal_comm_user;
+GRANT SELECT ON v_$managed_standby to c##tidal_comm_user;
+GRANT SELECT ON v_$database to c##tidal_comm_user;
+GRANT SELECT ON dba_hist_sysmetric_summary to c##tidal_comm_user;
+```
+
 ### SQL Server User
 
 You can can create a user with the [script and set of permissions defined in this script](/mssql_user.sql). You should provide a secure password near the top.
@@ -156,7 +168,7 @@ databases:
 {% include note.html content="It is best to use quotations, either double or single, around the values in the configuration file. To avoid special characters, : `{ } [ ] , & * # ? | - < > = ! % @ \ \n` from being interpreted. Single quotes are safest, if the value has a single quote within it, you can include it by using a two single quotations, ie. `'my''string'` - will become `my'string`." %}
 
 {% include tip.html content="Are you analyzing an Oracle Stanard Edition (SE)
-database? Check out the [advanced configuration below](#advanced-configuration)." %}
+database or using a CDB database? Check out the [advanced configuration below](#advanced-configuration)." %}
 
 - You’re all set! You can now analyze the database with:
 
@@ -199,6 +211,8 @@ The entire analysis takes place locally on your machine. The only data that is c
 
 ## Advanced Configuration
 
+
+### Oracle Standard Edition
 To use Oracle features included only in the Oracle Standard Edition (SE) license, you
 can set the `analyze_workload` property to `false` in your configuration file. For example:
 
@@ -228,3 +242,25 @@ Two commands you can use for this are:
 1. `dig your_db_host` - This should return a DNS record, usually an A record, with an IP address. This means you are able to resolve the hostname of the database. If there is no IP address then you either need to adjust the hostname or you need to configure or adjust the DNS server for your operating system.
 
 2. `nc -vzn -w 10 your_db_host db_port` This command should return `Connected to your_db_host:db_port` if it is able to connect. If it returns `Connection Timed Out` this means that it is not able to reach your database on this port. This could mean that you do not have the correct network connectivity to the database and may need to adjust firewalls or other network access. Or you are you not providing the correct port that is open and listening for requests on the database.
+
+### CDB Configuration
+
+You will need these additional values added to your configuration file to connect to a CDB database.
+
+```yaml
+databases:
+  - id: 111
+    engine: Oracle
+    host: 'my-db-host.com'
+    port: 1521
+    db_name: 'orcl'
+    user: 'tidal'
+    password: 'yoursecurepassword1234!'
+    name: 'My-Test-DB'
+    dbidtype: 'dbid'
+    ispdb: false
+    cdb:
+      name: 'cdbname'
+      user: 'c##tidal_comm_user'
+      password: 'your_secure_password'
+```
