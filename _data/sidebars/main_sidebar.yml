@@ -38,7 +38,7 @@ entries:
       url: analyze.html
     - title: Sync your Server Inventory
       output: web
-      url: sync-servers.html    
+      url: sync-servers.html
     - title: Gathering Machine Stats
       output: web
       url: machine_stats.html
