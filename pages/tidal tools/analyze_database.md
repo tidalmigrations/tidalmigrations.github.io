@@ -225,3 +225,13 @@ databases:
 {% include note.html content="By setting this to `false`, some results from the
 analysis will not be available, including server metrics, connected applications,
 and the workload analysis ranking." %}
+
+## Troubleshooting
+
+If you are getting errors in tring to perform the analysis it can help if you confirm that you do have network connectivity to the database.
+
+Two commands you can use for this are:
+
+1. `dig your_db_host` - This should return a DNS record, usually an A record, with an IP address. This means you are able to resolve the hostname of the database. If there is no IP address then you either need to adjust the hostname or you need to configure or adjust the DNS server for your operating system.
+
+2. `nc -vzn -w 10 your_db_host db_port` This command should return `Connected to your_db_host:db_port` if it is able to connect. If it returns `Connection Timed Out` this means that it is not able to reach your database on this port. This could mean that you do not have the correct network connectivity to the database and may need to adjust firewalls or other network access. Or you are you not providing the correct port that is open and listening for requests on the database.
