@@ -42,6 +42,9 @@ entries:
     - title: Gathering Machine Stats
       output: web
       url: machine_stats.html
+    - title: Host discovery with Nmap
+      output: web
+      url: host-discovery.html
     - title: Integrating with vSphere
       output: web
       url: vsphere.html
@@ -105,6 +108,9 @@ entries:
     - title: Using with Postman
       output: web
       url: /postman_docs.html
+    - title: Using with Nmap
+      output: web
+      url: /nmap-api.html
 
   - title: Troubleshooting
     output: web
