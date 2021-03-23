@@ -228,7 +228,7 @@ and the workload analysis ranking." %}
 
 ## Troubleshooting
 
-If you are getting errors in tring to perform the analysis it can help if you confirm that you do have network connectivity to the database.
+If you are getting errors in tring to perform the analysis, it can help if you confirm that you do have network connectivity to the database.
 
 Two commands you can use for this are:
 
