@@ -97,9 +97,9 @@ difficulty.
 
 After running `tidal analyze db your_config.yml` against your databases ([see
 guide](/analyze_database.html)), you will understand which database features in
-your Oracle or SQL Server installations make it difficult to adopt cloud-native
-database offerings and also identify which applications are connecting to your
-databases.
+your Oracle,SQL Server, MySQL, or PostgreSQL installations make it difficult to
+adopt cloud-native database offerings and also identify which applications are
+connecting to your databases.
 
 With over 100 unique characteristics considered, comparisons are made with the
 data platforms available in the cloud(s) you are migrating to which provide you
