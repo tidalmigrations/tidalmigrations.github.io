@@ -11,13 +11,13 @@ Not sure how ready you are to move to the cloud? With Tidal Migrations you have 
 
 The analysis will calculate the difficulty of migrating your databases to each target platform, and give details on database features that may complicate the migration.
 
-It is capable of analyzing both **Oracle and SQL Server databases**. Providing analysis on migrating a database to a **variety of services on AWS, Azure and Google Cloud**.
+It is capable of analyzing **Oracle**, **SQL Server**, **MySQL**, and **PostgreSQL** databases. Providing analysis on migrating a database to a **variety of services on AWS, Azure and Google Cloud**.
 
 {% include note.html content="The entire analysis never queries or reads user or application data and does not collect database source code." %}
 
 ## Supported Database Versions
 
-Tidal Tools is able to analyze Oracle and SQL Server databases with the following versions:
+Tidal Tools is able to analyze databases with the following versions:
 
 | Oracle                | SQL Server | MySQL | PostgreSQL |
 |-----------------------|------------|-------|------------|
@@ -49,7 +49,7 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 - Install [Docker CE](https://docs.docker.com/v17.12/install/), it is compatible with most OSs, select the one you need. Version 17.12 or later will work with Tidal Tools. [Why Docker?](#why-docker)
 - You will also need a few authentication and configuration details for the database:
   - `id` - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
-  - `engine` - The database vendor, either `Oracle` or `SQL Server`, it is not case sensitive.
+  - `engine` - The database vendor, either `Oracle`, `SQL Server`, `MySQL`, or `PostgreSQL`, it is not case sensitive.
   - `host` - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
   - `port` - The port that the host has open and the database can accept connections on, the default for Oracle is `1521`, for SQL Server it is `1433`, for MySQL it is `3306`, and for PostgreSQL the default port is `5432`.
   - `db_name` - The name of the database that will be analyzed, as it is defined within the database engine itself. ie. the value that is used by applications to connect to the database by name.
