@@ -64,7 +64,7 @@ You can can create a user with the [script and set of permissions defined in thi
 
 If you are using a CDB database you will also need to create a second user to access the CDB. You can do that with this script and also provide a secure password at the top:
 
-```
+```sql
 CREATE USER c##tidal_comm_user IDENTIFIED BY "replace_this_with_secure_password" account unlock;
 GRANT CREATE SESSION to c##tidal_comm_user;
 GRANT SELECT ON gv_$archive_dest to c##tidal_comm_user;
@@ -175,7 +175,6 @@ database or using a CDB database? Check out the [advanced configuration below](#
 
 ```
 tidal analyze db databases.yaml
-
 ```
 
 Try it out!
