@@ -50,6 +50,12 @@ pages/tidal tools/discover.md
 pages/tidal tools/analyze.md
 ```
 
+# Host discovery with Nmap
+
+```{.include}
+pages/user guides/discover_nmap.md
+```
+
 # Database analysis
 
 ```{.include}
