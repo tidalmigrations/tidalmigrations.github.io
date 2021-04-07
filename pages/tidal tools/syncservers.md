@@ -63,7 +63,7 @@ You can also include any other arbitrary fields in the key "custom_fields".
 }
 
 ```
-The syncronization of your servers to Tidal Migrations can be performed with the following command:
+The synchronization of your servers to Tidal Migrations can be performed with the following command:
 
 `` cat some_file.json | tidal sync servers ``
 
