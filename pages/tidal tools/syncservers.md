@@ -164,6 +164,8 @@ The syncronization of your Applications can be performed by following the above 
       "servers": [{
         "host_name": "trpewrcapbiz02"
       }],
+      "database_instances": [{
+        "name":"my_app_db"}],
       "urls": "https://approvalmanagementsystem.com",
       "transition_overview": "this is the transition_overview of the application",
       "transition_type": 3,
