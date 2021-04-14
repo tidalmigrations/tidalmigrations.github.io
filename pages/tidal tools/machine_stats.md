@@ -1,7 +1,7 @@
 ---
 title: Gather Machine Stats
 keywords:
-last_updated: February, 2021
+last_updated: April, 2021
 summary: "Gather machine stats from remote environments"
 sidebar: main_sidebar
 permalink: machine_stats.html
@@ -95,15 +95,12 @@ dependencies setup:
 - To get started you will need to have Tidal Tools installed. You can check out
   [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
   it.
-- You need to install **Python 3.5+** on your local workstation (control node)
+- You need to install **Python 3.6+** on your local workstation (control node)
   and **Python 2.6+** or **Python 3.5+** on the machines you need to gather
   stats from (managed nodes). Please refer to the Machine Stats for Unix-like
   systems [technical
   documentation](https://github.com/tidalmigrations/machine_stats/blob/master/unix/README.md)
   for installation instructions.
-- The scripts needed for this process can be found in [Machine Stats for
-  Unix-like systems GitHub
-  repository](https://github.com/tidalmigrations/machine_stats/tree/master/unix).
 
 ### Running the Script
 
@@ -120,10 +117,10 @@ dependencies setup:
     my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
     ```
 
-4. Execute `runner` and pipe its output to Tidal Tools:
+4. Execute `machine-stats` and pipe its output to Tidal Tools:
 
     ```
-    $ pipenv run stats | tidal sync servers
+    $ machine-stats | tidal sync servers
     ```
 
 For more details on configuration and usage, please check Machine Stats for
