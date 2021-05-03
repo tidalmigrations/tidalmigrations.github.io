@@ -14,11 +14,8 @@ the option to analyze your specified source code associated with the application
 
 The analysis will identify the difficulty to migrate your applications to the
 cloud, including the number of blocking issues identified. It is able to
-analyze source code written in ABAP, Ada, Apex, Assembly, C#, C/C++, COBOL,
-Clojure, CoffeeScript, ColdFusion, Delphi, Erlang, F#, Fortran, Go, Groovy,
-Java, JavaScript, JavaServer Pages, Kotlin, Ksh, Lisp, Lua, Matlab,
-Objective-C, PHP, PL/SQL, PL1, Python, R, Rexx, Ruby, Rust, Scala, Smalltalk,
-Swift, T-SQL, TypeScript, VB/VB.net.
+analyze source code written in C#, COBOL, Java, JavaScript, Kotlin, Microsoft
+Transact-SQL, PHP, Python, Swift, TypeScript, VB.Net.
 
 If you are interested in a deeper dive source code assessment, let us know at
 [info@tidalmigrations.com](mailto:info@tidalmigrations.com).
