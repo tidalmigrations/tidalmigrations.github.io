@@ -71,6 +71,8 @@ Try it out!
 
 {% include image.html file="source_code_analyze.png" caption="Analyze your source code" %}
 
+{% include tip.html content="Need to run code analysis on a entire set of applications all from one machine? Run [this command and easily create a directory for every application already in Tidal Migrations](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)" %}
+
 ### Why Docker?
 
 You need to install Docker in order to complete the source code analysis. This is because the analysis uses several system dependent software libraries so by using Docker the analysis can use those libraries without you requiring to install the correct versions and dependencies.
