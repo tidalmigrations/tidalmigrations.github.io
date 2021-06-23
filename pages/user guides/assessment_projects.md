@@ -6,7 +6,7 @@ last_updated: June, 2021
 summary: "A walkthrough on the features of a Assessment Projects."
 sidebar: main_sidebar
 folder: userguides
-permalink: assessment_projects.html
+permalink: assessment-projects.html
 ---
 
 # Assessment Projects
