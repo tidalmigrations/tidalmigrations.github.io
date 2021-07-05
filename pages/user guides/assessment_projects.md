@@ -14,14 +14,14 @@ permalink: assessment-projects.html
 
 During your migration to the cloud, you might find yourself in charge of dozens or hundreds of applications. At Tidal Migrations, we have found it invaluable to segment our applications into groups. Tidal's Project feature enables you to group applications by a common set of goals or timelines.
 
-The projects page is found under the home section in the menu.
+You can find the projects page under the home section in the menu.
 
 {% include image.html file="projects_menu.png" %}
 
 
 ## Creating a project
 
-When you first visit https://\<your-subdomain\>.tidalmg.com/#/projects, it looks pretty barren.
+When you first visit `https://\<your-subdomain\>.tidalmg.com/#/projects`, it looks pretty barren.
 
 {% include image.html file="projects_1.png" %}
 
@@ -40,11 +40,11 @@ It's ok if you don't know everything about your burgeoning forest just yet, you 
 
 Once you've set some goals and added some apps to your projects, you've laid a solid foundation to migrate your first set of applications to the cloud.
 
-The top of this page has now changed, we've added a new section that gives you quick insight into most recently updated project. We only have one project now, but as your arboretum grows it helps to see how you and your team are tending to these projects. This section highlights the progress, timeline of the project, and gives you access to dive into the rest of the details of the project.
+The top of this page has now changed, we've added a new section that gives you quick insight into the most recently updated project. We only have one project now, but as your portfolio grows, you will be able to easily keep track of where exactly each project is at in the assessment process. This section highlights the progress, timeline of the project, and gives you access to dive into the rest of the project's details.
 
 {% include image.html file="projects_4.png" %}
 
-Clicking the details button above causes a component to pop up on the right side of the screen that highlights some important information about your project. Alternatively, you can open up the component by clicking the row for that project in the table.
+Clicking the details button above causes a section to pop up on the right side of the screen that highlights some important information about your project. Alternatively, you can open up any project's details section by clicking the row for that project in the table.
 
 {% include image.html file="projects_5.png" %}
 
@@ -62,6 +62,6 @@ Finally, after filling in all the information about your project and adding some
 
 {% include image.html file="projects_8.png" %}
 
-This will lead you to our insights page where you can get an overview of your financial highlights, assessment overview, migration ROI, application resource utilization, security vulnerabilities, and technology breakdown
+This will lead you to our insights page, where you can get an overview of your financial highlights, assessment overview, migration ROI, application resource utilization, security vulnerabilities, and technology breakdown.
 
 {% include image.html file="projects_9.jpeg" %}
