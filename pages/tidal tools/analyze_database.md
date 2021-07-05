@@ -136,6 +136,15 @@ GRANT SELECT ON pg_catalog.pg_proc TO tidal;
 GRANT SELECT ON pg_catalog.pg_namespace TO tidal;
 ```
 
+For PostgreSQL versions **10 and above** the following `GRANT`s should be also applied:
+
+```sql
+GRANT SELECT ON pg_catalog.pg_hba_file_rules TO tidal;
+GRANT SELECT ON pg_catalog.pg_roles TO tidal;
+GRANT pg_read_all_settings TO tidal;
+GRANT pg_read_all_stats TO tidal;
+```
+
 After creating the user you will need to add the appropriate entry to the [`pg_hba.conf`](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html). For example:
 
 ```
