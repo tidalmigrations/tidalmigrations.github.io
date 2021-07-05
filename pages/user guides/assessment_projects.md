@@ -12,7 +12,7 @@ permalink: assessment-projects.html
 
 # Assessment Projects
 
-During your migration to the cloud, you might find yourself in charge of dozens or hundreds of applications. At Tidal Migrations, we have found it invaluable to segment our applications into groups. Tidal's Project feature enables users to group applications by a common set of goals or timelines.
+During your migration to the cloud, you might find yourself in charge of dozens or hundreds of applications. At Tidal Migrations, we have found it invaluable to segment our applications into groups. Tidal's Project feature enables you to group applications by a common set of goals or timelines.
 
 The projects page is found under the home section in the menu.
 
