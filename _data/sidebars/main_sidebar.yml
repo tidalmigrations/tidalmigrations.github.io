@@ -78,9 +78,6 @@ entries:
     - title: Get IP Addresses by Application Tag
       output: web
       url: /tag-to-ip-addresses.html
-    - title: Assessment Projects
-      output: web
-      url: /assessment-projects.html
   - title: Plan
     output: web
     folderitems:
