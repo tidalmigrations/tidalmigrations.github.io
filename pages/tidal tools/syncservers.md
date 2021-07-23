@@ -27,9 +27,9 @@ This data can be passed as standard input to the `tidal sync servers` command an
 synchronized via the API.
 
 
-The JSON document must be created in the specified format. The top-level key must be "servers",
+The JSON document must be created in the specified format. The top-level key must be `"servers"`,
 with a value of an array. The array can consist of the various keys as shown below, describing the server to be synced.
-You can also include any other arbitrary fields in the key "custom_fields".
+You can also include any other arbitrary fields in the key `"custom_fields"`.
 
 ```
 {
@@ -65,7 +65,9 @@ You can also include any other arbitrary fields in the key "custom_fields".
 ```
 The synchronization of your servers to Tidal Migrations can be performed with the following command:
 
-`` cat some_file.json | tidal sync servers ``
+```
+tidal sync servers some_file.json
+```
 
 
 You can easily set this to run periodically so that your servers are synced on a daily basis and the data is up to date.
@@ -127,15 +129,19 @@ The script above is an example of how to easily transform your data into the nec
 
 Change the file permissions to make the script executable using:
 
-``` chmod +x ./transform.rb ```
+```
+chmod +x ./transform.rb
+```
 
 You can now utlise your script with a given CSV file and it will be synced to your account via the API. Utlise the command below:
 
-``` cat some_file.csv | ./transform.rb | tidal sync servers ```
+```
+./transform.rb < some_file.csv | tidal sync servers
+```
 
 ## How do I sync my servers in more automated fashion?
 
-Instead of manually providing all of your servers details, you can utilize [Machine Status](https://github.com/tidalmigrations/machine_stats) utility to gather all the stats from your servers environment. Follow the Machine Stats installation and configuration steps available on the tool's [GitHub page](https://github.com/tidalmigrations/machine_stats).
+Instead of manually providing all of your servers details, you can utilize [Machine Stats](https://github.com/tidalmigrations/machine_stats) utility to gather all the stats from your servers environment. Follow the Machine Stats installation and configuration steps available on the tool's [GitHub page](https://github.com/tidalmigrations/machine_stats).
 
 ## How do I sync other resources?
 
@@ -145,7 +151,9 @@ You also have the option of syncing your **Applications** and **Database Instanc
 
 You can sync your Applications with the following command:
 
-`` cat some_file.json | tidal sync apps ``
+```
+tidal sync apps some_file.json
+```
 
 When importing your applications to the API, Tidal Migrations's sync tool will check for existing applications, based on their name, and update the changed data for those applications.
 If the given application to sync does not exist already, it will add that application to the Tidal Migrations API.
@@ -187,7 +195,9 @@ The syncronization of your Applications can be performed by following the above 
 
 You can sync your Database Instances with the following command:
 
-`` cat some_file.json | tidal sync dbs ``
+```
+tidal sync dbs some_file.json
+```
 
 When importing your database instances to the API, Tidal Migrations's sync tool will check for existing database instances, based on their name, and update the changed data for those database instances.
 If the given database instance to sync does not exist already, it will add it to the Tidal Migrations API.
