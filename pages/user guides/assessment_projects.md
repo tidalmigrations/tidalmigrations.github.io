@@ -40,6 +40,30 @@ You will then be brought to a new page that allows you to set out some goals for
 
 It's OK to skip the fields you are unsure about. You can always come back to this page and adjust the details as things evolve.
 
+## Bulk assign applications to a project
+You also have the ability to bulk assign the applications you selected to a project. Simply navigate to the `Applications` tab under `ASSESS` menu or manually visit `https://<your-subdomain>.tidalmg.com/#/apps`, select the applications you want to assign by click the checkboxes and then click the `Project Assign` button.
+
+{% include image.html file="projects_10.png" %}
+
+This will brings up the a modal which contains a list of projects and you can search the name of the project by filtering the project name in the search bar above the list.
+
+{% include image.html file="projects_11.png" %}
+
+Additionally, you can easily create a brand new project by simply typing the project name in the search bar and clicking `Create New Project: [Your project name]`. A new project with the name you entered will be created within seconds and you can edit project details later in the project detail view.
+
+{% include image.html file="projects_12.png" %}
+
+Once you selected the project you want to assign, continue the process by clicking the `Assign N App(s) to Project`. Depending on the applications you selected, you will either see the confirmation modal directly if there is no application that already being assigned to project in the selected applications.
+
+{% include image.html file="projects_13.png" %}
+
+If there is any selected application which already being assigned to a project, then you will see a warning modal which contains a list of conflicted applications. You can resolve the conflicts by either clicking `Remove` button beside each list item to deselect the application, or clicking `Overwrite` button to force update those conflicted applications to the new project you just selected.
+
+{% include image.html file="projects_14.png" %}
+
+And finally, you will see the confirmation modal which contains the number of applications you assigned, a clickable link to the selected project so you can go check the updates you just made, and a `Return` button which will close the modal and stay you in the Application page.
+
+{% include image.html file="projects_13.png" %}
 
 ## Overview
 
