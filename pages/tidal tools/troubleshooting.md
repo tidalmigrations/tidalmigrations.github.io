@@ -152,6 +152,13 @@ You may need to [configure Docker to use the proxy server](https://docs.docker.c
 
 **NB: If you need to authenticate with the proxy, be sure to include the username and password in the value, ie. 'http://proxy_userid:proxy_password@proxy_ip:proxy_port'**
 
+### PostgreSQL database fails to analyze with `tidal analyze db` {#postgres}
+
+Check the [PostgreSQL Server
+User](https://guides.tidalmg.com/analyze-database.html#postgresql-server-user)
+script to verify that the all the necessary permissions were granted. Pay
+attention that different permissions should be applied to different PostgreSQL
+versions.
 
 
 ## Windows specific troubleshooting {#windows}
@@ -253,11 +260,3 @@ $ sudo dnf install -y grubby && \
 ```
 
 This command reverts the systemd configuration to use cgroup v1.
-
-### PostgreSQL database fails to analyze with `tidal analyze db` {#postgres}
-
-Check the [PostgreSQL Server
-User](https://guides.tidalmg.com/analyze-database.html#postgresql-server-user)
-script to verify that the all the necessary permissions were granted. Pay
-attention that different permissions should be applied to different PostgreSQL
-versions.
