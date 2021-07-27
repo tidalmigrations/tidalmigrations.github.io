@@ -61,6 +61,8 @@ If there are any applications with assigned projects, you will see a warning mod
 
 You can also click the `Overwrite` button to remove the conflicting applications from their current project and assign them to the new project.
 
+{% include note.html content="An application can only be assigned to one project at a time, so assigning it to a new project removes it from any project it was assigned to before. This action can alter the original project's status and highlights view." %}
+
 {% include image.html file="projects_14.png" %}
 
 Finally, you will see the confirmation modal, which tells you how many applications have been added to the project. It also has a clickable link to the selected project so you can verify the updates you just made. Or you can click the `Return` button, which will close the modal and keep you on the Applications page.
