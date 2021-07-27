@@ -41,7 +41,7 @@ You will then be brought to a new page that allows you to set out some goals for
 It's OK to skip the fields you are unsure about. You can always come back to this page and adjust the details as things evolve.
 
 ## Bulk assign applications to a project
-You also have the ability to bulk assign the applications you selected to a project. Simply navigate to the `Applications` tab under `ASSESS` menu or manually visit `https://<your-subdomain>.tidalmg.com/#/apps`, select the applications you want to assign by click the checkboxes and then click the `Project Assign` button.
+You also have the ability to bulk assign the applications you selected to a project. Simply navigate to the `Applications` tab under the `ASSESS` menu or manually visit `https://.tidalmg.com/#/apps`, select the applications you want to assign by clicking the checkboxes, and then click the `Project Assign` button.
 
 {% include image.html file="projects_10.png" %}
 
