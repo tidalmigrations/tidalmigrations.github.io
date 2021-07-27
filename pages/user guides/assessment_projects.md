@@ -45,23 +45,25 @@ You also have the ability to bulk assign the applications you selected to a proj
 
 {% include image.html file="projects_10.png" %}
 
-This will brings up a modal which contains a list of projects. You can search this list by name of the project by filtering the project name in the search bar above the list.
+This brings up a modal that contains a list of projects. You can search this list by the name of the project by typing the project name in the search bar above the list.
 
 {% include image.html file="projects_11.png" %}
 
-Additionally, you can easily create a brand new project by simply typing the project name in the search bar and clicking `Create New Project: [Your project name]`. A new project with the name you entered will be created within seconds and you can edit project details later in the project detail view.
+Additionally, you can easily create a brand new project by simply typing the project name in the search bar and clicking `Create New Project: [Your project name]`. Within seconds, this will create a new project with the name you entered. You can edit the project details later in the project details view.
 
 {% include image.html file="projects_12.png" %}
 
-Once you have selected the project you want to assign, continue the process by clicking the `Assign N App(s) to Project` button. Depending on the applications you selected, if there is no application that is already being assigned to the project in the selected applications, you will see the confirmation modal directly.
+Once you have selected the project you want to assign, continue the process by clicking the `Assign N App(s) to Project` button. If none of your selected applications have projects assigned to them, you will see the confirmation modal directly.
 
 {% include image.html file="projects_13.png" %}
 
-If there is any selected application which is already assigned to a project, then you will see a warning modal which contains a list of conflicting applications. You can resolve the conflicts by clicking the `Remove` button beside each list item to deselect the application. You can also force the conflicting applications to update to the new project by clicking the `Overwrite` button.
+If there are any applications with assigned projects, you will see a warning modal containing a list of the conflicting applications. You can resolve the conflicts by clicking the `Remove` button beside each list item to deselect the application. Removed items will not be assigned to the project you selected.
+
+You can also click the `Overwrite` button to remove the conflicting applications from their current project and assign them to the new project.
 
 {% include image.html file="projects_14.png" %}
 
-Finally, you will see the confirmation modal which tells you how many applications have been added to the project. It also has a clickable link to the selected project so you can verify the updates you just made. Or you can click the `Return` button which will close the modal and stay you in the Application page.
+Finally, you will see the confirmation modal, which tells you how many applications have been added to the project. It also has a clickable link to the selected project so you can verify the updates you just made. Or you can click the `Return` button, which will close the modal and keep you on the Applications page.
 
 {% include image.html file="projects_13.png" %}
 
