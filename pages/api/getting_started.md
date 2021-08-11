@@ -38,4 +38,4 @@ Two tools that we would recommend are either cURL or Postman.
 
 You can access all of the API documents via https://[your_subdomain].tidalmg.com/docs/
 Replace start of the address above with your Tidal Migrations subdomain.
-For additional help on getting your subdomain, refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
+For additional help on getting your subdomain, refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar.

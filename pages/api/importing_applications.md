@@ -24,7 +24,7 @@ A request to import an application into the Tidal Migrations API looks like this
 
 ### You will need:
 
-1. Your subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
+1. Your subdomain -> Refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar. Afterwards, You will receive an email with all of your workspaces.
 2. Your authentication access token -> Refer to [Authentication Guide](index.html)
 3. Your Application Data -> *A JSON object of your applications. The object should be a list with each element in the list being an application object.*
 

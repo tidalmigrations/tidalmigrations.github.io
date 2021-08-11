@@ -30,7 +30,7 @@ A request to import *one* server into the Tidal Migrations API looks like this:
 
 You will need:
 
-1. Your subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
+1. Your subdomain -> Refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar. Afterwards, You will receive an email with all of your workspaces.
 2. Your authentication access token -> Refer to [Authentication Guide](index.html)
 3. Your Server Data -> *A JSON object of your servers. The object should be a list with each element in the list being a server object.*
 
@@ -86,7 +86,7 @@ A request to import *multiple* servers into the Tidal Migrations API looks like 
 
 You will need:
 
-1. Your subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
+1. Your subdomain -> Refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar. Afterwards, You will receive an email with all of your workspaces.
 2. Your authentication access token -> Refer to [Authentication Guide](index.html)
 3. Your Server Data -> *A JSON object of your servers. The object should be a list with each element in the list being a server object.*
 
