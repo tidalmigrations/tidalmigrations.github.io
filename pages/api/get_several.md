@@ -203,7 +203,7 @@ Returns the selected move group and its applications, database instances, and se
 
 You will need:
 
-1. Your subdomain -> Refer: [Get Subdomain](https://get.tidalmg.com/?login) & type in your email in the prompt bar.
+1. Your subdomain -> Refer: [Get Subdomain](https://get.tidalmg.com/?login) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
 2. Your access token -> Refer: [Authentication Guide](index.html).
 3. Your Move Group ID -> Refer to the [above request](#getallmg) to get your move group id.
 
