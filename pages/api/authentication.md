@@ -23,7 +23,7 @@ A request to authenticate into the Tidal Migrations API looks like this:
 
 You will need:
 
-1. Subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
+1. Your subdomain -> Refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
 2. Username
 3. Password
 
@@ -73,7 +73,7 @@ This endpoint can also be used to ensure you are authenticated.
 
 You will need:
 
-1. Subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
+1. Your subdomain -> Refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
 2. Your access token -> Refer: [api/v1/authenticate](#getaccess)
 
 ```
@@ -101,7 +101,7 @@ Refresh your access token and generate a new one.
 
 You will need:
 
-1. Subdomain -> Refer to [Get Subdomain](https://app.tidalmg.com/?login) & type in your email in the prompt bar.
+1. Your subdomain -> Refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
 2. Your access token -> Refer: [api/v1/authenticate](#getaccess)
 3. Your refresh token -> Refer: [api/v1/authenticate](#getaccess)
 
