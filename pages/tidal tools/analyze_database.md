@@ -22,14 +22,15 @@ Tidal Tools is able to analyze databases with the following versions:
 
 | Oracle                | SQL Server | MySQL | PostgreSQL |
 |-----------------------|------------|-------|------------|
-| [Beta](mailto:info@tidalmigrations.com?subject=Interested in Oracle 8i Database Analysis) Oracle Database 8i (8.1) | SQL Server 2008R2 | 5.6 | 8 |
-| [Beta](mailto:info@tidalmigrations.com?subject=Interested in Oracle 9 Database Analysis) Oracle Database 9i Release 2 (9.2)   | SQL Server 2016 | 5.7 | 9 |
-| Oracle Database 10g Release 2 (10.2) | SQL Server 2017 | 8.0 | 10 |
-| Oracle Database 11g Release 1 (11.1) | | | 11 |
-| Oracle Database 11g Release 2 (11.2) | | | 12 |
-| Oracle Database 12c Release 1 (12.1) | | | 13 |
-| Oracle Database 12c Release 2 (12.2) |
-| Oracle Database 18c (18.1) |
+| Oracle Database 8i (8.1) | SQL Server 2005 | 5.5 | 8.3 |
+| Oracle Database 9i Release 2 (9.2) | SQL Server 2008 | 5.6 | 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 |
+| Oracle Database 10g Release 2 (10.2) | SQL Server 2008R2 | 5.7 | 10 |
+| Oracle Database 11g Release 1 (11.1) | SQL Server 2012 | 8.0 | 11 |
+| Oracle Database 11g Release 2 (11.2) | SQL Server 2014 | | 12 |
+| Oracle Database 12c Release 1 (12.1) | SQL Server 2016 | | 13 |
+| Oracle Database 12c Release 2 (12.2)| SQL Server 2017|
+| Oracle Database 18c (18.0, 18.1) | SQL Server 2019 |
+| Oracle Database 19c (19.0, 19.1, 19.2, 19.3) |
 
 If you have a use case for a different version, definitely let us know at [info@tidalmigrations.com](mailto:info@tidalmigrations.com), we are always adding new capabilities.
 
