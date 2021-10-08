@@ -51,6 +51,8 @@ You can find the Tidal Migrations ServiceNow update set here:
 
 ### Creating an OAuth endpoint
 
+In order for your Tidal Migrations workspace to communicate with your ServiceNow instance, we must first set up an OAuth endpoint.
+
 - Type 'System OAuth' into the filter navigation bar and select 'Application Registry'.
 
 {% include image.html file="servicenow-oauth-step1.png" %}
