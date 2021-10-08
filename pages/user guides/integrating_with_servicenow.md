@@ -81,6 +81,30 @@ You can find the Tidal Migrations ServiceNow update set here:
 
 ## Integrating your Tidal workspace with ServiceNow
 
+- Log into your Tidal Migrations workspace and head to the ServiceNow integration page.
+
+`` https://<example>.tidalmg.com/#/servicenow ``
+
+- Enter the following information:
+    - Instance Name
+    - Client ID
+    - Client Secret
+    - Username
+    - Password
+
+  Note: The username and password here are for your ServiceNow instance. If you don't know them, go to the ServiceNow developer page and find 'Manage instance password'. 
+
+- Hit 'Create Connection' to connect this workspace to your ServiceNow instance.
+
+  {% include image.html file="integrate-tidal-step1.png" %}
+
+- Once the connection has been created, hit 'Sync' to send your workspace data to ServiceNow!
+
+  {% include image.html file="integrate-tidal-step2.png" %}
+
+- Return to ServiceNow and find your data under the Tidal Migrations -> 'Applications' 'Databases' and 'Servers' tables.
+
+  {% include image.html file="integrate-tidal-step3.png" %}
 
 
 
