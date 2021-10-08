@@ -1,5 +1,5 @@
 ---
-title: Integrating with Servicenow
+title: Integrating with ServiceNow
 keywords: servicenow, data, integration, apps, servers, databases
 last_updated: October, 2021
 summary: "Easily integrate your Tidal workspace with ServiceNow"
@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: integrate-with-servicenow.html
 ---
 
-Prepare your ServiceNow instance by importing our custom-made update set, then creating an OAuth endpoint. Once this is set up, you can send your your existing apps, servers and databases to your ServiceNow instance. All relationships between these entities will be preserved, and can be viewed in ServiceNow.  
+Prepare your ServiceNow instance by importing our custom-made update set, then creating an OAuth endpoint. Once this is set up, you can send your existing apps, servers and databases to your ServiceNow instance. All relationships between these entities will be preserved, and can be viewed in ServiceNow.  
 
 <!-- This is commented for now as the repository is still private.
 You can find the Tidal Migrations ServiceNow update set here:
