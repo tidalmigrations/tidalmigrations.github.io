@@ -51,6 +51,34 @@ You can find the Tidal Migrations ServiceNow update set here:
 
 ### Creating an OAuth endpoint
 
+- Type 'System OAuth' into the filter navigation bar and select 'Application Registry'.
+
+{% include image.html file="servicenow-oauth-step1.png" %}
+
+- On this page, click 'New'.
+
+{% include image.html file="servicenow-oauth-step2.png" %}
+
+- Select 'Create an OAuth API endpoint for external clients'.
+
+{% include image.html file="servicenow-oauth-step3.png" %}
+
+- Enter a name, we suggest 'Tidal Migrations', then click 'Submit'.
+
+{% include image.html file="servicenow-oauth-step4.png" %}
+
+- Select the endpoint you just created (eg. 'Tidal Migrations').
+
+{% include image.html file="servicenow-oauth-step5.png" %}
+
+- From this screen, take note of:
+     - Client ID
+     - Client Secret
+
+{% include image.html file="servicenow-oauth-step6.png" %}
+
+- You're now ready to head over to your Tidal Migrations workspace and set up your integration!
+
 ## Integrating your Tidal workspace with ServiceNow
 
 
