@@ -22,6 +22,12 @@ Tidal Tools is a cross platform CLI utility that you can use to discover and
 analyze your applications. [Easily install Tidal Tools](https://get.tidal.sh)
 on your operating system.
 
+If you are looking for a full walkthrough of the steps, you can watch a brief
+video on how to install it on [Windows, Linux](https://www.youtube.com/watch?v=t86W7BokqGM) or [macOS](https://www.youtube.com/watch?v=DyHT0mtPcfE).
+
+If you'd prefer to use a cloud shell, you can watch how to get setup in the [AWS](https://www.youtube.com/watch?v=YpX64_uU-Oo),
+[Azure](https://www.youtube.com/watch?v=N_o_GSSY0zg) or [Google](https://www.youtube.com/watch?v=lHO5sk54ceo) cloud shells.
+
 ### Dependencies
 
 If you plan to use the `tidal analyze code` command to analyze your source code
