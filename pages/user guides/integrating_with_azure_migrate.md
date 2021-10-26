@@ -48,7 +48,7 @@ Check out below for a brief video on how to do these steps.
    - Run `az login` and confirm the target subscription is present with `az account show`. See image below to find the `id` of the correct target subscription.
      ![Azure Migrate Project machine name](../../images/azure-migrate-2.0.png)
 
-- Set the default subscription with `az account set --subscription <SUBSCRIPTION_ID>`
+   - Set the default subscription with `az account set --subscription <SUBSCRIPTION_ID>`
 
 3. Next, configure four environment variables used by the integration to connect to your Azure subscription.
 
