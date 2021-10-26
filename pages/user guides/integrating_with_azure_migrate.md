@@ -15,6 +15,12 @@ It also allows `tidal sync servers` to completely synchronize the available serv
 Further, this sync task can specify and segregate the hosts into discrete groups based
 on their categorization of tags from the Tidal Migrations API.
 
+## Tutorial
+
+<div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_ERzDACKWgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Run the script
 
 1. The first step is install the integration script from the [Tidal Migrations Gists Repository](https://github.com/tidalmigrations/gists)
@@ -48,9 +54,3 @@ export AZ_MIGRATE_PROJECT= <ASSESSMENT_PROJECT_MACHINE_NAME>
 ```
 ./azure_migrate.rb | tidal sync servers
 ```
-
-## Tutorial
-
-<div>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/_ERzDACKWgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
