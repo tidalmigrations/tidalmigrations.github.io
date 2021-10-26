@@ -17,7 +17,7 @@ migration analysis tools.
 Further, we are able to specify and segregate our hosts into discrete groups based
 on their categorization of tags from the Tidal Migrations API.
 
-## Install the script
+## Run the script
 
 1. First step is install the integration script from the [Tidal Migrations Gists Repository]()
 
@@ -50,3 +50,9 @@ export AZ_MIGRATE_PROJECT= <ASSESSMENT_PROJECT_MACHINE_NAME>
 ```
 ./azure_migrate.rb | tidal sync servers
 ```
+
+## Tutorial
+
+<div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_ERzDACKWgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
