@@ -9,27 +9,25 @@ folder: userguides
 permalink: azure-migrate.html
 ---
 
-Here we will walk throug
-h how to integrate Tidal Migrations with Azure Migrate.
-This will allow your Microsoft Azure Migrate instance to use any servers from Tidal Migrations as possible targets to launch jobs against.
-It will also allow us to completely synchronize the available servers in our environment between the two
-migration analysis tools.
-Further, we are able to specify and segregate our hosts into discrete groups based
+Here you can walk through how to integrate Tidal Migrations with Azure Migrate.
+This allows your Microsoft Azure Migrate instance to use any servers from Tidal Migrations as possible targets to launch jobs against.
+It also allows `tidal sync servers` to completely synchronize the available servers in the Tidal Platform environment between the two migration analysis tools.
+Further, this sync task can specify and segregate the hosts into discrete groups based
 on their categorization of tags from the Tidal Migrations API.
 
 ## Run the script
 
-1. First step is install the integration script from the [Tidal Migrations Gists Repository]()
+1. The first step is install the integration script from the [Tidal Migrations Gists Repository](https://github.com/tidalmigrations/gists)
 
-   - If you are using git you can clone the repository with:
+   - If `git` is configured, clone the repository with:
      `git clone git@github.com:tidalmigrations/gists.git`
 
-   - Alternatively you can download a copy of the latest file directly from [your browser](https://github.com/tidalmigrations/gists/archive/refs/heads/master.zip).
+   - Alternatively you can download a copy of the latest file directly from [a browser](https://github.com/tidalmigrations/gists/archive/refs/heads/master.zip).
 
-2. Second configure your environment variables to align with you azure subscription. There are four environment variables to run the export script from Azure Migrate, if any of them are unknown, here are hints on how to populate them. The shell script uses an environment variable Authentication token to authorize the Azure requests. Follow these steps to set the environment variables:
+2. The second step is to configure the environment variables to align with you azure subscription. There are four environment variables to run the export script from Azure Migrate, if any of them are unknown, here are hints on how to populate them. The shell script uses an environment variable Authentication token to authorize the Azure requests. Follow these steps to set the environment variables:
 
 - Run `az login` and confirm the target subscription is present with `az account show`
-- Set the defaul subscription with `az account set --subscription <SUBSCRIPTION_ID>`
+- Set the default subscription with `az account set --subscription <SUBSCRIPTION_ID>`
   - Export as `AZURE_TOKEN`
 - Find the Azure subscription and resource group that the Azure Migrate Project Assessment is located in
   - Export as `AZ_MIGRATE_SUBSCRIPTION`, `AZ_MIGRATE_RG` respectively
@@ -43,7 +41,7 @@ export AZ_MIGRATE_RG= <RESOURCE_GROUP>
 export AZ_MIGRATE_PROJECT= <ASSESSMENT_PROJECT_MACHINE_NAME>
 ```
 
-3. Once environment variables are configured, log into Tidal Tools using `tidal login` and authenticate with your custom subdomain url, email and password.
+3. Once your environment variables are configured, log into Tidal Tools using `tidal login` and authenticate with your custom subdomain url, email and password.
 
 4. Execute the Azure Migrate export and pipe the servers into Tidal Tools using `sync servers`
 
