@@ -30,9 +30,7 @@ Check out below for a brief video on how to do these steps.
 
 ## Run the integration
 
-### Install
-
-Installation requirements:
+### Installation requirements
 
 - Azure Migrate script from [Tidal Migrations Gists Repository](https://github.com/tidalmigrations/gists).
 
@@ -54,7 +52,7 @@ Login to Azure with the `az` CLI.
 
 - Set the default subscription with `az account set --subscription <SUBSCRIPTION_ID>`
 
-### Configure
+### Configure environment
 
 Next, configure four environment variables used by the integration to connect to your Azure subscription.
 
