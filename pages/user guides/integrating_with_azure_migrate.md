@@ -66,7 +66,10 @@ export AZURE_TOKEN=$(az account get-access-token --query accessToken --output ts
 Run `./azure_migrate.rb -p` and you should see a list of all the Projects in the set subscription and resource group. See image below
 
 - Export this project machine name as `AZ_MIGRATE_PROJECT`
-  ![Azure Migrate Project machine name](../../images/azure-migrate-3.0.png)
+
+{% include image.html file="azure-migrate-3.0.png" %}
+
+![Azure Migrate Project machine name](../../images/azure-migrate-3.0.png)
 
 In summary the 4 variables to set are:
 
