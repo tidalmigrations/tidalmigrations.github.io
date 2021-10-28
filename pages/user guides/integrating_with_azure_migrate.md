@@ -48,7 +48,8 @@ Check out below for a brief video on how to do these steps.
 Login to Azure with the `az` CLI.
 
 - Run `az login` and confirm the target subscription is present with `az account show`. See image below to find the `id` of the correct target subscription.
-  ![Azure Migrate Project machine name](../../images/azure-migrate-2.0.png)
+
+  ![Azure Migrate Project name](../../images/azure-migrate-2.0.png)
 
 - Set the default subscription with `az account set --subscription <SUBSCRIPTION_ID>`
 
@@ -65,11 +66,9 @@ export AZURE_TOKEN=$(az account get-access-token --query accessToken --output ts
 
 Run `./azure_migrate.rb -p` and you should see a list of all the Projects in the set subscription and resource group. See image below
 
-- Export this project machine name as `AZ_MIGRATE_PROJECT`
+- Export this internal project name as `AZ_MIGRATE_PROJECT`
 
-{% include image.html file="azure-migrate-3.0.png" max-width="847.5" %}
-
-![Azure Migrate Project machine name](../../images/azure-migrate-3.0.png)
+![Azure Migrate Project name](../../images/azure-migrate-3.0.png)
 
 In summary the 4 variables to set are:
 
@@ -99,6 +98,7 @@ Execute the Azure Migrate export and pipe the servers into Tidal Tools using `sy
 
 Once the command succeeds you can navigate to your Tidal Migrations Workspace URL to see the results. Use the left menu bar to navigate to `Discover > Overview` where the “Most recently run job” card should say `Sync Servers` and have the same timestamp as when the sync servers command suceeded.
 This means that `tidal sync servers` successfully updated your server inventory, as seen in the image below.
+
 ![Server Sync success](../../images/azure-migrate-review.png)
 
 View the imported servers that have been from Azure Migrate to this Tidal workspace in the left menu under `Assess > Servers`. Select an imported server and some compute, virtualization and networking parameters have be pre-populated based on the data in Azure Migrate that was imported into this Tidal workspace.
