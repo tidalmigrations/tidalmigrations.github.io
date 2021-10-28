@@ -67,7 +67,7 @@ Run `./azure_migrate.rb -p` and you should see a list of all the Projects in the
 
 - Export this project machine name as `AZ_MIGRATE_PROJECT`
 
-{% include image.html file="azure-migrate-3.0.png" %}
+{% include image.html file="azure-migrate-3.0.png" max-width:847.5 %}
 
 ![Azure Migrate Project machine name](../../images/azure-migrate-3.0.png)
 
@@ -98,7 +98,7 @@ Execute the Azure Migrate export and pipe the servers into Tidal Tools using `sy
 ### Review
 
 Once the command succeeds you can navigate to your Tidal Migrations Workspace URL to see the results. Use the left menu bar to navigate to `Discover > Overview` where the “Most recently run job” card should say `Sync Servers` and have the same timestamp as when the sync servers command suceeded.
-This means that `tidal sync servers` successfully updated your server inventory, ass seen in the image below.
+This means that `tidal sync servers` successfully updated your server inventory, as seen in the image below.
 ![Server Sync success](../../images/azure-migrate-review.png)
 
 View the imported servers that have been from Azure Migrate to this Tidal workspace in the left menu under `Assess > Servers`. Select an imported server and some compute, virtualization and networking parameters have be pre-populated based on the data in Azure Migrate that was imported into this Tidal workspace.
