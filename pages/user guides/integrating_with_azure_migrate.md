@@ -86,12 +86,16 @@ export AZ_MIGRATE_PROJECT= <ASSESSMENT_PROJECT_MACHINE_NAME>
 
 Once your environment variables are configured, log in to Tidal Migration Platform using `tidal login` and authenticate with your Tidal Migrations Workspace URL, email and password.
 
+Confirm your shell is inside the `gists` repository, or change directory into that repo.
+
+```
+cd ./gists
+```
+
 Execute the Azure Migrate export and pipe the servers into Tidal Tools using `sync servers`
 
 ```
-
 ./azure_migrate.rb | tidal sync servers
-
 ```
 
 ### Review
