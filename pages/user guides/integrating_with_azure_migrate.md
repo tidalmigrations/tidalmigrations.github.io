@@ -67,7 +67,7 @@ Run `./azure_migrate.rb -p` and you should see a list of all the Projects in the
 
 - Export this project machine name as `AZ_MIGRATE_PROJECT`
 
-{% include image.html file="azure-migrate-3.0.png" maxWidth:"847.5" %}
+{% include image.html file="azure-migrate-3.0.png" max-width="847.5" %}
 
 ![Azure Migrate Project machine name](../../images/azure-migrate-3.0.png)
 
