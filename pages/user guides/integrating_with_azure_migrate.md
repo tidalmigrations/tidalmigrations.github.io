@@ -86,7 +86,7 @@ export AZ_MIGRATE_PROJECT= <ASSESSMENT_PROJECT_MACHINE_NAME>
 
 Once your environment variables are configured, log in to Tidal Migration Platform using `tidal login` and authenticate with your Tidal Migrations Workspace URL, email and password.
 
-Confirm your shell is inside the `gists` repository, or change directory into that repo.
+Change directory into the `gists` repository
 
 ```
 cd ./gists
