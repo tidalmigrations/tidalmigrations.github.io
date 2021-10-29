@@ -57,7 +57,7 @@ Login to Azure with the `az` CLI.
 
 Next, configure four environment variables used by the integration to connect to your Azure subscription.
 
-- In the Azure Portal, find the Azure subscription and resource group that the Azure Migrate Project Assessment are located in. Set the `AZURE_MIGRATE_SUBSCRIPTION` variable with the subscription ID and the `AZ_MIGRATE_RG` variable with the resource group name.
+- In the Azure Portal, find the Azure subscription and resource group that the Azure Migrate Project Assessment are located in. Set the `AZ_MIGRATE_SUBSCRIPTION` variable with the subscription ID and the `AZ_MIGRATE_RG` variable with the resource group name.
   Set `AZURE_TOKEN` variable with this command:
 
 ```
