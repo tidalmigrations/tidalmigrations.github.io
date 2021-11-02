@@ -104,10 +104,7 @@ In order for your Tidal Migrations workspace to communicate with your ServiceNow
 
   {% include image.html file="integrate-tidal-step2.png" %}
 
-
-
-
-
-
-
-
+  <br/>
+  
+  From this point on, any changes made to your Tidal Migrations workspace will be automatically synced over to your ServiceNow instance.  
+  
