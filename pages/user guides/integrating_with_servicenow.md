@@ -15,6 +15,14 @@ You can find the Tidal Migrations ServiceNow update set here:
 `` https://github.com/tidalmigrations/service-now/blob/master/Tidal%20SN%20CMDB%20Integration%20v2.xml `` 
 -->
 
+## Please note
+This feature is currently available for beta users only.
+
+We currently support syncing of applications and servers only. In future, this will be expanded to include database instances.
+
+At the moment, we support ServiceNow integrations for workspaces with up to 3000 of each record (apps and servers).
+This means that a workspace with 3000 apps and 3000 servers is available for integration, but a workspace with 0 servers and 3001 apps is not.
+
 ## Preparing your ServiceNow Instance
 
 ### Importing the Tidal update set
