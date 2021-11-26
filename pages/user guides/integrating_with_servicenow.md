@@ -49,6 +49,10 @@ This means that a workspace with 3000 apps and 3000 servers is available for int
 
 {% include image.html file="update-set-step5.png" %}
 
+- It is possible that this process will fail with errors. If this happens, close the loading window and scroll to the 'Update Set Preview Problem' table. In this table, where possible, click 'accept remote update' to resolve each issue. If this option is not available, click 'skip remote update' to resolve the issue. After the issues are resolved, you can proceed as normal.
+
+{% include image.html file="update-set-issues.png" %}
+
 - Once this has completed, close the loading bar and click 'Commit Update Set' in the top right corner of the window. This will show another loading bar as your update set is committed. This process should take around ten minutes.
 
 {% include image.html file="update-set-step6.png" %}
