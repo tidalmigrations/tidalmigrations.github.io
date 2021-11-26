@@ -53,7 +53,7 @@ entries:
             url: ansible-tower.html
           - title: Integrating with Azure Migrate
             output: web
-            url: azure-migrate.html
+            url: azure-migrate.html          
           - title: Windows DNS Zonefile Export
             output: web
             url: windows-zone-export.html
