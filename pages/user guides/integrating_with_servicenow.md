@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: integrate-with-servicenow.html
 ---
 
-Prepare your ServiceNow instance by importing our custom-made update set, then creating an OAuth endpoint. Once this is set up, you can send your existing apps, servers and databases to your ServiceNow instance. All relationships between these entities will be preserved, and can be viewed in ServiceNow.  
+Prepare your ServiceNow instance by importing our custom-made update set, then creating an OAuth endpoint. Once this is set up, you can send your existing apps and servers to your ServiceNow instance. All relationships between these entities will be preserved, and can be viewed in ServiceNow.  
 
 <!-- This is commented for now as the repository is still private.
 You can find the Tidal Migrations ServiceNow update set here:
@@ -53,7 +53,7 @@ This means that a workspace with 3000 apps and 3000 servers is available for int
 
 {% include image.html file="update-set-step6.png" %}
 
-- Once the update set has been committed, you can type 'Tidal Migrations' in the filter navigation bar, and see where your servers, apps and databases will be saved.
+- Once the update set has been committed, you can type 'Tidal Migrations' in the filter navigation bar, and see where your servers, apps and (in future) databases will be saved.
 
 {% include image.html file="update-set-step7.png" %}
 
@@ -104,11 +104,11 @@ In order for your Tidal Migrations workspace to communicate with your ServiceNow
 
   Note: The username and password here are for your ServiceNow instance. If you don't know them, go to the ServiceNow developer page and find 'Manage instance password'. 
 
-- Hit 'Create Connection' to connect this workspace to your ServiceNow instance. This action will automatically push all of your current apps, servers and databases over to your ServiceNow instance.
+- Hit 'Create Connection' to connect this workspace to your ServiceNow instance. This action will automatically push all of your current apps and servers over to your ServiceNow instance.
 
   {% include image.html file="integrate-tidal-step1.png" %}
 
-- Return to ServiceNow and find your data under the Tidal Migrations -> 'Applications' 'Databases' and 'Servers' tables.
+- Return to ServiceNow and find your data under the Tidal Migrations -> 'Applications' and 'Servers' tables.
 
   {% include image.html file="integrate-tidal-step2.png" %}
 
