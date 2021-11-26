@@ -96,22 +96,15 @@ In order for your Tidal Migrations workspace to communicate with your ServiceNow
 
   Note: The username and password here are for your ServiceNow instance. If you don't know them, go to the ServiceNow developer page and find 'Manage instance password'. 
 
-- Hit 'Create Connection' to connect this workspace to your ServiceNow instance.
+- Hit 'Create Connection' to connect this workspace to your ServiceNow instance. This action will automatically push all of your current apps, servers and databases over to your ServiceNow instance.
 
   {% include image.html file="integrate-tidal-step1.png" %}
 
-- Once the connection has been created, hit 'Sync' to send your workspace data to ServiceNow!
+- Return to ServiceNow and find your data under the Tidal Migrations -> 'Applications' 'Databases' and 'Servers' tables.
 
   {% include image.html file="integrate-tidal-step2.png" %}
 
-- Return to ServiceNow and find your data under the Tidal Migrations -> 'Applications' 'Databases' and 'Servers' tables.
-
-  {% include image.html file="integrate-tidal-step3.png" %}
-
-
-
-
-
-
-
-
+  <br/>
+  
+  From this point on, any changes made to your Tidal Migrations workspace will be automatically synced over to your ServiceNow instance.  
+  
