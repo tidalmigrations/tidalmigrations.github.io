@@ -54,6 +54,9 @@ entries:
           - title: Integrating with Azure Migrate
             output: web
             url: azure-migrate.html
+          - title: Integrating with Servicenow
+            output: web
+            url: integrate-with-servicenow.html
           - title: Windows DNS Zonefile Export
             output: web
             url: windows-zone-export.html
