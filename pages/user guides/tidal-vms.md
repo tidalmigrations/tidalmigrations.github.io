@@ -3,6 +3,7 @@ title: Pre-Configured Virtual Machines
 keywords: vm, virtual, machine, aws, ami, tidal, tools
 last_updated: November, 2021
 summary: "Virtual machines pre-configured with Tidal software"
+sidebar: main_sidebar
 permalink: pre-configured-vms.html
 ---
 
