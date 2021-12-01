@@ -36,7 +36,7 @@ Check out below for a brief video on how to do these steps.
 
   - If `git` is configured, clone the repository with:
 
-    `git clone git@github.com:tidalmigrations/gists.git`
+    `git clone https://github.com/tidalmigrations/gists.git`
 
   - Alternatively you can download a copy of the latest file directly from [a browser](https://github.com/tidalmigrations/gists/archive/refs/heads/master.zip).
 
