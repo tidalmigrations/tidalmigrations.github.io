@@ -18,13 +18,13 @@ Username: vagrant
 Password: vagrant
 ```
 
-The server install images do not have a graphical user interface and are suitable for AMD64 or EM64T architecture-based systems. To know more about this image type, visit [Ubuntu 18.04.6 LTS (Bionic Beaver)](https://cdimage.ubuntu.com/ubuntu/releases/18.04.6/release/).
+The _server install_ images do not have a graphical user interface and are suitable for AMD64 or EM64T architecture-based systems. To know more about this image type, visit [Ubuntu 18.04.6 LTS (Bionic Beaver)](https://cdimage.ubuntu.com/ubuntu/releases/18.04.6/release/).
 
 ### Minimum System Requirements
 
 - Memory: 2 GB
 - Processors: 2
-- Free Storage Space: 64 GB
+- Free Storage Space: 30 GB
 
 ### Download link
 
