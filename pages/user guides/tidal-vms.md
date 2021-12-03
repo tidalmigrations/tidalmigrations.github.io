@@ -7,13 +7,11 @@ sidebar: main_sidebar
 permalink: pre-configured-vms.html
 ---
 
-To help you get your Tidal Migrations discovery phase up and running, we've created a series of
-pre-configured virtual machines with common operating systems. These VMs have the latest Tidal software and
-dependencies installed for you, so you can focus on getting things done.
+To help you get your Tidal Migrations discovery phase up and running, we've created a series of pre-configured virtual machines with common operating systems. These VMs have the latest Tidal software and dependencies installed for you, so you can focus on getting things done.
 
 ## Ubuntu 18.04
 
-The Ubuntu-18.04-server-amd64 image comes with Tidal tools and Machine Stats installed. To get started, download the Virtual Machine image from the link given below. You can import this OVA file into your VirtualBox or VMware Workstation. Use the following credentials for SSH.
+The Ubuntu-18.04-server-amd64 image comes with [Tidal tools](https://tidalmigrations.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/) installed. To get started, download the Virtual Machine image from the link given below. You can import this OVA file into your VirtualBox or VMware Workstation. Use the following credentials for SSH.
 
 ```
 Username: vagrant
@@ -28,6 +26,6 @@ The server install images do not have a graphical user interface and are suitabl
 - Processors: 2
 - Free Storage Space: 64 GB
 
-### Download links
+### Download link
 
 - [tidal-ubuntu-18.04-server-amd64.ova](https://itis2203-home.s3.ap-southeast-2.amazonaws.com/rickroll.jpg)
