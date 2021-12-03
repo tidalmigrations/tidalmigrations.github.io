@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: tidal-offline.html
 ---
 
-Sometimes in the discovery process, you need to work on servers which are air-gapped or isolation from the public internet. This guide is a central place for installation and usage of all Tidal Migrations offline capable tools.
+Sometimes in the discovery process, you need to work on servers which are air-gapped or isolated from the public internet. This guide is a central place for installation and usage of all Tidal Migrations offline capable tools.
 
 For these processes, you will also need a server connected to the public internet to build artifacts necessary for the installation and usage of these tools. These guides are written with the assumption that you have a public instance which is connected to your offline instance via SCP, though you could also copy these artifacts over using physical storage media (ie. a USB stick).
 
@@ -19,7 +19,7 @@ First, install Docker on both your connected and offline server.
 
 Follow [this guide](https://guides.tidalmg.com/tidal-tools.html) to install Tidal Tools on your internet connected server.
 
-Tip: Tidal tools is just a single binary, so if you already have it installed on one machine it’s simple to use SCP to copy the binary onto your offline server! Alternatively, you can use our offline installer by following the steps below.
+{% include note.html content="Tidal Tools is just a single binary, so if you already have it installed on one machine it’s simple to use SCP to copy the binary onto your offline server! Alternatively, you can use our offline installer by following the steps below." %}
 
 Obtain the offline installer for your operating system from [this page](https://get.tidal.sh/) under 'Offline Installer' and move this to your offline server. 
 
@@ -47,7 +47,7 @@ That's it! You're ready to use Tidal Tools offline.
 
 ### Source Code Analysis
 
-Tip: This feature is still in beta.
+{% include note.html content="This feature is currently in beta." %}
 
 Follow [these instructions](#tidal-tools) to install Tidal Tools on your offline server. 
 
