@@ -64,7 +64,7 @@ execute this script before running it. [This
 guide](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6)
 will help you in doing so." %}
 
-1. At first, run the script `.\save_password.ps1` and enter your password when
+1. To start, run the script `.\save_password.ps1` and enter your password when
    prompted. This will save your credentials securely in a text file.
 
 2. Save a list of the server hostnames that you would like to sync in a file.
