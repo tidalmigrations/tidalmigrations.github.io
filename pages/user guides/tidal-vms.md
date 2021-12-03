@@ -14,6 +14,7 @@ dependencies installed for you, so you can focus on getting things done.
 ## Ubuntu 18.04
 
 The Ubuntu-18.04-server-amd64 image comes with Tidal tools and Machine Stats installed. To get started, download the Virtual Machine image from the link given below. You can import this OVA file into your VirtualBox or VMware Workstation. Use the following credentials for SSH.
+
 ```
 Username: vagrant
 Password: vagrant
@@ -30,5 +31,3 @@ The server install images do not have a graphical user interface and are suitabl
 ### Download links
 
 - [tidal-ubuntu-18.04-server-amd64.ova](https://itis2203-home.s3.ap-southeast-2.amazonaws.com/rickroll.jpg)
-
-### Documentation
