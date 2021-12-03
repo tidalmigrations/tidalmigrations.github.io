@@ -1,7 +1,7 @@
 ---
 title: Gather Machine Stats
 keywords:
-last_updated: April, 2021
+last_updated: December, 2021
 summary: "Gather machine stats from remote environments"
 sidebar: main_sidebar
 permalink: machine_stats.html
@@ -32,11 +32,14 @@ Migrations." %}
 
 ### Introduction
 
-This is a simple and effective way to gather machine stats (RAM, Storage,
-CPU) from a Windows Server environment. It uses
+This is a simple and effective way to gather machine stats (RAM, Storage, CPU)
+from a Windows Server environment. For better results, we recommend using it
+with
 [WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
-to `Invoke-Command` across your servers, creating a JSON file to securely send
-to your Tidal Migrations instance using the tidal command.
+to `Invoke-Command` across your servers. However, it is also possible to
+execute in non-WinRM environments, though not all of the stats will be
+available to gather in such case. As a result it outputs JSON data which can be
+securely sent to your Tidal Migrations workspace using the `tidal` command.
 
 ### Requirements and Dependencies
 
@@ -46,31 +49,35 @@ dependencies setup:
 - To get started you will need to have Tidal Tools installed. You can check out
   [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
   it.
-- You will need [WinRM
-  enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring)
+- To gather additional data, such as CPU utilization and process stats, you
+  will need [WinRM
+enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring)
   across your environment for this.
 - The scripts needed for this process can be found in [Machine Stats for
   Windows GitHub
-  repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows).
+repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows).
 
 ### Running the Script
-
-Start syncing your servers with Tidal Migrations, by running the script:
-`runner.ps1`.
 
 {% include note.html content="Be sure to set PowerShell's Execution policy to
 execute this script before running it. [This
 guide](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6)
 will help you in doing so." %}
 
-1. It will prompt you to set your username.
-
-2. Then, run the script: `save_password.ps1` and enter your password when
+1. To start, run the script `.\save_password.ps1` and enter your password when
    prompted. This will save your credentials securely in a text file.
 
-3. Save a list of the server hostnames that you would like to sync in a file
-   called: _servers.txt_.  The data of these servers will be shown in a table,
-   with numerical values rounded to the nearest second decimal.
+2. Save a list of the server hostnames that you would like to sync in a file.
+   By default, Machine Stats script will search for file called `servers.txt`
+   in the current folder. If a list was saved in some other file, you can specify
+   its path using the `-ServersPath` parameter for `runner.ps1` script.
+
+3. Run the script `.\runner.ps1`. It will prompt for username. Alternatively,
+   you can specify the username using the `-UserName` parameter. The data of
+   the list of servers will be shown as a JSON.
+
+4. You can pipe the output of the Machine Stats script directly to the Tidal
+   Tools: `.\runner.ps1 | tidal sync servers`
 
 {% include note.html content="We recommend that you set this script to run
 periodically so that your servers are synced on a daily basis and the
@@ -84,7 +91,7 @@ And there you have it! Your servers will be synced to Tidal Migrations.
 
 ### Introduction
 
-Machine Stats for Linux/Unix leverages [Ansible](https://www.ansible.com/) to
+Machine Stats for Unix-like Systems leverages [Ansible](https://www.ansible.com/) to
 gather facts in a cross-platform way.
 
 ### Requirements and Dependencies
@@ -126,3 +133,36 @@ dependencies setup:
 For more details on configuration and usage, please check Machine Stats for
 Unix-like systems [technical
 documentation](https://github.com/tidalmigrations/machine_stats/blob/master/unix/README.md).
+
+## Hypervisors (QEMU/KVM) <span class="label label-info">new</span>
+
+### Introduction
+
+Machine Stat for Hypervisors is built ontop of [libvirt](https://libvirt.org)
+and it gathers facts from virtual machines within a QEMU/KVM environment.
+
+### Requirements and Dependencies
+
+- To get started you will need to have Tidal Tools installed. You can check out
+  [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
+  it.
+- You need to install **Python 3.6+** on your local workstation.
+- You need to have **libvirt 3.0+** on your local workstation and on a remote machine which hosts the QEMU/KVM environment.
+
+Please refer to the Machine Stats for Hypervisors [technical
+documentation](https://github.com/tidalmigrations/machine_stats/blob/master/libvirt/README.md)
+for installation instructions.
+
+### Running the Script
+
+1. Make up the [connection URI](https://libvirt.org/uri.html) to communicate with a remote environment.
+
+2. Execute `virt-stats` and pipe its output to Tidal Tools:
+
+   ```
+   virt-stats --connection qemu+ssh://myuser@myhost/system | tidal sync servers
+   ```
+
+For more details on configuration and usage, please check Machine Stats for
+Hypervisors [technical
+documentation](https://github.com/tidalmigrations/machine_stats/blob/master/libvirt/README.md).
