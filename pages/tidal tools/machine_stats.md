@@ -33,7 +33,7 @@ Migrations." %}
 ### Introduction
 
 This is a simple and effective way to gather machine stats (RAM, Storage, CPU)
-from a Windows Server environment. For better results, we recomend to use it
+from a Windows Server environment. For better results, we recommend using it
 with
 [WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
 to `Invoke-Command` across your servers. However, it is also possible to
