@@ -28,4 +28,4 @@ The server install images do not have a graphical user interface and are suitabl
 
 ### Download link
 
-- [tidal-ubuntu-18.04-server-amd64.ova](https://itis2203-home.s3.ap-southeast-2.amazonaws.com/rickroll.jpg)
+- [tidal-ubuntu-18.04-server-amd64.ova](https://preconfigured-vms.s3.ca-central-1.amazonaws.com/tidal-ubuntu-18.04-server-amd64.ova)
