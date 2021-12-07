@@ -48,7 +48,7 @@ Run the following command:
 
 `tidal backup`
 
-This creates an archive file with Tidal configuration, and sets up the docker container images for offline use. It will have a name like:
+This creates an archive file with Tidal Tools configuration, and sets up the docker container images for offline use. It will have a name like:
 
 `tidal-backup-xxxxxx-xxxxxx.zip`
 
