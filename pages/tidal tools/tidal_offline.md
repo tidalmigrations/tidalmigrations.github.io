@@ -81,7 +81,7 @@ Send this file to Tidal Migrations support, and they'll upload it to your Tidal 
 
 ## Database Analysis
 
-Follow the instructions above to install Tidal Tools offline.
+Follow [these instructions](#tidal-tools) to install Tidal Tools on your offline server. 
 
 You can now run the database analysis without any external network connectivity, except to your database host itself:
 
