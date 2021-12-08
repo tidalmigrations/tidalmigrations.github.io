@@ -50,16 +50,16 @@ Run the following command:
 
 This creates an archive file with Tidal Tools configuration, and sets up the docker container images for offline use. It will have a name like:
 
-`tidal-backup-xxxxxx-xxxxxx.zip`
+`tidal-backup-DATE.zip`
 
 Transfer this file over to your offline server.
 
 ### Run tidal restore on your offline server
 Move to the offline server. 
 
-Run the following command:
+Run the following command, replacing `tidal-backup-DATE.zip` with your backup file:
 
-`tidal restore`
+`tidal restore tidal-backup-DATE.zip`
 
 That's it! You're ready to use Tidal Tools offline.
 
@@ -78,3 +78,17 @@ Run this command:
 This will save the result to an output zip file, called `code_stats.zip` by default.
 
 Send this file to Tidal Migrations support, and they'll upload it to your Tidal Migrations workspace for you.
+
+## Database Analysis
+
+Follow the instructions above to install Tidal Tools offline.
+
+You can now run the database analysis without any external network connectivity, except to your database host itself:
+
+`tidal analyze db --offline databases.yaml`
+
+This will output a zip file called, `tidal-dba-results_DATE.zip` that can then be uploaded (on the online server) to the application for a given database in order to complete the analysis:
+
+`tidal analyze db --upload tidal-dba-results_DATE.zip`
+
+You should receive confirmation that the upload has completed and can navigate to Tidal Migrations to see the results.
