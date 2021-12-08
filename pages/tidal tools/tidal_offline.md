@@ -63,6 +63,40 @@ Run the following command, replacing `tidal-backup-DATE.zip` with your backup fi
 
 That's it! You're ready to use Tidal Tools offline.
 
+## Machine Stats (For Unix-Like Systems)
+
+{% include note.html content="Creating the packages archive for offline installation and the actual
+offline installation process must be performed on machines with the same OS and
+Python versions." %}
+
+On the machine with internet connection create the packages archive using the following commands:
+
+```console
+$ python3 -m pip download -d machine-stats-offline machine-stats
+$ tar czf machine-stats-offline.tar.gz machine-stats-offline
+```
+
+Transfer the archive to the machine where you need to perform the offline
+installation (replace `<remote-host>` and `<remote-dir>` with the
+appropriate values):
+
+```console
+$ scp machine-stats-offline.tar.gz <remote-host>:/<remote-dir>/
+```
+
+On the remote host, extract the archive and switch to extracted directory:
+
+```
+$ tar xf machine-stats-offline.tar.gz
+$ cd machine-stats-offline
+```
+
+Install Machine Stats and its dependencies:
+
+```
+$ python3 -m pip install --no-index --find-links . machine_stats-*.whl
+```
+
 # Usage
 
 ## Source Code Analysis
@@ -92,3 +126,27 @@ This will output a zip file called, `tidal-dba-results_DATE.zip` that can then b
 `tidal analyze db --upload tidal-dba-results_DATE.zip`
 
 You should receive confirmation that the upload has completed and can navigate to Tidal Migrations to see the results.
+
+## Gather Machine Stats (For Unix-Like Systems)
+
+Follow [these instructions](#machine-stats-(For-Unix-Like-Systems)) to install Machine States on an offline instance.
+
+In your offline instance, create a `hosts` file in the current directory.
+
+Add connection strings in the form of `ssh-user@ip-address` or
+`ssh-user@domain` to the `hosts` file one per line If the `ssh-user@` part
+is omitted, then the current user name is used.
+
+If you need to use a custom SSH identity file for some particular host,
+provide it as the following:
+
+```
+my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
+```
+
+Execute `machine-stats` and save the result to a file of your choice:
+
+```
+$ machine-stats > result.json
+```
+
