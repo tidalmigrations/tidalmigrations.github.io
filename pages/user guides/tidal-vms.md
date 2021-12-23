@@ -28,4 +28,4 @@ The _server install_ images do not have a graphical user interface and are suita
 
 ### Download link
 
-- [tidal-ubuntu-18.04-server-amd64.ova](https://preconfigured-vms.s3.ca-central-1.amazonaws.com/tidal-ubuntu-18.04-server-amd64.ova)
+- [tidal-ubuntu-18.04-server-amd64.ova](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-18.04-server-amd64.ova)
