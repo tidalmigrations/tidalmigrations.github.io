@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: pre-configured-vms.html
 ---
 
-To help you get your Tidal Migrations discovery phase up and running, we've created a pre-configured virtual machines image. These VMs have the latest Tidal softwares and dependencies installed for you, so you can focus on getting things done.
+To help you get your Tidal Migrations discovery phase up and running, we've created a pre-configured virtual machine images. These VMs have the latest Tidal softwares and dependencies installed for you, so you can focus on getting things done.
 
 ## Ubuntu 18.04
 
