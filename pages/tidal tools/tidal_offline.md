@@ -19,7 +19,7 @@ First, install Docker on both your internet-connected and offline server, and en
 
 Follow [this guide](https://guides.tidalmg.com/tidal-tools.html) to install Tidal Tools on your internet connected server.
 
-Next, install Tidal tools on your offline server with one of two options:
+Next, install Tidal Tools on your offline server with one of two options:
 
 ### Option 1: Use SCP to transfer the binary
 Tidal Tools is a single binary file, so it's simple to transfer this over to your offline server with SCP.
