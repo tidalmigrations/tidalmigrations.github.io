@@ -1,5 +1,5 @@
 ---
-title: Offline Discovery
+title: Using Tidal Software Offline
 keywords: tools, tidal-tools, tidal, offline, airgap, discovery
 last_updated: November, 2021
 summary: "Use Tidal software on offline servers for air gapped discovery"
