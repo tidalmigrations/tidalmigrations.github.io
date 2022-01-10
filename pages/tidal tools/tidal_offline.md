@@ -19,6 +19,8 @@ First, install Docker on both your internet-connected and offline server, and en
 
 Follow [this guide](https://guides.tidalmg.com/tidal-tools.html) to install Tidal Tools on your internet connected server.
 
+Next, install Tidal tools on your offline server with one of two options:
+
 ### Option 1: Use SCP to transfer the binary
 Tidal Tools is a single binary file, so it's simple to transfer this over to your offline server with SCP.
 
@@ -69,7 +71,7 @@ That's it! You're ready to use Tidal Tools offline.
 offline installation process must be performed on machines with the same OS and
 Python versions." %}
 
-On the machine with internet connection create the packages archive using the following commands:
+On the machine with an internet connection create the packages archive using the following commands:
 
 ```console
 $ python3 -m pip download -d machine-stats-offline machine-stats
@@ -111,7 +113,7 @@ Run this command:
 
 This will save the result to an output zip file, called `code_stats.zip` by default.
 
-Send this file to Tidal Migrations support, and they'll upload it to your Tidal Migrations workspace for you.
+Send this file to [Tidal Migrations support](mailto:support@tidalmigrations.com), and they'll upload it to your Tidal Migrations workspace for you.
 
 ## Database Analysis
 
@@ -129,7 +131,7 @@ You should receive confirmation that the upload has completed and can navigate t
 
 ## Gather Machine Stats (For Unix-Like Systems)
 
-Follow [these instructions](#machine-stats-(For-Unix-Like-Systems)) to install Machine States on an offline instance.
+Follow [these instructions](#machine-stats-(For-Unix-Like-Systems)) to install Machine Stats on an offline instance.
 
 In your offline instance, create a `hosts` file in the current directory.
 
@@ -150,3 +152,12 @@ Execute `machine-stats` and save the result to a file of your choice:
 $ machine-stats > result.json
 ```
 
+Now, transfer the result.json file to your server with internet access.
+
+From here you can use
+
+```
+tidal sync servers result.json
+```
+
+This sends the results to the Tidal Migrations API. Tidal Tools should confirm to you that the results were successfully uploaded. You should see the Job in the Discovery section, and your updated Server inventory in the Tidal Migrations Platform.
