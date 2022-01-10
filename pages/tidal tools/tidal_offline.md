@@ -131,7 +131,7 @@ You should receive confirmation that the upload has completed and can navigate t
 
 ## Gather Machine Stats (For Unix-Like Systems)
 
-Follow [these instructions](#machine-stats-(For-Unix-Like-Systems)) to install Machine Stats on an offline instance.
+Follow [these instructions](#machine-stats-for-unix-like-systems) to install Machine Stats on an offline instance.
 
 In your offline instance, create a `hosts` file in the current directory.
 
