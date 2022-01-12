@@ -20,6 +20,9 @@ entries:
           - title: Tidal Tools Autocompletion
             output: web
             url: autocompletion.html
+          - title: Tidal Offline
+            output: web
+            url: tidal-offline.html
 
       - title: Discover
         output: web
