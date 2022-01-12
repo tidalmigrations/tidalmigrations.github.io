@@ -2,12 +2,12 @@
 title: Pre-Configured Virtual Machines
 keywords: vm, virtual, machine, image, ova, ovf, aws, ami, tidal, tools
 last_updated: January, 2022
-summary: "Virtual machines pre-configured with Tidal software"
+summary: "Virtual machines pre-configured with Tidal Migrations software"
 sidebar: main_sidebar
 permalink: pre-configured-vms.html
 ---
 
-To help you get your Tidal Migrations discovery phase up and running, we've created a pre-configured virtual machine image. This VM has the latest Tidal software and dependencies installed for you, so you can focus on getting things done.
+To help you get your Tidal Migrations discovery phase up and running, we've created a pre-configured virtual machine image. This VM has the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
 
 ## Ubuntu 18.04
 
