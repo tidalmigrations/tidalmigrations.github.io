@@ -1,7 +1,7 @@
 ---
 title: Pre-Configured Virtual Machines
 keywords: vm, virtual, machine, image, ova, ovf, aws, ami, tidal, tools
-last_updated: January, 2022
+last_updated: February, 2022
 summary: "Virtual machines pre-configured with Tidal Migrations software"
 sidebar: main_sidebar
 permalink: pre-configured-vms.html
@@ -11,19 +11,19 @@ To help you get your Tidal Migrations discovery phase up and running, we've crea
 
 ## Ubuntu 18.04
 
-The Ubuntu-18.04-server-amd64 image comes with the latest version of [Tidal Tools](https://tidalmigrations.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/) installed. To get started, download the Virtual Machine image from the link given below. You can import this OVA file into your VirtualBox or VMware Workstation. Use the following credentials to login.
+The Ubuntu-18.04-server-amd64 image comes with the latest version of [Tidal Tools](https://tidalmigrations.com/tidal-tools/), [Machine Stats](https://pypi.org/project/machine-stats/) and [DNS Tools](https://dnstools.ninja/) installed. To get started, download the Virtual Machine image from the link given below. You can import this OVA file into your VirtualBox or VMware Workstation. Use the following credentials to login as an user.
 
 ```
-Username: ubuntu
-Password: tidal
+Username: vagrant
+Password: vagrant
 ```
 
-The Virtual Machine image is built with the latest ubuntu-bionic-18.04-amd64-server image available from Ubuntu for AWS. You can locate the source AMI from [Ubuntu Cloud Image Finder](https://cloud-images.ubuntu.com/locator/).
+The _server install_ images do not have a graphical user interface and are suitable for AMD64 or EM64T architecture-based systems. To know more about this image type, visit [Ubuntu 18.04.6 LTS (Bionic Beaver)](https://cdimage.ubuntu.com/ubuntu/releases/18.04.6/release/).
 
 ### Minimum System Requirements
 
 - Memory: 2 GB
-- Processors: 1
+- vCPU: 2
 - Free Storage Space: 8 GB
 
 ### Download link
