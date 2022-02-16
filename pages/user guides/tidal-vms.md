@@ -14,8 +14,8 @@ To help you get your Tidal Migrations discovery phase up and running, we've crea
 The Ubuntu-18.04-server-amd64 image comes with the latest version of [Tidal Tools](https://tidalmigrations.com/tidal-tools/), [Machine Stats](https://pypi.org/project/machine-stats/) and [DNS Tools](https://dnstools.ninja/) installed. To get started, download the Virtual Machine image from the link given below. You can import this OVA file into your VirtualBox or VMware Workstation. Use the following credentials to login as an user.
 
 ```
-Username: vagrant
-Password: vagrant
+Username: ubuntu
+Password: tidal
 ```
 
 The _server install_ images do not have a graphical user interface and are suitable for AMD64 or EM64T architecture-based systems. To know more about this image type, visit [Ubuntu 18.04.6 LTS (Bionic Beaver)](https://cdimage.ubuntu.com/ubuntu/releases/18.04.6/release/).
@@ -28,4 +28,4 @@ The _server install_ images do not have a graphical user interface and are suita
 
 ### Download link
 
-- [tidal-ubuntu-18.04-server-amd64.ova](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-18.04-server-amd64.ova)
+- [tidal-ubuntu-18-04-server-amd64.ova](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-18-04-server-amd64.ova)
