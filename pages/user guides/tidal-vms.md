@@ -8,6 +8,7 @@ permalink: pre-configured-vms.html
 ---
 
 To help you get your Tidal Migrations discovery phase up and running, we've created a pre-configured virtual machine image. This VM has the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
+This virtual machine can also run as a server that is isolated from the public internet. To run Tidal Migrations software offline, checkout [this guide](https://guides.tidalmg.com/tidal-offline.html).
 
 ## Ubuntu 18.04
 
