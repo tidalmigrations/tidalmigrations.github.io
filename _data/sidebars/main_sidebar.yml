@@ -60,6 +60,10 @@ entries:
           - title: Windows DNS Zonefile Export
             output: web
             url: windows-zone-export.html
+          - title: Pre-Configured Virtual Machine
+            output: web
+            url: pre-configured-vms.html
+
       - title: Assess
         output: web
         folderitems:
@@ -87,6 +91,7 @@ entries:
           - title: Assessment Projects
             output: web
             url: /assessment-projects.html
+
       - title: Plan
         output: web
         folderitems:

@@ -6,3 +6,4 @@ permalink: downloads.html
 ---
 
 - [Tidal Migrations Layered Discovery Guide (PDF)](/book/discover.pdf)
+- [Pre-Configured Virtual Machine image](https://guides.tidalmg.com/pre-configured-vms.html)
