@@ -77,8 +77,12 @@ methods below.
 
 #### Configuration file
 
+
 Alternatively, you can use the `tidal config` command to manually set your
 credentials.
+
+It is  Configuration file is not encrypted.
+Only your Tidal Migrations password and vSphere password are encrypted using AES 256 bit encryption.
 
 For example, you can set your username, password and URL with the three
 following commands:
@@ -97,6 +101,7 @@ tidal:
   password: my_secure_password_here
   url: https://my_instance_name_here.tidalmg.com
 ```
+{% include note.html content="Your configuration file is not encrypted. Only your Tidal Migrations password and vSphere password are encrypted using AES 256 bit encryption." %}
 
 On macOS the config file is located:
 `$HOME/Library/Preferences/tidal/config.yaml`

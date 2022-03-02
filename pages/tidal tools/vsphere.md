@@ -93,19 +93,24 @@ You can set your vSphere credentials with the following commands:
 
 The set values are stored in the [default configuration file](/tidal-tools.html#configuration-file).
 
+{% include note.html content="Your configuration file is not encrypted. Only your Tidal Migrations password and vSphere password are encrypted using AES 256 bit encryption." %}
+
+
 #### Set Manually
 You can create a file, for example `config.yml`, with content similar to this:
 
 ```
 vsphere:
-  username: my_user_name_here
-  password: my_secure_vsphere_password
+  username: my_user_name_here  
   server: 1.1.1.1
 tidal:
-  email: my_user_name_here
-  password: my_secure_password_here
+  email: my_user_name_here  
   url: https://my_instance_name_here.tidalmg.com
 ```
+
+{% include note.html content="Your vSphere and Tidal password must be properly encrypted. In order to do so, you must use the tidal config set command."%}
+
+
 That can be used with a command: `tidal sync vsphere --config config.yml`
 
 ### 2) Environment Variables
