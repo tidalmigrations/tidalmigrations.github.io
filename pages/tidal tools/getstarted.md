@@ -100,7 +100,7 @@ tidal:
   password: my_secure_password_here
   url: https://my_instance_name_here.tidalmg.com
 ```
-{% include note.html content="Your configuration file is not encrypted. Only your Tidal Migrations password and vSphere password are encrypted using AES 256 bit encryption." %}
+{% include note.html content="Your Tidal Migrations password and vSphere password are encrypted, using AES 256 bit encryption when stored in the configuration file. The other parts of the configuration file are not encrypted." %}
 
 On macOS the config file is located:
 `$HOME/Library/Preferences/tidal/config.yaml`
