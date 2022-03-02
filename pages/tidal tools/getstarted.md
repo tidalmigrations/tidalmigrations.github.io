@@ -81,7 +81,6 @@ methods below.
 Alternatively, you can use the `tidal config` command to manually set your
 credentials.
 
-It is  Configuration file is not encrypted.
 Only your Tidal Migrations password and vSphere password are encrypted using AES 256 bit encryption.
 
 For example, you can set your username, password and URL with the three
