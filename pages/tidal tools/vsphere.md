@@ -108,7 +108,7 @@ tidal:
   url: https://my_instance_name_here.tidalmg.com
 ```
 
-{% include note.html content="Your vSphere and Tidal password must be properly encrypted. In order to do so, you must use the tidal config set command."%}
+{% include note.html content="You can not manually set or edit any passwords in the configuration file. They are stored here only as encrypted values. To persist a password, it must be added by using the `tidal config set` command."%}
 
 
 That can be used with a command: `tidal sync vsphere --config config.yml`
