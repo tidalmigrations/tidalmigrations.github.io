@@ -45,7 +45,7 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 
 ## Getting Started
 - Enable the Database Analysis feature for your account:
-  https://yoursubdomainhere.tidalmg.com/#/settings - See the Database Analysis section, under Preferences.
+  https://yoursubdomainhere.tidalmg.com/#/admin/settings - See the Database Analysis section, under Preferences.
 - `tidal login`
   Be sure to have [installed](tidal-tools.html) and [logged in](tidal-tools.html#login) to your Tidal Migrations account via Tidal Tools.
 - Install [Docker CE](https://docs.docker.com/v17.12/install/), it is compatible with most OSs, select the one you need. Version 17.12 or later will work with Tidal Tools. [Why Docker?](#why-docker)
