@@ -42,6 +42,10 @@ however **Tidal Tools works when your Docker installation is set to use
 Linux containers**. [Set up Docker for Windows to use Linux
 containers](/troubleshooting.html#docker-linux-containers).
 
+
+## Why Docker?
+You need to install Docker in order to complete the database analysis. This is because the analysis uses several system dependent software libraries, so by using Docker the analysis can use those libraries without you requiring to install the correct dependencies with the correct versions.
+
 ## Using Tidal Tools
 
 To get started, from a new terminal or Powershell prompt, simply run:
