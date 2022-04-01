@@ -132,7 +132,7 @@ Execute `machine-stats` in your current working directory, and save the result t
     $ machine-stats > <path-to-result-file>
     ```
 
-This is useful for ensuring that you have Machine Stats set up correctly, or for saving the results of a single invocation when running Machine Stats on an offline server.
+This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for saving the results of a single invocation when running Machine Stats on an offline server.
 
 ### Pipe Machine Stats to Tidal Migrations Platform 
 
@@ -144,7 +144,7 @@ Execute `machine-stats` and pipe its output to Tidal Tools:
 
 This approach is useful when you want to take a single snapshot of your infrastructure and upload it directly to the Tidal Migrations Platform. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
 
-### Running Machine Stats on a Cron Job
+### Run Machine Stats on a Cron Job
 
 By leveraging cron, you can run Machines Stats on a schedule to gather data over a period of time. This is useful if you want to gather utilization data, for example recording the CPU utilization of your machines over a set period.
 
@@ -156,8 +156,6 @@ First, create a script for cron to execute, like the one below. Replace `<path-t
     #!/bin/bash
 
     timestamp_start=$(date +%T)
-    echo $timestamp_start
-
     machine-stats <path-to-hosts-file> > <path-to-results-directory>/result-${timestamp_start}.json
     ```
 
@@ -170,7 +168,6 @@ Make the script executable by anyone, so that cron can execute it.
 Next, open a crontab with `crontab -e`. Copy the following into your crontab.
 
     ```
-    SHELL=/bin/bash
     PATH=<full-path>
     */5 * * * * bash <full-path-to-working-directory>/run-machine-stats.sh
     ```
