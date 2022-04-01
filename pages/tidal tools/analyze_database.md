@@ -49,7 +49,8 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 2. Now that you have activated the Database Analyze feature, You need to install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
   - How to [install](tidal-tools.html#install) Tidal Tools.
   - Install Tidal Tools [dependencies](tidal-tools.html#dependencies).
-  - Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools
+  - Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
+  - As a last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
 
 3. Tidal Tools will need a YAML configuration file with values and credentials needed to connect to your database. You can check this [section](#create-your-database-configuration-file) for more information on how to create such a file.
 4. Configure your Database to allow access to Tidal Tools. This [section](#configuring-a-user) will walk you through the creation of a `tidal` user and granting the necessary permissions.
@@ -194,7 +195,7 @@ To apply the configuration changes to the running PostgreSQL server you will nee
 
 When analyzing a database (or multiple), You have two options. 
 
-1. Perform the database analysis and upload the result immediately to your workspace. This is Tidal Tools default behaviour. To do so, all you need to do is run the following command.
+1. Perform the database analysis and upload the result immediately to your workspace. This is Tidal Tools' default behaviour. To do so, all you need to do is run the following command.
 ```bash
 tidal analyze db databases.yaml
 ```
