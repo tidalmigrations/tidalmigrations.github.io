@@ -130,23 +130,17 @@ Execute `machine-stats` in your current working directory, and save the result t
 
 This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for saving the results of a single invocation when running Machine Stats on an offline server.
 
-    ```
     $ machine-stats > <path-to-result-file>
-    ```
 
 On an online server with `tidal tools` installed, you can upload this result file to Tidal Migrations Platform with the following command.
 
-    ```
     $ tidal sync servers <path-to-result-file>
-    ```
 
 ### Pipe Machine Stats Output to Tidal Migrations Platform 
 
 Execute `machine-stats` and pipe its output to Tidal Tools:
 
-    ```
     $ machine-stats | tidal sync servers
-    ```
 
 This approach is useful when you want to take a snapshot of your infrastructure and upload it directly to the Tidal Migrations Platform in one command. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
 
@@ -158,33 +152,25 @@ Since we're not piping the result to Tidal Migrations Platform, and are instead 
 
 First, create a script for cron to execute, like the one below. Replace `<path-to-hosts-file>` and `<path-to-results-directory>` with the correct values. Ensure you use full paths, not relative paths. Save this script with a name like `run-machine-stats.sh`.
 
-    ```
     #!/bin/bash
 
     timestamp_start=$(date +%T)
     machine-stats <path-to-hosts-file> > <path-to-results-directory>/result-${timestamp_start}.json
-    ```
 
 Make the script executable by anyone, so that cron can execute it.
 
-    ```
     $ chmod +x <full-path-to-working-directory>/run-machine-stats.sh
-    ```
 
 Next, open a crontab with `crontab -e`. Copy the following into your crontab.
 
-    ```
     PATH=<full-path>
     */5 * * * * bash <full-path-to-working-directory>/run-machine-stats.sh
-    ```
 
 You can get the value for `<full-path>` by running `echo $PATH`.
 
 The `*/5` means that cron will execute this script every 5 minutes. You can customize this to set the sampling interval of your choosing. 
 
-Your results should appear in the existing `<path-to-results-directory>` that you specified in the `run-machine-stats.sh` script. Each result filename will contain a timestamp of when the invocation occurred. 
-
-
+Your results should appear in the existing `<path-to-results-directory>` that you specified in the `run-machine-stats.sh` script. Each result filename will contain a timestamp of when the invocation occurred.
 
 ### Technical Documentation
 
