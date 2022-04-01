@@ -109,7 +109,7 @@ dependencies setup:
   documentation](https://github.com/tidalmigrations/machine_stats/blob/master/unix/README.md)
   for installation instructions.
 
-## Creating the Hosts File
+### Creating the Hosts File
 
 1. Create a file named `hosts` in the current directory.
 
