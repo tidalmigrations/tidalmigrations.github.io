@@ -131,33 +131,10 @@ You should receive confirmation that the upload has completed and can navigate t
 
 ## Gather Machine Stats (For Unix-Like Systems)
 
-Follow [these instructions](#machine-stats-for-unix-like-systems) to install Machine Stats on an offline instance.
+Follow [these instructions](#machine-stats-for-unix-like-systems) to install Machine Stats on an offline server.
 
-In your offline instance, create a `hosts` file in the current directory.
+Next, follow [these instructions](https://guides.tidalmg.com/machine_stats.html#creating-the-hosts-file) to create a `hosts` file on your offline server.
 
-Add connection strings in the form of `ssh-user@ip-address` or
-`ssh-user@domain` to the `hosts` file one per line If the `ssh-user@` part
-is omitted, then the current user name is used.
+From here you have two approaches. You can take a single snapshot of your servers and save this to a `result` file. This file can then be moved to an online server with Tidal Tools installed, and uploaded to Tidal Migrations Platform from there. The instructions for this approach are found [here](https://guides.tidalmg.com/machine_stats.html#execute-machine-stats-manually).
 
-If you need to use a custom SSH identity file for some particular host,
-provide it as the following:
-
-```
-my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
-```
-
-Execute `machine-stats` and save the result to a file of your choice:
-
-```
-$ machine-stats > result.json
-```
-
-Now, transfer the result.json file to your server with internet access.
-
-From here you can use
-
-```
-tidal sync servers result.json
-```
-
-This sends the results to the Tidal Migrations API. Tidal Tools should confirm to you that the results were successfully uploaded. You should see the Job in the Discovery section, and your updated Server inventory in the Tidal Migrations Platform.
+Alternatively, you can set up a `cron` job on your offline server to record data on a schedule over a period of time. The instructions for this are found [here](https://guides.tidalmg.com/machine_stats.html#run-machine-stats-on-a-cron-job).
