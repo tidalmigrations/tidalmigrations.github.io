@@ -45,7 +45,7 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 
 ## Getting Started
 
-1. Before you can analyze a database, You must enable the Database Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://workspace.tidalmg.com/#/admin/setting). You will find at the bottom of the page the Database Analysis section.
+1. Before you can analyze a database, You must enable the Database Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://workspace.tidalmg.com/#/admin/setting). You will find the Database Analysis section at the bottom of the page.
 2. Now that you have activated the Database Analyze feature, You need to install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
   - How to [install](tidal-tools.html#install) Tidal Tools.
   - Install Tidal Tools [dependencies](tidal-tools.html#dependencies).
