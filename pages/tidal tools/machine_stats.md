@@ -128,13 +128,19 @@ dependencies setup:
 
 Execute `machine-stats` in your current working directory, and save the result to a `json` file of your choice.
 
+This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for saving the results of a single invocation when running Machine Stats on an offline server.
+
     ```
     $ machine-stats > <path-to-result-file>
     ```
 
-This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for saving the results of a single invocation when running Machine Stats on an offline server.
+On an online server with `tidal tools` installed, you can upload this result file to Tidal Migrations Platform with the following command.
 
-### Pipe Machine Stats to Tidal Migrations Platform 
+    ```
+    $ tidal sync servers <path-to-result-file>
+    ```
+
+### Pipe Machine Stats Output to Tidal Migrations Platform 
 
 Execute `machine-stats` and pipe its output to Tidal Tools:
 
@@ -142,7 +148,7 @@ Execute `machine-stats` and pipe its output to Tidal Tools:
     $ machine-stats | tidal sync servers
     ```
 
-This approach is useful when you want to take a single snapshot of your infrastructure and upload it directly to the Tidal Migrations Platform. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
+This approach is useful when you want to take a snapshot of your infrastructure and upload it directly to the Tidal Migrations Platform in one command. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
 
 ### Run Machine Stats on a Cron Job
 
