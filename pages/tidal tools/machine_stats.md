@@ -136,7 +136,11 @@ On an online server with `tidal tools` installed, you can upload this result fil
 
     $ tidal sync servers <path-to-result-file>
 
-### Pipe Machine Stats Output to Tidal Migrations Platform 
+### Run Machine Stats
+
+Now that you have created a hosts file, you have two options for how to run Machine Stats depending on your needs. For example, you could use Machine Stats to capture data points on your inventory and send its output to your Tidal workspace. Alternatively, You can use Machine Stats to capture statistics on a host for a period of time. The following 2 sections will guide you through both scenarios.
+
+#### Pipe Machine Stats Output to Tidal Migrations Platform 
 
 Execute `machine-stats` and pipe its output to Tidal Tools:
 
@@ -144,7 +148,7 @@ Execute `machine-stats` and pipe its output to Tidal Tools:
 
 This approach is useful when you want to take a snapshot of your infrastructure and upload it directly to the Tidal Migrations Platform in one command. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
 
-### Run Machine Stats on a Cron Job
+#### Run Machine Stats on a Cron Job
 
 By leveraging cron, you can run Machines Stats on a schedule to gather data over a period of time. This is useful if you want to gather utilization data, for example recording the CPU utilization of your machines over a set period.
 

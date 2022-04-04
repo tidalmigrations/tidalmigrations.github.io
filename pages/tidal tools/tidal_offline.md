@@ -150,7 +150,11 @@ Follow [the steps outlined above](#machine-stats-for-unix-like-systems) to insta
     my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
     ```
 
-### Execute Machine Stats Manually
+### Run Machine Stats
+
+Now that you have created a hosts file, you have two options for how to run Machine Stats depending on your needs. For example, you could use Machine Stats to capture data points on your inventory, and then send the result from an online server to your Tidal workspace. Alternatively, You can use Machine Stats to capture statistics on a host for a period of time. The following 2 sections will guide you through both scenarios.
+
+#### Execute Machine Stats Manually
 
 Execute `machine-stats` in your current working directory, and save the result to a `json` file of your choice.
 
@@ -162,7 +166,7 @@ On an online server with `tidal tools` installed, you can upload this result fil
 
     $ tidal sync servers <path-to-result-file>
 
-### Run Machine Stats on a Cron Job
+#### Run Machine Stats on a Cron Job
 
 By leveraging cron, you can run Machines Stats on a schedule to gather data over a period of time. This is useful if you want to gather utilization data, for example recording the CPU utilization of your machines over a set period.
 
