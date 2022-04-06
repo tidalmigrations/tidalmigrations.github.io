@@ -99,7 +99,7 @@ gather facts in a cross-platform way.
 Prior to the steps on syncing your Unix/Linux machines, be sure to have the below
 dependencies setup:
 
-- To get started you will need to have Tidal Tools installed. You can check out
+- If you want to upload the results of running Machine Stats to the Tidal Migrations Platform, you will need to be on a server which is connected to the internet and has Tidal Tools installed. You can check out
   [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
   it.
 - You need to install **Python 3.6+** on your local workstation (control node)
@@ -109,12 +109,12 @@ dependencies setup:
   documentation](https://github.com/tidalmigrations/machine_stats/blob/master/unix/README.md)
   for installation instructions.
 
-### Running the Script
+### Creating the Hosts File
 
-1. Create a `hosts` file in the current directory.
+1. Create a file named `hosts` in the current directory.
 
 2. Add connection strings in the form of `ssh-user@ip-address` or
-   `ssh-user@domain` to the `hosts` file one per line If the `ssh-user@` part
+   `ssh-user@domain` to the `hosts` file, one per line. If the `ssh-user@` part
    is omitted, then the current user name is used.
 
 3. If you need to use a custom SSH identity file for some particular host,
@@ -124,11 +124,59 @@ dependencies setup:
     my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
     ```
 
-4. Execute `machine-stats` and pipe its output to Tidal Tools:
+### Execute Machine Stats Manually
 
-    ```
+Execute `machine-stats` in your current working directory, and save the result to a `json` file of your choice.
+
+This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for saving the results of a single invocation when running Machine Stats on an offline server.
+
+    $ machine-stats > <path-to-result-file>
+
+On an online server with `tidal tools` installed, you can upload this result file to Tidal Migrations Platform with the following command.
+
+    $ tidal sync servers <path-to-result-file>
+
+### Run Machine Stats
+
+Now that you have created a hosts file, you have two options for how to run Machine Stats depending on your needs. For example, you could use Machine Stats to capture data points on your inventory and send its output to your Tidal workspace. Alternatively, You can use Machine Stats to capture statistics on a host for a period of time. The following 2 sections will guide you through both scenarios.
+
+#### Pipe Machine Stats Output to Tidal Migrations Platform 
+
+Execute `machine-stats` and pipe its output to Tidal Tools:
+
     $ machine-stats | tidal sync servers
-    ```
+
+This approach is useful when you want to take a snapshot of your infrastructure and upload it directly to the Tidal Migrations Platform in one command. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
+
+#### Run Machine Stats on a Cron Job
+
+By leveraging cron, you can run Machines Stats on a schedule to gather data over a period of time. This is useful if you want to gather utilization data, for example recording the CPU utilization of your machines over a set period.
+
+Since we're not piping the result to Tidal Migrations Platform, and are instead saving the result files locally, this approach can be used on an offline server.
+
+First, create a script for cron to execute, like the one below. Replace `<path-to-hosts-file>` and `<path-to-results-directory>` with the correct values. Ensure you use full paths, not relative paths. Save this script with a name like `run-machine-stats.sh`.
+
+    #!/bin/bash
+
+    timestamp_start=$(date +%T)
+    machine-stats <path-to-hosts-file> > <path-to-results-directory>/result-${timestamp_start}.json
+
+Make the script executable by anyone, so that cron can execute it.
+
+    $ chmod +x <full-path-to-working-directory>/run-machine-stats.sh
+
+Next, open a crontab with `crontab -e`. Copy the following into your crontab.
+
+    PATH=<full-path>
+    */5 * * * * bash <full-path-to-working-directory>/run-machine-stats.sh
+
+You can get the value for `<full-path>` by running `echo $PATH`.
+
+The `*/5` means that cron will execute this script every 5 minutes. You can customize this to set the sampling interval of your choosing. 
+
+Your results should appear in the existing `<path-to-results-directory>` that you specified in the `run-machine-stats.sh` script. Each result filename will contain a timestamp of when the invocation occurred.
+
+### Technical Documentation
 
 For more details on configuration and usage, please check Machine Stats for
 Unix-like systems [technical
@@ -138,7 +186,7 @@ documentation](https://github.com/tidalmigrations/machine_stats/blob/master/unix
 
 ### Introduction
 
-Machine Stat for Hypervisors is built ontop of [libvirt](https://libvirt.org)
+Machine Stats for Hypervisors is built on top of [libvirt](https://libvirt.org)
 and it gathers facts from virtual machines within a QEMU/KVM environment.
 
 ### Requirements and Dependencies

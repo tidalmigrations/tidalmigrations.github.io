@@ -131,33 +131,63 @@ You should receive confirmation that the upload has completed and can navigate t
 
 ## Gather Machine Stats (For Unix-Like Systems)
 
-Follow [these instructions](#machine-stats-for-unix-like-systems) to install Machine Stats on an offline instance.
+### Installation
 
-In your offline instance, create a `hosts` file in the current directory.
+Follow [the steps outlined above](#machine-stats-for-unix-like-systems) to install Machine Stats on an offline server.
 
-Add connection strings in the form of `ssh-user@ip-address` or
-`ssh-user@domain` to the `hosts` file one per line If the `ssh-user@` part
-is omitted, then the current user name is used.
+### Creating the Hosts File
 
-If you need to use a custom SSH identity file for some particular host,
-provide it as the following:
+1. Create a file named `hosts` in the current directory.
 
-```
-my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
-```
+2. Add connection strings in the form of `ssh-user@ip-address` or
+   `ssh-user@domain` to the `hosts` file, one per line. If the `ssh-user@` part
+   is omitted, then the current user name is used.
 
-Execute `machine-stats` and save the result to a file of your choice:
+3. If you need to use a custom SSH identity file for some particular host,
+   provide it as the following:
 
-```
-$ machine-stats > result.json
-```
+    ```
+    my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
+    ```
 
-Now, transfer the result.json file to your server with internet access.
+### Run Machine Stats
 
-From here you can use
+Now that you have created a hosts file, you have two options for how to run Machine Stats depending on your needs. For example, you could use Machine Stats to capture data points on your inventory, and then send the result from an online server to your Tidal workspace. Alternatively, You can use Machine Stats to capture statistics on a host for a period of time. The following 2 sections will guide you through both scenarios.
 
-```
-tidal sync servers result.json
-```
+#### Execute Machine Stats Manually
 
-This sends the results to the Tidal Migrations API. Tidal Tools should confirm to you that the results were successfully uploaded. You should see the Job in the Discovery section, and your updated Server inventory in the Tidal Migrations Platform.
+Execute `machine-stats` in your current working directory, and save the result to a `json` file of your choice.
+
+This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for taking a single snapshot of your machines to then upload from your online server to Tidal Migrations Platform.
+
+    $ machine-stats > <path-to-result-file>
+
+On an online server with `tidal tools` installed, you can upload this result file to Tidal Migrations Platform with the following command.
+
+    $ tidal sync servers <path-to-result-file>
+
+#### Run Machine Stats on a Cron Job
+
+By leveraging cron, you can run Machines Stats on a schedule to gather data over a period of time. This is useful if you want to gather utilization data, for example recording the CPU utilization of your machines over a set period.
+
+First, create a script for cron to execute, like the one below. Replace `<path-to-hosts-file>` and `<path-to-results-directory>` with the correct values. Ensure you use full paths, not relative paths. Save this script with a name like `run-machine-stats.sh`.
+
+    #!/bin/bash
+
+    timestamp_start=$(date +%T)
+    machine-stats <path-to-hosts-file> > <path-to-results-directory>/result-${timestamp_start}.json
+
+Make the script executable by anyone, so that cron can execute it.
+
+    $ chmod +x <full-path-to-working-directory>/run-machine-stats.sh
+
+Next, open a crontab with `crontab -e`. Copy the following into your crontab.
+
+    PATH=<full-path>
+    */5 * * * * bash <full-path-to-working-directory>/run-machine-stats.sh
+
+You can get the value for `<full-path>` by running `echo $PATH`.
+
+The `*/5` means that cron will execute this script every 5 minutes. You can customize this to set the sampling interval of your choosing. 
+
+Your results should appear in the existing `<path-to-results-directory>` that you specified in the `run-machine-stats.sh` script. Each result filename will contain a timestamp of when the invocation occurred.
