@@ -124,7 +124,10 @@ dependencies setup:
     my-user@example.com ansible_ssh_private_key_file=path/to/key-file.pem
     ```
 
-### Execute Machine Stats Manually
+### Run Machine Stats
+
+Now that you have created a hosts file, you have three options for how to run Machine Stats depending on your needs. You can run the program manually and save the output to a result file. You could use Machine Stats to capture data points on your inventory and send its output to your Tidal workspace. Finally, You can use Machine Stats to capture statistics on a host for a period of time. The following 3 sections will guide you through these scenarios.
+#### Execute Machine Stats Manually
 
 Execute `machine-stats` in your current working directory, and save the result to a `json` file of your choice.
 
@@ -135,10 +138,6 @@ This is useful for performing a test run to ensure you have Machine Stats set up
 On an online server with `tidal tools` installed, you can upload this result file to Tidal Migrations Platform with the following command.
 
     $ tidal sync servers <path-to-result-file>
-
-### Run Machine Stats
-
-Now that you have created a hosts file, you have two options for how to run Machine Stats depending on your needs. For example, you could use Machine Stats to capture data points on your inventory and send its output to your Tidal workspace. Alternatively, You can use Machine Stats to capture statistics on a host for a period of time. The following 2 sections will guide you through both scenarios.
 
 #### Pipe Machine Stats Output to Tidal Migrations Platform 
 
