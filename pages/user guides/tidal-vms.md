@@ -23,6 +23,9 @@ The _server install_ images do not have a graphical user interface and are suita
 
 ### Minimum System Requirements
 
+{% include note.html content="If you're planning on using this VM to capture data with Machine Stats for Unix, you may want to consider using an instance with more powerful specifications. For more information, see the [recommended specs](https://guides.tidalmg.com/machine_stats.html#recommended-specs) for Machine Stats for Unix." %}
+
+Recommended Minimum Specs:
 - Memory: 2 GB
 - vCPU: 2
 - Free Storage Space: 8 GB
