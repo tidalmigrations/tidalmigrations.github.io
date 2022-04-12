@@ -103,8 +103,9 @@ This is intended as a general guide, and your mileage may vary. If you want to r
 
 __AWS t3.micro__
 - vCPUs: 2
+- Clock Speed: 3.1 GHz
 - RAM (GB): 1
-- Baseline Performance/vCPU: 10%
+- RAM Type: DDR4
 - Network burst bandwidth (Gbps): 5
 
 ## Unix-like systems
