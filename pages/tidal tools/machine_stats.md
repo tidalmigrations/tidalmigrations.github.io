@@ -183,13 +183,17 @@ __< 250 Subjects__
 
 When scanning fewer than 250 subject machines, we recommend a controller machine with the following minimum specifications:
 - vCPUs: 2
+- Clock Speed: 3.1 GHz
 - RAM (GB): 2
+- RAM Type: DDR4
 
 __250 - 800 Subjects__
 
 When scanning up to 800 subject machines, we recommend a controller machine with the following minimum specifications:
 - vCPUs: 4
+- Clock Speed: 2.5 GHz
 - RAM (GB): 16
+- RAM Type: DDR4
 
 __> 800 Subjects__
 
