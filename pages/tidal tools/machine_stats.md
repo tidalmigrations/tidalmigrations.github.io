@@ -175,6 +175,30 @@ The `*/5` means that cron will execute this script every 5 minutes. You can cust
 
 Your results should appear in the existing `<path-to-results-directory>` that you specified in the `run-machine-stats.sh` script. Each result filename will contain a timestamp of when the invocation occurred.
 
+### Recommended Specs
+
+Under our testing conditions, we have found that Machine Stats for Unix requires the following specifications of the controller machine. This is intended as a general guide only, as all testing was performed on virtual machines in AWS. Your mileage may vary scanning on-premise servers on your network.
+
+__< 250 Subjects__
+
+When scanning fewer than 250 subject machines, we recommend a controller machine with the following minimum specifications:
+- vCPUs: 2
+- Clock Speed: 3.1 GHz
+- RAM (GB): 2
+- RAM Type: DDR4
+
+__250 - 800 Subjects__
+
+When scanning up to 800 subject machines, we recommend a controller machine with the following minimum specifications:
+- vCPUs: 4
+- Clock Speed: 2.5 GHz
+- RAM (GB): 16
+- RAM Type: DDR4
+
+__> 800 Subjects__
+
+We cannot guarantee the success of Machine Stats for Unix when scanning more than 800 subject machines. If you need to operate at this scale, we recommend sharding your inventory into smaller groups and using multiple controller machines.
+
 ### Technical Documentation
 
 For more details on configuration and usage, please check Machine Stats for
