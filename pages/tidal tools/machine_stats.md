@@ -61,7 +61,7 @@ repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows
 
 {% include note.html content="Be sure to set PowerShell's Execution policy to
 execute this script before running it. [This
-guide](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6)
+guide](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2)
 will help you in doing so." %}
 
 1. To start, run the script `.\save_password.ps1` and enter your password when
@@ -86,6 +86,27 @@ https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example-
 of a scripting task in PowerShell that runs daily."%}
 
 And there you have it! Your servers will be synced to Tidal Migrations.
+
+### How Many Subjects Can I Scan At Once?
+
+The short answer is that this depends on how you plan to run Machine Stats. If you plan to gather data over time by running Machine Stats on a scheduled job, then particular care needs to be taken choosing the number of subject machines a single controller machine can scan.
+
+This is because under our testing conditions, we have found that the main limiting factor on the number of subjects that Machine Stats for Windows can scan at once is the period of time between scheduled job invocations.
+
+In other words, if you want to invoke your scheduled job every 5 minutes, you need to ensure that the program can complete its scan of your desired number of subject machines within this 5 minutes. If the scan is still running when the next invocation occurs, that scan will fail.
+
+Testing on virtual machines in AWS, we found that a t3.micro instance (full stats below) can scan roughly 250 subject instances safely in 5 minutes. If you’d like to invoke Machine Stats more frequently, for example in 3 minute intervals, you may need to target fewer subjects per controller machine.
+
+If on the other hand you are gathering general information on your servers and need to invoke Machine Stats for Windows only once, we found that an AWS t3.micro instance can scan 800 subject instances in around 15 minutes.
+
+This is intended as a general guide, and your mileage may vary. If you want to run Machine Stats on a scheduled job, we encourage you to perform preliminary tests to determine the number of subject machines your controller machine can safely handle within your invocation period.
+
+__AWS t3.micro__
+- vCPUs: 2
+- Clock Speed: 3.1 GHz
+- RAM (GB): 1
+- RAM Type: DDR4
+- Network burst bandwidth (Gbps): 5
 
 ## Unix-like systems
 
