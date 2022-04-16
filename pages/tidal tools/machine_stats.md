@@ -38,7 +38,7 @@ to `Invoke-Command` across your servers.
 
 If WinRM is not the ideal solution for you, we offer an alternative approach backed by WMI. See [this section](#gather-machine-stats-without-winrm) for more information.
 
-Machine Stats for Windows outputs JSON data which can be securely sent to your Tidal Migrations workspace using the `tidal` command.
+Machine Stats for Windows outputs JSON data, which can be saved and uploaded to the Tidal Migrations Platform, or piped there directly using Tidal Tools.
 
 ### Requirements and Dependencies
 
