@@ -32,14 +32,13 @@ Migrations." %}
 
 ### Introduction
 
-This is a simple and effective way to gather machine stats (RAM, Storage, CPU)
-from a Windows Server environment. For better results, we recommend using it
-with
-[WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
-to `Invoke-Command` across your servers. However, it is also possible to
-execute in non-WinRM environments, though not all of the stats will be
-available to gather in such case. As a result it outputs JSON data which can be
-securely sent to your Tidal Migrations workspace using the `tidal` command.
+Machine Stats for Windows is a simple and effective way to gather machine stats (RAM, Storage, CPU) from a Windows Server environment. 
+For the best possible results, we recommend using it with [WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
+to `Invoke-Command` across your servers.
+
+If WinRM is not the ideal solution for you, we offer an alternative approach backed by WMI. See [this section](#gather-machine-stats-without-winrm) for more information.
+
+Machine Stats for Windows outputs JSON data, which can be saved and uploaded to the Tidal Migrations Platform, or piped there directly using Tidal Tools.
 
 ### Requirements and Dependencies
 
@@ -86,6 +85,33 @@ https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example-
 of a scripting task in PowerShell that runs daily."%}
 
 And there you have it! Your servers will be synced to Tidal Migrations.
+
+### Gather Machine Stats Without WinRM
+
+By default, Machine Stats for Windows uses WinRM to connect to and read data from your machines. If you need to gather machine stats from a non-WinRM environment, we offer an alternative approach backed by Windows Management Instrumentation (WMI).
+
+Using this approach, you will not be able to gather stats on running processes with the `-ProcessStats` flag. You will also not be able to gather peak and average CPU utilization over time. What you can capture is general machine information, as well as point-in-time CPU utilization using the `-CPUUtilizationOnlyValue` flag.
+
+__Requirements__
+- Your controller and subject machines should be on the same network, and you should populate the `servers.txt` file with the private IP addresses of your subject machines.
+- Your subject machines should have the Windows Management Instrumentation (WMI) firewall rule group enabled. You can enable this with the following command:
+  ```
+  netsh advfirewall firewall set rule group="Windows Management Instrumentation (WMI)" new enable=yes
+  ```
+
+After satisfying the above requirements, you can gather information on your subject machines with the following command:
+
+```
+<path-to-machine-stats>/windows/runner.ps1 -NoWinRM
+```
+
+Note that this does not collect CPU utilization by default. To include point-in-time CPU utilization in your result, use the following command:
+
+```
+<path-to-machine-stats>/windows/runner.ps1 -NoWinRM -CPUUtilizationOnlyValue -CPUUtilizationTimeout 1
+```
+
+As with the default behavior, this approach can be used with Tidal Tools, both in a single invocation or running in a scheduled task to gather information over time. You can upload the result file to Tidal Tools, or pipe the result directly, as covered in [this section](#running-the-script). 
 
 ### How Many Subjects Can I Scan At Once?
 
