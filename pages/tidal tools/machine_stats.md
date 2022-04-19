@@ -121,7 +121,7 @@ This is because under our testing conditions, we have found that the main limiti
 
 In other words, if you want to invoke your scheduled job every 5 minutes, you need to ensure that the program can complete its scan of your desired number of subject machines within this 5 minutes. If the scan is still running when the next invocation occurs, that scan will fail.
 
-Testing on virtual machines in AWS, we found that a t3.micro instance (full stats below) can scan roughly 250 subject instances safely in 5 minutes. If you’d like to invoke Machine Stats more frequently, for example in 3 minute intervals, you may need to target fewer subjects per controller machine.
+Testing on virtual machines in AWS, we found that a t3.micro instance (full stats below) can scan roughly 250 subject instances safely in 5 minutes. This is the case when using WinRM, and also the [WMI approach](#gather-machine-stats-without-winrm) (`-NoWinRM`). If you’d like to invoke Machine Stats more frequently, for example in 3 minute intervals, you may need to target fewer subjects per controller machine.
 
 If on the other hand you are gathering general information on your servers and need to invoke Machine Stats for Windows only once, we found that an AWS t3.micro instance can scan 800 subject instances in around 15 minutes.
 
