@@ -48,6 +48,10 @@ dependencies setup:
 - To gather additional data, such as peak and average CPU utilization and process stats, you
   will need [WinRM enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring)
   across your environment. See [this section](#gather-machine-stats-without-winrm) for an alternative approach using WMI.
+- If you are using the WinRM approach, you will need to add the machines you are reading to your list of trusted hosts. You can trust all hosts with the following command:
+  ```
+  Set-Item WSMan:localhost\client\trustedhosts -value *
+  ```
 - The scripts referenced here can be found in [Machine Stats for
   Windows GitHub
 repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows). Clone this and navigate to the `machine_stats\windows` directory.
