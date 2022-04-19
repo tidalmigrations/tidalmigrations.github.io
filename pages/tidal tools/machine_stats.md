@@ -32,7 +32,7 @@ Migrations." %}
 
 ### Introduction
 
-Machine Stats for Windows is a simple and effective way to gather machine stats (RAM, Storage, CPU) from a Windows Server environment. For the best possible results, we recommend using it with [WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
+Machine Stats for Windows is an open-source, simple and effective way to gather machine stats (RAM, Storage, CPU) from a Windows Server environment. For the best possible results, we recommend using it with [WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
 to `Invoke-Command` across your servers.
 
 If WinRM is not the ideal solution for you, we offer an alternative approach backed by WMI. See [this section](#gather-machine-stats-without-winrm) for more information.
