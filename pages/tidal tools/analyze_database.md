@@ -1,7 +1,7 @@
 ---
 title: Analyze your Databases
 keywords: source, assessment, readiness, analyze
-last_updated: July, 2018
+last_updated: April, 2022
 summary: "Use the Tidal Tools database analyzer to measure your databases’ cloud migration difficulty."
 sidebar: main_sidebar
 redirect_from: analyze_database.html
@@ -45,7 +45,7 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 
 ## Getting Started
 
-1. Before you can analyze a database, You must enable the Database Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://workspace.tidalmg.com/#/admin/setting). You will find the Database Analysis section at the bottom of the page.
+1. Before you can analyze a database, You must enable the Database Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://yourworkspace.tidalmg.com/#/admin/setting). You will find the Database Analysis section at the bottom of the page.
 2. Now that you have activated the Database Analyze feature, You need to install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
   - How to [install](tidal-tools.html#install) Tidal Tools.
   - Install Tidal Tools [dependencies](tidal-tools.html#dependencies).
@@ -61,36 +61,45 @@ That is all, You should be able to see the results in your workspace within seco
 
 ## Create your Database configuration file
 
-Your YAML configuration file must contain the following information.
+For the most part, all supported Database engines share very similar configuration with Oracle being the exception.
+
+Your YAML configuration file for Postgres, MySQL, and SQL Server must contain the following information.
 
   - `id` - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
-  - `engine` - The database vendor, either `Oracle`, `SQL Server`, `MySQL`, or `PostgreSQL`, it is not case sensitive.
+  - `name` - A common name for your database could be the same or different from db_name, but this value is arbitrary and only for your reference.
+  - `engine` - The database vendor, either `SQL Server`, `MySQL`, or `PostgreSQL`, it is not case sensitive.
   - `host` - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
-  - `port` - The port that the host has open and the database can accept connections on, the default for Oracle is `1521`, for SQL Server it is `1433`, for MySQL it is `3306`, and for PostgreSQL the default port is `5432`.
-  - `db_name` - The name of the database that will be analyzed, as it is defined within the database engine itself. ie. the value that is used by applications to connect to the database by name.
+  - `port` - The port that the host has open and the database can accept connections on, for SQL Server it is `1433`, for MySQL it is `3306`, and for PostgreSQL the default port is `5432`.
+  - `db_name` - The name of the database you are analyzing // or in the case of Oracle, the "service name". 
   - `user` - A username to authenticate with the database, check the section below for more details about creating a user and granting permissions.
   - `password` - A password for the corresponding user.
-  - `name` - A common name for your database could be the same or different from db_name, but this value is arbitrary and only for your reference.
 
 
-The simplest way to create your configuration file is to use the  `tidal analyze db init` command in Tidal Tools. It is an interactive command that will guide you through the process. Or you can create the file manually:
+When analyzing Oracle databases, the attributes in your configuration file must contain the following details.
 
-This is an example of how the YAML file should look like
+  - `id` - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
+  - `name` - A common name for your database.
+  - `analyze_workload` - When set to **true** workload analysis is enabled. Be sure to configure AWR data retention and verify licensing. For more information check the advance configuration [section](#advanced-configuration)
+  - `engine` - **Oracle**
+  - `host` - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
+  - `port` - The port that the host has open and the database can accept connections on, the default for Oracle is `1521`.
+  - `db_id_type` - Specifies the identifier type. Must be one of the following values:
+    * **SID** if entering an Oracle System ID (SID) in the next field.
+    * **Service Name** if entering a service name in the next field.
+
+  - `sid_or_service_name` - If you selected SID as your **db_id_type**, you should add the Oracle database SID, otherwise enter your  Oracle service name.
+  - `user` - A username to authenticate with the database, check the section below for more details about creating a user and granting permissions.
+  - `password` - A password for the corresponding user.
+  - `is_pdb` - An Oracle Multitenant Pluggable Database (PDB). If set to true, You will need to provide credentials for the Container Database in following fields.
+  - `cdb_sid` - The Service ID of the container database.
+  - `cdb_user` - The common username of the container database user.
+  - `cdb_password` - The password of the container common database user. 
 
 
-databases.yaml:
 
-```yaml
-databases:
-  - id: 111
-    engine: Oracle
-    host: 'my-db-host.com'
-    port: 1521
-    db_name: 'orcl'
-    user: 'tidal'
-    password: 'yoursecurepassword1234!'
-    name: 'My-Test-DB'
-```
+The simplest way to create your configuration file is to use the  `tidal analyze db init` command in Tidal Tools. The command will generate for you a databases.yaml file with a template with each one of the supported engines. All you will need to do is populate the file according to your needs.
+
+
 
 {% include note.html content="It is best to use quotations, either double or single, around the values in the configuration file. To avoid special characters, : `{ } [ ] , & * # ? | - < > = ! % @ \ \n` from being interpreted. Single quotes are safest, if the value has a single quote within it, you can include it by using a two single quotations, ie. `'my''string'` - will become `my'string`." %}
 
@@ -251,14 +260,19 @@ can set the `analyze_workload` property to `false` in your configuration file. F
 ```yaml
 databases:
   - id: 111
+    name: "your-oracle-db"
     analyze_workload: false
     engine: Oracle
     host: 'my-db-host.com'
     port: 1521
-    db_name: 'orcl'
+    db_id_type: "Service Name"
+    sid_or_service_name: "orcl"
     user: 'tidal'
     password: 'yoursecurepassword1234!'
-    name: 'My-Test-DB'
+    is_pdb: false
+    cdb_sid: ""
+    cbd_user: ""
+    cbd_password: ""
 ```
 
 {% include note.html content="By setting this to `false`, some results from the
@@ -274,25 +288,3 @@ Two commands you can use for this are:
 1. `dig your_db_host` - This should return a DNS record, usually an A record, with an IP address. This means you are able to resolve the hostname of the database. If there is no IP address then you either need to adjust the hostname or you need to configure or adjust the DNS server for your operating system.
 
 2. `nc -vzn -w 10 your_db_host db_port` This command should return `Connected to your_db_host:db_port` if it is able to connect. If it returns `Connection Timed Out` this means that it is not able to reach your database on this port. This could mean that you do not have the correct network connectivity to the database and may need to adjust firewalls or other network access. Or you are not providing the correct port that is open and listening for requests on the database.
-
-### CDB Configuration
-
-You will need these additional values added to your configuration file to connect to a CDB database.
-
-```yaml
-databases:
-  - id: 111
-    engine: Oracle
-    host: 'my-db-host.com'
-    port: 1521
-    db_name: 'orcl'
-    user: 'tidal'
-    password: 'yoursecurepassword1234!'
-    name: 'My-Test-DB'
-    dbidtype: 'dbid'
-    ispdb: false
-    cdb:
-      name: 'cdbname'
-      user: 'c##tidal_comm_user'
-      password: 'your_secure_password'
-```
