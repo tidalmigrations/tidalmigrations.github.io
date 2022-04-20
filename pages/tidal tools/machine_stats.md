@@ -24,67 +24,118 @@ plan data replication time, or other migration metrics on an app-by-app basis.
 
 {% include tip.html content="As your cloud migration will likely take place
 over many months or years, it's important to have current resource requirements
-throughout your journey. To accomplish this, setup `machine_stats` in a cron
-job or Scheduled Task and synchronize your data on a _daily_ basis to Tidal
+throughout your journey. To accomplish this, setup `machine_stats` in a [cron job](#run-machine-stats-on-a-cron-job) 
+or [Scheduled Task](#run-machine-stats-in-a-scheduled-task) and synchronize your data on a _daily_ basis to Tidal
 Migrations." %}
 
 ## Windows
 
 ### Introduction
 
-Machine Stats for Windows is a simple and effective way to gather machine stats (RAM, Storage, CPU) from a Windows Server environment. 
-For the best possible results, we recommend using it with [WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
+Machine Stats for Windows is an open-source, simple and effective way to gather machine stats (RAM, Storage, CPU) from a Windows Server environment. For the best possible results, we recommend using it with [WinRM](https://docs.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
 to `Invoke-Command` across your servers.
 
 If WinRM is not the ideal solution for you, we offer an alternative approach backed by WMI. See [this section](#gather-machine-stats-without-winrm) for more information.
 
-Machine Stats for Windows outputs JSON data, which can be saved and uploaded to the Tidal Migrations Platform, or piped there directly using Tidal Tools.
+Machine Stats for Windows outputs JSON data, which can be saved and uploaded to the Tidal Migrations Platform, or piped there directly using Tidal Tools. You can also run Machine Stats in a Windows scheduled task, by following some [additional steps](#run-machine-stats-in-a-scheduled-task).
 
 ### Requirements and Dependencies
 
-Prior to the steps on syncing your hypervisors, be sure to have the below
+Prior to the steps on syncing your Windows machines, be sure to have the below
 dependencies setup:
 
-- To get started you will need to have Tidal Tools installed. You can check out
-  [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
-  it.
-- To gather additional data, such as CPU utilization and process stats, you
-  will need [WinRM
-enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring)
-  across your environment for this.
-- The scripts needed for this process can be found in [Machine Stats for
+- If you want to upload the results of running Machine Stats to the Tidal Migrations Platform, you will need to be on a server which is connected to the internet and has Tidal Tools installed. You can check out the [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install it.
+- To gather additional data, such as peak and average CPU utilization and process stats, you
+  will need [WinRM enabled](https://support.auvik.com/hc/en-us/articles/204424994-How-to-enable-WinRM-with-domain-controller-Group-Policy-for-WMI-monitoring)
+  across your environment. See [this section](#gather-machine-stats-without-winrm) for an alternative approach using WMI.
+- If you are using the WinRM approach, you will need to add the machines you are reading to your list of trusted hosts. You can trust all hosts with the following command:
+  ```
+  Set-Item WSMan:localhost\client\trustedhosts -value *
+  ```
+- The scripts referenced here can be found in [Machine Stats for
   Windows GitHub
-repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows).
+repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows). Clone this and navigate to the `machine_stats\windows` directory.
+- The main script you'll be executing, `runner.ps1`, is not digitally signed. You can change the execution policy for this script with the following command:
+  ```
+  Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+  ```
+For more information see Microsoft documentation [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2).
+- Machine Stats uses the same credentials to connect to all your subject machines. Each machine should be accessible with the same username and password.
 
-### Running the Script
+### Creating the Password and Servers File
 
-{% include note.html content="Be sure to set PowerShell's Execution policy to
-execute this script before running it. [This
-guide](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2)
-will help you in doing so." %}
+To start, navigate to the `machine_stats\windows` directory and run the script `.\save_password.ps1`. Enter your password when prompted. This will save your credentials securely in a text file.
 
-1. To start, run the script `.\save_password.ps1` and enter your password when
-   prompted. This will save your credentials securely in a text file.
+Next, Save a list of the server hostnames that you would like to sync into a text file (unicode/ascii). Hosts can be specified either as IP addresses or as hostnames that resolve via DNS. In either case, the hostnames and IP addresses must be resolvable (private or global DNS) and routable from the machine that Machine Stats is running on. By default, Machine Stats will search for a file called `servers.txt` in the current folder. If this list was saved in some other file, you can specify its path using the `-ServersPath` parameter.
 
-2. Save a list of the server hostnames that you would like to sync in a file.
-   By default, Machine Stats script will search for file called `servers.txt`
-   in the current folder. If a list was saved in some other file, you can specify
-   its path using the `-ServersPath` parameter for `runner.ps1` script.
+### Run Machine Stats for Windows
 
-3. Run the script `.\runner.ps1`. It will prompt for username. Alternatively,
-   you can specify the username using the `-UserName` parameter. The data of
-   the list of servers will be shown as a JSON.
+Now that you have your password and `servers.txt` files, you have three options for how to run Machine Stats depending on your needs. You can run the program manually and save the output to a result file. You could use Machine Stats to capture data points on your inventory and send its output to your Tidal workspace. Finally, You can run Machine Stats in a scheduled task to capture statistics on your inventory for a period of time. The following 3 sections will guide you through these scenarios.
 
-4. You can pipe the output of the Machine Stats script directly to the Tidal
-   Tools: `.\runner.ps1 | tidal sync servers`
+#### Execute Machine Stats Manually
 
-{% include note.html content="We recommend that you set this script to run
-periodically so that your servers are synced on a daily basis and the
-data is up to date. Here is an [example](
-https://docs.microsoft.com/en-us/windows/desktop/taskschd/daily-trigger-example--scripting-)
-of a scripting task in PowerShell that runs daily."%}
+Execute Machine Stats in your current working directory, and save the result to a `json` file of your choice.
 
-And there you have it! Your servers will be synced to Tidal Migrations.
+This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for saving the results of a single invocation when running Machine Stats on an offline server. Ensure you run the following command from the `machine_stats\windows` directory.
+
+    ./runner.ps1 | Out-File <path-to-result-file>
+
+Running this will prompt you for a username. Alternatively, you can provide this with the `-UserName` parameter.
+
+    ./runner.ps1 -UserName <username> | Out-File <path-to-result-file>
+
+#### Pipe Machine Stats Output to Tidal Migrations Platform 
+
+On a machine with Tidal Tools installed and which is connected to the internet, you can execute Machine Stats and pipe its output to Tidal Tools with the following command.
+
+    ./runner.ps1 | tidal sync severs
+
+As above, you can provide the username with the `-UserName` parameter.
+
+This approach is useful when you want to take a snapshot of your infrastructure and upload it directly to the Tidal Migrations Platform in one command. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
+
+#### Run Machine Stats in a Scheduled Task
+
+To run Machine Stats in a Windows scheduled task, we must first create the script which the scheduled task will execute. If you want to save the results as json files to the current directory, with a timestamp in the filename, you can use something like this (remember to replace `<path>` with the correct path):
+
+`run_default.ps1`:
+``` 
+$timestamp = Get-Date -Format "HH-mm-ss"
+
+<path>\runner.ps1 `
+-UserName <username> `
+-ServersPath "<path>\servers.txt" `
+-ServerStatsPath "<path>\server_stats.ps1" `
+-SecurePwdFilePath "<path>\SecuredText.txt" `
+| Out-File "<path>\result_${timestamp}"
+
+```
+
+For piping the results straight to your Tidal workspace with Tidal Tools, you can use something like this:
+
+`run_tidal_tools.ps1`:
+``` 
+<path>\runner.ps1 `
+-UserName <username> `
+-ServersPath <path-to-servers.txt> `
+-ServerStatsPath "<path>\server_stats.ps1" `
+-SecurePwdFilePath "<path>\SecuredText.txt" `
+| tidal sync servers
+```
+
+If you plan on using this approach, remember to log into `tidal tools` with `tidal login`.
+
+We recommend you run your script from the `machine_stats\windows` directory to ensure everything is working correctly. If this works, navigate to a different directory and run the script again, to ensure you have the paths set correctly. If this works, you should be ready to invoke the script using a scheduled task.
+
+__Creating the Task__
+
+1. Download the scheduled task XML file [here](https://ms4w-scheduled-task-xml.s3.ca-central-1.amazonaws.com/MS4W-scheduled-task.xml). With a few tweaks, we can use this to quickly create our own scheduled task.
+2. Open `Task Scheduler` and select `import task`. Follow the prompts to import the XML file we just downloaded.
+3. Select `Change User or Groups`. Under `Enter the object name to select`, enter the name of the user you’d like to run the script as (for example, `Administrator`).
+4. Navigate to the `Triggers` tab and edit the trigger. Change the start datetime to whenever you’d like the task to start.
+5. Navigate to the `Actions` tab and, if necessary, edit the script name (default is `run_default`).
+6. Hit OK, you’ll be prompted to enter the password for the user you selected in step 3.
+7. That’s it, your script should be executed at the time you chose in step 4, and will repeat every 5 minutes for 24 hours. You can edit this in the ‘Triggers’ section if you'd like to customize it further.
 
 ### Gather Machine Stats Without WinRM
 
@@ -111,21 +162,21 @@ Note that this does not collect CPU utilization by default. To include point-in-
 <path-to-machine-stats>/windows/runner.ps1 -NoWinRM -CPUUtilizationOnlyValue -CPUUtilizationTimeout 1
 ```
 
-As with the default behavior, this approach can be used with Tidal Tools, both in a single invocation or running in a scheduled task to gather information over time. You can upload the result file to Tidal Tools, or pipe the result directly, as covered in [this section](#running-the-script). 
+As with the default behavior, this approach can be used with Tidal Tools, both in a single invocation or running in a scheduled task to gather information over time. You can upload the result file to Tidal Tools, or pipe the result directly, as covered in [this section](#run-machine-stats-for-windows). 
 
 ### How Many Subjects Can I Scan At Once?
 
-The short answer is that this depends on how you plan to run Machine Stats. If you plan to gather data over time by running Machine Stats on a scheduled job, then particular care needs to be taken choosing the number of subject machines a single controller machine can scan.
+The short answer is that this depends on how you plan to run Machine Stats. If you plan to gather data over time by running Machine Stats on a scheduled task, then particular care needs to be taken choosing the number of subject machines a single controller machine can scan.
 
-This is because under our testing conditions, we have found that the main limiting factor on the number of subjects that Machine Stats for Windows can scan at once is the period of time between scheduled job invocations.
+This is because under our testing conditions, we have found that the main limiting factor on the number of subjects that Machine Stats for Windows can scan at once is the period of time between scheduled task invocations.
 
-In other words, if you want to invoke your scheduled job every 5 minutes, you need to ensure that the program can complete its scan of your desired number of subject machines within this 5 minutes. If the scan is still running when the next invocation occurs, that scan will fail.
+In other words, if you want to invoke your scheduled task every 5 minutes, you need to ensure that the program can complete its scan of your desired number of subject machines within this 5 minutes. If the scan is still running when the next invocation occurs, that scan will fail.
 
 Testing on virtual machines in AWS, we found that a t3.micro instance (full stats below) can scan roughly 250 subject instances safely in 5 minutes. This is the case when using WinRM, and also the [WMI approach](#gather-machine-stats-without-winrm) (`-NoWinRM`). If you’d like to invoke Machine Stats more frequently, for example in 3 minute intervals, you may need to target fewer subjects per controller machine.
 
 If on the other hand you are gathering general information on your servers and need to invoke Machine Stats for Windows only once, we found that an AWS t3.micro instance can scan 800 subject instances in around 15 minutes.
 
-This is intended as a general guide, and your mileage may vary. If you want to run Machine Stats on a scheduled job, we encourage you to perform preliminary tests to determine the number of subject machines your controller machine can safely handle within your invocation period.
+This is intended as a general guide, and your mileage may vary. If you want to run Machine Stats on a scheduled task, we encourage you to perform preliminary tests to determine the number of subject machines your controller machine can safely handle within your invocation period.
 
 __AWS t3.micro__
 - vCPUs: 2
@@ -146,7 +197,7 @@ gather facts in a cross-platform way.
 Prior to the steps on syncing your Unix/Linux machines, be sure to have the below
 dependencies setup:
 
-- If you want to upload the results of running Machine Stats to the Tidal Migrations Platform, you will need to be on a server which is connected to the internet and has Tidal Tools installed. You can check out
+- If you want to upload the results of running Machine Stats to the Tidal Migrations Platform, you will need to be on a server which is connected to the internet and has Tidal Tools installed. You can check out the
   [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install
   it.
 - You need to install **Python 3.6+** on your local workstation (control node)
