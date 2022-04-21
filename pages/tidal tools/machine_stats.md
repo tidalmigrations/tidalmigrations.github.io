@@ -55,11 +55,15 @@ dependencies setup:
 - The scripts referenced here can be found in [Machine Stats for
   Windows GitHub
 repository](https://github.com/tidalmigrations/machine_stats/tree/master/windows). Clone this and navigate to the `machine_stats\windows` directory.
-- The main script you'll be executing, `runner.ps1`, is not digitally signed. You can change the execution policy for this script with the following command:
+- The main script you'll be executing, `runner.ps1`, is not digitally signed. This is intentional, so that you can make edits to the script if need be. You can change the execution policy of your current (powershell) session with the following command:
   ```
-  Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+  Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
   ```
-For more information see Microsoft documentation [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2).
+  If you'd prefer, you can also bypass the execution policy for each invocation of the script. Simply prepend the following every time you run `runner.ps1`.
+  ```
+  powershell -ExecutionPolicy Bypass -File runner.ps1
+  ```
+For more information on `Set-ExecutionPolicy` see Microsoft documentation [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2).
 - Machine Stats uses the same credentials to connect to all your subject machines. Each machine should be accessible with the same username and password.
 
 ### Creating the Password and Servers File
