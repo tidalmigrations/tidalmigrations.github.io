@@ -60,9 +60,9 @@ entries:
           - title: Windows DNS Zonefile Export
             output: web
             url: windows-zone-export.html
-          - title: Pre-Configured Virtual Machine
+          - title: Tidal Tools Virtual Machine Image
             output: web
-            url: pre-configured-vms.html
+            url: tidal-discovery-vm.html
 
       - title: Assess
         output: web
