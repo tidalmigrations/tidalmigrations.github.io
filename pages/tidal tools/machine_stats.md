@@ -170,24 +170,21 @@ As with the default behavior, this approach can be used with Tidal Tools, both i
 
 ### How Many Subjects Can I Scan At Once?
 
-The short answer is that this depends on how you plan to run Machine Stats. If you plan to gather data over time by running Machine Stats on a scheduled task, then particular care needs to be taken choosing the number of subject machines a single controller machine can scan.
+It depends on how you plan to run Machine Stats.
 
-This is because under our testing conditions, we have found that the main limiting factor on the number of subjects that Machine Stats for Windows can scan at once is the period of time between scheduled task invocations.
+## Gather data continuously over time
 
-In other words, if you want to invoke your scheduled task every 5 minutes, you need to ensure that the program can complete its scan of your desired number of subject machines within this 5 minutes. If the scan is still running when the next invocation occurs, that scan will fail.
+If you plan to gather data by running Machine Stats on a recurring scheduled task the main limiting factor on the number of hosts that Machine Stats for Windows can scan at once is the period of time between scheduled task invocations.
 
-Testing on virtual machines in AWS, we found that a t3.micro instance (full stats below) can scan roughly 250 subject instances safely in 5 minutes. This is the case when using WinRM, and also the [WMI approach](#gather-machine-stats-without-winrm) (`-NoWinRM`). If you’d like to invoke Machine Stats more frequently, for example in 3 minute intervals, you may need to target fewer subjects per controller machine.
+If you want to invoke your scheduled task every 5 minutes as we recommend, you need to ensure that the scan across your total hosts can complete within 5 minutes. If the scan is still running when the next invocation occurs, after 5 minutes, the data collection will fail. To resolve this, you need to either increase the timing interval to something greater than 5 minutes, or decrease the number of hosts scanned at once.
 
-If on the other hand you are gathering general information on your servers and need to invoke Machine Stats for Windows only once, we found that an AWS t3.micro instance can scan 800 subject instances in around 15 minutes.
+You can scan up to 250 hosts every 5 minutes with a VM with the following specs: 2 vCPUs (3.1 GHz), 1 GB RAM (DDR4) and 8 GB storage.
 
-This is intended as a general guide, and your mileage may vary. If you want to run Machine Stats on a scheduled task, we encourage you to perform preliminary tests to determine the number of subject machines your controller machine can safely handle within your invocation period.
+If you’d like to gather data more frequently than 5 minutes, for example in 3 minute intervals, you will need to target fewer hosts. We encourage you to perform preliminary tests to determine the number hosts that your VM can effectively gather data from for your given invocation period.
 
-__AWS t3.micro__
-- vCPUs: 2
-- Clock Speed: 3.1 GHz
-- RAM (GB): 1
-- RAM Type: DDR4
-- Network burst bandwidth (Gbps): 5
+## Gather data at one point in time
+
+If you are gathering general static information from the hosts, and only need to invoke Machine Stats for Windows once. You can scan upt 800 hosts, in around 15 minutes with a VM with 2 vCPUs (3.1 GHz), 1 GB RAM (DDR4) and 8 GB storage.
 
 ## Unix-like systems
 
@@ -279,27 +276,31 @@ Your results should appear in the existing `<path-to-results-directory>` that yo
 
 ### Recommended Specs
 
-Under our testing conditions, we have found that Machine Stats for Unix requires the following specifications of the controller machine. This is intended as a general guide only, as all testing was performed on virtual machines in AWS. Your mileage may vary scanning on-premise servers on your network.
+In general the specifications will depend on the number of hosts in your enivronment that you plan to scan with [Machine Stats](/machine_stats.html). We recommend the following server specifications below, depending on your environment size. These recommendations are intended as a guide only:
 
-__< 250 Subjects__
+__Under 250 Hosts__
 
-When scanning fewer than 250 subject machines, we recommend a controller machine with the following minimum specifications:
-- vCPUs: 2
-- Clock Speed: 3.1 GHz
-- RAM (GB): 2
-- RAM Type: DDR4
+- 2 CPUs (3.1 GHz)
+- 2 GB RAM (DDR4)
+- 8 GB Storage
 
-__250 - 800 Subjects__
+__250 - 800 Hosts__
 
-When scanning up to 800 subject machines, we recommend a controller machine with the following minimum specifications:
-- vCPUs: 4
-- Clock Speed: 2.5 GHz
-- RAM (GB): 16
-- RAM Type: DDR4
+- 4 CPUs (2.5 GHz)
+- 16 GB RAM (DDR4)
+- 8 GB Storage
 
-__> 800 Subjects__
+__> 800 Hosts__
 
-We cannot guarantee the success of Machine Stats for Unix when scanning more than 800 subject machines. If you need to operate at this scale, we recommend sharding your inventory into smaller groups and using multiple controller machines.
+If you plan to discover over 800 at once, you can consider two options.
+
+One option is to split your set of hosts into groups of 800 or less and then use one Tidal Tools VM while running Machine Stats for one set at a time. We recommend configuring Machine Stats to capture data every 24 hours, so it is very reasonable to have multiple scans occurring throughout a 24hr period.
+
+The second option, is to also split your set of hosts into groups of 800 or less and then use one Tidal Tools VM for each set. This will allow you to run the discovery concurrently at the same time across all the hosts.
+
+The current supported limit on scanning one group of hosts at once with Machine Stats is 800 hosts. It may be possible to scan more but it might not be reliable and will depend on the exact performance of the virtual hypervisor and network speeds in your environment.
+
+If you need any help in deploying the VM or getting started with your discovery, [send us a message](mailto:support@tidalmigrations.com) and we can help you get setup.
 
 ### Technical Documentation
 
