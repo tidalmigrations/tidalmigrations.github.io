@@ -202,7 +202,7 @@ If you’d like to gather data more frequently than 5 minutes, for example in 3 
 
 #### Gather data at one point in time
 
-If you are gathering general static information from the hosts, and only need to invoke Machine Stats for Windows once. You can scan upt 800 hosts, in around 15 minutes with a VM with 2 vCPUs (3.1 GHz), 1 GB RAM (DDR4) and 8 GB storage.
+If you are gathering general static information from the hosts, and only need to invoke Machine Stats for Windows once. You can scan up to 800 hosts, in around 15 minutes with a VM with 2 vCPUs (3.1 GHz), 1 GB RAM (DDR4) and 8 GB storage.
 
 ## Unix-like systems
 
