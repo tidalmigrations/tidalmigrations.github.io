@@ -16,7 +16,9 @@ You can import your Excel spreadsheets into Tidal Migrations by visiting:
 `` https://your_subdomain.tidalmg.com/#/discover/import``
 
 
-## Preparing
+## Preparing your Spreadsheet
+
+If you'd like to try the process itself but don't have a file yet, you can use this <a href="https://s3.ca-central-1.amazonaws.com/tidal.assets/inventory_data.xlsx">sample spreadsheet</a>.
 
 You should import your data in the following order:
 
@@ -27,7 +29,6 @@ You should import your data in the following order:
 
 This order is especially important if you are planning to import dependencies for your Databases and Applications.
 Ie. If your Application has a dependency on a server, you need to have that server imported first for the dependency to be imported correctly.
-
 
 {% include note.html content="You can always update a dependency after importing too."  %}
 
@@ -52,6 +53,8 @@ If this is the case you should do this before you import your data.
 {% include image.html file="step2.PNG" %}
 
 - Click submit to import the data.
+
+{% include note.html content="If you are importing applications, the name field is required for each application in order to successfully import. For any of the other record types you are importing, there are no fields that are required in order for you to import them." %}
 
 {% include tip.html content="The Tags option can be used to generate multiple tags and associate them with the record. You can use this track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)" %}
 
