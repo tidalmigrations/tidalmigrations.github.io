@@ -97,6 +97,65 @@ Execute the Azure Migrate export and pipe the servers into Tidal Tools using `sy
 ```
 ./azure_migrate.rb | tidal sync servers
 ```
+<!-- host_name:              properties["displayName"],
+ip_addresses:           ip_addresses,
+description:            properties["description"],
+custom_fields:          {
+  arm_id: properties["discoveryMachineArmId"], operating_system_type: properties["operatingSystemType"],
+  operating_system_name: properties["operatingSystemName"],
+  operating_system_version: properties["operatingSystemVersion"],
+  first_seen: properties["createdTimestamp"],
+  last_seen: properties["updatedTimestamp"]
+},
+ram_allocated_gb:       ram_allocated_gb,
+storage_allocated_gb:   gb_adder.to_i,
+cpu_count:              properties["numberOfCores"],
+virtualization_cluster: properties["datacenterManagementServerName"], -->
+
+
+<!-- **_NOTE:_** The `azure_migrate.rb` script will collect the following data points.
+- host_name
+- ip_address
+- description
+- ram_allocated_gb
+- storage_allocated_gb
+- cpu_count
+- virtualization_cluster
+- custom_fields
+  - arm_id
+  - operating_system_name
+  - first_seen (createdTimestamp) 
+  - last_seen (updatedTimestamp)  -->
+
+---
+**NOTE:** 
+The `azure_migrate.rb` script will collect the following data points.
+- host_name
+- ip_address
+- description
+- ram_allocated_gb
+- storage_allocated_gb
+- cpu_count
+- virtualization_cluster
+- discovery_machine_arm_id
+- operating_system_name
+- operating_system_type
+- operating_system_version
+- first_seen (createdTimestamp) 
+- last_seen (updatedTimestamp)
+
+---
+
+<!-- {% include callout.html content="The azure_migrate.rb script will collect the following data points.  
+
+- PTR records
+  - mario
+
+* their open ports
+
+
+- the ports status, the port protocol (TCP/UDP), and the services running in the port 
+- including the version."  type="primary"%} -->
 
 ### Review
 

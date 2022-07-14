@@ -39,6 +39,23 @@ If WinRM is not the ideal solution for you, we offer an alternative approach bac
 
 Machine Stats for Windows outputs JSON data, which can be saved and uploaded to the Tidal Migrations Platform, or piped there directly using Tidal Tools. You can also run Machine Stats in a Windows scheduled task, by following some [additional steps](#run-machine-stats-in-a-scheduled-task).
 
+#### Data captured
+By default, the following metrics are captured from the resources
+
+```
+CPU Count
+CPU name
+Host Name
+Operating System
+Operating System Version
+RAM Allocated (GB)
+RAM Used (GB)
+Storage Allocated (GB)
+Storage Used (GB)
+```
+
+You can find more information on additional data points [here](https://github.com/tidalmigrations/machine_stats/blob/master/windows/README.md#data-captured)
+
 ### Requirements and Dependencies
 
 Prior to the steps on syncing your Windows machines, be sure to have the below
@@ -75,6 +92,7 @@ Next, Save a list of the server hostnames that you would like to sync into a tex
 ### Run Machine Stats for Windows
 
 Now that you have your password and `servers.txt` files, you have three options for how to run Machine Stats depending on your needs. You can run the program manually and save the output to a result file. You could use Machine Stats to capture data points on your inventory and send its output to your Tidal workspace. Finally, You can run Machine Stats in a scheduled task to capture statistics on your inventory for a period of time. The following 3 sections will guide you through these scenarios.
+
 
 #### Execute Machine Stats Manually
 
@@ -193,6 +211,24 @@ If you are gathering general static information from the hosts, and only need to
 Machine Stats for Unix-like Systems leverages [Ansible](https://www.ansible.com/) to
 gather facts in a cross-platform way.
 
+#### Data captured
+By default, the following metrics are captured from the resources
+
+```
+CPU Count
+CPU name
+FQDN
+Host Name
+IP Addresses
+Operating System
+Operating System Version
+RAM Allocated (GB)
+RAM Used (GB)
+Storage Allocated (GB)
+Storage Used (GB)
+```
+
+You can find more information on additional data points [here](https://github.com/tidalmigrations/machine_stats/blob/master/unix/README.md#data-captured)
 ### Requirements and Dependencies
 
 Prior to the steps on syncing your Unix/Linux machines, be sure to have the below
