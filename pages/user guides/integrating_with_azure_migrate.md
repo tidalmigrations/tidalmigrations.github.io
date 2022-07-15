@@ -98,6 +98,25 @@ Execute the Azure Migrate export and pipe the servers into Tidal Tools using `sy
 ./azure_migrate.rb | tidal sync servers
 ```
 
+---
+**NOTE:** 
+The `azure_migrate.rb` script will collect the following data points.
+- host_name
+- ip_address
+- description
+- ram_allocated_gb
+- storage_allocated_gb
+- cpu_count
+- virtualization_cluster
+- discovery_machine_arm_id
+- operating_system_name
+- operating_system_type
+- operating_system_version
+- first_seen (createdTimestamp) 
+- last_seen (updatedTimestamp)
+
+---
+
 ### Review
 
 Once the command succeeds you can navigate to your Tidal Migrations Workspace URL to see the results. Use the left menu bar to navigate to `Discover > Overview` where the “Most recently run job” card should say `Sync Servers` and have the same timestamp as when the sync servers command suceeded.
