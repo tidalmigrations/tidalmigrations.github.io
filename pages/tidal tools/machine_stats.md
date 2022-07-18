@@ -172,7 +172,7 @@ As with the default behavior, this approach can be used with Tidal Tools, both i
 
 It depends on how you plan to run Machine Stats.
 
-## Gather data continuously over time
+#### Gather data continuously over time
 
 If you plan to gather data by running Machine Stats on a recurring scheduled task the main limiting factor on the number of hosts that Machine Stats for Windows can scan at once is the period of time between scheduled task invocations.
 
@@ -182,7 +182,7 @@ You can scan up to 250 hosts every 5 minutes with a VM with the following specs:
 
 If you’d like to gather data more frequently than 5 minutes, for example in 3 minute intervals, you will need to target fewer hosts. We encourage you to perform preliminary tests to determine the number hosts that your VM can effectively gather data from for your given invocation period.
 
-## Gather data at one point in time
+#### Gather data at one point in time
 
 If you are gathering general static information from the hosts, and only need to invoke Machine Stats for Windows once. You can scan upt 800 hosts, in around 15 minutes with a VM with 2 vCPUs (3.1 GHz), 1 GB RAM (DDR4) and 8 GB storage.
 
