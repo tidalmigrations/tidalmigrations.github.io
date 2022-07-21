@@ -1,6 +1,6 @@
 ---
 title: Tidal Tools Virtual Machine Image
-keywords: vm, virtual, machine, image, ova, ovf, aws, ami, tidal, tools
+keywords: vm, virtual, machine, image, ova, ovf, aws, ami, tidal, tools, ubuntu, windows
 last_updated: April, 2022
 summary: "Tidal Tools virtual image for your migration discovery"
 sidebar: main_sidebar
