@@ -8,6 +8,7 @@ permalink: tidal-discovery-vm.html
 ---
 
 To help you speed up your discovery process, you can use a  pre-configured Tidal Migrations Virtual Machine. These VMs have the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
+We recommend you to use the [Ubuntu Server](#ubuntu-server-1804) OVA image unless you want to you want to run Machine Stats on Windows.
 It can also perform discovery without any network connectivity to the public internet. To run a discovery in an 'offline' mode checkout [this guide](https://guides.tidalmg.com/tidal-offline.html).
 
 ## Ubuntu Server 18.04
@@ -61,7 +62,7 @@ If you need any help in deploying the VM or getting started with your discovery,
 
 ## Windows Server 2022
 
-The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022). It comes with the latest version of [Tidal Tools](https://tidalmigrations.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/) installed.
+The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022). It comes only with the latest version of [Tidal Tools](https://tidalmigrations.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/) installed. The Windows image does not include all the tools that are included in the Linux image.
 
 It can be deployed into any virtual environment that is compatible with OVA based images.
 
