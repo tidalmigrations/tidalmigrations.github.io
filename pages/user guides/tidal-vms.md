@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: tidal-discovery-vm.html
 ---
 
-To help you get your Tidal Migrations discovery done easily and quickly you can use the Tidal Tools virtual machine image. This VM has the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
+To help you speed up your discovery process, you can use a  pre-configured Tidal Migrations Virtual Machine. These VMs have the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
 It can also perform discovery without any network connectivity to the public internet. To run a discovery in an 'offline' mode checkout [this guide](https://guides.tidalmg.com/tidal-offline.html).
 
 ## Ubuntu Server 18.04
@@ -69,7 +69,7 @@ To get started:
 
 1. [Download the image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-windows-server-2022.ova)
 2. Deploy the downloaded OVA file into your VMware (or VirtualBox, or any OVA compatible virtual environment)
-3. Once the VM is running, you can log in with either the following credentials:
+3. Once the VM is running, you can log in with either of the following credentials:
 
 ```text
 Username: vagrant
@@ -81,7 +81,7 @@ Username: Administrator
 Password: vagrant
 ```
 
-Once you are logged in, we recommend you change the password to a unique and secure password.
+Once you are logged in, we recommend you change the password to one that's more unique and secure.
 
 You can now get started with your [migration discovery](/index.html)!
 
