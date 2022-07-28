@@ -8,28 +8,30 @@ permalink: sync-servers.html
 folder: tidaltools
 ---
 
-After having [installed](tidal-tools.html#install) Tidal Tools, begin to sync your inventories with `tidal sync servers`. Tidal sync supports many server inventory management tools such as
-VMWare, HyperV, and more.
-
 ## What is Syncing?
 
-Syncing is a process that transfers your inventories to your Tidal Migrations account.
-When importing your servers to the API, Tidal Migrations's sync tool will check for existing servers, based on their hostname
-and update the changed data for those servers.
-If the given server to sync does not exist already, it will add that server to the Tidal Migrations platform.
+Syncing is a process that creates and updates your inventories to your Tidal Migrations Workspace. This is useful if you
+would like to update a lot of data across many different records. It can also be useful to keep your inventory up to date with an external
+date source, by continually updating your inventory on a recurring scheudle.
 
 
-## How do I manually sync my servers?
+## How do I sync my servers?
+
+{% include note.html content="You will first need to have [Tidal Tools installed and login](https://guides.tidalmg.com/tidal-tools.html) to your Workspace." %}
 
 You can sync any data source with Tidal Migrations by generating a simple JSON document of the data.
 
 This data can be passed as standard input to the `tidal sync servers` command and your servers data will be
 synchronized via the API.
 
-
 The JSON document must be created in the specified format. The top-level key must be `"servers"`,
 with a value of an array. The array can consist of the various keys as shown below, describing the server to be synced.
 You can also include any other arbitrary fields in the key `"custom_fields"`.
+
+{% include note.html content="If you pass data to Tidal Tools via standard input (ie. `cat x.json | tidal sync servers`)
+any custom fields presented will be automatically created if they don't already exist. If you provide the data to the
+command as an argument (ie. `tidal sync servers x.json`) you will be prompted to create any custom fields if they don't
+already exist." %}
 
 ```
 {
@@ -69,6 +71,8 @@ The synchronization of your servers to Tidal Migrations can be performed with th
 tidal sync servers some_file.json
 ```
 
+Any servers provided that already exist, based on their hostname, will be updated with the data
+provided in the JSON document. If no server with the given hostname exist, that server will be created with all the included data.
 
 You can easily set this to run periodically so that your servers are synced on a daily basis and the data is up to date.
 This is a [great resource](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps)
