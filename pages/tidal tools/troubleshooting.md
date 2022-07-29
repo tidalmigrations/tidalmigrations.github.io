@@ -148,9 +148,9 @@ If you need a proxy to access the internet and see an error that looks similar t
 Error response from daemon: Get https://gcr.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
 ```
 
-You may need to [configure Docker to use the proxy server](https://docs.docker.com/docker-for-windows/#proxies).
+You may need to configure Docker to use your proxy server. You can follow the steps that Docker provides to do that on [Windows](https://docs.docker.com/docker-for-windows/#proxies) or [Linux](https://docs.docker.com/network/proxy/), depending on where you are running docker.
 
-**NB: If you need to authenticate with the proxy, be sure to include the username and password in the value, ie. 'http://proxy_userid:proxy_password@proxy_ip:proxy_port'**
+{% include note.html content="If you need to authenticate with the proxy, be sure to include the username and password in the value, ie. 'http://proxy_userid:proxy_password@proxy_ip:proxy_port'" %}
 
 ### PostgreSQL database fails to analyze with `tidal analyze db` {#postgres}
 
