@@ -10,14 +10,14 @@ folder: tidaltools
 
 ## What is Syncing?
 
-Syncing is a process that creates and updates your inventories to your Tidal Migrations Workspace. This is useful if you
+Syncing is a process that creates and updates your inventories in your Tidal Migrations Workspace. This is useful if you
 would like to update a lot of data across many different records. It can also be useful to keep your inventory up to date with an external
-date source, by continually updating your inventory on a recurring scheudle.
+date source, by continually updating your inventory on a recurring schedule.
 
 
 ## How do I sync my servers?
 
-{% include note.html content="You will first need to have [Tidal Tools installed and login](https://guides.tidalmg.com/tidal-tools.html) to your Workspace." %}
+{% include note.html content="You will first need to have [Tidal Tools installed and logged in](https://guides.tidalmg.com/tidal-tools.html) to your Workspace." %}
 
 You can sync any data source with Tidal Migrations by generating a simple JSON document of the data.
 
@@ -72,7 +72,7 @@ tidal sync servers some_file.json
 ```
 
 Any servers provided that already exist, based on their hostname, will be updated with the data
-provided in the JSON document. If no server with the given hostname exist, that server will be created with all the included data.
+provided in the JSON document. If no server with the given hostname exists, that server will be created with all the included data.
 
 You can easily set this to run periodically so that your servers are synced on a daily basis and the data is up to date.
 This is a [great resource](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps)
