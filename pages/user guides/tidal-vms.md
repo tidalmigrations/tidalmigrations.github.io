@@ -77,13 +77,13 @@ To get started:
 3. Once the VM is running, you can log in with either of the following credentials:
 
 ```text
-Username: vagrant
-Password: vagrant
+Username: tidal
+Password: tidal
 ```
 
 ```text
 Username: Administrator
-Password: vagrant
+Password: tidal
 ```
 
 Once you are logged in, we recommend you change the password to one that's more unique and secure.
