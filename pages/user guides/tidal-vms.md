@@ -1,15 +1,17 @@
 ---
-title: Tidal Tools Virtual Machine Image
-keywords: vm, virtual, machine, image, ova, ovf, aws, ami, tidal, tools, ubuntu, windows
-last_updated: April, 2022
-summary: "Tidal Tools virtual image for your migration discovery"
+title: Tidal Virtual Machine Image
+keywords: vm, virtual, machine, image, ova, ovf, aws, ami, ubuntu, windows, server, vmware, virtualbox
+last_updated: August, 2022
+summary: "Tidal virtual image for your migration discovery"
 sidebar: main_sidebar
 permalink: tidal-discovery-vm.html
 ---
 
-To help you speed up your discovery process, you can use a  pre-configured Tidal Migrations Virtual Machine. These VMs have the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
-We recommend you to use the [Ubuntu Server](#ubuntu-server-1804) OVA image unless you want to you want to run Machine Stats on Windows.
-It can also perform discovery without any network connectivity to the public internet. To run a discovery in an 'offline' mode checkout [this guide](https://guides.tidalmg.com/tidal-offline.html).
+To help you speed up your discovery process, you can use a pre-configured Tidal Migrations Virtual Machine. These VMs have the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
+
+Ubuntu Server image can also perform discovery without any network connectivity to the public internet. To run a discovery in an 'offline' mode checkout [this guide](https://guides.tidalmg.com/tidal-offline.html).
+
+{% include note.html content="We recommend you to use the [Ubuntu Server](#ubuntu-server-1804) image unless you want to you want to run Machine Stats on Windows." %}
 
 ## Ubuntu Server 18.04
 
@@ -62,9 +64,11 @@ If you need any help in deploying the VM or getting started with your discovery,
 
 ## Windows Server 2022
 
-The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022). It comes only with the latest version of [Tidal Tools](https://tidalmigrations.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/) installed. The Windows image does not include all the tools that are included in the Linux image.
+The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022) and comes with a 180-day trial. It can be deployed into any virtual environment that is compatible with OVA based images.
 
-It can be deployed into any virtual environment that is compatible with OVA based images.
+{% include note.html content="This image comes only with the latest version of
+[Tidal Tools](https://tidalmigrations.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/)
+installed. The Windows image does not consist all the tools and software that are included in the Ubuntu Server image." %}
 
 To get started:
 
