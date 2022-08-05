@@ -76,7 +76,7 @@ There are no required fields when importing Virtualization clusters.
 
 ### Importing Servers
 
-There is no required field when importing Servers. 
+There are no required fields when importing Servers. 
 
 Default fields:
 - Host Name (*)
