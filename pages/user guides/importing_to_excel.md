@@ -78,8 +78,6 @@ There is no required field when importing Virtualization clusters.
 
 There is no required field when importing Servers. 
 
-<!-- However, in order properly to map your inventory you must use the following fields. -->
-
 Default fields:
 - Host Name (*)
 - FQDN
