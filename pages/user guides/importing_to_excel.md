@@ -64,7 +64,7 @@ Default fields:
 - Hypervisor Technology
 - Servers
 
-There is no required field when importing Virtualization clusters. 
+There are no required fields when importing Virtualization clusters. 
 
 * _Hypervisor Technology_, this specifies the technology that is used to run the hypervisor. Ex. VMware ESXi, Hyper-V. 
 
