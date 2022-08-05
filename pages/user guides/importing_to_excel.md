@@ -76,8 +76,12 @@ There is no required field when importing Virtualization clusters.
 
 ### Importing Servers
 
+There is no required field when importing Servers. 
+
+<!-- However, in order properly to map your inventory you must use the following fields. -->
+
 Default fields:
-- Host Name
+- Host Name (*)
 - FQDN
 - Assigned ID
 - Zone
@@ -89,38 +93,45 @@ Default fields:
 - Storage Allocated (GB)
 - Storage Used (GB)
 - Description
-- IP Addresses
-- Database Instances
-- Environment
-- Cluster
+- IP Addresses -> Address (*)
+- Database Instances -> Name (*)
+- Environment -> Name (*)
+- Cluster -> Host Name (*)
 - Tags
 - Operating System Version
 - Operating System
 
 
-There is no required field when importing Servers. However, in order properly to map your inventory you must use the following fields.
+**(*)** Associative fields.
 * _Host Name_, This field is used to identify the server and to create association with Databases, Applications, and Virtualization Clusters.
-* _Cluster -> host_name_, If a server is a Virtual Server, this field should match the value from the _Servers_ field in the Virtualization Cluster inventory. The **cluster** field is be used create the necessary association with its Virtual Cluster and its physical host.
-* _Database Instances_, If a server is hosting a Database (or multiple), this field should contain the **name**(s) of such database(s).
+* _Cluster -> Host Name_, If a server is a Virtual Server, this field should match the value from the _Servers_ field in the Virtualization Cluster inventory. The **cluster host name** field is be used create the necessary association with its Virtual Cluster and its physical host.
+* _Database Instances -> Name_, If a server is hosting a Database (or multiple), this field should contain the **name**(s) of such database(s).
+* _Environment -> Name_, This field is used to represent the server's environment.
+
 
 
 ### Importing Databases
 
+There is no required field when importing Databases.
+
 Default fields:
-- Name
+- Name (*)
 - Description
 - Database Size (MB)
 - Database Path
-- Server
-- Environment
+- Server -> Host Name (*)
+- Environment -> Name (*)
 - Tags
 
-There is no required field when importing Databases. However, in order to properly map your inventory you must use the following fields.
+**(*)** Associative fields.
 * _Name_, This field is used to identify and connect a Database to an Application and a Server.
-* _Server_, represents the server hosting a Database. This field should contain the **Host Name** of such server.
+* _Server -> Host Name_, represents the server hosting a Database. This field should contain the **Host Name** of such server.
+* _Environment -> Name_, This field is used to associate a Database to an environment.
 
 
 ### Importing Applications
+
+When importing Applications, only the **Name** field is required.
 
 Default fields:
 - Name
@@ -142,14 +153,16 @@ Default fields:
 - Business Continuity Plan
 - Can Run On Linux
 - End Of Support Date
-- Servers
-- Database Instances
-- Environment
+- Servers -> Host Name (*)
+- Database Instances -> Name (*)
+- Environment -> Name (*)
 - Customers
 - Tags
 - Technical Lead
 - Business Owner
 
-When importing Applications, only the **Name** field is required. However, in order to properly map your inventory you must use the following fields.
-* _Servers_, represents the server hosting the Application. This field should contain the **Host Name** of such server(s).
-* _Database Instances_, This field should contain the **Name** of the database(s) associated to the Application.
+**(*)** Associative fields.
+ However, in order to properly map your inventory you must use the following fields.
+* _Servers -> Host Name_, represents the server hosting the Application. This field should contain the **Host Name** of such server(s).
+* _Database Instances -> Name_, This field should contain the **Name** of the database(s) associated to the Application.
+* _Environment -> Name_, This field is used to associate an Application to an environment.
