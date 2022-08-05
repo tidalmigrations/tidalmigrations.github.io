@@ -42,15 +42,15 @@ Remember to add those fields before importing the data.
 
 1. Select the data type you wish to import.
 
-{% include image.html file="step0.PNG" %}
+   {% include image.html file="step0.PNG" %}
 
 2. Select the sheet in your file that you want to import data from.
 
-{% include image.html file="step1.PNG" %}
+   {% include image.html file="step1.PNG" %}
 
 3.  Map the columns of your sheet to the fields from the drop down. If you have a column that is not present as a field and you want to import it, you can add that field.
 
-{% include image.html file="step2.PNG" %}
+   {% include image.html file="step2.PNG" %}
 
 4. Click submit to import the data.
 
