@@ -66,7 +66,7 @@ Default fields:
 
 There is no required field when importing Virtualization clusters. 
 
-* _Hypervisor Technology_, this field is used to list the technologies you have in your inventory. 
+* _Hypervisor Technology_, this specifies the technology that is used to run the hypervisor. Ex. VMware ESXi, Hyper-V. 
 
 * _Servers_, this field is used to create associations as you import the rest of your inventory, in this instance, _Servers_ refers to the server (host name) hosting the hypervisor.
 
