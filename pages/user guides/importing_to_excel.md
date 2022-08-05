@@ -54,7 +54,7 @@ Remember to add those fields before importing the data.
 
 4. Click submit to import the data.
 
-{% include note.html content="If you are importing applications, the "name" field is required for each application in order to successfully import. For any of the other record types you are importing, there are no fields that are required in order for you to import them." %}
+{% include note.html content="If you are importing applications, the _name_ field is required for each application in order to successfully import. For any of the other record types you are importing, there are no fields that are required in order for you to import them." %}
 
 {% include tip.html content="The Tags option can be used to generate multiple tags and associate them with the record. You can use this track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)" %}
 
