@@ -110,7 +110,7 @@ Default fields:
 
 ### Importing Databases
 
-There is no required field when importing Databases.
+There are no required fields when importing Databases.
 
 Default fields:
 - Name (*)
