@@ -122,7 +122,7 @@ Default fields:
 - Tags
 
 **(*)** Associative fields.
-* _Name_, This field is used to identify and connect a Database to an Application and a Server.
+* _Name_, When you are importing other records, Applications and Servers, and you provide a set of dependent databases with them the Name field for Database Instances is used to identify those databases and associate the databases as dependencies for those other records. This is helpful when you have some existing dependencies, between Databases and Servers or Applications, in your Excel files and want to capture and leverage them.
 * _Server -> Host Name_, represents the server hosting a Database. This field should contain the **Host Name** of such server.
 * _Environment -> Name_, This field is used to associate a Database to an environment.
 
