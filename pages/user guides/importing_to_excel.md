@@ -68,7 +68,7 @@ There are no required fields when importing Virtualization clusters.
 
 * _Hypervisor Technology_, this specifies the technology that is used to run the hypervisor. Ex. VMware ESXi, Hyper-V. 
 
-* _Servers_, this field is used to create associations as you import the rest of your inventory, in this instance, _Servers_ refers to the server (host name) hosting the hypervisor.
+* _Servers_, As you import other records, (ex. Applications, Databases) this field is used to find the correct Server and create those dependencies.
 
     {% include note.html content="Make sure your server inventory (when importing virtual servers) contains a field `Cluster` that points back to the Virtualization Cluster it is part of." %}
 
