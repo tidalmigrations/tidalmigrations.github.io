@@ -6,20 +6,58 @@ sidebar: main_sidebar
 permalink: vsphere.html
 folder: tidaltools
 ---
-## Getting Started
-To get started you will need to make sure you have a copy of [Tidal Tools](https://get.tidal.sh) and it is [installed](tidal-tools.html).
+
+## Overview
+
+As part of your Cloud Migration journey, it is very important to have a reliable inventory of your infrastructure. Tidal Tools is able to connect you Hypervisor to synchronize your inventory of virtual machines from vSphere.
+
+This guide will walk you through the steps and necessary configuration to properly integrate with vSphere and capture the following data points on its VMs.
+
+```
+- FQDN
+- IP Addresses
+- HostName
+- AssignedID (InstanceUuid)
+- RAM Used (gb)
+- RAMAllocated (gb)
+- CPU Name
+- CPU Count
+- Storage Used (gb)
+- Storage Allocated (gb)
+- Operating System
+- Operating System Version
+- CreatedAt
+- UpdatedAt
+```
+
+
+## Requirements
+- Tidal Tools. You can check out the [Getting Started with Tidal Tools](tidal-tools.html) guide on how to install it.
+- vSphere Credentials.
 
 ## Supported Versions
-### vSphere 5.5
-NB: When you set the vsphere.server you will likely need to include the default port, 443, in the url. Ex. 192.168.1:443
-### vSphere 6.0
 
-## vSphere Login
-If you have not logged on to the Tidal API yet, run `tidal login` to do so.
+Tidal Tools is able to integrate with the following versions:
 
-Once you are logged on to the Tidal API, execute the `tidal login vsphere` command
+| vSphere Version       | Supported  | Notes |
+|-----------------------|------------|-------|
+| 5.5                   | Yes        | When you set the vsphere.server you will likely need to include the default port, 443, in the url. Ex. 192.168.1:443 |
+| 6.0                   | Yes        |       |
+| 7.0                   | Yes        |       |
 
-A set of prompts will appear to help you connect to your vSphere account:
+
+
+# Authentication
+
+First, you need to login into your workspace. On your Terminal run the login command.
+
+`tidal login`
+
+Once you are logged on to the Tidal API, You can connect to your vSphere account. 
+The following command will guide you through a set of prompts:
+
+`tidal login vsphere`
+
 
 1. vSphere Server - Either an IP address or a FQDN that resolves to the correct IP for the ESXi or vCenter instance
 2. vSphere Username - A username that has read access to the vCenter or ESXi instance.
@@ -35,7 +73,8 @@ Login to vSphere successful. Saving config file...Done!
 ```
 
 ## Sync {#vsphere-sync}
-Syncronizing your vSphere inventory with Tidal Migrations is simple with:
+
+Synchronizing your vSphere inventory with Tidal Migrations is simple with:
 
 `tidal sync vsphere`
 
