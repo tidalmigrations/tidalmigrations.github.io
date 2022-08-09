@@ -9,7 +9,7 @@ folder: tidaltools
 
 ## Overview
 
-As part of your Cloud Migration journey, it is very important to have a reliable inventory of your infrastructure. Tidal Tools is able to connect you Hypervisor to synchronize your inventory of virtual machines from vSphere.
+As part of your Cloud Migration journey, it is very important to have a reliable inventory of your infrastructure. Tidal Tools is able to connect to a Hypervisor to synchronize your inventory of virtual machines from vSphere.
 
 This guide will walk you through the steps and necessary configuration to properly integrate with vSphere and capture the following data points on its VMs.
 
