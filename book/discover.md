@@ -27,7 +27,7 @@ pages/tidal tools/getstarted.md
 # Import data from Excel
 
 ```{.include}
-pages/user guides/importing_to_excel.md
+pages/user guides/importing_from_excel.md
 ```
 
 # Sync with your hypervisors
