@@ -1,7 +1,7 @@
 ---
 title: Integrate Tidal Migrations with vSphere
 keywords: vsphere, login, configure, sync, environment
-last_updated: Dec 2, 2020
+last_updated: August, 2022
 sidebar: main_sidebar
 permalink: vsphere.html
 folder: tidaltools
