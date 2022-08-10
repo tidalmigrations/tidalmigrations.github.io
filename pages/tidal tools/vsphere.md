@@ -13,7 +13,6 @@ As part of your Cloud Migration journey, it is very important to have a reliable
 
 This guide will walk you through the steps and necessary configuration to properly integrate with vSphere and capture the following data points on its VMs.
 
-```
 - FQDN
 - IP Addresses
 - HostName
@@ -28,7 +27,6 @@ This guide will walk you through the steps and necessary configuration to proper
 - Operating System Version
 - CreatedAt
 - UpdatedAt
-```
 
 
 ## Requirements
