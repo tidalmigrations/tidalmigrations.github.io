@@ -25,8 +25,6 @@ This guide will walk you through the steps and necessary configuration to proper
 - Storage Allocated (gb)
 - Operating System
 - Operating System Version
-- CreatedAt
-- UpdatedAt
 
 
 ## Requirements
