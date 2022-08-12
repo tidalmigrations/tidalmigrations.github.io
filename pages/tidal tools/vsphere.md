@@ -16,13 +16,13 @@ This guide will walk you through the steps and necessary configuration to proper
 - FQDN
 - IP Addresses
 - HostName
-- AssignedID (InstanceUuid)
-- RAM Used (gb)
-- RAMAllocated (gb)
+- AssignedID (InstanceUuid in vSphere)
+- RAM Used (GB)
+- RAMAllocated (GB)
 - CPU Name
 - CPU Count
-- Storage Used (gb)
-- Storage Allocated (gb)
+- Storage Used (GB)
+- Storage Allocated (GB)
 - Operating System
 - Operating System Version
 
