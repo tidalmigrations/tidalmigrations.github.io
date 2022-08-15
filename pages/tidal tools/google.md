@@ -1,12 +1,13 @@
 ---
-title: Getting Started with Tidal Tools on Google Cloud Platform</span>
-keywords: Google, marketplace, tidal tools
+title: Getting Started with Tidal Tools on Google Cloud Platform
+keywords: Google, marketplace, tidal tools, gcp
 last_updated: November 2, 2020
 summary: Configure and use Tidal Tools from the Google Cloud Marketplace
 sidebar: main_sidebar
 permalink: tidal-tools-gcp.html
 folder: tidaltools
 ---
+
 Using Tidal Tools you can easily discover and assess your applications and their infrastructure. You can get started and rapidly capture what technologies are in use, on which networks and with what DNS configuration.
 
 {% include note.html content="This page describes how to configure and use Tidal Tools from the Google Cloud Marketplace, it can also be [installed on many other systems](tidal-tools.html)." %}
