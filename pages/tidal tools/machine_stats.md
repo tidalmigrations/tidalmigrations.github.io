@@ -1,7 +1,7 @@
 ---
 title: Gather Machine Stats
-keywords:
-last_updated: December, 2021
+keywords: machine, stats, cron, job, windows, unix
+last_updated: April, 2022
 summary: "Gather machine stats from remote environments"
 sidebar: main_sidebar
 permalink: machine_stats.html
