@@ -284,7 +284,7 @@ This approach is useful when you want to take a snapshot of your infrastructure 
 
 #### Run Machine Stats on a Cron Job
 
-By leveraging cron, you can run Machines Stats on a schedule to gather data over a period of time. This is useful if you want to gather utilization data, for example recording the CPU utilization of your machines over a set period.
+By leveraging cron, you can run Machines Stats on a schedule to gather data over a period of time.
 
 Since we're not piping the result to Tidal Migrations Platform, and are instead saving the result files locally, this approach can be used on an offline server.
 
