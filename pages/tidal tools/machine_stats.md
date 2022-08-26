@@ -151,7 +151,7 @@ We recommend you run your script from the `machine_stats\windows` directory to e
 
 __Creating the Task__
 
-1. Download the scheduled task XML file [here](https://ms4w-scheduled-task-xml.s3.ca-central-1.amazonaws.com/MS4W-scheduled-task.xml). With a few tweaks, we can use this to quickly create our own scheduled task.
+1. Download the scheduled task XML file [here](https://s3.ca-central-1.amazonaws.com/vm-images.tidal/MS4W-scheduled-task.xml). With a few tweaks, we can use this to quickly create our own scheduled task.
 2. Open `Task Scheduler` and select `import task`. Follow the prompts to import the XML file we just downloaded.
 3. Select `Change User or Groups`. Under `Enter the object name to select`, enter the name of the user you’d like to run the script as (for example, `Administrator`).
 4. Navigate to the `Triggers` tab and edit the trigger. Change the start datetime to whenever you’d like the task to start.
