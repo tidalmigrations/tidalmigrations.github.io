@@ -110,7 +110,7 @@ Running this will prompt you for a username. Alternatively, you can provide this
 
 On a machine with Tidal Tools installed and which is connected to the internet, you can execute Machine Stats and pipe its output to Tidal Tools with the following command.
 
-    ./runner.ps1 | tidal sync severs
+    ./runner.ps1 | tidal sync servers
 
 As above, you can provide the username with the `-UserName` parameter.
 
