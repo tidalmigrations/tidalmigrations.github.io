@@ -78,15 +78,15 @@ When analyzing a source code (or multiple), You have two options.
 
 1. Perform the source code analysis and upload the result immediately to your workspace. This is Tidal Tools' default behaviour. To do so, all you need to do is run the following command.
 
-  ```bash
-  cd /path/to/source-code
-  tidal analyze code --app-id 111
-  ```
+    ```bash
+    cd /path/to/source-code
+    tidal analyze code --app-id 111
+    ```
 
-  Alternatively, you can pass the location to the source code.
-  ```bash
-  tidal analyze code ~/location/to-source-code/ --app-id 111
-  ```
+    Alternatively, you can pass the location to the source code.
+    ```bash
+    tidal analyze code ~/location/to-source-code/ --app-id 111
+    ```
 
 2. Perform the source code analysis and upload the results **at a later time**. The following section will explain how to run database analysis in **offline mode**
 
