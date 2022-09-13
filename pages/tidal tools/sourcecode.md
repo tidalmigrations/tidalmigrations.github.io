@@ -58,7 +58,7 @@ Try it out!
   - Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
   - As the last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
 
-3. You will need the ID of the application for which you are going to perform as source code analysis.  - You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal Migrations, the URL will show https://demo.tidalmg.com/#/apps/111 in this case 111 is the application ID.
+3. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal Migrations, the URL will show `https://demo.tidalmg.com/#/apps/111` in this case 111 is the application ID.
 
 4. Lastly, You will need a local copy of the source code for the application.
 
