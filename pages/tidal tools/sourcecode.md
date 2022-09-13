@@ -74,7 +74,7 @@ That is all. You should be able to see the results in your workspace within seco
 
 ## Perform the analysis
 
-When analyzing a source code (or multiple), You have two options. 
+When analyzing a source code (or multiple), you have two options.
 
 1. Perform the source code analysis and upload the result immediately to your workspace. This is Tidal Tools' default behaviour. To do so, all you need to do is run the following command.
 
@@ -92,34 +92,34 @@ When analyzing a source code (or multiple), You have two options.
 
 ### Running offline
 
-There are circumstances in which you need to perform a source code analysis on an environment without or with restricted internet access. In such case, You can perform the analysis, capture its results and at a later stage upload those results to your Tidal Migrations workspace.
+There are circumstances in which you need to perform a source code analysis on an environment without or with restricted internet access. In such case, you can perform the analysis, capture its results and at a later stage upload those results to your Tidal Migrations workspace.
 
 These are the steps you need to follow in order to bypass internet access limitations:
 
 1. On a Machine with internet access, you need to install, and configure Tidal Tools. 
 
-2. Package Tidal Tools and its required docker container images into a tar file, This will allow you to move the archive file into your restricted environment. To do so, run the following command.
+2. Package Tidal Tools and its required docker container images into a tar file. This will allow you to move the archive file into your restricted environment. To do so, run the following command.
 
     `tidal backup`
 
     Once it has finished, you will find (in your current location) a tar file called `tidal-snapshot_DATE.tar`. This is the file you need to transport into your internet restricted environment.
 
-3. On the machine that has no internet access. You will now restore Tidal Tools using the following command.
+3. On the machine that has no internet access, you will now restore Tidal Tools using the following command.
 
     `tidal restore tidal-snapshot_DATE.tar`
 
-    This will load a docker image and all the existing Tidal Tools configurations from the original machine. You can now run the source code analysis without any external network connectivity.:
+    This will load a docker image and all the existing Tidal Tools configurations from the original machine. You can now run the source code analysis without any external network connectivity.
 
     `tidal analyze code [path/to-directory] --offline --output-dir [directory]`
 
     Note:
-    -  The `--offline` flag, it will indicate to Tidal Tools that the output needs to be stored in a file instead of being uploaded.
-    - The `--output-dir`, will be use to determine where the output will be located.
+    - The `--offline` flag indicates to Tidal Tools that the output needs to be stored in a file instead of being uploaded.
+    - The `--output-dir` flag determines where the output will be located.
 
     After the analysis is completed, you will find a zip file called, `result-<DATE>.zip` that can then be transferred into a machine with internet connectivity.
 
 
-4. Back to the machine with internet access. you can now upload your results to your workspace with this command.
+4. Back to the machine with internet access, you can now upload your results to your workspace with this command.
 
     `tidal analyze code --app-id [app_id_for_your_application] --upload [file_name]`
 
