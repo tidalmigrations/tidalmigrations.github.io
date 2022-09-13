@@ -50,7 +50,7 @@ Try it out!
 
 ## Getting Started
 
-1. Before you can analyze a source code and rank your applications by *Migration Difficulty*, You must enable the Source Code Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://yourworkspace.tidalmg.com/#/admin/setting). You will find the Source Code Analysis section at the bottom of the page.
+1. Before you can analyze a source code and rank your applications by *Migration Difficulty*, you must enable the Source Code Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://yourworkspace.tidalmg.com/#/admin/setting). You will find the Source Code Analysis section at the bottom of the page.
 
 2. Now that you have activated the Source Code Analyze feature, You need to install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
   - How to [install](tidal-tools.html#install) Tidal Tools.
