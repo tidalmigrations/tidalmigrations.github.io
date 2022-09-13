@@ -64,7 +64,7 @@ Try it out!
 
 5. Perform the Source Code Analysis. There are 2 options to do so. You can find more details in this [section](#perform-the-analysis)
 
-That is all, You should be able to see the results in your workspace within seconds.
+That is all. You should be able to see the results in your workspace within seconds.
 
 {% include tip.html content="Looking to try it out and don't have any code handy? You can use this sample [schoolbus application](https://github.com/tidalmigrations/schoolbus) by [cloning it from GitHub](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)." %}
 
