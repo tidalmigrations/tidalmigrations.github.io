@@ -62,7 +62,7 @@ Try it out!
 
 4. Lastly, you will need a local copy of the source code for the application.
 
-5. Perform the Source Code Analysis. There are 2 options to do so. You can find more details in this [section](#perform-the-analysis)
+5. Perform the Source Code Analysis. There are 2 options to do so. You can find more details in this [section](#perform-the-analysis).
 
 That is all. You should be able to see the results in your workspace within seconds.
 
