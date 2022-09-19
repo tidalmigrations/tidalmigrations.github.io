@@ -38,7 +38,7 @@ already exist." %}
   "servers": [
     {
         "host_name": "ewrfceapcfg03",
-        "description": "This is a general description for this server. The server has several functions. One function is to serve serveral applications. Another is to store some databases.",
+        "description": "This is a general description for this server.",
         "custom_fields": {
           "tcp_port": 11441,
           "database_software": "SQL 2008 SP3",
@@ -166,28 +166,34 @@ The syncronization of your Applications can be performed by following the above 
 
 ```
 {
-"apps": [
-    {
-      "name": "App_name",
-      "custom_fields": {
-        "Technologies": "Approval Management System DB"
-      },
-      "description": "This is a general purpose application that has several functionalities. The first functionality is that it is a demo application. The second functionality is that it could be a real application as well.",
-      "servers": [{
-        "host_name": "trpewrcapbiz02"
-      }],
-      "database_instances": [{
-        "name":"my_app_db"}],
-      "urls": "https://approvalmanagementsystem.com",
-      "transition_overview": "this is the transition_overview of the application",
-      "transition_type": 3,
-      "transition_plan_complete": true,
-      "source_code_location": [
-            "/filepath/location",
-            "folder1/file1"
-      ]
-    }
-  ]
+    "apps": [
+        {
+            "name": "App_name",
+            "custom_fields": {
+                "technologies": "Approval Management System DB"
+            },
+            "description": "This is a general purpose application",
+            "servers": [
+                {
+                    "host_name": "trpewrcapbiz02"
+                }
+            ],
+            "database_instances": [
+                {
+                    "name": "my_app_db"
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://approvalmanagementsystem.com"
+                }
+            ],
+            "source_code_location": [
+                "/filepath/location",
+                "folder1/file1"
+            ]
+        }
+    ]
 }
 ```
 {% include note.html content="[This](https://github.com/tidalmigrations/gists/blob/master/transformations/scripts/csv_transform.rb) is a similar script as the one above to transform your data into the necessary JSON object for applications." %}
