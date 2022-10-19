@@ -214,19 +214,16 @@ To synchronize your Database Instances data, It must have the following JSON for
 ```
 {
   "database_instances" : [
-  {
-    "created_at": "2018-05-25T05:01:48.533Z",
-    "updated_at": "2018-05-25T05:01:48.588Z",
-    "name": "720 TASK DB",
-    "database_size_mb": 1870,
-    "database_path": "C:\\system\\databases\\720_TASK_DB",
-    "description": "This is a general description for this database instance. This database primarily purpose it to server an application that needs this data.",
-    "custom_fields": {
-            "Technologies": "Approval Management System DB"
-      },
-    "environment_id": 2,
-    "move_group_id": 3
-  }
- ]
+    {    
+      "name": "720 TASK DB",
+      "database_size_mb": 1870,
+      "database_path": "C:\\system\\databases\\720_TASK_DB",
+      "description": "This is a general description for this database instance. This database primarily purpose it to server an application that needs this data.",
+      "environment": "production",
+      "custom_fields": {
+        "technologies": "Approval Management System DB"
+      }
+    }
+  ]
 }
 ```
