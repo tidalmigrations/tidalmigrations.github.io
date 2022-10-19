@@ -1,7 +1,7 @@
 ---
 title: Sync your Server Inventory (and other resources)
-keywords: servers, sync, transform, apps, database instances
-last_updated: July 12, 2019
+keywords: servers, sync, transform, apps, database instances, tidal tools
+last_updated: September 19, 2022
 summary: "Sync your data with Tidal Migrations"
 sidebar: main_sidebar
 permalink: sync-servers.html
@@ -19,12 +19,11 @@ date source, by continually updating your inventory on a recurring schedule.
 
 {% include note.html content="You will first need to have [Tidal Tools installed and logged in](https://guides.tidalmg.com/tidal-tools.html) to your Workspace." %}
 
-You can sync any data source with Tidal Migrations by generating a simple JSON document of the data.
+To upload your server inventory into your Tidal Migrations workspace you need to transform your data into JSON format.
 
-This data can be passed as standard input to the `tidal sync servers` command and your servers data will be
-synchronized via the API.
+This data can be passed as standard input to the `tidal sync servers` command and your servers data will be synchronized via the API.
 
-The JSON document must be created in the specified format. The top-level key must be `"servers"`,
+The JSON document must have this specified format. The top-level key must be `"servers"`,
 with a value of an array. The array can consist of the various keys as shown below, describing the server to be synced.
 You can also include any other arbitrary fields in the key `"custom_fields"`.
 
@@ -38,7 +37,7 @@ already exist." %}
   "servers": [
     {
         "host_name": "ewrfceapcfg03",
-        "description": "This is a general description for this server. The server has several functions. One function is to serve serveral applications. Another is to store some databases.",
+        "description": "This is a general description for this server.",
         "custom_fields": {
           "tcp_port": 11441,
           "database_software": "SQL 2008 SP3",
@@ -82,7 +81,7 @@ We recommend that you setup your inventories to sync *every 24 hours*, this will
 
 ### Transforming your data
 
-If your document is not formatted as the above, not to worry.
+If your server inventory is not available in the required JSON format, don't worry we have you covered.
 
 Suppose you have a [**csv** file](servers.csv).
 
@@ -137,7 +136,7 @@ Change the file permissions to make the script executable using:
 chmod +x ./transform.rb
 ```
 
-You can now utlise your script with a given CSV file and it will be synced to your account via the API. Utlise the command below:
+You can now use your script with a given CSV file and it will be synced to your account via the API. Run the following command:
 
 ```
 ./transform.rb < some_file.csv | tidal sync servers
@@ -162,32 +161,38 @@ tidal sync apps some_file.json
 When importing your applications to the API, Tidal Migrations's sync tool will check for existing applications, based on their name, and update the changed data for those applications.
 If the given application to sync does not exist already, it will add that application to the Tidal Migrations API.
 
-The syncronization of your Applications can be performed by following the above procedure with a simple JSON document of the data:
+To synchronize your Application data, It must have the following JSON format.
 
 ```
 {
-"apps": [
-    {
-      "name": "App_name",
-      "custom_fields": {
-        "Technologies": "Approval Management System DB"
-      },
-      "description": "This is a general purpose application that has several functionalities. The first functionality is that it is a demo application. The second functionality is that it could be a real application as well.",
-      "servers": [{
-        "host_name": "trpewrcapbiz02"
-      }],
-      "database_instances": [{
-        "name":"my_app_db"}],
-      "urls": "https://approvalmanagementsystem.com",
-      "transition_overview": "this is the transition_overview of the application",
-      "transition_type": 3,
-      "transition_plan_complete": true,
-      "source_code_location": [
-            "/filepath/location",
-            "folder1/file1"
-      ]
-    }
-  ]
+    "apps": [
+        {
+            "name": "App_name",
+            "custom_fields": {
+                "technologies": "Approval Management System DB"
+            },
+            "description": "This is a general purpose application",
+            "servers": [
+                {
+                    "host_name": "trpewrcapbiz02"
+                }
+            ],
+            "database_instances": [
+                {
+                    "name": "my_app_db"
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://approvalmanagementsystem.com"
+                }
+            ],
+            "source_code_location": [
+                "/filepath/location",
+                "folder1/file1"
+            ]
+        }
+    ]
 }
 ```
 {% include note.html content="[This](https://github.com/tidalmigrations/gists/blob/master/transformations/scripts/csv_transform.rb) is a similar script as the one above to transform your data into the necessary JSON object for applications." %}
@@ -205,23 +210,20 @@ tidal sync dbs some_file.json
 When importing your database instances to the API, Tidal Migrations's sync tool will check for existing database instances, based on their name, and update the changed data for those database instances.
 If the given database instance to sync does not exist already, it will add it to the Tidal Migrations API.
 
-The syncronization of your Database Instances can be performed by following the above procedure with a simple JSON document of the data:
+To synchronize your Database Instances data, It must have the following JSON format.
 ```
 {
   "database_instances" : [
-  {
-    "created_at": "2018-05-25T05:01:48.533Z",
-    "updated_at": "2018-05-25T05:01:48.588Z",
-    "name": "720 TASK DB",
-    "database_size_mb": 1870,
-    "database_path": "C:\\system\\databases\\720_TASK_DB",
-    "description": "This is a general description for this database instance. This database primarily purpose it to server an application that needs this data.",
-    "custom_fields": {
-            "Technologies": "Approval Management System DB"
-      },
-    "environment_id": 2,
-    "move_group_id": 3
-  }
- ]
+    {    
+      "name": "720 TASK DB",
+      "database_size_mb": 1870,
+      "database_path": "C:\\system\\databases\\720_TASK_DB",
+      "description": "This is a general description for this database instance. This database primarily purpose it to server an application that needs this data.",
+      "environment": "production",
+      "custom_fields": {
+        "technologies": "Approval Management System DB"
+      }
+    }
+  ]
 }
 ```
