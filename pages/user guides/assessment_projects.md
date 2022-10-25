@@ -12,7 +12,7 @@ permalink: assessment-projects.html
 
 # Assessment Projects
 
-During your migration to the cloud, you might find yourself in charge of dozens or hundreds of applications. At Tidal Migrations, we have found it invaluable to segment our applications into groups for 3 reasons:
+During your migration to the cloud, you might find yourself in charge of dozens or hundreds of applications. At Tidal, we have found it invaluable to segment our applications into groups for 3 reasons:
 
 1. It allows you to easily track your assessment progress and report items like financial highlights, project goals, and projected savings to project managers or sponsors.
 1. Segmenting applications into projects helps you to make sure that the needs and purpose of an assessment are aligned in terms of timelines or goals.

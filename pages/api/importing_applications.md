@@ -3,14 +3,14 @@ toc: false
 title: Importing Applications
 keywords: apps, import, request, data
 last_updated: Feb 13, 2018
-summary: "Easily import your applications with the Tidal Migrations API"
+summary: "Easily import your applications with the Tidal API"
 sidebar: main_sidebar
 redirect_from: importapps.html
 permalink: import-apps.html
 ---
 
-Tidal Migrations's API includes the import endpoint to help you import your applications.
-Before using the endpoint, you must authenticate to the Tidal Migrations API:
+Tidal's API includes the import endpoint to help you import your applications.
+Before using the endpoint, you must authenticate to the Tidal API:
 [Authentication Guide](index.html)
 
 ## Start using the endpoint!
@@ -20,7 +20,7 @@ For any additional details regarding the endpoint, checkout the Tidal API docume
 (https://[your subdomain].tidalmg.com/docs/)
 
 
-A request to import an application into the Tidal Migrations API looks like this:
+A request to import an application into the Tidal API looks like this:
 
 ### You will need:
 
@@ -59,7 +59,7 @@ curl -X POST \
   ]
 }'
 ```
-This will allow you to import your application to the Tidal Migrations API!
+This will allow you to import your application to the Tidal API!
 
 The response of the above request should be the following:
 

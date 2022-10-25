@@ -11,7 +11,7 @@ permalink: interviews.html
 ## Goals
 The goals of the interview process are:
 - Rank the prioritization of applications for transformation.
-- Determine transition types for each application (Tidal Migrations can provide recommendations based on the interview too).
+- Determine transition types for each application (Tidal can provide recommendations based on the interview too).
 - Provide relevant information for the cloud architect.
 - Migration planning based on grouping, affinity, integrations and business impact (user communities).
 

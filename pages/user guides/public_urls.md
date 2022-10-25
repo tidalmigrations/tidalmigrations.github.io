@@ -30,7 +30,7 @@ In this case the IP address is `205.210.17.179` and the ASN is `AS20940`.
 If you don’t own it, you can try analyzing another domain.
 
 {% include tip.html content="If you don’t own any domains directly yourself, you can skip to the last step here and
-try simply searching the domain name in the Public URLs search in Tidal Migrations." %}
+try simply searching the domain name in the Public URLs search in Tidal." %}
 
 ## Step 2
 Go to https://whois.com/whois and search the IP you found above, in this case, `205.210.17.179`.
@@ -50,7 +50,7 @@ If there are more you can note down all of them here.
 <br>
 
 ## Step 4
-Go to your account on Tidal Migrations my_domain.tidalmg.com/#/discover/public_urls.
+Go to your account on Tidal my_domain.tidalmg.com/#/discover/public_urls.
 Enter the CIDR range you found above, from the whois command or any labelled as netblock from ipinfo.io.
 In this case that is `104.194.16.0/22` and `205.210.17.0/24`.
 

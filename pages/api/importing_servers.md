@@ -3,14 +3,14 @@
 title: Importing Servers
 keywords: servers, import, multiple, endpoint, zone
 last_updated: Feb 22, 2018
-summary: "Importing Servers with the Tidal Migrations API"
+summary: "Importing Servers with the Tidal API"
 sidebar: main_sidebar
 redirect_from: import_servers.html
 permalink: import-servers.html
 ---
 
-Tidal Migrations's API includes the import endpoint to help you import your servers.
-Before using the endpoint, you must authenticate to the Tidal Migrations API:
+Tidal's API includes the import endpoint to help you import your servers.
+Before using the endpoint, you must authenticate to the Tidal API:
 [Authentication Guide](index.html)
 
 ## Start using the endpoint!
@@ -26,7 +26,7 @@ Role, Storage Allocated gb, Storage Used gb, fqdn, Hostname, Virtual, Virtualiza
 
 ### Importing *one* Server
 
-A request to import *one* server into the Tidal Migrations API looks like this:
+A request to import *one* server into the Tidal API looks like this:
 
 You will need:
 
@@ -42,7 +42,7 @@ curl -X POST \
   -d '{"servers": [{"custom_fields": {"Technologies": "Python"},"description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well.","fqdn": "dnstools.ninja","host_name": "trpewrcapbiz02","operating_system": "Windows Server","operating_system_version": "Windows 10","ram_allocated_gb": 3,"ram_used_gb": 6,"role": "The role","storage_allocated_gb": 5,"storage_used_gb": 6,"virtual": "true","zone": "Datacenter 1"}]}'
 ```
 
-This will allow you to import your server to the Tidal Migrations API!
+This will allow you to import your server to the Tidal API!
 
 The response of the above request should be the following:
 
@@ -82,7 +82,7 @@ The response of the above request should be the following:
 ```
 ### Importing *multiple* servers
 
-A request to import *multiple* servers into the Tidal Migrations API looks like this:
+A request to import *multiple* servers into the Tidal API looks like this:
 
 You will need:
 
@@ -140,7 +140,7 @@ curl -X POST \
 '
 ```
 
-This will allow you to import your servers to the Tidal Migrations API!
+This will allow you to import your servers to the Tidal API!
 
 The response of the above request should be the following:
 

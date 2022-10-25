@@ -3,7 +3,7 @@ toc: false
 title: Getting Started
 keywords: starting introduction
 last_updated: Feb 22, 2018
-summary: "Get started using the Tidal Migrations API"
+summary: "Get started using the Tidal API"
 sidebar: main_sidebar
 redirect_from: api_getting_started.html
 permalink: api-getting-started.html
@@ -37,5 +37,5 @@ Two tools that we would recommend are either cURL or Postman.
 ## Full API Documentation
 
 You can access all of the API documents via https://[your_subdomain].tidalmg.com/docs/
-Replace start of the address above with your Tidal Migrations subdomain.
+Replace start of the address above with your Tidal subdomain.
 For additional help on getting your subdomain, refer to [Get Subdomain](https://get.tidalmg.com/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.

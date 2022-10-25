@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: tidal-offline.html
 ---
 
-Sometimes in the discovery process, you need to work on servers which are air-gapped or isolated from the public internet. This guide is a central place for installation and usage of all Tidal Migrations offline capable tools.
+Sometimes in the discovery process, you need to work on servers which are air-gapped or isolated from the public internet. This guide is a central place for installation and usage of all Tidal offline capable tools.
 
 For these processes, you will also need a server connected to the public internet to build artifacts necessary for the installation and usage of these tools. These guides are written with the assumption that you have a public instance which is connected to your offline instance via SCP, though you could also copy these artifacts over using physical storage media (ie. a USB stick).
 
@@ -113,7 +113,7 @@ Run this command:
 
 This will save the result to an output zip file, called `code_stats.zip` by default.
 
-Send this file to [Tidal Migrations support](mailto:support@tidalmigrations.com), and they'll upload it to your Tidal Migrations workspace for you.
+Send this file to [Tidal support](mailto:support@tidalmigrations.com), and they'll upload it to your Tidal workspace for you.
 
 ## Database Analysis
 
@@ -127,7 +127,7 @@ This will output a zip file called, `tidal-dba-results_DATE.zip` that can then b
 
 `tidal analyze db --upload tidal-dba-results_DATE.zip`
 
-You should receive confirmation that the upload has completed and can navigate to Tidal Migrations to see the results.
+You should receive confirmation that the upload has completed and can navigate to Tidal to see the results.
 
 ## Gather Machine Stats (For Unix-Like Systems)
 
@@ -158,11 +158,11 @@ Now that you have created a hosts file, you have two options for how to run Mach
 
 Execute `machine-stats` in your current working directory, and save the result to a `json` file of your choice.
 
-This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for taking a single snapshot of your machines to then upload from your online server to Tidal Migrations Platform.
+This is useful for performing a test run to ensure you have Machine Stats set up correctly, or for taking a single snapshot of your machines to then upload from your online server to Tidal Platform.
 
     $ machine-stats > <path-to-result-file>
 
-On an online server with `tidal tools` installed, you can upload this result file to Tidal Migrations Platform with the following command.
+On an online server with `tidal tools` installed, you can upload this result file to Tidal Platform with the following command.
 
     $ tidal sync servers <path-to-result-file>
 

@@ -1,5 +1,5 @@
 ---
-title: Integrate Tidal Migrations with vSphere
+title: Integrate Tidal with vSphere
 keywords: vsphere, login, configure, sync, environment
 last_updated: August, 2022
 sidebar: main_sidebar
@@ -70,7 +70,7 @@ Login to vSphere successful. Saving config file...Done!
 
 ## Sync {#vsphere-sync}
 
-Synchronizing your vSphere inventory with Tidal Migrations is simple with:
+Synchronizing your vSphere inventory with Tidal is simple with:
 
 `tidal sync vsphere`
 
@@ -93,7 +93,7 @@ Modify it as you need and then you can use the sync command to upload your data.
 
 2. Modify the data as you like from Standard Input and then send it to Standard Output.
 
-3. `tidal sync servers`, will take that JSON from STDIN and send it to Tidal Migrations.
+3. `tidal sync servers`, will take that JSON from STDIN and send it to Tidal.
 
 ```
 tidal get vsphere | ./modify_script.rb | tidal sync servers
@@ -128,7 +128,7 @@ You can set your vSphere credentials with the following commands:
 
 The set values are stored in the [default configuration file](/tidal-tools.html#configuration-file).
 
-{% include note.html content="Your configuration file is not encrypted. Only your Tidal Migrations password and vSphere password are encrypted using AES 256 bit encryption." %}
+{% include note.html content="Your configuration file is not encrypted. Only your Tidal password and vSphere password are encrypted using AES 256 bit encryption." %}
 
 
 #### Set Manually

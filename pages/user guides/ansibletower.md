@@ -3,18 +3,18 @@ toc: false
 title: Integrating with Ansible Tower
 keywords: sync, import, discover, analyze, source code, discovery plan
 last_updated: July, 2018
-summary: "A walk through on how to integrate Tidal Migrations with Ansible Tower."
+summary: "A walk through on how to integrate Tidal with Ansible Tower."
 sidebar: main_sidebar
 folder: userguides
 permalink: ansible-tower.html
 ---
 
-Here we will walk through how to integrate Tidal Migrations with Ansible Tower.
-This will allow your Ansible Tower instance to use any servers from Tidal Migrations as possible targets to launch jobs against.
+Here we will walk through how to integrate Tidal with Ansible Tower.
+This will allow your Ansible Tower instance to use any servers from Tidal as possible targets to launch jobs against.
 It will also allow us to completely synchronize the available servers in our environment between the two
 applications so our Ansible Tower inventory is always up to date.
 Further, we are able to specify and segregate our hosts into discrete groups based
-on their categorization of tags from the Tidal Migrations API.
+on their categorization of tags from the Tidal API.
 
 
 ## Install the script
@@ -35,7 +35,7 @@ The first step is to install the Inventory Script into Ansible Tower.
 
 3. On the 'New Custom Inventory' page:
 
-    - Define a name for your script, for example 'Tidal Migrations' and an optional description.
+    - Define a name for your script, for example 'Tidal' and an optional description.
     - Specify an Organization, or leave it set to 'Default'.
     - In the 'Custom Script' box copy and paste a copy of the script into the text field.
     - Click Save.
@@ -91,8 +91,8 @@ in Ansible that can be addressed as a set, of which many may exist within a sing
     - TIDAL_PASSWORD
 
 
-These are needed to allow the script to locate and authenticate your Tidal Migrations API.
-If the environment the script is running in will need a proxy to access your Tidal Migrations API you can set two environment variables for the proxy address with:
+These are needed to allow the script to locate and authenticate your Tidal API.
+If the environment the script is running in will need a proxy to access your Tidal API you can set two environment variables for the proxy address with:
 
 - HTTP_PROXY
 - HTTPS_PROXY
@@ -127,8 +127,8 @@ See [here](https://docs.ansible.com/ansible-tower/latest/html/userguide/inventor
 ## Custom Configuration
 
 A configuration file can optionally be provided to customize the results returned by the script.
-This configuration allows your to filter the servers that are returned from the Tidal Migrations API based on their tags.
-This allows you to create groups within Ansible Tower that correspond to specific sets of servers from your Tidal Migrations Application. Additionally, you are able to specify the property used to represent the host name in Ansible Tower.
+This configuration allows your to filter the servers that are returned from the Tidal API based on their tags.
+This allows you to create groups within Ansible Tower that correspond to specific sets of servers from your Tidal Application. Additionally, you are able to specify the property used to represent the host name in Ansible Tower.
 If no configuration file is provided the script will use the default values specified below.
 
 To use the configuration file:
@@ -178,7 +178,7 @@ The default value for property is 'fqdn' when it is not specified.
 
 **groups**
 
-The groups key can be used to specify sets of tags to define one or more groups of servers. The tags correspond to tags from the Tidal Migrations Application.
+The groups key can be used to specify sets of tags to define one or more groups of servers. The tags correspond to tags from the Tidal Application.
 
 This key has higher precedence than filter-tags; if the groups key is present these parameters are used and the filter-tags key is ignored. The groups key is optional, if there is no key then the results will not be grouped.
 
@@ -206,4 +206,4 @@ This parameter is optional, if there is no key then all servers will be returned
 
 ## Summary
 
-Hopefully at this point you are able to run a sync job that will pull data from your Tidal Migrations API into Ansible Tower. If you are still having trouble getting setup, checkout the [troubleshooting article](https://guides.tidalmg.com/troubleshoot-ansible.html) with some more tips on common issues.
+Hopefully at this point you are able to run a sync job that will pull data from your Tidal API into Ansible Tower. If you are still having trouble getting setup, checkout the [troubleshooting article](https://guides.tidalmg.com/troubleshoot-ansible.html) with some more tips on common issues.

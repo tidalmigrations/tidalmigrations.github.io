@@ -60,10 +60,10 @@ creating sync jobs or analyzing your applications via their URLs.
 ## Connecting to the API
 
 Once you have Tidal Tools installed you need to configure access to the API.
-[Register for a free account](https://get.tidalmg.com/) with Tidal Migrations
+[Register for a free account](https://get.tidalmg.com/) with Tidal
 to get the connection details.
 
-There are several ways to authenticate with the Tidal Migrations API, we
+There are several ways to authenticate with the Tidal API, we
 recommend the first one, `tidal login`, because your password is never
 persisted to disk.
 
@@ -85,7 +85,7 @@ methods below.
 Alternatively, you can use the `tidal config` command to manually set your
 credentials.
 
-Only your Tidal Migrations password and vSphere password are encrypted using AES 256 bit encryption.
+Only your Tidal password and vSphere password are encrypted using AES 256 bit encryption.
 
 For example, you can set your username, password and URL with the three
 following commands:
@@ -104,7 +104,7 @@ tidal:
   password: my_secure_password_here
   url: https://my_instance_name_here.tidalmg.com
 ```
-{% include note.html content="Your Tidal Migrations password and vSphere password are encrypted, using AES 256 bit encryption when stored in the configuration file. The other parts of the configuration file are not encrypted." %}
+{% include note.html content="Your Tidal password and vSphere password are encrypted, using AES 256 bit encryption when stored in the configuration file. The other parts of the configuration file are not encrypted." %}
 
 On macOS the config file is located:
 `$HOME/Library/Preferences/tidal/config.yaml`

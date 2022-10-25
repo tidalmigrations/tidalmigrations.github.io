@@ -47,12 +47,12 @@ my_plan.yml | tidal analyze web --upload`" %}
 private network? No problem, drop the `--upload` flag, continue on and then
 checkout the Uploading to your account section below." type="primary" %}
 
-## Uploading to Tidal Migrations API
+## Uploading to Tidal API
 
 After recieving the results of Tidal Analyze Web, you may or may not be connected
 to the internet.
 
-If you are so, you can import it to your Tidal Migrations account with the
+If you are so, you can import it to your Tidal account with the
 following flag:
 
 ```

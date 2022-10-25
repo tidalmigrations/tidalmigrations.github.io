@@ -3,7 +3,7 @@ elements to the cloud. However, the path to the cloud can be long and painful
 without proper planning and execution.  By following Tidal Migration's six
 discovery layering techniques, you will be migrating to the cloud with ease!
 
-{% include image.html file="layered_discovery_expanded.png" caption="Tidal Migrations'
+{% include image.html file="layered_discovery_expanded.png" caption="Tidal'
 layered approach to application discovery, for cloud migration." %}
 
 # Six Steps To Discovery Bliss
@@ -45,13 +45,13 @@ over time in the _Analyze_ feature.
 
 ## 3) Aggregate Server Usage Statistics
 
-Tidal Migrations provides you with a simple and effective way to [gather
+Tidal provides you with a simple and effective way to [gather
 machine statistics](https://github.com/tidalmigrations/machine_stats) (RAM,
 Storage, CPU allocations and usage) from Windows and UNIX/Linux server
 environmens.
 In Windows, we use WinRM to Invoke-Command across your servers, and for *NIX we
 leverage ansible. Both of these approaches output JSON which is securely sent
-to your Tidal Migrations instance using the tidal command.
+to your Tidal instance using the tidal command.
 
 Checkout this [guide](sync_hyper-v.html) for a quick and clean approach to
 gathering server usage statistics. See the
@@ -125,7 +125,7 @@ ID`, to be logged in with tidal-tools and a copy of the source code checked
 out.
 
 You can find the `Application ID` in the URL bar when looking at an
-application.  e.g. if I'm loking at an application in Tidal Migrations, the URL
+application.  e.g. if I'm loking at an application in Tidal, the URL
 will show `https://demo2.tidalmg.com/#/apps/111`  Here, `111` is my
 `Application ID`.
 

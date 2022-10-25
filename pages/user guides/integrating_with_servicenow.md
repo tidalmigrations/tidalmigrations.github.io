@@ -19,7 +19,7 @@ We currently support syncing of applications, servers and databases with up to 3
 
 ### Importing the Tidal update set
 
-You can find the Tidal Migrations ServiceNow update set [here](https://github.com/tidalmigrations/service-now/blob/master/Tidal%20SN%20CMDB%20Integration.xml):
+You can find the Tidal ServiceNow update set [here](https://github.com/tidalmigrations/service-now/blob/master/Tidal%20SN%20CMDB%20Integration.xml):
 
 
 
@@ -49,13 +49,13 @@ You can find the Tidal Migrations ServiceNow update set [here](https://github.co
 
 {% include image.html file="update-set-step6.png" %}
 
-- Once the update set has been committed, you can type 'Tidal Migrations' in the filter navigation bar, and see where your servers, apps and databases will be saved.
+- Once the update set has been committed, you can type 'Tidal' in the filter navigation bar, and see where your servers, apps and databases will be saved.
 
 {% include image.html file="update-set-step7.png" %}
 
 ### Creating an OAuth endpoint
 
-In order for your Tidal Migrations workspace to communicate with your ServiceNow instance, we must first set up an OAuth endpoint.
+In order for your Tidal workspace to communicate with your ServiceNow instance, we must first set up an OAuth endpoint.
 
 - Type 'System OAuth' into the filter navigation bar and select 'Application Registry'.
 
@@ -69,11 +69,11 @@ In order for your Tidal Migrations workspace to communicate with your ServiceNow
 
 {% include image.html file="servicenow-oauth-step3.png" %}
 
-- Enter a name, we suggest 'Tidal Migrations', then click 'Submit'.
+- Enter a name, we suggest 'Tidal', then click 'Submit'.
 
 {% include image.html file="servicenow-oauth-step4.png" %}
 
-- Select the endpoint you just created (eg. 'Tidal Migrations').
+- Select the endpoint you just created (eg. 'Tidal').
 
 {% include image.html file="servicenow-oauth-step5.png" %}
 
@@ -83,11 +83,11 @@ In order for your Tidal Migrations workspace to communicate with your ServiceNow
 
 {% include image.html file="servicenow-oauth-step6.png" %}
 
-- You're now ready to head over to your Tidal Migrations workspace and set up your integration!
+- You're now ready to head over to your Tidal workspace and set up your integration!
 
 ## Integrating your Tidal workspace with ServiceNow
 
-- Log into your Tidal Migrations workspace and head to the ServiceNow integration page.
+- Log into your Tidal workspace and head to the ServiceNow integration page.
 
 `` https://<example>.tidalmg.com/#/servicenow ``
 
@@ -104,11 +104,11 @@ In order for your Tidal Migrations workspace to communicate with your ServiceNow
 
   {% include image.html file="integrate-tidal-step1.png" %}
 
-- Return to ServiceNow and find your data under the Tidal Migrations -> 'Applications', 'Servers' and 'Databases' tables.
+- Return to ServiceNow and find your data under the Tidal -> 'Applications', 'Servers' and 'Databases' tables.
 
   {% include image.html file="integrate-tidal-step2.png" %}
 
   <br/>
   
-  From this point on, any changes made to your Tidal Migrations workspace will be automatically synced over to your ServiceNow instance.  
+  From this point on, any changes made to your Tidal workspace will be automatically synced over to your ServiceNow instance.  
   

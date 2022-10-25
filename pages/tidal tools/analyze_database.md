@@ -8,7 +8,7 @@ redirect_from: analyze_database.html
 permalink: analyze-database.html
 folder: tidaltools
 ---
-Not sure how ready you are to move to the cloud? With Tidal Migrations, you have the option to analyze the databases associated with your applications.
+Not sure how ready you are to move to the cloud? With Tidal, you have the option to analyze the databases associated with your applications.
 
 The analysis will calculate the difficulty of migrating your databases to each target platform, and give details on database features that may complicate the migration.
 
@@ -65,7 +65,7 @@ For the most part, all supported Database engines share very similar configurati
 
 Your YAML configuration file for Postgres, MySQL, and SQL Server must contain the following information.
 
-  - `id` - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
+  - `id` - The id of the database from your Tidal account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
   - `name` - A common name for your database could be the same or different from db_name, but this value is arbitrary and only for your reference.
   - `engine` - The database vendor, either `SQL Server`, `MySQL`, or `PostgreSQL`, it is not case sensitive.
   - `host` - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
@@ -77,7 +77,7 @@ Your YAML configuration file for Postgres, MySQL, and SQL Server must contain th
 
 When analyzing Oracle databases, the attributes in your configuration file must contain the following details.
 
-  - `id` - The id of the database from your Tidal Migrations account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal Migrations, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
+  - `id` - The id of the database from your Tidal account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal, the URL will show https://demo2.tidalmg.com/#/database_instances/111 in this case 111 is the database instance ID.
   - `name` - A common name for your database.
   - `analyze_workload` - When set to **true** workload analysis is enabled. Be sure to configure AWR data retention and verify licensing. For more information check the advance configuration [section](#advanced-configuration)
   - `engine` - **Oracle**
@@ -213,7 +213,7 @@ tidal analyze db databases.yaml
 
 ### Running offline
 
-There are circumstances in which you need to perform a database analysis on an environment without or with restricted internet access. In such case, You can perform the Database analysis, capture its results and at a later stage upload those results to your Tidal Migrations workspace.
+There are circumstances in which you need to perform a database analysis on an environment without or with restricted internet access. In such case, You can perform the Database analysis, capture its results and at a later stage upload those results to your Tidal workspace.
 
 These are the steps you need to follow in order to bypass internet access limitations:
 
@@ -242,7 +242,7 @@ These are the steps you need to follow in order to bypass internet access limita
 
     `tidal analyze db --upload db-analyze-<DATE>.zip`
 
-    You should receive confirmation that the upload has been completed and can navigate to Tidal Migrations to see the results.
+    You should receive confirmation that the upload has been completed and can navigate to Tidal to see the results.
 
 
 ## Why Docker?

@@ -2,7 +2,7 @@
 title: Sync your Server Inventory (and other resources)
 keywords: servers, sync, transform, apps, database instances, tidal tools
 last_updated: September 19, 2022
-summary: "Sync your data with Tidal Migrations"
+summary: "Sync your data with Tidal"
 sidebar: main_sidebar
 permalink: sync-servers.html
 folder: tidaltools
@@ -10,7 +10,7 @@ folder: tidaltools
 
 ## What is Syncing?
 
-Syncing is a process that creates and updates your inventories in your Tidal Migrations Workspace. This is useful if you
+Syncing is a process that creates and updates your inventories in your Tidal Workspace. This is useful if you
 would like to update a lot of data across many different records. It can also be useful to keep your inventory up to date with an external
 date source, by continually updating your inventory on a recurring schedule.
 
@@ -19,7 +19,7 @@ date source, by continually updating your inventory on a recurring schedule.
 
 {% include note.html content="You will first need to have [Tidal Tools installed and logged in](https://guides.tidalmg.com/tidal-tools.html) to your Workspace." %}
 
-To upload your server inventory into your Tidal Migrations workspace you need to transform your data into JSON format.
+To upload your server inventory into your Tidal workspace you need to transform your data into JSON format.
 
 This data can be passed as standard input to the `tidal sync servers` command and your servers data will be synchronized via the API.
 
@@ -64,7 +64,7 @@ already exist." %}
 }
 
 ```
-The synchronization of your servers to Tidal Migrations can be performed with the following command:
+The synchronization of your servers to Tidal can be performed with the following command:
 
 ```
 tidal sync servers some_file.json
@@ -158,8 +158,8 @@ You can sync your Applications with the following command:
 tidal sync apps some_file.json
 ```
 
-When importing your applications to the API, Tidal Migrations's sync tool will check for existing applications, based on their name, and update the changed data for those applications.
-If the given application to sync does not exist already, it will add that application to the Tidal Migrations API.
+When importing your applications to the API, Tidal's sync tool will check for existing applications, based on their name, and update the changed data for those applications.
+If the given application to sync does not exist already, it will add that application to the Tidal API.
 
 To synchronize your Application data, It must have the following JSON format.
 
@@ -207,8 +207,8 @@ You can sync your Database Instances with the following command:
 tidal sync dbs some_file.json
 ```
 
-When importing your database instances to the API, Tidal Migrations's sync tool will check for existing database instances, based on their name, and update the changed data for those database instances.
-If the given database instance to sync does not exist already, it will add it to the Tidal Migrations API.
+When importing your database instances to the API, Tidal's sync tool will check for existing database instances, based on their name, and update the changed data for those database instances.
+If the given database instance to sync does not exist already, it will add it to the Tidal API.
 
 To synchronize your Database Instances data, It must have the following JSON format.
 ```

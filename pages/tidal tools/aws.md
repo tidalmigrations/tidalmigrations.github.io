@@ -31,11 +31,11 @@ information about that subcommand.
 
 Some of the subcommands, for example `tidal analyze web`, work independently and
 immediately provide results. While some other subcommands, for example `tidal
-analyze code`, require access to the Tidal Migrations API.
+analyze code`, require access to the Tidal API.
 
 To summarize,
 
-* Tidal Tools seamlessly integrates with the [Tidal Migrations
+* Tidal Tools seamlessly integrates with the [Tidal
   API](tidal-tools.html#connecting-to-the-api) and SaaS platform;
 * Tidal Tools can be used independently of the API for some features, while
   some features do require access to the API to be used;

@@ -9,7 +9,7 @@ folder: userguides
 permalink: exporting-servers-to-csv.html
 ---
 
-Here we will show how to take an entire migration wave of servers from Tidal Migrations and export them for direct ingestion into RiverMeadow, to perform a VM migration.
+Here we will show how to take an entire migration wave of servers from Tidal and export them for direct ingestion into RiverMeadow, to perform a VM migration.
 
 # Requirements
 

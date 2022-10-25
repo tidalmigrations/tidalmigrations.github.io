@@ -7,7 +7,7 @@ keywords: sync, import, discover,discovery plan
 
 last_updated: October, 2021
 
-summary: "A walk through on how to synchronize data from Microsoft Azure Migrate with Tidal Migrations Platform."
+summary: "A walk through on how to synchronize data from Microsoft Azure Migrate with Tidal Platform."
 
 sidebar: main_sidebar
 
@@ -16,7 +16,7 @@ folder: userguides
 permalink: azure-migrate.html
 ---
 
-This will walk you through how to integrate Azure Migrate with Tidal Migrations. This integration will sync an inventory of servers that are a part of a Project within your Azure Migrate Portal.
+This will walk you through how to integrate Azure Migrate with Tidal. This integration will sync an inventory of servers that are a part of a Project within your Azure Migrate Portal.
 
 ## Tutorial
 
@@ -32,7 +32,7 @@ Check out below for a brief video on how to do these steps.
 
 ### Installation requirements
 
-- Azure Migrate script from [Tidal Migrations Gists Repository](https://github.com/tidalmigrations/gists).
+- Azure Migrate script from [Tidal Gists Repository](https://github.com/tidalmigrations/gists).
 
   - If `git` is configured, clone the repository with:
 
@@ -84,7 +84,7 @@ export AZ_MIGRATE_PROJECT= <ASSESSMENT_PROJECT_MACHINE_NAME>
 
 ### Execute
 
-Once your environment variables are configured, log in to Tidal Migration Platform using `tidal login` and authenticate with your Tidal Migrations Workspace URL, email and password.
+Once your environment variables are configured, log in to Tidal Migration Platform using `tidal login` and authenticate with your Tidal Workspace URL, email and password.
 
 Change directory into the `gists` repository
 
@@ -119,7 +119,7 @@ The `azure_migrate.rb` script will collect the following data points.
 
 ### Review
 
-Once the command succeeds you can navigate to your Tidal Migrations Workspace URL to see the results. Use the left menu bar to navigate to `Discover > Overview` where the “Most recently run job” card should say `Sync Servers` and have the same timestamp as when the sync servers command suceeded.
+Once the command succeeds you can navigate to your Tidal Workspace URL to see the results. Use the left menu bar to navigate to `Discover > Overview` where the “Most recently run job” card should say `Sync Servers` and have the same timestamp as when the sync servers command suceeded.
 This means that `tidal sync servers` successfully updated your server inventory, as seen in the image below.
 
 ![Server Sync success](../../images/azure-migrate-review.png)

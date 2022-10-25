@@ -51,7 +51,7 @@ echo "source <(tidal completion bash)" >> ~/.bashrc
 
 Some of the subcommands, for example `tidal analyze web`, work independently and immediately provide results.
 While some other subcommands, for example `tidal analyze code`,
-require access to the [Tidal Migrations API](tidal-tools.html#connecting-to-the-api).
+require access to the [Tidal API](tidal-tools.html#connecting-to-the-api).
 
 To see what you can do with `tidal`, checkout some of our other articles about
 [creating sync jobs](sync-servers.html) or [analyzing your
