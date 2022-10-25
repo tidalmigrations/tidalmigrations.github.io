@@ -13,7 +13,7 @@ First you will need to have:
 
 - jq and cURL installed
 
-- have access to the internet and your account at https://get.tidalmg.com
+- have access to the internet and your account at https://get.tidal.cloud
 
 - and a terminal with bash.
 
