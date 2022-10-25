@@ -112,7 +112,7 @@ sidebars:
 description: "Guides for using and working with Tidal."
 
 # needed for sitemap.xml file only
-url: "https://guides.tidalmg.com"
+url: "https://guides.tidal.cloud"
 baseurl: ""
 
 plugins:

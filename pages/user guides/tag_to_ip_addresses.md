@@ -34,7 +34,7 @@ You can find also get a copy of all the code for the [two](https://github.com/ti
 First step is to find the tag we want to filter our applications by, here we search for a tag with `dev`:
 
 ```
-curl -sS "https://$SUBDOMAIN.tidalmg.com/api/v1/tags?search=dev" -H "Authorization: Bearer $API_TOKEN" | jq .
+curl -sS "https://$SUBDOMAIN.tidal.cloud/api/v1/tags?search=dev" -H "Authorization: Bearer $API_TOKEN" | jq .
 ```
 
 In this case it returns all the tags with `dev` included, here we will need the tag id, `197`.
@@ -63,12 +63,12 @@ TAG_ID=187
 Run the following and the results will be in `ip_addresses.txt`
 ```
 # Get all the applications with that tag:
-app_ids=$(curl -sS "https://$SUBDOMAIN.tidalmg.com/api/v1/apps?tag_id=$TAG_ID" -H "Authorization: Bearer $API_TOKEN" | jq ".[] | .id" )
+app_ids=$(curl -sS "https://$SUBDOMAIN.tidal.cloud/api/v1/apps?tag_id=$TAG_ID" -H "Authorization: Bearer $API_TOKEN" | jq ".[] | .id" )
 
 # 3 - For each app ID get all the dependencies for each application
 server_ids=()
 while IFS= read -r id ; do
-  server_ids+=$(curl -sS "https://$SUBDOMAIN.tidalmg.com/api/v1/apps/$id/dependencies" -H "Authorization: Bearer $API_TOKEN" | jq '.children | .[] | select(.type == "Server") | .id')
+  server_ids+=$(curl -sS "https://$SUBDOMAIN.tidal.cloud/api/v1/apps/$id/dependencies" -H "Authorization: Bearer $API_TOKEN" | jq '.children | .[] | select(.type == "Server") | .id')
 done <<< "$app_ids"
 
 # Format ids
@@ -77,7 +77,7 @@ server_ids=$(echo $server_ids | jq -Rr 'gsub(" "; "\n")')
 # 4 - For each server dependencies for the application, get all it's IP addresses
 ip_addresses=()
 while IFS= read -r id ; do
-  ip_addresses+=$(curl -sS "https://$SUBDOMAIN.tidalmg.com/api/v1/servers/$id" -H "Authorization: Bearer $API_TOKEN"  | jq '.ip_addresses | .[] | .address')
+  ip_addresses+=$(curl -sS "https://$SUBDOMAIN.tidal.cloud/api/v1/servers/$id" -H "Authorization: Bearer $API_TOKEN"  | jq '.ip_addresses | .[] | .address')
 done <<< "$server_ids"
 
 # Format ids

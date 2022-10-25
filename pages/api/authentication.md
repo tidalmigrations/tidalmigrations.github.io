@@ -29,7 +29,7 @@ You will need:
 
 ```
   curl -X POST \
-  https://[your subdomain].tidalmg.com/api/v1/authenticate \
+  https://[your subdomain].tidal.cloud/api/v1/authenticate \
   -H 'content-type: application/json' \
   -d '{"username":"[insert your email]",
 "password": "[insert your password]"}'
@@ -78,7 +78,7 @@ You will need:
 
 ```
 curl -X GET \
-  https://[insert your subdomain].tidalmg.com/api/v1/ping \
+  https://[insert your subdomain].tidal.cloud/api/v1/ping \
   -H 'authorization: bearer [insert your access token]' \
   -H 'content-type: application/json' \
 ```
@@ -107,7 +107,7 @@ You will need:
 
 ```
 curl -X POST \
-  https://[insert your subdomain].tidalmg.com/api/v1/refresh \
+  https://[insert your subdomain].tidal.cloud/api/v1/refresh \
   -H 'authorization: bearer [insert your access token]' \
   -H 'content-type: application/json' \
   -d '{"refresh_token":"[insert your refresh token]"}'

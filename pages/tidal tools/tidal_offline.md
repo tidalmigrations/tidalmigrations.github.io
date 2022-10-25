@@ -17,7 +17,7 @@ For these processes, you will also need a server connected to the public interne
 
 First, install Docker on both your internet-connected and offline server, and ensure that the docker daemon is running on both servers. To install docker on your offline server from binaries, see [this guide](https://docs.docker.com/engine/install/binaries/).
 
-Follow [this guide](https://guides.tidalmg.com/tidal-tools.html) to install Tidal Tools on your internet connected server.
+Follow [this guide](https://guides.tidal.cloud/tidal-tools.html) to install Tidal Tools on your internet connected server.
 
 Next, install Tidal Tools on your offline server with one of two options:
 

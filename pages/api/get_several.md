@@ -14,7 +14,7 @@ Before using each endpoint, you must authenticate to the Tidal API:
 
 Once you have authenticated with the Tidal API, utilising each endpoint is super simple.
 For any additional details regarding the endpoint, checkout the Tidal API documentation.
-(https://[your subdomain].tidalmg.com/docs/)
+(https://[your subdomain].tidal.cloud/docs/)
 
 ## Getting all the Move Groups:
 #### GET api/v1/move_groups {#getallmg}
@@ -30,7 +30,7 @@ You will need:
 
 ```
 curl -X GET \
-  https://[insert your subdomain].tidalmg.com/api/v1/move_groups \
+  https://[insert your subdomain].tidal.cloud/api/v1/move_groups \
   -H 'authorization: bearer [insert your access_token]' \
   -H 'content-type: application/json' \
 ```
@@ -209,7 +209,7 @@ You will need:
 
 ```
 curl -X GET \
-  https://[insert your subdomain].tidalmg.com/api/v1/move_groups/[insert move_group id] \
+  https://[insert your subdomain].tidal.cloud/api/v1/move_groups/[insert move_group id] \
   -H 'authorization: bearer [insert your access_token]' \
   -H 'content-type: application/json' \
 ```

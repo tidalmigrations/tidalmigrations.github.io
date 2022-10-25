@@ -93,7 +93,7 @@ following commands:
 ```
 tidal config set tidal.email [set your email]
 tidal config set tidal.password [set your password]
-tidal config set tidal.url https://demo.tidalmg.com
+tidal config set tidal.url https://demo.tidal.cloud
 ```
 
 Your credentials will be stored in a configuration file such as:
@@ -102,7 +102,7 @@ Your credentials will be stored in a configuration file such as:
 tidal:
   email: my_user_name_here
   password: my_secure_password_here
-  url: https://my_instance_name_here.tidalmg.com
+  url: https://my_instance_name_here.tidal.cloud
 ```
 {% include note.html content="Your Tidal password and vSphere password are encrypted, using AES 256 bit encryption when stored in the configuration file. The other parts of the configuration file are not encrypted." %}
 
@@ -130,7 +130,7 @@ arguments using the following flags:
 ```
 --tidal-email youremail@address.here
 --tidal-password your_secure_password
---tidal-url https://yoursubdomain.tidalmg.com
+--tidal-url https://yoursubdomain.tidal.cloud
 ```
 
 ## Testing connectivity and authentication

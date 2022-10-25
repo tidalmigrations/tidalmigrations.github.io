@@ -17,7 +17,7 @@ Before using the endpoint, you must authenticate to the Tidal API:
 
 Once you have authenticated with the Tidal API, utilising the endpoint is super simple.
 For any additional details regarding the endpoint, checkout the Tidal API documentation.
-(https://[your subdomain].tidalmg.com/docs/)
+(https://[your subdomain].tidal.cloud/docs/)
 
 
 A request to import an application into the Tidal API looks like this:
@@ -35,7 +35,7 @@ Type.*
 
 ```
 curl -X POST \
-  https://[insert your subdomain].tidalmg.com/api/v1/apps/import \
+  https://[insert your subdomain].tidal.cloud/api/v1/apps/import \
   -H 'authorization: bearer [insert your access_token] \
   -H 'content-type: application/json' \
   -d '{

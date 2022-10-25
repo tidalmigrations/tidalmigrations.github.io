@@ -79,7 +79,7 @@ Loading data..
 Transforming data..
 Validating JSON...
 Valid.
-Logging in to server at https://demo.tidalmg.com as info@tidalcloud.com
+Logging in to server at https://demo.tidal.cloud as info@tidalcloud.com
 Logged in.
 Updating via API..
 Update successful
@@ -140,7 +140,7 @@ vsphere:
   server: 1.1.1.1
 tidal:
   email: my_user_name_here  
-  url: https://my_instance_name_here.tidalmg.com
+  url: https://my_instance_name_here.tidal.cloud
 ```
 
 {% include note.html content="You can not manually set or edit any passwords in the configuration file. They are stored here only as encrypted values. To persist a password, it must be added by using the `tidal config set` command."%}

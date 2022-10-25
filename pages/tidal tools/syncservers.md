@@ -17,7 +17,7 @@ date source, by continually updating your inventory on a recurring schedule.
 
 ## How do I sync my servers?
 
-{% include note.html content="You will first need to have [Tidal Tools installed and logged in](https://guides.tidalmg.com/tidal-tools.html) to your Workspace." %}
+{% include note.html content="You will first need to have [Tidal Tools installed and logged in](https://guides.tidal.cloud/tidal-tools.html) to your Workspace." %}
 
 To upload your server inventory into your Tidal workspace you need to transform your data into JSON format.
 
