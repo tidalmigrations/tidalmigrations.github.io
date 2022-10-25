@@ -1,6 +1,6 @@
 Cloud migration is the process of moving your data, applications, and other
 elements to the cloud. However, the path to the cloud can be long and painful
-without proper planning and execution.  By following Tidal Migration's six
+without proper planning and execution.  By following Tidal's six
 discovery layering techniques, you will be migrating to the cloud with ease!
 
 {% include image.html file="layered_discovery_expanded.png" caption="Tidal'
@@ -12,7 +12,7 @@ layered approach to application discovery, for cloud migration." %}
 
 If your already have some data collected in spreadsheets, the first step to
 begin your cloud migration project is importing a spreadsheet of Virtualization
-Clusters, Servers, Databases Instances and Applications. Tidal Migration's
+Clusters, Servers, Databases Instances and Applications. Tidal's
 importer will guide you through mapping your columns to our fields, create your
 own fields and even make associations between dependencies if you have captured
 these.

@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: import-from-excel.html
 ---
 
-Tidal Migration's importer will guide you through mapping your columns to our fields,
+Tidal's importer will guide you through mapping your columns to our fields,
 create your own fields and even make associations between dependencies
 if you have captured these.
 
