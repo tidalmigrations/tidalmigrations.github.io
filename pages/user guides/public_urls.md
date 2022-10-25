@@ -17,7 +17,7 @@ The entire process should only take a couple of minutes and does not require any
 ## Step 1
 You can start with a top level domain that your company owns. For example, canadiantire.ca.
 
-[Analyze the domain with Tidal Tools](https://guides.tidalmg.com/analyze.html). - `tidal analyze web canadiantire.ca`
+[Analyze the domain with Tidal Tools](https://guides.tidal.cloud/analyze.html). - `tidal analyze web canadiantire.ca`
 
 {% include image.html file="analyze.png" %}
 <br>
@@ -50,7 +50,7 @@ If there are more you can note down all of them here.
 <br>
 
 ## Step 4
-Go to your account on Tidal my_domain.tidalmg.com/#/discover/public_urls.
+Go to your account on Tidal my_domain.tidal.cloud/#/discover/public_urls.
 Enter the CIDR range you found above, from the whois command or any labelled as netblock from ipinfo.io.
 In this case that is `104.194.16.0/22` and `205.210.17.0/24`.
 

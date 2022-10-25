@@ -23,7 +23,7 @@ If you haven't used the API yet or need a quick refresh, you [should get setup f
   ```
   export API_TOKEN=PUT_YOUR_TOKEN_HERE
   export SUBDOMAIN=PUT_YOUR_SUBDOMAIN_HERE
-  curl -H "Authorization: Bearer $API_TOKEN" "https://$SUBDOMAIN.tidalmg.com/api/v1/ip_addresses" > my_ip_addresses.json
+  curl -H "Authorization: Bearer $API_TOKEN" "https://$SUBDOMAIN.tidal.cloud/api/v1/ip_addresses" > my_ip_addresses.json
   ```
   This will save the results to a json file, `my_ip_addresses.json`
 
@@ -52,5 +52,5 @@ If you haven't used the API yet or need a quick refresh, you [should get setup f
   ```
   export API_TOKEN=PUT_YOUR_TOKEN_HERE
   export SUBDOMAIN=PUT_YOUR_SUBDOMAIN_HERE
-  curl -H "Authorization: Bearer $API_TOKEN" "https://$SUBDOMAIN.tidalmg.com/api/v1/ip_addresses" | jq '.[] | .address' > ip_addresses.csv
+  curl -H "Authorization: Bearer $API_TOKEN" "https://$SUBDOMAIN.tidal.cloud/api/v1/ip_addresses" | jq '.[] | .address' > ip_addresses.csv
   ```

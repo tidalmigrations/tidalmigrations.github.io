@@ -17,7 +17,7 @@ You will need:
 
 ```
 curl -X GET \
-  https://[your subdomain].tidalmg.com/api_docs \
+  https://[your subdomain].tidal.cloud/api_docs \
   -H 'authorization: bearer [insert your access_token] \
 
 ```

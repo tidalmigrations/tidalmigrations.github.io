@@ -155,7 +155,7 @@ You may need to configure Docker to use your proxy server. You can follow the st
 ### PostgreSQL database fails to analyze with `tidal analyze db` {#postgres}
 
 Check the [PostgreSQL Server
-User](https://guides.tidalmg.com/analyze-database.html#postgresql-server-user)
+User](https://guides.tidal.cloud/analyze-database.html#postgresql-server-user)
 script to verify that the all the necessary permissions were granted. Pay
 attention that different permissions should be applied to different PostgreSQL
 versions.

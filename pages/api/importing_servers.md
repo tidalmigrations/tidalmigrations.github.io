@@ -17,7 +17,7 @@ Before using the endpoint, you must authenticate to the Tidal API:
 
 Once you have authenticated with the Tidal API, utilising the endpoint is super simple.
 For any additional details regarding the endpoint, checkout the Tidal API documentation.
-(https://[your subdomain].tidalmg.com/docs/)
+(https://[your subdomain].tidal.cloud/docs/)
 
 There are various parameters you can define about your server in the body:
 
@@ -36,7 +36,7 @@ You will need:
 
 ```
 curl -X POST \
-  https://[insert your subdomain].tidalmg.com/api/v1/servers/import \
+  https://[insert your subdomain].tidal.cloud/api/v1/servers/import \
   -H 'authorization: bearer [insert your access_token]' \
   -H 'content-type: application/json' \
   -d '{"servers": [{"custom_fields": {"Technologies": "Python"},"description": "This is a general purpose server that has several functionalities. The first functionality is that it is a demo server. The second functionality is that it could be a real server as well.","fqdn": "dnstools.ninja","host_name": "trpewrcapbiz02","operating_system": "Windows Server","operating_system_version": "Windows 10","ram_allocated_gb": 3,"ram_used_gb": 6,"role": "The role","storage_allocated_gb": 5,"storage_used_gb": 6,"virtual": "true","zone": "Datacenter 1"}]}'
@@ -92,7 +92,7 @@ You will need:
 
 ```
 curl -X POST \
-  https://[insert your subdomain].tidalmg.com/api/v1/servers/import \
+  https://[insert your subdomain].tidal.cloud/api/v1/servers/import \
   -H 'authorization: bearer [insert your access_token]' \
   -H 'content-type: application/json' \
   -d '{

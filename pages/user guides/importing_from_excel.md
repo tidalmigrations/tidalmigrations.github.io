@@ -13,7 +13,7 @@ if you have captured these.
 
 You can import your Excel spreadsheets into Tidal by visiting:
 
-``https://your_workspace.tidalmg.com/#/discover/import``
+``https://your_workspace.tidal.cloud/#/discover/import``
 
 
 ## Preparing your Spreadsheet

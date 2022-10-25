@@ -126,7 +126,7 @@ out.
 
 You can find the `Application ID` in the URL bar when looking at an
 application.  e.g. if I'm loking at an application in Tidal, the URL
-will show `https://demo2.tidalmg.com/#/apps/111`  Here, `111` is my
+will show `https://demo2.tidal.cloud/#/apps/111`  Here, `111` is my
 `Application ID`.
 
 I can now analyze the source code with:
