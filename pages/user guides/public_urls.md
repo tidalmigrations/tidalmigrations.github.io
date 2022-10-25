@@ -62,4 +62,4 @@ You should now see a list of domains that belong to your organization.
 With this list you can now continue your discovery by assigning them to applications within Tidal,
 either applications you already have identified or by creating new applications with these URLs as the initial data points.
 
-Note: If the CIDR range you have found is very large (/16 larger) you can use a <a href="https://tidalmigrations.com/subnet-builder/">subnet viewer</a> to break it into smaller ranges.
+Note: If the CIDR range you have found is very large (/16 larger) you can use a <a href="https://tidalcloud.com/subnet-builder/">subnet viewer</a> to break it into smaller ranges.

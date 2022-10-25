@@ -14,4 +14,4 @@ It is possible the emails are being blocked by your spam or filtering system. If
 
 ## Still need help?
 
-We are here to help, [send us a message](mailto:support@tidalmigrations.com) and let us know what you are trying to do.
+We are here to help, [send us a message](mailto:support@tidalcloud.com) and let us know what you are trying to do.

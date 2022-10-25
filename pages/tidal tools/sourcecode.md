@@ -18,7 +18,7 @@ analyze source code written in C#, COBOL, Java, JavaScript, Kotlin, Microsoft
 Transact-SQL, PHP, Python, Swift, TypeScript, VB.Net.
 
 If you are interested in a deeper dive source code assessment, let us know at
-[info@tidalmigrations.com](mailto:info@tidalmigrations.com).
+[info@tidalcloud.com](mailto:info@tidalcloud.com).
 
 ## Analytics
 

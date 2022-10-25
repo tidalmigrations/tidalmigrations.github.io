@@ -32,7 +32,7 @@ Tidal Tools is able to analyze databases with the following versions:
 | Oracle Database 18c (18.0, 18.1) | SQL Server 2019 |
 | Oracle Database 19c (19.0, 19.1, 19.2, 19.3) |
 
-If you have a use case for a different version, definitely let us know at [info@tidalmigrations.com](mailto:info@tidalmigrations.com), we are always adding new capabilities.
+If you have a use case for a different version, definitely let us know at [info@tidalcloud.com](mailto:info@tidalcloud.com), we are always adding new capabilities.
 
 ## Migration Complexity
 The databases are analyzed to look for patterns and feature usage that may be difficult to migrate due to lack of support or compatibility in their new environment. The databases are analyzed based on their metadata, looking at specific schema objects that are used within your databases as well as the usage of proprietary features that will not be available in the target platforms.

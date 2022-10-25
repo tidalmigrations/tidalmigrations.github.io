@@ -17,7 +17,7 @@ They will help you in understanding the fundamental components the API offers an
 
 ## What the guides cover
 
-These guides cover common tasks that we find users use the API to complete. If there is something you are looking to do with the API and you are having trouble send us a message at support@tidalmigrations.com and we'll help you.
+These guides cover common tasks that we find users use the API to complete. If there is something you are looking to do with the API and you are having trouble send us a message at support@tidalcloud.com and we'll help you.
 
 ## Tools
 

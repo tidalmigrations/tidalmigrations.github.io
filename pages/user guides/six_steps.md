@@ -27,7 +27,7 @@ _NB: See additional ways on importing your [applications](importapps.html) and
 Once you have imported your data, you can begin to synchronize your inventories
 via [`tidal sync servers`](sync-servers.html).  Tidal sync supports many server
 inventory management tools such as VMWare and HyperV with more possible via
-scripting ([ask us](https://tidalmigrations.com/contact)).
+scripting ([ask us](https://tidalcloud.com/contact)).
 
 If you have VM Ware's vSphere, [`tidal sync vsphere`](#vsphere-sync) will
 handle everying with just read-only credentials required.

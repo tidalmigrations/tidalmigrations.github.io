@@ -79,7 +79,7 @@ Loading data..
 Transforming data..
 Validating JSON...
 Valid.
-Logging in to server at https://demo.tidalmg.com as info@tidalmigrations.com
+Logging in to server at https://demo.tidalmg.com as info@tidalcloud.com
 Logged in.
 Updating via API..
 Update successful

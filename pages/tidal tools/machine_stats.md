@@ -336,7 +336,7 @@ The second option, is to also split your set of hosts into groups of 800 or less
 
 The current supported limit on scanning one group of hosts at once with Machine Stats is 800 hosts. It may be possible to scan more but it might not be reliable and will depend on the exact performance of the virtual hypervisor and network speeds in your environment.
 
-If you need any help in deploying the VM or getting started with your discovery, [send us a message](mailto:support@tidalmigrations.com) and we can help you get setup.
+If you need any help in deploying the VM or getting started with your discovery, [send us a message](mailto:support@tidalcloud.com) and we can help you get setup.
 
 ### Technical Documentation
 
