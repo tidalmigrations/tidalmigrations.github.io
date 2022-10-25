@@ -113,7 +113,7 @@ Run this command:
 
 This will save the result to an output zip file, called `code_stats.zip` by default.
 
-Send this file to [Tidal support](mailto:support@tidalmigrations.com), and they'll upload it to your Tidal workspace for you.
+Send this file to [Tidal support](mailto:support@tidalcloud.com), and they'll upload it to your Tidal workspace for you.
 
 ## Database Analysis
 

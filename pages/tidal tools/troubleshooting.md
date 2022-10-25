@@ -11,7 +11,7 @@ folder: tidaltools
 
 Most problems with Tidal Tools can be fixed by following the troubleshooting
 methods described below. If you need extra help with any of this, you can reach
-us at [support@tidalmigrations.com](mailto:support@tidalmigrations.com).
+us at [support@tidalcloud.com](mailto:support@tidalcloud.com).
 
 ## General troubleshooting options {#general}
 
@@ -66,7 +66,7 @@ Also you can explicitly check for new Tidal Tools versions available by running
 To perform better diagnosis of any issues with Tidal Tools, some of the
 underlying activities performed by Tidal Tools are written to the log file. If
 you are having trouble with one of the Tidal Tools commands, you can reach us
-at [support@tidalmigrations.com](mailto:support@tidalmigrations.com) and send
+at [support@tidalcloud.com](mailto:support@tidalcloud.com) and send
 us your log file for us to investigate.
 
 The default locations of the log file are:

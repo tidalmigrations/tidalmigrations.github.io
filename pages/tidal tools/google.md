@@ -61,4 +61,4 @@ applications](analyze.html) via their URLs.
 
 If you are having problems related to Tidal Tools, [the following tips](troubleshooting.html)
 should help you getting things working. If you still need help feel free
-to [reach out to us directly](mailto:support@tidalmigrations.com) and we would be happy to help.
+to [reach out to us directly](mailto:support@tidalcloud.com) and we would be happy to help.
