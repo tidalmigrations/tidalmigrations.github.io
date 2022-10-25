@@ -28,4 +28,4 @@ start planning your cloud migration any more._
 ---
 
 Not yet a customer?  See [tidalcloud.com](https://tidalcloud.com) and
-[Try For Free](https://get.tidalmg.com).
+[Try For Free](https://get.tidal.cloud).

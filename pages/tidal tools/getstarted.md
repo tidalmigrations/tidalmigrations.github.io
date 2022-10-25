@@ -60,7 +60,7 @@ creating sync jobs or analyzing your applications via their URLs.
 ## Connecting to the API
 
 Once you have Tidal Tools installed you need to configure access to the API.
-[Register for a free account](https://get.tidalmg.com/) with Tidal
+[Register for a free account](https://get.tidal.cloud/) with Tidal
 to get the connection details.
 
 There are several ways to authenticate with the Tidal API, we
