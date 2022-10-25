@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: tidal-discovery-vm.html
 ---
 
-To help you speed up your discovery process, you can use a pre-configured Tidal Migrations Virtual Machine. These VMs have the latest Tidal Migrations software and dependencies installed for you, so you can focus on getting things done.
+To help you speed up your discovery process, you can use a pre-configured Tidal Virtual Machine. These VMs have the latest Tidal software and dependencies installed for you, so you can focus on getting things done.
 
 The Ubuntu Server image can also perform discovery without any network connectivity to the public internet. To run a discovery in an 'offline' mode checkout [this guide](https://guides.tidalmg.com/tidal-offline.html).
 

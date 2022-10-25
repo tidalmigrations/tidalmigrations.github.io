@@ -2,7 +2,7 @@
 title: Importing Data from Excel
 keywords: excel, import, apps, data, servers, clusters, database instances
 last_updated: August, 2022
-summary: "Easily import your Excel spreadsheets into Tidal Migrations"
+summary: "Easily import your Excel spreadsheets into Tidal"
 sidebar: main_sidebar
 permalink: import-from-excel.html
 ---
@@ -11,7 +11,7 @@ Tidal Migration's importer will guide you through mapping your columns to our fi
 create your own fields and even make associations between dependencies
 if you have captured these.
 
-You can import your Excel spreadsheets into Tidal Migrations by visiting:
+You can import your Excel spreadsheets into Tidal by visiting:
 
 ``https://your_workspace.tidalmg.com/#/discover/import``
 

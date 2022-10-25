@@ -3,13 +3,13 @@ repository: tomjoht/documentation-theme-jekyll
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Tidal Migrations
+topnav_title: Tidal
 # this appears on the top navigation bar next to the home button
 
-site_title: Tidal Migrations
+site_title: Tidal
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Tidal Migrations
+company_name: Tidal
 # this appears in the footer
 
 github_editme_path:
@@ -36,7 +36,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Tidal Migrations API Guides
+feedback_subject_line: Tidal API Guides
 
 feedback_email: support@tidalmigrations.com
 # used as a contact email for the Feedback link in the top navigation bar
@@ -109,7 +109,7 @@ sidebars:
 - other
 
 # the description is used in the feed.xml file
-description: "Guides for using and working with Tidal Migrations."
+description: "Guides for using and working with Tidal."
 
 # needed for sitemap.xml file only
 url: "https://guides.tidalmg.com"

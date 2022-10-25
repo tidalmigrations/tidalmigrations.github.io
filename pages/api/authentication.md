@@ -2,7 +2,7 @@
 title: Authentication
 keywords: authentication, login, ping, refresh, token, subdomain
 last_updated: Feb 13, 2018
-summary: "Easily authenticate with the Tidal Migrations API"
+summary: "Easily authenticate with the Tidal API"
 sidebar: main_sidebar
 permalink: authenticate.html
 ---
@@ -12,14 +12,14 @@ permalink: authenticate.html
 
 
 The purpose of this document is to show you how to modify HTTP requests
-to send authorized requests to the Tidal Migrations API.
-However, to send these requests, you must authenticate with the Tidal Migrations
+to send authorized requests to the Tidal API.
+However, to send these requests, you must authenticate with the Tidal
 API.
 
-In order to authenticate with the Tidal Migrations API, you must provide your
+In order to authenticate with the Tidal API, you must provide your
 username and password in the body.
 
-A request to authenticate into the Tidal Migrations API looks like this:
+A request to authenticate into the Tidal API looks like this:
 
 You will need:
 
@@ -37,7 +37,7 @@ You will need:
 ```
 
 
-This should provide you with an access token and a refresh token. Tidal Migrations's implementation
+This should provide you with an access token and a refresh token. Tidal's implementation
 requires that requests needing authorization contain an additional HTTP `Authorization`
 header. There should be two headers present: `Authorization` and `Content-Type`.
 
@@ -68,7 +68,7 @@ The response of the request is:
 ## Utilising the Ping Endpoint {#ping}
 <font size="3"> <i> api/v1/ping </i> </font> <br>
 
-Verify that you are able to connect to the Tidal Migrations API utilising the `api/v1/ping` endpoint.
+Verify that you are able to connect to the Tidal API utilising the `api/v1/ping` endpoint.
 This endpoint can also be used to ensure you are authenticated.
 
 You will need:

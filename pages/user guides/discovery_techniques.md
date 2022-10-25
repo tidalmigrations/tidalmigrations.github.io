@@ -18,7 +18,7 @@ permalink: index.html
 Immediately getting an idea of the size and scope of your migration is critical
 to successful cloud migration planning.
 
-Our goal at Tidal Migrations is to provide you with useful information within
+Our goal at Tidal is to provide you with useful information within
 60 seconds of signup, and letting you layer in additional information from
 discovery sources as needed.
 

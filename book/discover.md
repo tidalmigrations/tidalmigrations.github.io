@@ -1,5 +1,5 @@
 ---
-title: "Tidal Migrations Layered Discovery Guide"
+title: "Tidal Layered Discovery Guide"
 toc-own-page: true
 links-as-notes: true
 mainfont: NotoSans

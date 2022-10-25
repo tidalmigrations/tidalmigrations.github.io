@@ -114,7 +114,7 @@ This message shows that your installation appears to be working correctly.
 ```
 
 To explicitly check that your Docker installation is able to communicate with
-Tidal Migrations container registry run the command `docker run
+Tidal container registry run the command `docker run
 gcr.io/tidal-1529434400027/hello-world`. You should see the output similar to
 the following:
 
@@ -124,7 +124,7 @@ latest: Pulling from tidal-1529434400027/hello-world
 9e91b00c0251: Pull complete
 Digest: sha256:b60c2de90e0b5c4f7e74b84ca888e2fec1d288d47c99e48bd612e0eefeb604c5
 Status: Downloaded newer image for gcr.io/tidal-1529434400027/hello-world:latest
-Hello from Tidal Migrations!
+Hello from Tidal!
 ```
 
 Another option is to run `tidal doctor` and check the Docker section of the output.

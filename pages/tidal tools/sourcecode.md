@@ -9,7 +9,7 @@ folder: tidaltools
 ---
 ## Tidal Analyze Source Code
 
-Not sure how ready you are to move to the cloud? With Tidal Migrations you have
+Not sure how ready you are to move to the cloud? With Tidal you have
 the option to analyze your specified source code associated with the applications.
 
 The analysis will identify the difficulty to migrate your applications to the
@@ -58,7 +58,7 @@ Try it out!
   - Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
   - As the last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
 
-3. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal Migrations, the URL will show `https://demo.tidalmg.com/#/apps/111` in this case 111 is the application ID.
+3. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://demo.tidalmg.com/#/apps/111` in this case 111 is the application ID.
 
 4. Lastly, you will need a local copy of the source code for the application.
 
@@ -92,7 +92,7 @@ When analyzing a source code (or multiple), you have two options.
 
 ### Running offline
 
-There are circumstances in which you need to perform a source code analysis on an environment without or with restricted internet access. In such case, you can perform the analysis, capture its results and at a later stage upload those results to your Tidal Migrations workspace.
+There are circumstances in which you need to perform a source code analysis on an environment without or with restricted internet access. In such case, you can perform the analysis, capture its results and at a later stage upload those results to your Tidal workspace.
 
 These are the steps you need to follow in order to bypass internet access limitations:
 
@@ -123,7 +123,7 @@ These are the steps you need to follow in order to bypass internet access limita
 
     `tidal analyze code --app-id [app_id_for_your_application] --upload [file_name]`
 
-    You should receive confirmation that the upload has been completed and can navigate to Tidal Migrations to see the results.
+    You should receive confirmation that the upload has been completed and can navigate to Tidal to see the results.
 
 
 
@@ -131,7 +131,7 @@ These are the steps you need to follow in order to bypass internet access limita
 
 
 
-{% include tip.html content="Need to run code analysis on a entire set of applications all from one machine? Run [this command and easily create a directory for every application already in Tidal Migrations](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)" %}
+{% include tip.html content="Need to run code analysis on a entire set of applications all from one machine? Run [this command and easily create a directory for every application already in Tidal](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)" %}
 
 ### Why Docker?
 

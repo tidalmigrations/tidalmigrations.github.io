@@ -9,7 +9,7 @@ redirect_from: getallmovegroups.html
 permalink: get-all-move-groups.html
 ---
 
-Before using each endpoint, you must authenticate to the Tidal Migrations API:
+Before using each endpoint, you must authenticate to the Tidal API:
 [Authentication Guide](index.html)
 
 Once you have authenticated with the Tidal API, utilising each endpoint is super simple.
