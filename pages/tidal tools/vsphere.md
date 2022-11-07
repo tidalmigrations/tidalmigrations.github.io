@@ -157,3 +157,32 @@ Another alternative is to set the following environment variables with the neede
 - VSPHERE_SERVER
 - VSPHERE_TLS
 - VSPHERE_INSECURE
+
+## Troubleshooting
+
+### Login failing with error `expected element type <Envelope> but have <html>`
+
+The reason behind this behavior is that provided vSphere login data references [vCenter REST API](https://developer.vmware.com/apis/vsphere-automation/latest/vcenter/) 
+service which is exposed on `/rest` (versions `<=6.5`) or `/api` (versions `>6.5`) endpoint. 
+
+Instead, Tidal Tools CLI uses [vSphere Web Services API](https://developer.vmware.com/apis/1355/vsphere) which is exposed on `/sdk`
+endpoint. This service is enabled by default on vSphere products for versions `>=v5.5`.
+If you have manually disabled this service, Tidal vSphere functionalities cannot be used.
+
+#### How to login?
+```yaml
+vsphere.server: FQDN (or IP)
+vsphere.username: username@domain (or domain\username)
+vsphere.api_path: /sdk (default path to vSphere Web Services API)
+vsphere.tls: true (or false if using http)
+vsphere.insecure: true (or false to skip certificate checks)
+```
+
+#### Additional context
+1. [vSphere Automation API](https://developer.vmware.com/apis/vsphere-automation/latest/) - provides REST API for
+   managing and automating infrastructure operations of various vSphere services (includes _vCenter REST API_ among other APIs).
+2. [vSphere Web Services API](https://developer.vmware.com/apis/1192/vsphere) - provides SOAP API for
+   centralized management of vSphere infrastructure components (virtual machines, datacenters,...).
+
+The difference between the APIs is that Automation API provides access to underlying service management, 
+while Web Service API provides access to the management of individual components.
