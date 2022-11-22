@@ -1,4 +1,4 @@
-# Tidal
+# Tidal Guides
 
 A set of guides on how to use the Tidal API and Tidal Tools.
 
