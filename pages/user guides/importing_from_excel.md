@@ -1,7 +1,7 @@
 ---
 title: Importing Data from Excel
 keywords: excel, import, apps, data, servers, clusters, database instances
-last_updated: August, 2022
+last_updated: November, 2022
 summary: "Easily import your Excel spreadsheets into Tidal"
 sidebar: main_sidebar
 permalink: import-from-excel.html
