@@ -1,18 +1,11 @@
 ---
 toc: false
-
 title: Integrating with Microsoft Azure Migrate
-
 keywords: sync, import, discover,discovery plan
-
-last_updated: October, 2021
-
+last_updated: November, 2022
 summary: "A walk through on how to synchronize data from Microsoft Azure Migrate with Tidal Platform."
-
 sidebar: main_sidebar
-
 folder: userguides
-
 permalink: azure-migrate.html
 ---
 
@@ -99,7 +92,7 @@ Execute the Azure Migrate export and pipe the servers into Tidal Tools using `sy
 ```
 
 ---
-**NOTE:** 
+**NOTE:**
 The `azure_migrate.rb` script will collect the following data points.
 - host_name
 - ip_address
@@ -112,16 +105,16 @@ The `azure_migrate.rb` script will collect the following data points.
 - operating_system_name
 - operating_system_type
 - operating_system_version
-- first_seen (createdTimestamp) 
+- first_seen (createdTimestamp)
 - last_seen (updatedTimestamp)
 
 ---
 
 ### Review
 
-Once the command succeeds you can navigate to your Tidal Workspace URL to see the results. Use the left menu bar to navigate to `Discover > Overview` where the “Most recently run job” card should say `Sync Servers` and have the same timestamp as when the sync servers command suceeded.
+Once the command succeeds you can navigate to your Tidal Workspace URL at `https://my_workspace.tidal.cloud/activity-logs` to see the results. Use the left menu bar to navigate to `Inventory > Activity Logs` where the “Latest job” card should say `Sync Servers` and have the same timestamp as when the sync servers command succeeded.
 This means that `tidal sync servers` successfully updated your server inventory, as seen in the image below.
 
-![Server Sync success](../../images/azure-migrate-review.png)
+{% include image.html file="import-servers.png" %}
 
 View the imported servers that have been from Azure Migrate to this Tidal workspace in the left menu under `Assess > Servers`. Select an imported server and some compute, virtualization and networking parameters have be pre-populated based on the data in Azure Migrate that was imported into this Tidal workspace.

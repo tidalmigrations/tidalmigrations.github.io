@@ -2,7 +2,7 @@
 toc: false
 title: Public URL Discovery
 keywords: urls, discover
-last_updated: January 19, 2021
+last_updated: November, 2022
 summary: "Discover your organizations public URLs"
 sidebar: main_sidebar
 folder: userguides
@@ -50,11 +50,11 @@ If there are more you can note down all of them here.
 <br>
 
 ## Step 4
-Go to your account on Tidal my_domain.tidal.cloud/#/discover/public_urls.
+Go to your account on Tidal `https://my_workspace.tidal.cloud/public-urls`.
 Enter the CIDR range you found above, from the whois command or any labelled as netblock from ipinfo.io.
 In this case that is `104.194.16.0/22` and `205.210.17.0/24`.
 
-{% include image.html file="search1.png" %}
+{% include image.html file="public_url_search1.png" %}
 <br>
 <br>
 

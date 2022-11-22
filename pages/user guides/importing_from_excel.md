@@ -13,8 +13,7 @@ if you have captured these.
 
 You can import your Excel spreadsheets into Tidal by visiting:
 
-``https://your_workspace.tidal.cloud/#/discover/import``
-
+``https://your_workspace.tidal.cloud/import/``
 
 ## Preparing your Spreadsheet
 
@@ -34,7 +33,7 @@ Ie. If your Application has a dependency on a server, you need to have that serv
 
 You should have one sheet or file per type of record.
 
-There are several default columns values included for each record type, 
+There are several default columns values included for each record type,
 however if you have additional information on your inventory that would like to include, you can create custom fields for a record (Check step 3). 
 Remember to add those fields before importing the data.
 
@@ -42,15 +41,15 @@ Remember to add those fields before importing the data.
 
 1. Select the data type you wish to import.
 
-    {% include image.html file="step0.PNG" %}
+    {% include image.html file="import_step0.png" %}
 
 2. Select the sheet in your file that you want to import data from.
 
-    {% include image.html file="step1.PNG" %}
+    {% include image.html file="import_step1.png" %}
 
 3. Map the columns of your sheet to the fields from the drop down. If you have a column that is not present as a field and you want to import it, you can add that field.
 
-    {% include image.html file="step2.PNG" %}
+    {% include image.html file="import_step2.png" %}
 
 4. Click submit to import the data.
 
