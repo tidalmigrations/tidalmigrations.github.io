@@ -40,7 +40,7 @@ Once you have gathered this information, you'll need set it as an environment va
 
 ## 2. Gather Move Group ID
 
-To find the ID of the move group that you'd like to export, log in to the Tidal Platform, click the "Plan Migration" button under the "Planning" section in the menu. Once there, click on the Move Group that contains the servers you'd like to export. Here, you'll be able to find the ID of the move group at the end of the URL, as shown below:
+To find the ID of the move group that you'd like to export, log in to the Tidal Accelerator Platform and from the `Projects` view, select the project that your move group is associated with. In the `Project` view, go to `Migration Waves` tab. You should see a list of move groups that are associated with the selected project. Click on the name of the move group you're interested in. Here, you'll be able to find the ID of the move group at the end of the URL, as shown below:
 
 {% include image.html file="move_group_id.png" caption="An image highlighting how to find a move group id." %}
 
