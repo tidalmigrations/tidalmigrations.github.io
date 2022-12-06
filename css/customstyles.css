@@ -430,9 +430,12 @@ span.projectTitle {
 .footer {
     text-align: right;
 }
+.footer-link::after {
+    visibility: hidden;
+}
 .footer-logo {
     position: relative;
-    right: -65px;
+    right: -33px;
 }
 
 .footerMeta {
