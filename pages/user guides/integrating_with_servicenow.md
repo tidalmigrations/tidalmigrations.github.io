@@ -89,7 +89,7 @@ In order for your Tidal workspace to communicate with your ServiceNow instance, 
 
 - Log into your Tidal workspace and head to the ServiceNow integration page.
 
-`` https://<example>.tidal.cloud/#/servicenow ``
+`` https://<example>.tidal.cloud/_/#/servicenow ``
 
 - Enter the following information:
     - Instance Name
