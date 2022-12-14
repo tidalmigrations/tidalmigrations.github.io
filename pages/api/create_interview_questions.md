@@ -23,7 +23,7 @@ For any additional details regarding the endpoint, checkout the Tidal API docume
 
 # Tools
 
- * [jq](https://stedolan.github.io/jq/) - `jq` is a CLI that allows us quickly parse and filter JSON.
+- [jq](https://stedolan.github.io/jq/) - `jq` is a CLI that allows us quickly parse and filter JSON.
 
 # Creating Interview Questions
 
@@ -33,7 +33,7 @@ Our interview questions are tightly coupled with our application fields. So, bef
 
 ### Create a custom field
 
-You can create a custom field for an application by going to https://[your subdomain].tidal.cloud/#/admin and clicking on the 'New Application Field' button. Note: we don't limit the type of field (dropdown, text, number, currency, checkbox) that can be used in interview questions.
+You can create a custom field for an application by going to https://[your workspace].tidal.cloud/fields/applications and clicking on the 'New Application Field' button. Note: we don't limit the type of field (dropdown, text, number, currency, checkbox) that can be used in interview questions.
 
 ### Get a custom field id
 
@@ -44,7 +44,6 @@ Once we have created a custom field, we need to get its field id. So, to start w
       -H authorization\:\ \"Bearer\ [auth token]\" \
       -H Content-Type\:\ application/json \
       -o fields.json
-
 
 Once we have that, we need to search for our newly created field name. If you have 'jq' installed you can use it to query the json file for your field name
 
@@ -67,7 +66,6 @@ Which should give you an output similiar to
       "currency_id": null,
       "field_options": []
     }
-
 
 ## Custom Question
 
@@ -131,7 +129,6 @@ Putting this all together we can then post this request to our API
       -H authorization\:\ \"Bearer\ [auth token]\" \
       -H Content-Type\:\ application/json \
       -d \{\"question\"\:\ \{\ \"text\"\:\ \"How\ many\ users\ does\ this\ application\ have\?\"\,\ \"number\"\:\ 22\,\ \"field_id\"\:\ 1\}\}
-
 
 ### Updating an existing quesiton
 
