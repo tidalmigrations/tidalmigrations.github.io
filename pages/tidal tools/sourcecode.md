@@ -50,7 +50,7 @@ Try it out!
 
 ## Getting Started
 
-1. Before you can analyze a source code and rank your applications by *Migration Difficulty*, you must enable the Source Code Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://yourworkspace.tidal.cloud/#/admin/setting). You will find the Source Code Analysis section at the bottom of the page.
+1. Before you can analyze a source code and rank your applications by *Migration Difficulty*, you must enable the Source Code Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://[your workspace].tidal.cloud/preferences). You will find the Source Code Analysis section at the bottom of the page.
 
 2. Now that you have activated the Source Code Analysis feature, you need to install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
   - How to [install](tidal-tools.html#install) Tidal Tools.
@@ -58,7 +58,7 @@ Try it out!
   - Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
   - As the last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
 
-3. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://demo.tidal.cloud/#/apps/111` in this case 111 is the application ID.
+3. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://[your workspace].tidal.cloud/apps/111/overview` in this case 111 is the application ID.
 
 4. Lastly, you will need a local copy of the source code for the application.
 
