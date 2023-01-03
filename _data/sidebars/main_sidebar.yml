@@ -70,9 +70,6 @@ entries:
           - title: Source Code Analysis
             output: web
             url: analyze-source-code.html
-          - title: Accessing Source Code Premium Insights
-            output: web
-            url: /source-code-insights.html
           - title: Database Analysis
             output: web
             url: analyze-database.html
