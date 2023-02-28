@@ -1,6 +1,6 @@
 ---
 title: Gather Machine Stats
-keywords: machine, stats, cron, job, windows, unix
+keywords: machine, stats, process, cron, job, windows, unix
 last_updated: April, 2022
 summary: "Gather machine stats from remote environments"
 sidebar: main_sidebar
@@ -115,6 +115,27 @@ On a machine with Tidal Tools installed and which is connected to the internet, 
 As above, you can provide the username with the `-UserName` parameter.
 
 This approach is useful when you want to take a snapshot of your infrastructure and upload it directly to the Tidal Platform in one command. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
+
+#### Gather Process Stats
+
+You also can optionally capture metrics about processes running on the server using the command-line flag `-ProcessStats`. It will capture the following metadata for each process.
+
+- User
+- Process Name
+- Process Path
+- Memory Used (MB)
+- Max Memory Used (MB)
+- Total Alive Time
+- PID
+- PPID
+
+To enable capturing process metrics and pipe the output to Tidal Accelerator use:
+
+    ./runner.ps1 -ProcessStats | tidal sync servers
+
+With this, you can also access this information on the Tidal Accelerator platform from `https://my_workspace.tidal.cloud/servers/your_server_id/process-stats`
+
+{% include image.html file="process_stats.png" %}
 
 #### Run Machine Stats in a Scheduled Task
 
@@ -262,6 +283,7 @@ dependencies setup:
 ### Run Machine Stats
 
 Now that you have created a hosts file, you have three options for how to run Machine Stats depending on your needs. You can run the program manually and save the output to a result file. You could use Machine Stats to capture data points on your inventory and send its output to your Tidal workspace. Finally, You can use Machine Stats to capture statistics on a host for a period of time. The following 3 sections will guide you through these scenarios.
+
 #### Execute Machine Stats Manually
 
 Execute `machine-stats` in your current working directory, and save the result to a `json` file of your choice.
@@ -281,6 +303,27 @@ Execute `machine-stats` and pipe its output to Tidal Tools:
     $ machine-stats | tidal sync servers
 
 This approach is useful when you want to take a snapshot of your infrastructure and upload it directly to the Tidal Platform in one command. Since we're uploading the result immediately, this approach will only work on a server which has `tidal tools` installed and which is connected to the internet.
+
+#### Gather Process Stats
+
+You also can optionally capture metrics about processes running on the server using the command-line flag `--process-stats`. It will capture the following metadata for each process.
+
+- User
+- Process Name
+- Process Path
+- Memory Used (MB)
+- Max Memory Used (MB)
+- Total Alive Time
+- PID
+- PPID
+
+To enable capturing process metrics and pipe the output to Tidal Accelerator use:
+
+    $ machine-stats --process-stats | tidal sync servers
+
+With this, you can also access this information on the Tidal Accelerator platform from `https://my_workspace.tidal.cloud/servers/your_server_id/process-stats`
+
+{% include image.html file="process_stats.png" %}
 
 #### Run Machine Stats on a Cron Job
 
