@@ -98,6 +98,9 @@ entries:
           - title: Exporting Servers from Move Groups
             output: web
             url: /exporting-servers-to-csv.html
+          - title: Integrating with Jira
+            output: web
+            url: /integrate-with-jira.html
 
       - title: API
         output: web
