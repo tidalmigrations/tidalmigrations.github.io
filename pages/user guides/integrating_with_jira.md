@@ -14,14 +14,15 @@ permalink: integrate-with-jira.html
 Cloud migrations aren't just a solo activity. It's a big job that
 requires coordination across your organization. Using Tidal's Task
 integration with Jira, we enable you to tie your cloud migration tasks
-to resources within Tidal. This helps what tasks are assigned to which
-resources and where your project overall stands in it's migration.
+to resources within Tidal. This helps teams track what tasks are
+assigned to which resources and where your project overall stands in
+it's migration.
 
 
 
 ## Enabling Jira
 
-Before we can be able to pull in data from Jira, we need you to
+Before we can pull in data from Jira, we need you to
 authorize Tidal.
 From within Tidal Accelerator:
 
