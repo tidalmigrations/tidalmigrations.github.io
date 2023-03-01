@@ -129,7 +129,7 @@ You also can optionally capture metrics about processes running on the server us
 - PID
 - PPID
 
-To enable capturing process metrics and pipe the output to Tidal Accelerator use:
+To enable capturing process metrics and pipe the output to Tidal Accelerator add the `-ProcessStats` flag to `runner.ps1`:
 
     ./runner.ps1 -ProcessStats | tidal sync servers
 
@@ -317,7 +317,7 @@ You also can optionally capture metrics about processes running on the server us
 - PID
 - PPID
 
-To enable capturing process metrics and pipe the output to Tidal Accelerator use:
+To enable capturing process metrics and pipe the output to Tidal Accelerator add the `--process-stats flag` to `machine-stats`:
 
     $ machine-stats --process-stats | tidal sync servers
 
