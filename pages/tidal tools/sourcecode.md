@@ -7,12 +7,13 @@ sidebar: main_sidebar
 permalink: analyze-source-code.html
 folder: tidaltools
 ---
+
 ## Tidal Analyze Source Code
 
 Not sure how ready you are to move to the cloud? With Tidal you have
 the option to analyze your specified source code associated with the applications.
 The analysis will identify the difficulty to migrate your applications to the
-cloud. 
+cloud.
 
 If you are interested in a deeper dive source code assessment, let us know at
 [info@tidalcloud.com](mailto:info@tidalcloud.com).
@@ -24,12 +25,13 @@ Try it out!
 ## Getting Started
 
 1. Install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
-  - How to [install](tidal-tools.html#install) Tidal Tools.
-  - Install Tidal Tools [dependencies](tidal-tools.html#dependencies).
-  - Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
-  - As the last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
 
-2. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://demo.tidal.cloud/#/apps/111` in this case 111 is the application ID.
+- How to [install](tidal-tools.html#install) Tidal Tools.
+- Install Tidal Tools [dependencies](tidal-tools.html#dependencies).
+- Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
+- As the last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
+
+2. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://[your workspace].tidal.cloud/apps/111/overview` in this case 111 is the application ID.
 
 3. Lastly, you will need a local copy of the source code for the application.
 
@@ -45,15 +47,16 @@ When analyzing a source code (or multiple), you have two options.
 
 1. Perform the source code analysis and upload the result immediately to your workspace. This is Tidal Tools' default behaviour. To do so, all you need to do is run the following command.
 
-    ```bash
-    cd /path/to/source-code
-    tidal analyze code --app-id 111
-    ```
+   ```bash
+   cd /path/to/source-code
+   tidal analyze code --app-id 111
+   ```
 
-    Alternatively, you can pass the location to the source code.
-    ```bash
-    tidal analyze code ~/location/to-source-code/ --app-id 111
-    ```
+   Alternatively, you can pass the location to the source code.
+
+   ```bash
+   tidal analyze code ~/location/to-source-code/ --app-id 111
+   ```
 
 2. Perform the source code analysis and upload the results **at a later time**. The following section will explain how to run database analysis in **offline mode**
 
@@ -63,33 +66,34 @@ There are circumstances in which you need to perform a source code analysis on a
 
 These are the steps you need to follow in order to bypass internet access limitations:
 
-1. On a Machine with internet access, you need to install, and configure Tidal Tools. 
+1. On a Machine with internet access, you need to install, and configure Tidal Tools.
 
 2. Package Tidal Tools and its required docker container images into a tar file. This will allow you to move the archive file into your restricted environment. To do so, run the following command.
 
-    `tidal backup`
+   `tidal backup`
 
-    Once it has finished, you will find (in your current location) a tar file called `tidal-snapshot_DATE.tar`. This is the file you need to transport into your internet restricted environment.
+   Once it has finished, you will find (in your current location) a tar file called `tidal-snapshot_DATE.tar`. This is the file you need to transport into your internet restricted environment.
 
 3. On the machine that has no internet access, you will now restore Tidal Tools using the following command.
 
-    `tidal restore tidal-snapshot_DATE.tar`
+   `tidal restore tidal-snapshot_DATE.tar`
 
-    This will load a docker image and all the existing Tidal Tools configurations from the original machine. You can now run the source code analysis without any external network connectivity.
+   This will load a docker image and all the existing Tidal Tools configurations from the original machine. You can now run the source code analysis without any external network connectivity.
 
-    `tidal analyze code [path/to-directory] --offline --output-dir [directory]`
+   `tidal analyze code [path/to-directory] --offline --output-dir [directory]`
 
-    Note:
-    - The `--offline` flag indicates to Tidal Tools that the output needs to be stored in a file instead of being uploaded.
-    - The `--output-dir` flag determines where the output will be located.
+   Note:
 
-    After the analysis is completed, you will find a zip file called, `result-<DATE>.zip` that can then be transferred into a machine with internet connectivity.
+   - The `--offline` flag indicates to Tidal Tools that the output needs to be stored in a file instead of being uploaded.
+   - The `--output-dir` flag determines where the output will be located.
+
+   After the analysis is completed, you will find a zip file called, `result-<DATE>.zip` that can then be transferred into a machine with internet connectivity.
 
 4. Back to the machine with internet access, you can now upload your results to your workspace with this command.
 
-    `tidal analyze code --app-id [app_id_for_your_application] --upload [file_name]`
+   `tidal analyze code --app-id [app_id_for_your_application] --upload [file_name]`
 
-    You should receive confirmation that the upload has been completed and can navigate to Tidal to see the results.
+   You should receive confirmation that the upload has been completed and can navigate to Tidal to see the results.
 
 {% include tip.html content="Need to run code analysis on a entire set of applications all from one machine? Run [this command and easily create a directory for every application already in Tidal Migrations](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)" %}
 

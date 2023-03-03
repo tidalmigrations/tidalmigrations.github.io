@@ -45,7 +45,7 @@ For example, in Oracle databases, the Data Dictionary and AWR repository tables 
 
 ## Getting Started
 
-1. Before you can analyze a database, You must enable the Database Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://yourworkspace.tidal.cloud/#/admin/setting). You will find the Database Analysis section at the bottom of the page.
+1. Before you can analyze a database, You must enable the Database Analysis feature for your account. To do so, go to your workspace Settings/Preferences (https://[your workspace].tidal.cloud/preferences). You will find the Database Analysis section at the bottom of the page.
 2. Now that you have activated the Database Analyze feature, You need to install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
   - How to [install](tidal-tools.html#install) Tidal Tools.
   - Install Tidal Tools [dependencies](tidal-tools.html#dependencies).
@@ -65,7 +65,7 @@ For the most part, all supported Database engines share very similar configurati
 
 Your YAML configuration file for Postgres, MySQL, and SQL Server must contain the following information.
 
-  - `id` - The id of the database from your Tidal account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal, the URL will show https://demo2.tidal.cloud/#/database_instances/111 in this case 111 is the database instance ID.
+  - `id` - The id of the database from your Tidal account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal, the URL will show https://[your workspace].tidal.cloud/database_instances/111/overview in this case 111 is the database instance ID.
   - `name` - A common name for your database could be the same or different from db_name, but this value is arbitrary and only for your reference.
   - `engine` - The database vendor, either `SQL Server`, `MySQL`, or `PostgreSQL`, it is not case sensitive.
   - `host` - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
@@ -77,7 +77,7 @@ Your YAML configuration file for Postgres, MySQL, and SQL Server must contain th
 
 When analyzing Oracle databases, the attributes in your configuration file must contain the following details.
 
-  - `id` - The id of the database from your Tidal account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal, the URL will show https://demo2.tidal.cloud/#/database_instances/111 in this case 111 is the database instance ID.
+  - `id` - The id of the database from your Tidal account. You can find it in the URL bar when looking at a database instance. ex. If you are viewing a database instance in Tidal, the URL will show https://[your workspace].tidal.cloud/database_instances/111/overview in this case 111 is the database instance ID.
   - `name` - A common name for your database.
   - `analyze_workload` - When set to **true** workload analysis is enabled. Be sure to configure AWR data retention and verify licensing. For more information check the advance configuration [section](#advanced-configuration)
   - `engine` - **Oracle**
