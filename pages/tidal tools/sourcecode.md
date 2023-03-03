@@ -31,11 +31,11 @@ Try it out!
 - Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
 - As the last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
 
-3. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://[your workspace].tidal.cloud/apps/111/overview` in this case 111 is the application ID.
+2. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://[your workspace].tidal.cloud/apps/111/overview` in this case 111 is the application ID.
 
-4. Lastly, you will need a local copy of the source code for the application.
+3. Lastly, you will need a local copy of the source code for the application.
 
-5. Perform the Source Code Analysis. There are 2 options to do so. You can find more details in this [section](#perform-the-analysis).
+4. Perform the Source Code Analysis. There are 2 options to do so. You can find more details in this [section](#perform-the-analysis).
 
 That is all. You should be able to see the results in your workspace within seconds.
 
