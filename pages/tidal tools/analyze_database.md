@@ -69,7 +69,7 @@ Your YAML configuration file for Postgres, MySQL, and SQL Server must contain th
   - `name` - A common name for your database could be the same or different from db_name, but this value is arbitrary and only for your reference.
   - `engine` - The database vendor, either `SQL Server`, `MySQL`, or `PostgreSQL`, it is not case sensitive.
   - `host` - The hostname of the server that the database is located on and is accessible via a network connection from your current device and location.
-  - `port` - The port that the host has open and the database can accept connections on, for SQL Server it is `1433`, for MySQL it is `3306`, and for PostgreSQL the default port is `5432`.
+  - `port` - The port that the host has open and the database can accept connections on, for SQL Server it is `1433` or the port of the named instance, for MySQL it is `3306`, and for PostgreSQL the default port is `5432`.
   - `db_name` - The name of the database you are analyzing // or in the case of Oracle, the "service name". 
   - `user` - A username to authenticate with the database, check the section below for more details about creating a user and granting permissions.
   - `password` - A password for the corresponding user.
