@@ -22,7 +22,7 @@ It can be deployed into any virtual environment that is compatible with OVA or V
 To get started:
 
 1. Download the [OVA image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-18-04-server-amd64.ova) or the [VHD image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-server-18-04-amd64-hyperv-disk.vhd)
-2. Deploy the downloaded OVA file into your VMware (or VirtualBox, or any OVA compatible virtual environment)
+2. Deploy the downloaded OVA file into your VMware (or VirtualBox, or any OVA-compatible virtual environment) or VHD file into your Hyper-V Manager.
 3. Once the VM is running, log in with the following credentials:
 
 ```text
