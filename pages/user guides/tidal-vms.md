@@ -17,12 +17,12 @@ The Ubuntu Server image can also perform discovery without any network connectiv
 
 The image runs standard [Ubuntu Server (18.04.6)](https://cdimage.ubuntu.com/ubuntu/releases/18.04.6/release/) and has a CLI only interface. It comes with the latest version of [Tidal Tools](https://tidalcloud.com/tidal-tools/), [Machine Stats](https://pypi.org/project/machine-stats/) and [DNS Tools](https://dnstools.ninja/) installed.
 
-It can be deployed into any virtual environment that is compatible with OVA based images, and is compatible with AMD64 or EM64T architectures.
+It can be deployed into any virtual environment that is compatible with OVA or VHD-based images, and is compatible with AMD64 or EM64T architectures.
 
 To get started:
 
-1. [Download the image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-18-04-server-amd64.ova)
-2. Deploy the downloaded OVA file into your VMware (or VirtualBox, or any OVA compatible virtual environment)
+1. Download the [OVA image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-18-04-server-amd64.ova) or the [VHD image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-ubuntu-server-18-04-amd64-hyperv-disk.vhd)
+2. Deploy the downloaded OVA file into your VMware (or VirtualBox, or any OVA-compatible virtual environment) or VHD file into your Hyper-V Manager.
 3. Once the VM is running, log in with the following credentials:
 
 ```text
