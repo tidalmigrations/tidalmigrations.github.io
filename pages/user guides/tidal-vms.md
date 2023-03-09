@@ -64,7 +64,7 @@ If you need any help in deploying the VM or getting started with your discovery,
 
 ## Windows Server 2022
 
-The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022) and comes with a 180-day trial. It can be deployed into any virtual environment that is compatible with OVA based images.
+The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022) and comes with a 180-day trial. It can be deployed into any virtual environment that is compatible with OVA or VHD-based images.
 
 {% include note.html content="This image comes only with the latest version of
 [Tidal Tools](https://tidalcloud.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/)
@@ -73,8 +73,8 @@ since it is only intended to be used when capturing metrics with Machine Stats o
 
 To get started:
 
-1. [Download the image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-windows-server-2022.ova)
-2. Deploy the downloaded OVA file into your VMware (or VirtualBox, or any OVA compatible virtual environment)
+1. Download the [OVA image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-windows-server-2022.ova) or the [VHD image](https://d2ny8m13pxxvfx.cloudfront.net/tidal-windows-server-2022-hyperv-disk.vhd)
+2. Deploy the downloaded OVA file into your VMware (or VirtualBox, or any OVA-compatible virtual environment) or VHD file into your Hyper-V Manager.
 3. Once the VM is running, you can log in with either of the following credentials:
 
 ```text
