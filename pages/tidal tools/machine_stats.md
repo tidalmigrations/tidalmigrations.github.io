@@ -166,7 +166,7 @@ For piping the results straight to your Tidal workspace with Tidal Tools, you ca
 | tidal sync servers
 ```
 
-If you plan on using this approach, remember to log into `tidal tools` with `tidal login`.
+If you plan on using this approach, remember to save your password locally using `tidal config set tidal.password 'your-password'`.
 
 We recommend you run your script from the `machine_stats\windows` directory to ensure everything is working correctly. If this works, navigate to a different directory and run the script again, to ensure you have the paths set correctly. If this works, you should be ready to invoke the script using a scheduled task.
 
