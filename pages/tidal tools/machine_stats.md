@@ -225,6 +225,12 @@ If you’d like to gather data more frequently than 5 minutes, for example in 3 
 
 If you are gathering general static information from the hosts, and only need to invoke Machine Stats for Windows once. You can scan up to 800 hosts, in around 15 minutes with a VM with 2 vCPUs (3.1 GHz), 1 GB RAM (DDR4) and 8 GB storage.
 
+### Known Issues in Windows
+
+#### If using local Administrator account, allow remote access
+
+Temporarily set the `LocalAccountTokenFilterPolicy` registry value, located at `[HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]` to 1. This will disable the User Account Control (UAC) restrictions for members of the local administrators group who are accessing resources remotely via Remote Procedure Call (RPC).
+
 ## Unix-like systems
 
 ### Introduction
