@@ -49,13 +49,13 @@ When analyzing a source code (or multiple), you have two options.
 
    ```bash
    cd /path/to/source-code
-   tidal analyze code --app-id 111
+   tidal analyze code --app-id [app_id_for_your_application]
    ```
 
    Alternatively, you can pass the location to the source code.
 
    ```bash
-   tidal analyze code ~/location/to-source-code/ --app-id 111
+   tidal analyze code [/path/to/source-code] --app-id [app_id_for_your_application]
    ```
 
 2. Perform the source code analysis and upload the results **at a later time**. The following section will explain how to run database analysis in **offline mode**
@@ -78,20 +78,34 @@ These are the steps you need to follow in order to bypass internet access limita
 
    `tidal restore tidal-snapshot_DATE.tar`
 
-   This will load a docker image and all the existing Tidal Tools configurations from the original machine. You can now run the source code analysis without any external network connectivity.
+   This will load a docker image and all the existing Tidal Tools configurations from the original machine. 
 
-   `tidal analyze code [path/to-directory] --offline --output-dir [directory]`
+4. You can now run the source code analysis without any external network connectivity.
+
+   ```bash
+   cd /path/to/source-code
+   tidal analyze code --offline --output-dir [directory]
+   ```
+
+   Alternatively, you can pass the location to the source code.
+
+   ```bash
+   tidal analyze code [/path/to/source-code] --offline --output-dir [directory]
+   ```
 
    Note:
 
    - The `--offline` flag indicates to Tidal Tools that the output needs to be stored in a file instead of being uploaded.
    - The `--output-dir` flag determines where the output will be located.
 
-   After the analysis is completed, you will find a zip file called, `result-<DATE>.zip` that can then be transferred into a machine with internet connectivity.
+   After the analysis is completed, you will find an artifact file called `code-analysis-<DATE>-<TYPE>.json` that can then be transferred into a machine with internet connectivity.
 
-4. Back to the machine with internet access, you can now upload your results to your workspace with this command.
+5. Back to the machine with internet access, you can now upload your results to your workspace with this command.
 
-   `tidal analyze code --app-id [app_id_for_your_application] --upload [file_name]`
+
+   ```bash
+   tidal analyze code upload [file_name] --app-id [app_id_for_your_application]`
+   ```
 
    You should receive confirmation that the upload has been completed and can navigate to Tidal to see the results.
 
@@ -99,7 +113,8 @@ These are the steps you need to follow in order to bypass internet access limita
 
 ### Why Docker?
 
-You need to install Docker in order to complete the source code analysis. This is because the analysis uses several system dependent software libraries so by using Docker the analysis can use those libraries without you requiring to install the correct versions and dependencies.
+You need to install Docker in order to complete the source code analysis. This is because the analysis uses several system dependent software libraries. 
+By using Docker, the analysis can use those libraries without requiring you to install any other dependencies.
 
 ### What about security?
 
