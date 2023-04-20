@@ -109,7 +109,7 @@ These are the steps you need to follow in order to bypass internet access limita
 
    You should receive confirmation that the upload has been completed and can navigate to Tidal to see the results.
 
-{% include tip.html content="Need to run code analysis on a entire set of applications all from one machine? Run [this command and easily create a directory for every application already in Tidal Migrations](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)" %}
+{% include tip.html content="Need to run code analysis on a entire set of applications all from one machine? Run [this command and easily create a directory for every application already in Tidal Accelerator](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)" %}
 
 ### Why Docker?
 
