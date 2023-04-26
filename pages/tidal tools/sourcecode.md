@@ -84,19 +84,18 @@ These are the steps you need to follow in order to bypass internet access limita
 
    ```bash
    cd /path/to/source-code
-   tidal analyze code --offline --output-dir [directory]
+   tidal analyze code --offline
    ```
 
    Alternatively, you can pass the location to the source code.
 
    ```bash
-   tidal analyze code [/path/to/source-code] --offline --output-dir [directory]
+   tidal analyze code [/path/to/source-code] --offline
    ```
 
    Note:
 
    - The `--offline` flag indicates to Tidal Tools that the output needs to be stored in a file instead of being uploaded.
-   - The `--output-dir` flag determines where the output will be located.
 
    After the analysis is completed, you will find an artifact file called `code-analysis-<DATE>-<TYPE>.json` that can then be transferred into a machine with internet connectivity.
 
