@@ -52,10 +52,10 @@ When analyzing a source code (or multiple), you have two options.
    tidal analyze code --app-id [app_id_for_your_application]
    ```
 
-   Alternatively, you can pass the location to the source code.
+   Alternatively, you can pass multiple locations or even wildcard for analysis. You can even specify individual files.
 
    ```bash
-   tidal analyze code [/path/to/source-code] --app-id [app_id_for_your_application]
+   tidal analyze code [/path/to/source-code-A] [/path/to/source-code-B] --app-id [app_id_for_your_application]
    ```
 
 2. Perform the source code analysis and upload the results **at a later time**. The following section will explain how to run database analysis in **offline mode**
@@ -87,10 +87,10 @@ These are the steps you need to follow in order to bypass internet access limita
    tidal analyze code --offline
    ```
 
-   Alternatively, you can pass the location to the source code.
+   Alternatively, you can pass multiple locations or even wildcard for analysis. You can even specify individual files.
 
    ```bash
-   tidal analyze code [/path/to/source-code] --offline
+   tidal analyze code [/path/to/source-code-A] [/path/to/source-code-B] --offline
    ```
 
    Note:

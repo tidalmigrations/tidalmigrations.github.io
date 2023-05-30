@@ -73,6 +73,9 @@ entries:
           - title: Database Analysis
             output: web
             url: analyze-database.html
+          - title: HTTP Web Log Analysis
+            output: web
+            url: analyze-logs.html
           - title: Application Interview Best Practices
             output: web
             url: interviews.html
