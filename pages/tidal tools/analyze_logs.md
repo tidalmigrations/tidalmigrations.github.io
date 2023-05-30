@@ -7,7 +7,7 @@ sidebar: main_sidebar
 permalink: analyze-logs.html
 folder: tidaltools
 ---
-Not sure what is the best time to perform cloud migration? 
+Not sure when the best time to perform a migration cut over is? 
 With Tidal, you have the option to analyze the HTTP web logs associated with your applications.
 
 The analysis will provide relevant insights regarding request volumes, users, and bandwidth usage patterns over time. 
