@@ -17,7 +17,7 @@ The Ubuntu Server image can also perform discovery without any network connectiv
 
 The image runs standard [Ubuntu Server (18.04.6)](https://cdimage.ubuntu.com/ubuntu/releases/18.04.6/release/) and has a CLI only interface. It comes with the latest version of [Tidal Tools](https://tidalcloud.com/tidal-tools/), [Machine Stats](https://pypi.org/project/machine-stats/) and [DNS Tools](https://dnstools.ninja/) installed.
 
-It can be deployed into any virtual environment that is compatible with OVA or VHD-based images, and is compatible with AMD64 or EM64T architectures.
+It can be deployed into any virtual environment that is compatible with OVA, VMDK or VHD-based images, and is compatible with AMD64 or EM64T architectures. Like VMware Workstation/Fusion.
 
 To get started:
 
@@ -64,7 +64,7 @@ If you need any help in deploying the VM or getting started with your discovery,
 
 ## Windows Server 2022
 
-The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022) and comes with a 180-day trial. It can be deployed into any virtual environment that is compatible with OVA or VHD-based images.
+The image runs [Windows Server (2022 Datacenter Evaluation)](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022) and comes with a 180-day trial. It can be deployed into any virtual environment that is compatible with OVA, VMDK or VHD-based images. Like VMware Workstation/Fusion.
 
 {% include note.html content="This image comes only with the latest version of
 [Tidal Tools](https://tidalcloud.com/tidal-tools/) and [Machine Stats](https://pypi.org/project/machine-stats/)
