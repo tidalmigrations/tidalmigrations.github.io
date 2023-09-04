@@ -30,7 +30,7 @@ tidal analyze logs [path/to/log_file]
    Non-supported files will be skipped.
 
 ```bash
-tidal analyze code [/path/to/log_folder] [/path/to/other_folder]/*.log
+tidal analyze logs [/path/to/log_folder] [/path/to/other_folder]/*.log
 ```
 
 ## Upload log analysis
@@ -40,13 +40,13 @@ This can help track the changes and allow you to easily generate reports.
 You can get started by running log analysis:
 
 ```bash
-tidal analyze log [directory] --json
+tidal analyze logs [directory] --json
 ```
    
 And upload the produced JSON log analysis result file by using the following command:
    
 ```bash
-tidal analyze log upload [file] --app-id [app_id_for_your_application]
+tidal analyze logs upload [file] --app-id [app_id_for_your_application]
 ```
 
 {% include note.html content="The log analysis result data must be uploaded manually." %}
@@ -56,7 +56,7 @@ If your log anaysis data has been exported to JSON for reusability, or you would
 convert saved data into PDF, you can do so by running:
 
 ```bash
-tidal analyze log generate [file]
+tidal analyze logs generate [file]
 ```
 
 This will convert a JSON result into a PDF report.
