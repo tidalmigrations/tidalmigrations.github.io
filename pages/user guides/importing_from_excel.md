@@ -10,8 +10,8 @@ permalink: import-from-excel.html
 Tidal's importer will guide you through mapping your columns to our
 fields, creating your own fields, and even making associations between
 dependencies if you have captured these. When using the Tidal
-importer, we will create or update records depending on the name's or
-host name's uniqueness.
+importer, we will create or update records depending on the names or
+host names uniqueness.
 
 You can import your Excel spreadsheets into Tidal by visiting:
 
