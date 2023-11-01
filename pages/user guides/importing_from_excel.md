@@ -7,9 +7,11 @@ sidebar: main_sidebar
 permalink: import-from-excel.html
 ---
 
-Tidal's importer will guide you through mapping your columns to our fields,
-create your own fields and even make associations between dependencies
-if you have captured these.
+Tidal's importer will guide you through mapping your columns to our
+fields, creating your own fields, and even making associations between
+dependencies if you have captured these. When using the Tidal
+importer, it will create or update records depending on the names or
+host names uniqueness.
 
 You can import your Excel spreadsheets into Tidal by visiting:
 
@@ -21,10 +23,9 @@ If you'd like to try the process itself but don't have a file yet, you can use t
 
 You should import your data in the following order:
 
-1. Virtualization Clusters
-2. Servers
-3. Database Instances
-4. Applications
+1. Servers
+2. Database Instances
+3. Applications
 
 This order is especially important if you are planning to import dependencies for your Databases and Applications.
 Ie. If your Application has a dependency on a server, you need to have that server imported first for the dependency to be imported correctly.
@@ -57,21 +58,6 @@ Remember to add those fields before importing the data.
 
 {% include tip.html content="The Tags option can be used to generate multiple tags and associate them with the record. You can use this track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)" %}
 
-### Importing Virtualization Clusters
-
-Default fields:
-- Hypervisor Technology
-- Servers
-
-There are no required fields when importing Virtualization clusters. 
-
-* _Hypervisor Technology_, this specifies the technology that is used to run the hypervisor. Ex. VMware ESXi, Hyper-V. 
-
-* _Servers_, As you import other records, (ex. Applications, Databases) this field is used to find the correct Server and create those dependencies.
-
-    {% include note.html content="Make sure your server inventory (when importing virtual servers) contains a field `Cluster` that points back to the Virtualization Cluster it is part of." %}
-
-
 
 ### Importing Servers
 
@@ -100,8 +86,8 @@ Default fields:
 
 
 **(*)** Associative fields.
-* _Host Name_, This field is used to identify the server and to create association with Databases, Applications, and Virtualization Clusters.
-* _Cluster -> Host Name_, If a server is a Virtual Server, this field should match the value from the _Servers_ field in the Virtualization Cluster inventory. The **cluster host name** field is be used create the necessary association with its Virtual Cluster and its physical host.
+* _Host Name_, This field is used to identify the server and to create association with Databases and Applications,
+* _Cluster -> Host Name_, This field is used to indicate that the Server that belongs to a virtual machine cluster with _Host Name_.
 * _Database Instances -> Name_, If a server is hosting a Database (or multiple), this field should contain the **name**(s) of such database(s).
 * _Environment -> Name_, This field is used to represent the server's environment.
 
