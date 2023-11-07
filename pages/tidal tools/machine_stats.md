@@ -137,6 +137,18 @@ With this, you can also access this information on the Tidal Accelerator platfor
 
 {% include image.html file="process_stats.png" %}
 
+#### Capture CPU Utilization Time Series Data
+
+To capture point-in-time CPU utilization data, you can use the `-CPUUtilizationOnlyValue` and `-CPUUtilizationTimeout` flags. When run this way, machine stats will capture the current CPU utilization of the machine, rather than peak and average over a given interval.
+
+    ./runner.ps1 -CPUUtilizationOnlyValue -CPUUtilizationTimeout 1
+
+You can use the `-Measurements` flag along with `tidal request` to upload the result to Tidal Accelerator. 
+
+    ./runner.ps1 -CPUUtilizationOnlyValue -CPUUtilizationTimeout 1 -Measurements | tidal request -X POST /api/v1/measurements/import
+
+When run in a scheduled task (as outlined in the following section), it's possible to use machine stats to continuously capture CPU utilization data for a given server over time. 
+
 #### Run Machine Stats in a Scheduled Task
 
 To run Machine Stats in a Windows scheduled task, we must first create the script which the scheduled task will execute. If you want to save the results as json files to the current directory, with a timestamp in the filename, you can use something like this (remember to replace `<path>` with the correct path):
@@ -330,6 +342,18 @@ To enable capturing process metrics and pipe the output to Tidal Accelerator add
 With this, you can also access this information on the Tidal Accelerator platform from `https://my_workspace.tidal.cloud/servers/your_server_id/process-stats`
 
 {% include image.html file="process_stats.png" %}
+
+#### Capture CPU Utilization Time Series Data
+
+To capture point-in-time CPU utilization data, you can use the `--cpu-utilization-only-value` and `--cpu-utilization-timeout` flags. When run this way, machine stats will capture the current CPU utilization of the machine.
+
+    $ machine-stats --cpu-utilization-only-value --cpu-utilization-timeout 1
+
+You can use the `-m` switch along with `tidal request` to upload the result to Tidal Accelerator.
+
+    $ machine-stats --cpu-utilization-only-value --cpu-utilization-timeout 1 -m | tidal request -X POST /api/v1/measurements/import
+
+When run in a cron job (as outlined in the following section), it's possible to use machine stats to continuously capture CPU utilization data for a given server over time.
 
 #### Run Machine Stats on a Cron Job
 
