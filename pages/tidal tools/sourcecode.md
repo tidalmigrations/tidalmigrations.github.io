@@ -1,120 +1,107 @@
 ---
-title: Analyze your Source Code
+title: Performing Source Code Analysis
 keywords: source, assessment, readiness, analyze, code, application
 last_updated: January, 2023
-summary: "Use Tidal Tools source code analysis feature to measure your application code bases for cloud PaaS migration difficulty."
+summary: "Use Tidal Tools to analyze your application source code for cloud migration and modernization opportunities."
 sidebar: main_sidebar
 permalink: analyze-source-code.html
 folder: tidaltools
 ---
 
-## Tidal Analyze Source Code
+## Tidal Source Code Analysis
 
-Not sure how ready you are to move to the cloud? With Tidal you have
-the option to analyze your specified source code associated with the applications.
-The analysis will identify the difficulty to migrate your applications to the
-cloud.
-
-If you are interested in a deeper dive source code assessment, let us know at
-[info@tidalcloud.com](mailto:info@tidalcloud.com).
-
-Try it out!
+Not sure how ready you are to move to the cloud? With Tidal you can analyze your
+application's source code to identify difficulties and opportunities in migrating and modernizing.
+It is compatible with most of the current and legacy languages and detects a wide array of factors. See [the overview
+for more information on its capabilities](/code-analysis-overview.html).
 
 {% include image.html file="source_code_analyze.png" caption="Analyze your source code" %}
 
-## Getting Started
+## What You Need to Get Started
 
-1. Install, configure and authenticate via Tidal Tools. Make sure you follow these guides.
+1. [Install](tidal-tools.html#install), and [authenticate](tidal-tools.html#connecting-to-the-api) Tidal Tools with your [Tidal Accelerator](tidalcloud.com/accelerator) Workspace.
 
-- How to [install](tidal-tools.html#install) Tidal Tools.
-- Install Tidal Tools [dependencies](tidal-tools.html#dependencies).
-- Make sure you can [connect](tidal-tools.html#connecting-to-the-api) with your workspace using Tidal Tools.
-- As the last step, You should run the [tidal doctor](troubleshooting.html#tidal-doctor) command to verify that your environment has been configured properly.
+2. You will need the ID of the application you are going to perform the source code analysis on. You can find it in the URL bar when looking at an application in Accelerator. ex. If you are viewing an application in Tidal, the URL will show `https://[your workspace].tidal.cloud/apps/111/overview` in this case 111 is the application ID.
 
-2. You will need the ID of the application for which you are going to perform the source code analysis. You can find it in the URL bar when looking at an application. ex. If you are viewing an application in Tidal, the URL will show `https://[your workspace].tidal.cloud/apps/111/overview` in this case 111 is the application ID.
+3. You will need a copy of the source code files for the application locally on your device.
 
-3. Lastly, you will need a local copy of the source code for the application.
+With that, you can perform the code analysis in a matter of seconds.
 
-4. Perform the Source Code Analysis. There are 2 options to do so. You can find more details in this [section](#perform-the-analysis).
+{% include tip.html content="Looking to try it out and don't have any code handy? You can use this sample ['schoolbus' application](https://github.com/tidalmigrations/schoolbus) by [cloning it from GitHub](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)." %}
 
-That is all. You should be able to see the results in your workspace within seconds.
+## Performing the Code Analysis
 
-{% include tip.html content="Looking to try it out and don't have any code handy? You can use this sample [schoolbus application](https://github.com/tidalmigrations/schoolbus) by [cloning it from GitHub](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)." %}
+When analyzing an application there are two workflows available. Deciding which option to use depends if the code you are analyzing is located on a machine that has access to the internet or not, specifically https://tidal.cloud. If you do have the code on a machine with this access you can use the standard mode. If the code is located on a device that can not access the Accelerator platform, then you can use the Offline mode.
 
-## Perform the analysis
+### Standard mode
 
-When analyzing a source code (or multiple), you have two options.
-
-1. Perform the source code analysis and upload the result immediately to your workspace. This is Tidal Tools' default behaviour. To do so, all you need to do is run the following command.
+1. Perform the source code analysis and upload the result immediately to your workspace:
 
    ```bash
    cd /path/to/source-code
    tidal analyze code --app-id [app_id_for_your_application]
    ```
 
-   Alternatively, you can pass multiple locations or even wildcard for analysis. You can even specify individual files.
+   Alternatively, you can pass multiple locations or even wildcard paths, or filenames for analysis. This will result in all the provided and matching file paths to be considered source code for the one application you are analyzing.
 
    ```bash
    tidal analyze code [/path/to/source-code-A] [/path/to/source-code-B] --app-id [app_id_for_your_application]
    ```
 
-2. Perform the source code analysis and upload the results **at a later time**. The following section will explain how to run database analysis in **offline mode**
+### Offline mode
 
-### Running offline
+If the machine running code analysis can not access the internet; you can perform the analysis and store the results locally and upload those results to your workspace from a different machine. This process will involve two machines, one that has internet access and one that has no internet access, and a copy of the application's source code.
 
-There are circumstances in which you need to perform a source code analysis on an environment without or with restricted internet access. In such case, you can perform the analysis, capture its results and at a later stage upload those results to your Tidal workspace.
+1. On a machine with internet access, [install, and configure Tidal Tools](#what-you-need-to-get-started).
 
-These are the steps you need to follow in order to bypass internet access limitations:
-
-1. On a Machine with internet access, you need to install, and configure Tidal Tools.
-
-2. Package Tidal Tools and its required docker container images into a tar file. This will allow you to move the archive file into your restricted environment. To do so, run the following command.
+2. Backup Tidal Tools required dependencies into a backup file.
 
    `tidal backup`
 
-   Once it has finished, you will find (in your current location) a tar file called `tidal-snapshot_DATE.tar`. This is the file you need to transport into your internet restricted environment.
+   When finished in the current working directory there will be a file called `tidal-snapshot_DATE.tar`. Move this file, in any reasonable way you can, to the machine with the code on it to be analyzed
 
-3. On the machine that has no internet access, you will now restore Tidal Tools using the following command.
+3. On the machine that has no internet access, you will now restore the backup:
 
    `tidal restore tidal-snapshot_DATE.tar`
 
-   This will load a docker image and all the existing Tidal Tools configurations from the original machine. 
+   This will load the needed dependencies and Tidal Tools configuration needed to run the analysis.
 
-4. You can now run the source code analysis without any external network connectivity.
+4. Now run the source code analysis on the current directory:
 
    ```bash
    cd /path/to/source-code
    tidal analyze code --offline
-   ```
+	   ```
 
-   Alternatively, you can pass multiple locations or even wildcard for analysis. You can even specify individual files.
+   Alternatively, you can pass multiple locations or even wildcard paths, or filenames for analysis. This will result in all the provided and matching file paths to be considered source code for the one application you are analyzing.
 
    ```bash
    tidal analyze code [/path/to/source-code-A] [/path/to/source-code-B] --offline
    ```
 
-   Note:
+   The `--offline` flag indicates that the results are outputted to a local file, instead of being uploaded.
 
-   - The `--offline` flag indicates to Tidal Tools that the output needs to be stored in a file instead of being uploaded.
+   After the analysis is completed, you will find the results in a file called `code-analysis-<DATE>-<TYPE>.json`.
 
-   After the analysis is completed, you will find an artifact file called `code-analysis-<DATE>-<TYPE>.json` that can then be transferred into a machine with internet connectivity.
 
-5. Back to the machine with internet access, you can now upload your results to your workspace with this command.
+5. Transfer the results file from the analysis to the machine with internet access.
+
+5. On the machine with internet access, upload the results to your workspace:
 
 
    ```bash
    tidal analyze code upload [file_name] --app-id [app_id_for_your_application]`
    ```
 
-   You should receive confirmation that the upload has been completed and can navigate to Tidal to see the results.
+   You should receive confirmation that the upload has been completed and can navigate to Tidal Accelerator to see the results.
 
-{% include tip.html content="Need to run code analysis on a entire set of applications all from one machine? Run [this command and easily create a directory for every application already in Tidal Accelerator](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)" %}
+{% include tip.html content="Need to run code analysis on an entire set of applications all from one machine? Run [this command and easily create a directory for every application already in your Tidal Accelerator workspace](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)." %}
 
 ### Why Docker?
 
-You need to install Docker in order to complete the source code analysis. This is because the analysis uses several system dependent software libraries. 
+You need to install Docker to complete the source code analysis. This is because the analysis uses several system-dependent software libraries. 
 By using Docker, the analysis can use those libraries without requiring you to install any other dependencies.
 
 ### What about security?
 
-The entire analysis takes place _locally on your machine_. The **only** data that is captured and sent from the analysis are the results of the analysis and metadata. **No source code, files or the contents of any files on your machine are ever copied or sent anywhere.**
+**The entire code analysis process takes place locally on your machine.** It will scan your files locally looking for common patterns and information when modernizing. The only data that is captured and sent from the analysis are the results of the analysis and the associated metadata. You can view all of the raw analysis results that are sent to Tidal Accelerator before they are sent, by viewing the contents of the results file locally.
