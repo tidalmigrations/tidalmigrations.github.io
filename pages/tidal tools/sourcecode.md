@@ -79,7 +79,7 @@ If the machine running code analysis can not access the internet; you can perfor
    tidal analyze code [/path/to/source-code-A] [/path/to/source-code-B] --offline
    ```
 
-   The `--offline` flag indicates that the results are outputted to a local file, instead of being uploaded.
+   The `--offline` flag indicates that the results are saved to a local file, instead of being uploaded.
 
    After the analysis is completed, you will find the results in a file called `code-analysis-<DATE>-<TYPE>.json`.
 
@@ -104,4 +104,4 @@ By using Docker, the analysis can use those libraries without requiring you to i
 
 ### What about security?
 
-**The entire code analysis process takes place locally on your machine.** It will scan your files locally looking for common patterns and information when modernizing. The only data that is captured and sent from the analysis are the results of the analysis and the associated metadata. You can view all of the raw analysis results that are sent to Tidal Accelerator before they are sent, by viewing the contents of the results file locally.
+**The entire code analysis process takes place locally on your machine.** It will scan your files locally looking for common patterns and information when modernizing. The only data that is captured and sent from the analysis are the results of the analysis and the associated metadata. You can view all raw analysis results sent to Tidal Accelerator before they are sent, by performing an offline analysis and viewing the results file locally.
