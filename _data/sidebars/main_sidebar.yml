@@ -67,7 +67,10 @@ entries:
       - title: Assess
         output: web
         folderitems:
-          - title: Source Code Analysis
+          - title: Code Analysis Overview
+            output: web
+            url: code-analysis-overview.html
+          - title: Performing Code Analysis
             output: web
             url: analyze-source-code.html
           - title: Database Analysis
