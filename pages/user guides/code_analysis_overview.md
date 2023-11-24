@@ -9,8 +9,7 @@ folder: userguides
 permalink: code-analysis-overview.html
 ---
 
-# Tidal Code Analysis Overview
-Analyzes code bases for various patterns that are useful in assessing applications for transformation and continual modernization.
+Analyzes application's source code for various patterns that are useful in assessing applications for transformation and continual modernization.
 
 ## Language support
 
