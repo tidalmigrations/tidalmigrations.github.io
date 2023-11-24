@@ -9,7 +9,7 @@ folder: userguides
 permalink: code-analysis-overview.html
 ---
 
-Analyzes application's source code for various patterns that are useful in assessing applications for transformation and continual modernization.
+Analyzes an application's source code for various patterns that are useful in assessing applications for transformation and continual modernization.
 
 ## Language support
 
