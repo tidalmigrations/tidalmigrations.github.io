@@ -97,11 +97,11 @@ If the machine running code analysis can not access the internet; you can perfor
 
 {% include tip.html content="Need to run code analysis on an entire set of applications all from one machine? Run [this command and easily create a directory for every application already in your Tidal Accelerator workspace](https://github.com/tidalmigrations/gists/blob/master/make_source_code_dirs.sh)." %}
 
-### Why Docker?
+### Why do I need Docker?
 
 You need to install Docker to complete the source code analysis. This is because the analysis uses several system-dependent software libraries. 
 By using Docker, the analysis can use those libraries without requiring you to install any other dependencies.
 
-### What about security?
+### What information is collected?
 
-**The entire code analysis process takes place locally on your machine.** It will scan your files locally looking for common patterns and information when modernizing. The only data that is captured and sent from the analysis are the results of the analysis and the associated metadata. You can view all raw analysis results sent to Tidal Accelerator before they are sent, by performing an offline analysis and viewing the results file locally.
+**The entire code analysis process takes place locally on your machine.** It will scan your files locally looking for common patterns and information when modernizing. The only data that is captured and sent from the analysis are the results of the analysis and the associated metadata. You can view all raw analysis results sent to Tidal Accelerator before they are sent, by performing an offline analysis and viewing the results file locally. See the [overview for more information](code-analysis-overview.html#what-information-is-collected) on how to do that.
