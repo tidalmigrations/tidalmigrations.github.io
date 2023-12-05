@@ -65,6 +65,10 @@ pages/tidal tools/analyze_database.md
 # Source code analysis
 
 ```{.include}
+pages/user guides/code_analysis_overview.md
+```
+
+```{.include}
 pages/tidal tools/sourcecode.md
 ```
 
