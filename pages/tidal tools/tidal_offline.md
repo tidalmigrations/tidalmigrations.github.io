@@ -115,20 +115,6 @@ This will save the result to an output zip file, called `code_stats.zip` by defa
 
 Send this file to [Tidal support](mailto:support@tidalcloud.com), and they'll upload it to your Tidal workspace for you.
 
-## Database Analysis
-
-Follow [these instructions](#tidal-tools) to install Tidal Tools on your offline server. 
-
-You can now run the database analysis without any external network connectivity, except to your database host itself:
-
-`tidal analyze db --offline databases.yaml`
-
-This will output a zip file called, `tidal-dba-results_DATE.zip` that can then be uploaded (on the online server) to the application for a given database in order to complete the analysis:
-
-`tidal analyze db --upload tidal-dba-results_DATE.zip`
-
-You should receive confirmation that the upload has completed and can navigate to Tidal to see the results.
-
 ## Gather Machine Stats (For Unix-Like Systems)
 
 ### Installation

@@ -76,8 +76,7 @@ We hope that this book helped you to get yourself familiar with **Layering Disco
 2. Scheduling synchronizations across your hypervisors such as VMWare or Hyper-V
 3. Server usage statistics aggregation
 4. Discovering and fingerprinting your running web applications
-5. Performing databases analysis
-6. Analyzing your source code
+5. Analyzing your source code
 
 That was the beginning of your journey towards the transformative cloud migrations. And now, we hope, you are ready to move forward!
 

@@ -30,8 +30,7 @@ If you'd prefer to use a cloud shell, you can watch how to get setup in the [AWS
 
 ### Dependencies
 
-If you plan to use the `tidal analyze code` command to analyze your source code
-or `tidal analyze db` to analyze your databases, you will need to install
+If you plan to use the `tidal analyze code` command to analyze your source code, you will need to install
 Docker Community Edition. To install Docker on your system you can check
 [Docker's documentation directly](https://docs.docker.com/install/). Once
 installed you can [verify it is installed and working
@@ -44,7 +43,7 @@ containers](/troubleshooting.html#docker-linux-containers).
 
 
 ## Why Docker?
-You need to install Docker in order to complete the database analysis. This is because the analysis uses several system dependent software libraries, so by using Docker the analysis can use those libraries without you requiring to install the correct dependencies with the correct versions.
+You need to install Docker in order to complete the source code analysis. This is because the analysis uses several system dependent software libraries, so by using Docker the analysis can use those libraries without you requiring to install the correct dependencies with the correct versions.
 
 ## Using Tidal Tools
 
