@@ -1,12 +1,12 @@
 Cloud migration is the process of moving your data, applications, and other
 elements to the cloud. However, the path to the cloud can be long and painful
-without proper planning and execution.  By following Tidal's six
+without proper planning and execution.  By following Tidal's five
 discovery layering techniques, you will be migrating to the cloud with ease!
 
-{% include image.html file="layered_discovery_expanded.png" caption="Tidal'
+{% include image.html file="layered_discovery_expanded.png" caption="Tidal's
 layered approach to application discovery, for cloud migration." %}
 
-# Six Steps To Discovery Bliss
+# Five Steps To Discovery Bliss
 
 ## 1) Import Your Spreadsheets
 
@@ -90,29 +90,7 @@ checkout this [guide](analyze.html).
 
 ---
 
-## 5) Analyze Your Databases
-
-Analyze all of your databases in minutes and _measure_ the migration
-difficulty.
-
-After running `tidal analyze db your_config.yml` against your databases ([see
-guide](/analyze_database.html)), you will understand which database features in
-your Oracle,SQL Server, MySQL, or PostgreSQL installations make it difficult to
-adopt cloud-native database offerings and also identify which applications are
-connecting to your databases.
-
-With over 100 unique characteristics considered, comparisons are made with the
-data platforms available in the cloud(s) you are migrating to which provide you
-with _data-driven insights_ for planning your cloud migration.
-
-Follow the steps in [the guide](/analyze_database.html), and you will be able
-to quantify the difficulty in migrating your database from Oracle to PostreSQL;
-or from SQL Server to AWS Aurora etc.
-
----
-
-
-## 6) Analyze Your Source Code
+## 5) Analyze Your Source Code
 
 Finally, to find the applications which will migrate more easily to
 cloud-native technologies you can analyze your source code and rank your

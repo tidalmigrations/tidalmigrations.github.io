@@ -14,7 +14,7 @@ documentclass: report
 This book will cover all the discovery steps you will need to perform for your cloud migration project.
 
 ```{.include shift-heading-level-by=1}
-pages/user guides/six_steps.md
+pages/user guides/five_steps.md
 ```
 
 The remaining will now go through the discvory process step by step. Starting with installing Tidal Tools.
@@ -54,12 +54,6 @@ pages/tidal tools/analyze.md
 
 ```{.include}
 pages/user guides/discover_nmap.md
-```
-
-# Database analysis
-
-```{.include}
-pages/tidal tools/analyze_database.md
 ```
 
 # Source code analysis
