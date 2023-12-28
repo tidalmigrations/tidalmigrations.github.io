@@ -73,9 +73,6 @@ entries:
           - title: Performing Code Analysis
             output: web
             url: analyze-source-code.html
-          - title: Database Analysis
-            output: web
-            url: analyze-database.html
           - title: HTTP Web Log Analysis
             output: web
             url: analyze-logs.html

@@ -9,7 +9,7 @@ folder: userguides
 permalink: index.html
 ---
 
-{% include_relative six_steps.md %}
+{% include_relative five_steps.md %}
 
 ---
 

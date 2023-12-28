@@ -14,7 +14,7 @@ documentclass: report
 This book will cover all the discovery steps you will need to perform for your cloud migration project.
 
 ```{.include shift-heading-level-by=1}
-pages/user guides/six_steps.md
+pages/user guides/five_steps.md
 ```
 
 The remaining will now go through the discvory process step by step. Starting with installing Tidal Tools.
@@ -56,12 +56,6 @@ pages/tidal tools/analyze.md
 pages/user guides/discover_nmap.md
 ```
 
-# Database analysis
-
-```{.include}
-pages/tidal tools/analyze_database.md
-```
-
 # Source code analysis
 
 ```{.include}
@@ -82,8 +76,7 @@ We hope that this book helped you to get yourself familiar with **Layering Disco
 2. Scheduling synchronizations across your hypervisors such as VMWare or Hyper-V
 3. Server usage statistics aggregation
 4. Discovering and fingerprinting your running web applications
-5. Performing databases analysis
-6. Analyzing your source code
+5. Analyzing your source code
 
 That was the beginning of your journey towards the transformative cloud migrations. And now, we hope, you are ready to move forward!
 

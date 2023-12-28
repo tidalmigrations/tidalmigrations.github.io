@@ -152,15 +152,6 @@ You may need to configure Docker to use your proxy server. You can follow the st
 
 {% include note.html content="If you need to authenticate with the proxy, be sure to include the username and password in the value, ie. 'http://proxy_userid:proxy_password@proxy_ip:proxy_port'" %}
 
-### PostgreSQL database fails to analyze with `tidal analyze db` {#postgres}
-
-Check the [PostgreSQL Server
-User](https://guides.tidal.cloud/analyze-database.html#postgresql-server-user)
-script to verify that the all the necessary permissions were granted. Pay
-attention that different permissions should be applied to different PostgreSQL
-versions.
-
-
 ## Windows specific troubleshooting {#windows}
 
 ### Setting up Docker for Windows to use Linux containers {#docker-linux-containers}
