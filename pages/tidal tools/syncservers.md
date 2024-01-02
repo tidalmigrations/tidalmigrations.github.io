@@ -36,29 +36,31 @@ already exist." %}
 {
   "servers": [
     {
-        "host_name": "ewrfceapcfg03",
-        "description": "This is a general description for this server.",
-        "custom_fields": {
-          "tcp_port": 11441,
-          "database_software": "SQL 2008 SP3",
-          "database_version": "10.0.5538.0"
-         },
-        "fqdn": "ewrfceapcfg03.com",
-        "environment_id": 2,
-        "assigned_id": "198",
-        "zone": "Data",
-        "ram_allocated_gb": 8,
-        "storage_allocated_gb": 83.8,
-        "storage_used_gb": 52.06,
-        "cluster_id": 48337,
-        "role": "Administrator",
-        "cpu_count": 4,
-        "ram_used_gb": 2,
-        "virtual": true,
-        "environment": "Production",
-        "cluster": {
-          "host_name": "rrfedfds"
-        }
+      "host_name": "ewrfceapcfg03",
+      "description": "This is a general description for this server.",
+      "custom_fields": {
+        "tcp_port": 11441,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      },
+      "fqdn": "ewrfceapcfg03.com",
+      "environment_id": 2,
+      "assigned_id": "198",
+      "zone": "Data",
+      "ram_allocated_gb": 8,
+      "storage_allocated_gb": 83.8,
+      "storage_used_gb": 52.06,
+      "cluster_id": 48337,
+      "role": "Administrator",
+      "cpu_count": 4,
+      "ram_used_gb": 2,
+      "virtual": true,
+      "environment": {
+        "name": "Production",
+      },
+      "cluster": {
+        "host_name": "rrfedfds"
+      }
     }
   ]
 }
@@ -187,6 +189,9 @@ To synchronize your Application data, It must have the following JSON format.
                     "url": "https://approvalmanagementsystem.com"
                 }
             ],
+            "environment": {
+                "name": "Production"
+            },
             "source_code_location": [
                 "/filepath/location",
                 "folder1/file1"
@@ -219,7 +224,9 @@ To synchronize your Database Instances data, It must have the following JSON for
       "database_size_mb": 1870,
       "database_path": "C:\\system\\databases\\720_TASK_DB",
       "description": "This is a general description for this database instance. This database primarily purpose it to server an application that needs this data.",
-      "environment": "production",
+      "environment": {
+        "production"
+      },
       "custom_fields": {
         "technologies": "Approval Management System DB"
       }
