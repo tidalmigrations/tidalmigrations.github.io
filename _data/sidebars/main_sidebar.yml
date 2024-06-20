@@ -91,6 +91,9 @@ entries:
           - title: Assessment Projects
             output: web
             url: /assessment-projects.html
+          - title: Code Research Program
+            output: web
+            url: /code-research.html
 
       - title: Plan
         output: web
