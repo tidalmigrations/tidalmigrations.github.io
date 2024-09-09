@@ -37,8 +37,6 @@ To assign servers to a project, you must create a migration wave. Simply create 
 
 After navigating to your migration wave, you can then add servers (and their dependencies, if required).
 
-{% include image.html file="instance_rec_3.png" %}
-
 All servers in this project will use the project's cloud provider and cloud region by default. If you need more granular control over cloud region, you can set this at the server level as well. Be aware that changing cloud provider or region at the project level will clear server-level cloud region settings, and re-generate recommendations for all servers in the project. 
 
 ### Gather data
@@ -55,12 +53,12 @@ See [our documentation](machine_stats.html) for detailed instructions on gatheri
 
 From here, we can begin generating recommendations for this server. You can find your recommendation in the server overview under Transition Planning > Cloud Instance Target. If server doesn't have a recommendation yet, you should be able to hover over this field and see what information you need to gather to generate the recommendation.
 
-{% include image.html file="instance_rec_4.png" %}
+{% include image.html file="instance_rec_3.png" %}
 
 ### Refine your recommendation
 
 In order to generate the best possible recommendation, we can leverage CPU utilization data that you gather for your server. For details on how to do this, see our documentation on gathering CPU utilization time-series data. As you gather CPU utilization data for your server, we will aggregate this data behind the scenes, and update your recommendation every 12 hours as data is received. A summary of your server's CPU utilization is displayed on the server overview.
 
-{% include image.html file="instance_rec_5.png" %}
+{% include image.html file="instance_rec_4.png" %}
 
 We recommend gathering CPU utilization data over as long a time period as possible - at least a full week - in order to get the best possible picture of a server's CPU workload. If you decide against capturing CPU utilization data, we will assume that the server if operating at 100% utilization.
