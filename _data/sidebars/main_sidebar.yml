@@ -91,6 +91,9 @@ entries:
           - title: Assessment Projects
             output: web
             url: /assessment-projects.html
+          - title: Cloud Instance Recommendations
+            output: web
+            url: /instance-recommendation.html
 
       - title: Plan
         output: web
