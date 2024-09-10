@@ -3,7 +3,7 @@ toc: false
 title: Cloud Instance Recommendations
 keywords: vm, ec2, instance, cloud, recommendation, cpu usage
 last_updated: September, 2024
-summary: "How to generate cloud instance recommendations"
+summary: "A step by step guide to generating accurate cloud instance recommendations for your server inventory. We will walk you through organizing your server inventory into projects and migration waves, then gathering the required data for your servers. Plus, learn how you can gather CPU utilization data over time to generate recommendations that become more accurate as you learn more about the workload of your servers."
 sidebar: main_sidebar
 folder: userguides
 permalink: instance-recommendation.html
@@ -66,3 +66,5 @@ In order to generate the best possible recommendation, we can leverage CPU utili
 {% include image.html file="instance_rec_4.png" %}
 
 We recommend gathering CPU utilization data over as long a time period as possible - at least a full week - in order to get the best possible picture of a server's CPU workload. If you decide against capturing CPU utilization data, we will assume that the server if operating at 100% utilization.
+
+By following the above steps, you have now organized your server inventory into projects and migration waves, while also generating cloud instance recommendations for eligible servers. Remember, the more you discover about your servers - the more accurate the recommendations become.
