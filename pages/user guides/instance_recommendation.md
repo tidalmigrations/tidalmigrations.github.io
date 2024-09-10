@@ -37,7 +37,9 @@ To assign servers to a project, you must create a migration wave. Simply create 
 
 After navigating to your migration wave, you can then add servers (and their dependencies, if required).
 
-All servers in this project will use the project's cloud provider and cloud region by default. If you need more granular control over cloud region, you can set this at the server level as well. Be aware that changing cloud provider or region at the project level will clear server-level cloud region settings, and re-generate recommendations for all servers in the project. 
+All servers in this project will use the project's cloud provider and cloud region by default. If you need more granular control over cloud region, you can set this at the server level as well. 
+
+{% include warning.html content="Changing cloud provider or region at the project level will clear server-level cloud region settings, and re-generate recommendations for all servers in the project." %}
 
 ### Gathering data
 
