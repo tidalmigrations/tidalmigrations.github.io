@@ -45,6 +45,8 @@ All servers in this project will use the project's cloud provider and cloud regi
 
 After servers are assigned to a project, instance recommendation occurs automatically when your servers have enough data for us to begin making recommendations.
 
+{% include note.html content="The recommendation process can sometimes take several minutes to complete." %}
+
 The best place to start is by using Machine Stats and Tidal Tools to analyze your servers and upload the data to Tidal Accelerator. This will provide us with the following information:
 - CPU name
 - RAM used
