@@ -39,7 +39,7 @@ After navigating to your migration wave, you can then add servers (and their dep
 
 All servers in this project will use the project's cloud provider and cloud region by default. If you need more granular control over cloud region, you can set this at the server level as well. Be aware that changing cloud provider or region at the project level will clear server-level cloud region settings, and re-generate recommendations for all servers in the project. 
 
-### Gather data
+### Gathering data
 
 After servers are assigned to a project, instance recommendation occurs automatically when your servers have enough data for us to begin making recommendations.
 
