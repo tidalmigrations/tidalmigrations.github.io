@@ -55,7 +55,7 @@ From here, we can begin generating recommendations for this server. You can find
 
 {% include image.html file="instance_rec_3.png" %}
 
-### Refine your recommendation
+### Refining your recommendation
 
 In order to generate the best possible recommendation, we can leverage CPU utilization data that you gather for your server. For details on how to do this, see our documentation on gathering CPU utilization time-series data. As you gather CPU utilization data for your server, we will aggregate this data behind the scenes, and update your recommendation every 12 hours as data is received. A summary of your server's CPU utilization is displayed on the server overview.
 
