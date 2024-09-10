@@ -21,7 +21,7 @@ We consider CPU age and processing power, as well as RAM and storage usage to ge
 
 Under the hood, we leverage the approach described in Amazon Web Service's whitepaper <a target="_blank" href="https://s3.ca-central-1.amazonaws.com/tidal.assets/aws-demystifying-vcpus.pdf">Demystifying the Number of vCPUs for Optimal Workload Performance</a>.
 
-This scientifically proven methodology drives the CPU performance aspect of our recommendations.
+This proven methodology drives the CPU performance aspect of our recommendations.
 
 ## Where do I start?
 
