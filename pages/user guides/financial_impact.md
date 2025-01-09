@@ -23,7 +23,7 @@ The second is a drill-down section for each application in this project.
 
 {% include image.html file="financial-impact-2.png" %}
 
-In addition, you can view an application's financial impact (the drill-down section) directly in that app's native view.
+In addition, you can view an application's financial impact (the drill-down section) in the financial impact tab for an application.
 
 {% include image.html file="financial-impact-3.png" %}
 
