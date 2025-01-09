@@ -94,6 +94,9 @@ entries:
           - title: Cloud Instance Recommendations
             output: web
             url: /instance-recommendation.html
+          - title: Financial Impact
+            output: web
+            url: /financial-impact.html
 
       - title: Plan
         output: web
