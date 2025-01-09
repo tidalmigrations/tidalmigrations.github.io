@@ -15,7 +15,7 @@ Tidal Accelerator empowers you to construct a compelling business case by visual
 
 Tidal's financial impact reports are generated based on projects. If you haven't set up a project before, you can check out our [guide](https://guides.tidal.cloud/assessment-projects.html) on setting up an assessment project.
 
-Your financial impact report essentially has two parts. The first is the project-wide overview which includes summaries and visuals for your entire project. 
+Your financial impact report can be divided into two parts. The first is the project-wide overview, which includes summaries and visuals for the entire project. 
 
 {% include image.html file="financial-impact-1.png" %}
 
