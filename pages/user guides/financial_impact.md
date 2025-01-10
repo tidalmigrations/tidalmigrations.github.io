@@ -27,7 +27,7 @@ In addition, you can view an application's financial impact (the drill-down sect
 
 {% include image.html file="financial-impact-3.png" %}
 
-For all of these visuals, the majority of the data we're summarizing is sourced from the apps themselves, so that's where you'll want to look in order to add and tweak data. The only current exception to this is cloud instance targets, which are included in the cloud costs of your app. For more information about generating cloud instance targets, see our [guide](https://guides.tidal.cloud/instance-recommendation.html).
+We derive the data for your financial impact report based on information gathered from the application itself, and from your application's servers via cloud instance targets. For more information about cloud instance targets, you can learn more  [here](https://guides.tidal.cloud/instance-recommendation.html).
 
 {% include note.html content="For all apps, we also include the estimated migration cost in the projected cloud cost for the first year. You can see this visualized in time-series graphs such as' Current Vs Cloud Costs' and 'Savings Over Time'." %}
 
@@ -39,41 +39,67 @@ Current costs can be found in the 'Financial' category of the application overvi
 
 {% include image.html file="financial-impact-4.png" %}
 
-Cloud costs are found in the 'Transition Planning' category, which is under the 'Migration Plan' tab. The fields of note here are 'Forecasted Cost (Annually)' which is your estimated rehost cost, and 'Estimated Migration Cost', which is used as you might imagine. Note that this migration cost is critical for calculations such as return on investment and break-even point, and as noted earlier, this is included in your app's first year of cloud costs when visualized in time-series graphs.
+Cloud costs are found in the 'Transition Planning' category, which is under the 'Migration Plan' tab. The fields of note here are 'Forecasted Cost (Annually)' which is your estimated rehost cost, and 'Estimated Migration Cost', which is used as you might imagine. Note that this migration cost is critical for calculations such as return on investment (ROI) and break-even point, and as noted earlier, this is included in your application's first year of cloud costs when visualized in time-series graphs.
 
 {% include image.html file="financial-impact-5.png" %}
 
-Do you have a cost that is not covered by these existing fields? Maybe you pay a license cost for this app, for example. That's easy to add, simply navigate to settings -> fields and create a new custom field by clicking the '+ New' button. The category you choose for this field determines whether it is a current or a cloud cost. For a current cost, select the 'Financial' category, and for a cloud cost, select the 'Transition Planning' category.
+## Financial Classification
 
-{% include image.html file="financial-impact-6.png" %}
-
-After you've created your custom field, you can navigate back to the app record and populate it with data. Your financial impact visuals will be updated appropriately to reflect this new current or cloud cost.
-
-{% include image.html file="financial-impact-7.png" %}
-
-{% include note.html content="To be included in an app's current or cloud costs, the field must have category 'Financial' or 'Transition Planning' (for current and cloud costs respectively), and must have the field type 'Currency'. In most cases, you'll also want to set the field aggregation to 'Sum'." %}
-
-## Application Cost Breakdown
-
-Building on what you've learned from creating current and cloud cost fields above, you can leverage our financial classification system for further granularity over your application's current and cloud costs.
-
-When creating a custom field where the category is 'Financial' or 'Transition Planning' and the field type is 'Currency', you'll notice that there is an additional attribute available - 'Financial Classification'. This allows you to distinguish between different cost types, such as license or maintenance costs. 
+When creating a custom field where the category is 'Financial' or 'Transition Planning' and the field type is 'Currency', you'll notice that there is an additional attribute available - 'Financial Classification'. This allows you to distinguish between different cost types, such as license or maintenance costs.
 
 {% include image.html file="financial-impact-8.png" %}
 
-By ensuring these are set correctly, you will be able to generate a cost breakdown for each of your apps, which gives you in-depth insight in the cost of your app when comparing current, cloud and transformative costs. This table can be found in the application drill-down (or on the app itself) under 'Cost Breakdown'.
+These are the available financial classifications:
+
+- License
+  - License costs such as server operating system or DBMS
+
+- Subscription
+  - Costs related to services subscriptions
+
+- Maintenance and Support
+  - Staff costs related to the upkeep of your app
+
+- Development
+  - Staff costs related to the ongoing development of your app
+
+- Server
+  - Costs for the physical server infrastructure
+
+This system allow you to group costs in the cost breakdown table, as described [here](#customizingt-the-application-cost-breakdown).
+
+## Customizing the Calculation
+
+Do you have a cost which is not covered by existing fields? Maybe you pay a license cost for this app, for example. That's easy to add, simply navigate to settings -> fields and create a new custom field by clicking the '+ New' button. The category you choose for this field determines whether it is a current or a cloud cost. For a current cost, select the 'Financial' category, and for a cloud cost, select the 'Transition Planning' category. You can also set a financial classification at this point as described [here](#financial-classification). The appropriate classification in this example would be 'License'. 
+
+{% include image.html file="financial-impact-6.png" %}
+
+After you've created your custom field, you can navigate back to the application record and populate it with data. Your financial impact visuals will be updated appropriately to reflect this new current or cloud cost.
+
+{% include image.html file="financial-impact-7.png" %}
+
+{% include note.html content="To be included in an application's current or cloud costs, the field must have category 'Financial' or 'Transition Planning' (for current and cloud costs respectively), and must have the field type 'Currency'. In most cases, you'll also want to set the field aggregation to 'Sum'." %}
+
+
+## Customizing the Application Cost Breakdown
+
+Building on what you've learned so far, you can leverage our financial classification system for further granularity over your application's current and cloud costs.
+
+On the cost breakdown table, which can be found in the application drill-down (or on the application itself) under 'Cost Breakdown', you can see your applications's costs grouped by financial classification. 
 
 {% include image.html file="financial-impact-9.png" %}
 
-This dovetails with the custom field system outlined above. If you need to add a cost which is not covered by our default fields, then your custom costs will appear on the app record, in our charts and summaries, and here in the cost breakdown table.
+This dovetails with the custom field system outlined above. If you need to add a cost which is not covered by our default fields, then your custom costs will appear on the application record, in our charts and summaries, and here in the cost breakdown table.
 
 ### Detailed Cost Breakdown
 
-The app record's financial impact view also has a 'Detailed Cost Breakdown' table, which lays out all cost sources for your app, including fields and cloud instance targets. This can be found by navigating to the app record, then the 'Financial Impact' tab, under the 'Cost Breakdown' section. You will be able to tab between the cost breakdown as described above, and also the detailed cost breakdown, which provides more granularity and insight into an app's cost sources.
+The application record's financial impact view also has a 'Detailed Cost Breakdown' table, which lays out all cost sources for your app, including fields and cloud instance targets. This can be found by navigating to the application record, then the 'Financial Impact' tab, under the 'Cost Breakdown' section. You will be able to tab between the cost breakdown as described above, and also the detailed cost breakdown, which provides more granularity and insight into an application's cost sources.
+
+{% include image.html file="financial-impact-detailed-cost-breakdown.png" %}
 
 ## ROI Comparison
 
-Part of building your cloud migration business case is comparing and contrasting different ** 6R ** approaches to cloud migration. Tidal Accelerator's financial impact view includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the app drill-down under 'Recommendation Details'. To populate this, on the app record under 'Transition Planning' you will find the following fields; 'Repurchase Cost', 'Replatform Cost' and 'Transformative Cost'. 
+Part of building your cloud migration business case is comparing and contrasting different [6R](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) approaches to cloud migration. Tidal Accelerator's financial impact report includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the application drill-down under 'Recommendation Details'. To populate this, on the application record under 'Transition Planning' you will find the following fields; 'Repurchase Cost', 'Replatform Cost' and 'Transformative Cost'. 
 
 {% include image.html file="financial-impact-10.png" %}
 
