@@ -66,7 +66,7 @@ These are the available financial classifications:
 - Server
   - Costs for the physical server infrastructure
 
-This system allow you to group costs in the cost breakdown table, as described [here](#customizingt-the-application-cost-breakdown).
+This system allow you to group costs in the cost breakdown table, as described [here](#customizing-the-application-cost-breakdown).
 
 ## Customizing the Calculation
 
