@@ -27,7 +27,7 @@ In addition, you can view an application's financial impact (the drill-down sect
 
 {% include image.html file="financial-impact-3.png" %}
 
-We derive the data for your financial impact report based on information gathered from the application itself, and from your application's servers via cloud instance targets. For more information about cloud instance targets, you can learn more  [here](https://guides.tidal.cloud/instance-recommendation.html).
+We derive the data for your financial impact report based on information gathered from the application itself, and from your application's servers via cloud instance targets. For more information about cloud instance targets, you can learn more [here](https://guides.tidal.cloud/instance-recommendation.html).
 
 {% include note.html content="For all apps, we also include the estimated migration cost in the projected cloud cost for the first year. You can see this visualized in time-series graphs such as' Current Vs Cloud Costs' and 'Savings Over Time'." %}
 
