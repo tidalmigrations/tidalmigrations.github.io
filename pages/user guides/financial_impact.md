@@ -64,7 +64,10 @@ These are the available financial classifications:
   - Ongoing development expenses and investments, _e.g. $375k p.a. in outsourced development fees_
 
 - Server
-  - Infrastructure expenses, _e.g. $89k in server amortization, network, power/cooling, floorspace etc._
+  - Expenses related to your physical server infrastructure, _e.g. $89k in server amortization, network, power/cooling, floorspace etc._
+
+- Storage
+  - Expenses related to your physical storage infrastructure, _e.g. SSD / HDD costs, power, etc._
 
 This system allow you to group costs in the cost breakdown table, as described [here](#customizing-the-application-cost-breakdown).
 
