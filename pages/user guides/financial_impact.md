@@ -52,19 +52,19 @@ When creating a custom field where the category is 'Financial' or 'Transition Pl
 These are the available financial classifications:
 
 - License
-  - License costs such as server operating system or DBMS
+  - Pre- and post-migration software fees, _e.g. Oracle DB_
 
 - Subscription
-  - Costs related to services subscriptions
+  - Costs related to service subscriptions, _e.g. $500 p.a. for Auth0, $3,000 for CloudFlare CDN_
 
 - Maintenance and Support
-  - Staff costs related to the upkeep of your app
+  - Staff and operational costs, _e.g. $60k p.a. in FTE costs_
 
 - Development
-  - Staff costs related to the ongoing development of your app
+  - Ongoing development expenses and investments, _e.g. $375k p.a. in outsourced development fees_
 
 - Server
-  - Costs for the physical server infrastructure
+  - Infrastructure expenses, _e.g. $89k in server amortization, network, power/cooling, floorspace etc._
 
 This system allow you to group costs in the cost breakdown table, as described [here](#customizing-the-application-cost-breakdown).
 
