@@ -51,9 +51,11 @@ The best place to start is by using Machine Stats and Tidal Tools to analyze you
 - CPU name
 - RAM used
 - Storage used
-- Number of logical processors
+- Logical CPU count
 
 See [our documentation](machine_stats.html) for detailed instructions on gathering machine stats with Tidal Tools.
+
+If you'd prefer to enter these details manually, you can do so by editing the server directly.
 
 From here, we can begin generating recommendations for this server. You can find your recommendation in the server overview under Transition Planning > Cloud Instance Target. If server doesn't have a recommendation yet, you should be able to hover over this field and see what information you need to gather to generate the recommendation.
 
