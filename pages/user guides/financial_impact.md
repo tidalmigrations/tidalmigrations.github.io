@@ -108,7 +108,7 @@ The application record's financial impact view also has a 'Detailed Cost Breakdo
 
 ## ROI Comparison
 
-Part of building your cloud migration business case is comparing and contrasting different [6R](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) approaches to cloud migration. Tidal Accelerator's financial impact report includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the application drill-down under 'Recommendation Details'. To populate this, on the application record under 'Cloud Financial Estimates' you will find the following fields; 'Repurchase Cost', 'Replatform Cost' and 'Transformative Cost'. 
+Part of building your cloud migration business case is comparing and contrasting different [6R](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) approaches to cloud migration. Tidal Accelerator's financial impact report includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the application drill-down under 'Recommendation Details'. To populate this, on the application record under 'Alternative Transition Estimates' you will find the following possible fields; 'Repurchase Cost', 'Replatform Cost', 'Rehost Cost', and 'Transformative Cost'. 
 
 {% include image.html file="financial-impact-10.png" %}
 
