@@ -39,13 +39,13 @@ Current costs can be found in the 'Financial' category of the application overvi
 
 {% include image.html file="financial-impact-4.png" %}
 
-Cloud costs are found in the 'Transition Planning' category, which is under the 'Migration Plan' tab. The fields of note here are 'Forecasted Cost (Annually)' which is your estimated rehost cost, and 'Estimated Migration Cost', which is used as you might imagine. Note that this migration cost is critical for calculations such as return on investment (ROI) and break-even point, and as noted earlier, this is included in your application's first year of cloud costs when visualized in time-series graphs.
+Cloud costs are found in the 'Cloud Financial Estimates' category, which is under the 'Migration Plan' tab. The fields of note here are 'Forecasted Cost (Annually)' which is your estimated rehost cost, and 'Estimated Migration Cost', which is used as you might imagine. Note that this migration cost is critical for calculations such as return on investment (ROI) and break-even point, and as noted earlier, this is included in your application's first year of cloud costs when visualized in time-series graphs.
 
 {% include image.html file="financial-impact-5.png" %}
 
 ## Financial Classification
 
-When creating a custom field where the category is 'Financial' or 'Transition Planning' and the field type is 'Currency', you'll notice that there is an additional attribute available - 'Financial Classification'. This allows you to distinguish between different cost types, such as license or maintenance costs.
+When creating a custom field where the category is 'Financial' or 'Cloud Financial Estimates' and the field type is 'Currency', you'll notice that there is an additional attribute available - 'Financial Classification'. This allows you to distinguish between different cost types, such as license or maintenance costs.
 
 {% include image.html file="financial-impact-8.png" %}
 
@@ -79,7 +79,7 @@ This system allow you to group costs in the cost breakdown table, as described [
 
 ## Customizing the Calculation
 
-Do you have a cost which is not covered by existing fields? Maybe you pay a license cost for this app, for example. That's easy to add, simply navigate to settings -> fields and create a new custom field by clicking the '+ New' button. The category you choose for this field determines whether it is a current or a cloud cost. For a current cost, select the 'Financial' category, and for a cloud cost, select the 'Transition Planning' category. You can also set a financial classification at this point as described [here](#financial-classification). The appropriate classification in this example would be 'License'. 
+Do you have a cost which is not covered by existing fields? Maybe you pay a license cost for this app, for example. That's easy to add, simply navigate to settings -> fields and create a new custom field by clicking the '+ New' button. The category you choose for this field determines whether it is a current or a cloud cost. For a current cost, select the 'Financial' category, and for a cloud cost, select the 'Cloud Financial Estimates' category. You can also set a financial classification at this point as described [here](#financial-classification). The appropriate classification in this example would be 'License'. 
 
 {% include image.html file="financial-impact-6.png" %}
 
@@ -87,7 +87,7 @@ After you've created your custom field, you can navigate back to the application
 
 {% include image.html file="financial-impact-7.png" %}
 
-{% include note.html content="To be included in an application's current or cloud costs, the field must have category 'Financial' or 'Transition Planning' (for current and cloud costs respectively), and must have the field type 'Currency'. In most cases, you'll also want to set the field aggregation to 'Sum'." %}
+{% include note.html content="To be included in an application's current or cloud costs, the field must have category 'Financial' or 'Cloud Financial Estimates' (for current and cloud costs respectively), and must have the field type 'Currency'. In most cases, you'll also want to set the field aggregation to 'Sum'." %}
 
 
 ## Customizing the Application Cost Breakdown
@@ -108,7 +108,7 @@ The application record's financial impact view also has a 'Detailed Cost Breakdo
 
 ## ROI Comparison
 
-Part of building your cloud migration business case is comparing and contrasting different [6R](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) approaches to cloud migration. Tidal Accelerator's financial impact report includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the application drill-down under 'Recommendation Details'. To populate this, on the application record under 'Transition Planning' you will find the following fields; 'Repurchase Cost', 'Replatform Cost' and 'Transformative Cost'. 
+Part of building your cloud migration business case is comparing and contrasting different [6R](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) approaches to cloud migration. Tidal Accelerator's financial impact report includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the application drill-down under 'Recommendation Details'. To populate this, on the application record under 'Alternative Transition Estimates' you will find the following possible fields; 'Repurchase Cost', 'Replatform Cost', 'Rehost Cost', and 'Transformative Cost'. 
 
 {% include image.html file="financial-impact-10.png" %}
 
