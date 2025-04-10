@@ -17,7 +17,7 @@ When working with Applications, Server or Databases, you might need to apply cha
 
 From the Applications view, select the checkboxes for the records you'd like to edit. You can use the search bar to narrow down your selection by name or tag, or use advanced filtering to narrow down your search by record attribute.
 
-For this example, say we have some new information and we'd like to update the technical lead for all apps with the tag 'Group 1'. 
+For this example, say we have some new information and we'd like to update the technical lead for all applications with the tag 'Group 1'. 
 
 {% include image.html file="edit-apps-1.png" %}
 
@@ -61,4 +61,55 @@ The servers will now be assigned to your selected application.
 
 ## Copy Values Across Applications
 
+In Tidal Accelerator, it's considered best practice to model the same application in different environments as separate application records. This is because separate 'versions' of an application in different environments can have different needs when it comes to planning a migration. For example, an application running in a development environment has different uptime requirements, resources, and dependencies than that same application running in your production environment.
+
+However, these separate application records also share many of the same attributes, and it can be time consuming to enter the same data for each application record.
+
+To this end, you can copy values from an application to other versions of that application. We determine the 'other versions' as application records with the same name but different environments.
+
+For our example, say we have an application 'ABCya!', with all of it's relevant data captured. We also have two other version of this application in different environments that we want to copy some of this data to.
+
+First, from the application record page, click 'Copy To'.
+
+{% include image.html file="copy-apps-1.png" %}
+
+Next you will be shown a list of applications to copy the values to. Select the application records and click 'Continue'.
+
+{% include image.html file="copy-apps-2.png" %}
+
+Now you will be shown a list of the application values to copy over. These are presented alongside the existing values of your selected target applications, if present. Select any of the values that you'd like to copy over and click 'Continue'.
+
+{% include image.html file="copy-apps-3.png" %}
+
+You will be shown a confirmation message explaining what you're about to do, and how many records it will affect. If you are satisfied, click 'Confirm'.
+
+{% include image.html file="copy-apps-4.png" %}
+
+Your selected values will now be copied to the selected applications.
+
 ## Merge Environments
+
+Sometimes when uploading data from a spreadsheet, you will wind up with several environments with different names, which represent the same environment. For example you might have an environment named 'Production', and an environment named 'Prod', and you'd like to merge these environments together.
+
+By merging 'Prod' into 'Production', all of the applications, servers and databases that were in the 'Prod' environment will be placed in the 'Production' environment, and the 'Prod' environment will be deleted.
+
+To begin, navigate to the environments page.
+
+{% include image.html file="merge-environments-1.png" %}
+
+Select the environment that you would like to merge. For our example, we will select 'Prod', then click 'Merge'.
+
+{% include image.html file="merge-environments-2.png" %}
+
+From the dropdown list, select the environment that you'd like to merge this environment into. For this example, we will select 'Production'.
+
+{% include image.html file="merge-environments-3.png" %}
+
+You will be shown a message explaining the changes that you're about to make. If you're satisfied, click 'Merge'.
+
+{% include image.html file="merge-environments-4.png" %}
+
+All records in the merged environment will be added to the target environment, and the merged environment will be deleted.
+
+{% include image.html file="merge-environments-5.png" %}
+
