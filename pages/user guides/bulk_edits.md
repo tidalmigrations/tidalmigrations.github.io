@@ -1,6 +1,6 @@
 ---
 toc: false
-title: Bulk Edits
+title: Bulk Editing Records
 keywords: discovery, edits, data, portfolio, bulk, actions
 last_updated: April, 2025
 summary: "Efficiently manage your data by performing actions on multiple records simultaneously"
@@ -20,16 +20,20 @@ From the Applications view, select the checkboxes for the records you'd like to 
 For this example, say we have some new information and we'd like to update the technical lead for all applications with the tag 'Group 1'. 
 
 {% include image.html file="edit-apps-1.png" %}
+<br>
 
 After making your selection, open the 'Bulk Actions' dropdown and select 'Edit'
 
 {% include note.html content="You must click the checkbox for each record you plan to edit, rather than clicking the 'select all' checkbox at the top of the checkbox role." %}
+<br>
 
 {% include image.html file="edit-apps-2.png" %}
+<br>
 
 In the drawer, enter the values for the field or fields that you'd like to change. For our example, we'll set 'Technical Lead' to 'Addie Stroman'.
 
 {% include image.html file="edit-apps-3.png" %}
+<br>
 
 Next, click 'Submit', and your changes will be applied to your selected records.
 
@@ -42,22 +46,27 @@ When working with servers, sometimes it's necessary to associate many of your ex
 First, use the advanced filtering drawer to filter your servers by FQDN.
 
 {% include image.html file="assign-servers-1.png" %}
+<br>
 
 Now, select the servers you'd like to assign.
 
 {% include image.html file="assign-servers-2.png" %}
+<br>
 
 Next, under the 'Bulk Actions' menu, click 'Assign to Application'.
 
 {% include image.html file="assign-servers-3.png" %}
+<br>
 
 Now select the application that you'd like to assign your selected servers to. For this example we will select 'ABCya!'. Once you've selected the app, click 'Assign'. 
 
 {% include image.html file="assign-servers-4.png" %}
+<br>
 
 The servers will now be assigned to your selected application.
 
 {% include image.html file="assign-servers-5.png" %}
+<br>
 
 ## Copy Values Across Applications
 
@@ -72,18 +81,22 @@ For our example, say we have an application 'ABCya!', with all of it's relevant 
 First, from the application record page, click 'Copy To'.
 
 {% include image.html file="copy-apps-1.png" %}
+<br>
 
 Next you will be shown a list of applications to copy the values to. Select the application records and click 'Continue'.
 
 {% include image.html file="copy-apps-2.png" %}
+<br>
 
 Now you will be shown a list of the application values to copy over. These are presented alongside the existing values of your selected target applications, if present. Select any of the values that you'd like to copy over and click 'Continue'.
 
 {% include image.html file="copy-apps-3.png" %}
+<br>
 
 You will be shown a confirmation message explaining what you're about to do, and how many records it will affect. If you are satisfied, click 'Confirm'.
 
 {% include image.html file="copy-apps-4.png" %}
+<br>
 
 Your selected values will now be copied to the selected applications.
 
@@ -96,18 +109,22 @@ By merging 'Prod' into 'Production', all of the applications, servers and databa
 To begin, navigate to the environments page.
 
 {% include image.html file="merge-environments-1.png" %}
+<br>
 
 Select the environment that you would like to merge. For our example, we will select 'Prod', then click 'Merge'.
 
 {% include image.html file="merge-environments-2.png" %}
+<br>
 
 From the dropdown list, select the environment that you'd like to merge this environment into. For this example, we will select 'Production'.
 
 {% include image.html file="merge-environments-3.png" %}
+<br>
 
 You will be shown a message explaining the changes that you're about to make. If you're satisfied, click 'Merge'.
 
 {% include image.html file="merge-environments-4.png" %}
+<br>
 
 All records in the merged environment will be added to the target environment, and the merged environment will be deleted.
 
