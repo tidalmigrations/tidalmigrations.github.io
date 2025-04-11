@@ -58,7 +58,7 @@ Next, under the 'Bulk Actions' menu, click 'Assign to Application'.
 {% include image.html file="assign-servers-3.png" %}
 <br>
 
-Now select the application that you'd like to assign your selected servers to. For this example we will select 'ABCya!'. Once you've selected the app, click 'Assign'. 
+Now, select the application that you'd like to assign your selected servers to. For this example we will select 'ABCya!'. Once you've selected the app, click 'Assign'. 
 
 {% include image.html file="assign-servers-4.png" %}
 <br>
