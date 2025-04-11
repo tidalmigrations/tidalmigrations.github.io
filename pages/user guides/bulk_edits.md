@@ -13,7 +13,7 @@ Tidal Accelerator streamlines your cloud migration workflow by enabling powerful
 
 ## Bulk Editing Applications, Servers and Database Instances
 
-When working with applications, servers, or database instances, you might need to apply changes to multiple records at once. This process works the same way for all three record types, but for the purposes of this guide, we'll work with Applications.
+When working with applications, servers, or database instances, you might need to apply changes to multiple records at once. This process works the same way for all three record types, but for the purposes of this guide, we'll work with applications.
 
 From the "Applications" view, select the checkboxes for the records you'd like to edit. You can use the search bar to narrow down your selection by name or tag, or use advanced filtering to narrow down your search by record attribute.
 
@@ -43,29 +43,24 @@ Next, click 'Submit', and your changes will be applied to your selected records.
 
 When working with servers, sometimes it's necessary to associate many of your existing servers to an application record. For this example, we're going to associate all servers with the fully qualified domain name (FQDN) 'Abcya.com' with the application named 'ABCya!'.
 
-First, use the advanced filtering drawer to filter your servers by FQDN.
+First, select the servers you'd like to assign.
 
 {% include image.html file="assign-servers-1.png" %}
 <br>
 
-Now, select the servers you'd like to assign.
+Next, under the 'Bulk Actions' menu, click 'Assign to Application'.
 
 {% include image.html file="assign-servers-2.png" %}
 <br>
 
-Next, under the 'Bulk Actions' menu, click 'Assign to Application'.
+Now, select the application that you'd like to assign your selected servers to. For this example we will select 'ABCya!'. Once you've selected the app, click 'Assign'. 
 
 {% include image.html file="assign-servers-3.png" %}
 <br>
 
-Now, select the application that you'd like to assign your selected servers to. For this example we will select 'ABCya!'. Once you've selected the app, click 'Assign'. 
-
-{% include image.html file="assign-servers-4.png" %}
-<br>
-
 The servers will now be assigned to your selected application.
 
-{% include image.html file="assign-servers-5.png" %}
+{% include image.html file="assign-servers-4.png" %}
 <br>
 
 ## Copy Values Across Applications
