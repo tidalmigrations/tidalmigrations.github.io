@@ -17,8 +17,6 @@ When working with applications, servers, or database instances, you might need t
 
 From the "Applications" view, select the checkboxes for the records you'd like to edit. You can use the search bar to narrow down your selection by name or tag, or use advanced filtering to narrow down your search by record attribute.
 
-For this example, say we have some new information and we'd like to update the technical lead for all applications with the tag 'Group 1'. 
-
 {% include image.html file="edit-apps-1.png" %}
 <br>
 
@@ -30,7 +28,7 @@ After making your selection, open the 'Bulk Actions' dropdown and select 'Edit'.
 {% include image.html file="edit-apps-2.png" %}
 <br>
 
-In the drawer, enter the values for the field or fields that you'd like to change. For our example, we'll set 'Technical Lead' to 'Addie Stroman'.
+In the drawer, enter the values for the field or fields that you'd like to change.
 
 {% include image.html file="edit-apps-3.png" %}
 <br>
@@ -41,7 +39,7 @@ Next, click 'Submit', and your changes will be applied to your selected records.
 
 ## Bulk Assigning Servers to an Application
 
-When working with servers, sometimes it's necessary to associate many of your existing servers to an application record. For this example, we're going to associate all servers with the fully qualified domain name (FQDN) 'Abcya.com' with the application named 'ABCya!'.
+When working with servers, sometimes it's necessary to associate many of your existing servers to an application record. You may want to do this because the records were not associated when they were originally imported into Accelerator, or maybe you have some new information about your inventory and you need to update your data in Accelerator to match this.
 
 First, select the servers you'd like to assign.
 
@@ -53,12 +51,12 @@ Next, under the 'Bulk Actions' menu, click 'Assign to Application'.
 {% include image.html file="assign-servers-2.png" %}
 <br>
 
-Now, select the application that you'd like to assign your selected servers to. For this example we will select 'ABCya!'. Once you've selected the app, click 'Assign'. 
+Now, select the application that you'd like to assign your selected servers to. Once you've made your selection, click 'Assign'. 
 
 {% include image.html file="assign-servers-3.png" %}
 <br>
 
-The servers will now be assigned to your selected application.
+The servers will now be assigned to the selected application.
 
 {% include image.html file="assign-servers-4.png" %}
 <br>
@@ -69,15 +67,14 @@ In Tidal Accelerator, it's considered best practice to model the same applicatio
 
 However, these separate application records also share many of the same attributes, and it can be time consuming to enter the same data for each application record.
 
-To this end, you can copy values from an application to other instances of that application. We determine the other instances as application records with the same name but different environments.
+To this end, you can copy values from an application to other instances of that application. We determine the 'other instances' as application records with the same name but different environments.
 
-For our example, say we have an application 'ABCya!', with all of its relevant data captured. We also have two other instances of this application in different environments that we want to copy some of this data to.
-First, from the application record page, click 'Copy To'.
+To begin, from the application record page, click 'Copy To'.
 
 {% include image.html file="copy-apps-1.png" %}
 <br>
 
-Next, you will be shown a list of applications to copy the values to. Select the application records and click 'Continue'.
+Next, you will be shown a list of other application instances to copy the values to. Select the application records and click 'Continue'.
 
 {% include image.html file="copy-apps-2.png" %}
 <br>
@@ -98,19 +95,19 @@ The selected values will now be copied to the selected applications.
 
 Life is rarely perfect, and the spreadsheet inventory that you will get from your clients will have several environments with different names, which represent the same environment. For example you might have an environment named 'Production', and an environment named 'Prod', and you'd like to merge these environments together.
 
-By merging 'Prod' into 'Production', all of the applications, servers, and database instances that were in the 'Prod' environment will be placed in the 'Production' environment, and the 'Prod' environment will be deleted.
+By merging one environment into another, all of the applications, servers, and database instances that were in the merged environment will be placed in the target environment, and the merged environment will be deleted.
 
 To begin, navigate to the environments page.
 
 {% include image.html file="merge-environments-1.png" %}
 <br>
 
-Select the environment that you would like to merge. For our example, we will select 'Prod', then click 'Merge'.
+Select the environment that you would like to merge, then click 'Merge'.
 
 {% include image.html file="merge-environments-2.png" %}
 <br>
 
-From the dropdown list, select the environment that you'd like to merge this environment into. For this example, we will select 'Production'.
+From the dropdown list, select the environment that you'd like to merge this environment into.
 
 {% include image.html file="merge-environments-3.png" %}
 <br>
@@ -123,4 +120,3 @@ You will be shown a message explaining the changes that you're about to make. If
 All records in the merged environment will be added to the target environment, and the merged environment will be deleted.
 
 {% include image.html file="merge-environments-5.png" %}
-
