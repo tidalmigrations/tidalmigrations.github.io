@@ -30,6 +30,9 @@ entries:
           - title: Importing Data From Excel
             output: web
             url: import-from-excel.html
+          - title: Bulk Editing Records
+            output: web
+            url: bulk-edits.html
           - title: Tidal Discover
             output: web
             url: discover.html
