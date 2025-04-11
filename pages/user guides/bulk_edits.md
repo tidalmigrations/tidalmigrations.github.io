@@ -15,7 +15,7 @@ Tidal Accelerator streamlines your cloud migration workflow by enabling powerful
 
 When working with applications, servers, or databases, you might need to apply changes to multiple records at once. This process works the same way for all three record types, but for the purposes of this guide, we'll work with Applications.
 
-From the Applications view, select the checkboxes for the records you'd like to edit. You can use the search bar to narrow down your selection by name or tag, or use advanced filtering to narrow down your search by record attribute.
+From the "Applications" view, select the checkboxes for the records you'd like to edit. You can use the search bar to narrow down your selection by name or tag, or use advanced filtering to narrow down your search by record attribute.
 
 For this example, say we have some new information and we'd like to update the technical lead for all applications with the tag 'Group 1'. 
 
