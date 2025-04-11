@@ -32,7 +32,7 @@ In the drawer, enter the values for the field or fields that you'd like to chang
 {% include image.html file="edit-apps-3.png" %}
 <br>
 
-Next, click 'Submit', and your changes will be applied to your selected records.
+Click 'Submit', and your changes will be applied to your selected records.
 
 {% include image.html file="edit-apps-4.png" %}
 
@@ -45,12 +45,12 @@ First, select the servers you'd like to assign.
 {% include image.html file="assign-servers-1.png" %}
 <br>
 
-Next, under the 'Bulk Actions' menu, click 'Assign to Application'.
+Under the 'Bulk Actions' menu, click 'Assign to Application'.
 
 {% include image.html file="assign-servers-2.png" %}
 <br>
 
-Now, select the application that you'd like to assign your selected servers to. Once you've made your selection, click 'Assign'. 
+Select the application that you'd like to assign your selected servers to. Once you've made your selection, click 'Assign'. 
 
 {% include image.html file="assign-servers-3.png" %}
 <br>
@@ -73,12 +73,12 @@ To begin, from the application record page, click 'Copy To'.
 {% include image.html file="copy-apps-1.png" %}
 <br>
 
-Next, you will be shown a list of other application instances to copy the values to. Select the application records and click 'Continue'.
+You will be shown a list of other application instances to copy the values to. Select the application records and click 'Continue'.
 
 {% include image.html file="copy-apps-2.png" %}
 <br>
 
-Now you will be shown a list of the application values to copy over. These are presented alongside the existing values of your selected target applications, if present. Select any of the values that you'd like to copy over and click 'Continue'.
+You will be shown a list of the application values to copy over. These are presented alongside the existing values of your selected target applications, if present. Select any of the values that you'd like to copy over and click 'Continue'.
 
 {% include image.html file="copy-apps-3.png" %}
 <br>
