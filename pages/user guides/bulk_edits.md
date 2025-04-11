@@ -102,7 +102,7 @@ Your selected values will now be copied to the selected applications.
 
 ## Merge Environments
 
-Sometimes when uploading data from a spreadsheet, you will wind up with several environments with different names, which represent the same environment. For example you might have an environment named 'Production', and an environment named 'Prod', and you'd like to merge these environments together.
+Life is rarely perfect, and the spreadsheet inventory that you will get from your clients will have several environments with different names, which represent the same environment. For example you might have an environment named 'Production', and an environment named 'Prod', and you'd like to merge these environments together.
 
 By merging 'Prod' into 'Production', all of the applications, servers and databases that were in the 'Prod' environment will be placed in the 'Production' environment, and the 'Prod' environment will be deleted.
 
