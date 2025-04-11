@@ -76,8 +76,7 @@ However, these separate application records also share many of the same attribut
 
 To this end, you can copy values from an application to other versions of that application. We determine the 'other versions' as application records with the same name but different environments.
 
-For our example, say we have an application 'ABCya!', with all of it's relevant data captured. We also have two other version of this application in different environments that we want to copy some of this data to.
-
+For our example, say we have an application 'ABCya!', with all of its relevant data captured. We also have two other version of this application in different environments that we want to copy some of this data to.
 First, from the application record page, click 'Copy To'.
 
 {% include image.html file="copy-apps-1.png" %}
