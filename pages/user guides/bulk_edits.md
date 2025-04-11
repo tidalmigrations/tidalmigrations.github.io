@@ -23,7 +23,6 @@ From the "Applications" view, select the checkboxes for the records you'd like t
 After making your selection, open the 'Bulk Actions' dropdown and select 'Edit'.
 
 {% include note.html content="You must click the checkbox for each record you plan to edit, rather than clicking the 'select all' checkbox at the top of the checkbox role." %}
-<br>
 
 {% include image.html file="edit-apps-2.png" %}
 <br>
@@ -120,3 +119,26 @@ You will be shown a message explaining the changes that you're about to make. If
 All records in the merged environment will be added to the target environment, and the merged environment will be deleted.
 
 {% include image.html file="merge-environments-5.png" %}
+
+## Bulk Applying Tags
+
+Tags are a great way to group and organize your records. You can apply tags in bulk to applications, servers and databases instances. For the purposes of this guide, we'll work with applications.
+
+First, navigate to the "Applications" view and select the applications that you'd like to apply your tag to. 
+
+{% include image.html file="apply-tags-1.png" %}
+<br>
+
+Once you've made your selection, open the "Bulk Actions" menu and click "Apply Tag".
+
+{% include image.html file="apply-tags-2.png" %}
+<br>
+
+Select a tag from the drop-down list. 
+
+{% include note.html content="You can create a new tag directly in this drop-down. Simply enter the desired tag name, and the option to create this tag will appear." %}
+
+{% include image.html file="apply-tags-3.png" %}
+<br>
+
+After selecting the tag, click assign. The tag will then be applied to your selected records.
