@@ -39,7 +39,7 @@ Next, click 'Submit', and your changes will be applied to your selected records.
 
 {% include image.html file="edit-apps-4.png" %}
 
-## Bulk Assigning Server to Applications
+## Bulk Assigning Servers to an Application
 
 When working with servers, sometimes it's necessary to associate many of your existing servers to an application record. For this example, we're going to associate all servers with the fully qualified domain name (FQDN) 'Abcya.com' with the application named 'ABCya!'.
 
