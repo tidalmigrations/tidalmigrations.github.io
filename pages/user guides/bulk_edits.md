@@ -11,9 +11,9 @@ permalink: bulk-edits.html
 
 Tidal Accelerator streamlines your cloud migration workflow by enabling powerful bulk operations across your portfolio. You can manage multiple records at once - from assigning servers to applications in bulk, to copying values across multiple applications, and consolidating environments. These bulk operations help you maintain consistency and save time when working with large application portfolios during your migration journey.
 
-## Bulk Editing Applications, Servers and Databases
+## Bulk Editing Applications, Servers and Database Instances
 
-When working with applications, servers, or databases, you might need to apply changes to multiple records at once. This process works the same way for all three record types, but for the purposes of this guide, we'll work with Applications.
+When working with applications, servers, or database instances, you might need to apply changes to multiple records at once. This process works the same way for all three record types, but for the purposes of this guide, we'll work with Applications.
 
 From the "Applications" view, select the checkboxes for the records you'd like to edit. You can use the search bar to narrow down your selection by name or tag, or use advanced filtering to narrow down your search by record attribute.
 
@@ -103,7 +103,7 @@ The selected values will now be copied to the selected applications.
 
 Life is rarely perfect, and the spreadsheet inventory that you will get from your clients will have several environments with different names, which represent the same environment. For example you might have an environment named 'Production', and an environment named 'Prod', and you'd like to merge these environments together.
 
-By merging 'Prod' into 'Production', all of the applications, servers, and databases that were in the 'Prod' environment will be placed in the 'Production' environment, and the 'Prod' environment will be deleted.
+By merging 'Prod' into 'Production', all of the applications, servers, and database instances that were in the 'Prod' environment will be placed in the 'Production' environment, and the 'Prod' environment will be deleted.
 
 To begin, navigate to the environments page.
 
