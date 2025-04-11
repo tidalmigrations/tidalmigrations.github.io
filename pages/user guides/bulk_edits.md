@@ -22,7 +22,7 @@ For this example, say we have some new information and we'd like to update the t
 {% include image.html file="edit-apps-1.png" %}
 <br>
 
-After making your selection, open the 'Bulk Actions' dropdown and select 'Edit'
+After making your selection, open the 'Bulk Actions' dropdown and select 'Edit'.
 
 {% include note.html content="You must click the checkbox for each record you plan to edit, rather than clicking the 'select all' checkbox at the top of the checkbox role." %}
 <br>
@@ -82,7 +82,7 @@ First, from the application record page, click 'Copy To'.
 {% include image.html file="copy-apps-1.png" %}
 <br>
 
-Next you will be shown a list of applications to copy the values to. Select the application records and click 'Continue'.
+Next, you will be shown a list of applications to copy the values to. Select the application records and click 'Continue'.
 
 {% include image.html file="copy-apps-2.png" %}
 <br>
@@ -103,7 +103,7 @@ The selected values will now be copied to the selected applications.
 
 Life is rarely perfect, and the spreadsheet inventory that you will get from your clients will have several environments with different names, which represent the same environment. For example you might have an environment named 'Production', and an environment named 'Prod', and you'd like to merge these environments together.
 
-By merging 'Prod' into 'Production', all of the applications, servers and databases that were in the 'Prod' environment will be placed in the 'Production' environment, and the 'Prod' environment will be deleted.
+By merging 'Prod' into 'Production', all of the applications, servers, and databases that were in the 'Prod' environment will be placed in the 'Production' environment, and the 'Prod' environment will be deleted.
 
 To begin, navigate to the environments page.
 
