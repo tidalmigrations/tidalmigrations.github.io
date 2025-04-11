@@ -97,7 +97,7 @@ You will be shown a confirmation message explaining what you're about to do, and
 {% include image.html file="copy-apps-4.png" %}
 <br>
 
-Your selected values will now be copied to the selected applications.
+The selected values will now be copied to the selected applications.
 
 ## Merge Environments
 
