@@ -70,13 +70,13 @@ The servers will now be assigned to your selected application.
 
 ## Copy Values Across Applications
 
-In Tidal Accelerator, it's considered best practice to model the same application in different environments as separate application records. This is because separate 'versions' of an application in different environments can have different needs when it comes to planning a migration. For example, an application running in a development environment has different uptime requirements, resources, and dependencies than that same application running in your production environment.
+In Tidal Accelerator, it's considered best practice to model the same application in different environments as separate application records. This is because separate instances of an application in different environments can have different needs when it comes to planning a migration. For example, an application running in a development environment has different uptime requirements, resources, and dependencies than that same application running in your production environment.
 
 However, these separate application records also share many of the same attributes, and it can be time consuming to enter the same data for each application record.
 
-To this end, you can copy values from an application to other versions of that application. We determine the 'other versions' as application records with the same name but different environments.
+To this end, you can copy values from an application to other instances of that application. We determine the other instances as application records with the same name but different environments.
 
-For our example, say we have an application 'ABCya!', with all of its relevant data captured. We also have two other version of this application in different environments that we want to copy some of this data to.
+For our example, say we have an application 'ABCya!', with all of its relevant data captured. We also have two other instances of this application in different environments that we want to copy some of this data to.
 First, from the application record page, click 'Copy To'.
 
 {% include image.html file="copy-apps-1.png" %}
