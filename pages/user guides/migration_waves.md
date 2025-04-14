@@ -6,7 +6,7 @@ last_updated: April, 2025
 summary: "Organize your cloud migration into strategic waves of related resources for phased deployment"
 sidebar: main_sidebar
 folder: userguides
-permalink: bulk-edits.html
+permalink: migration-waves.html
 ---
 
 Migration waves help you organize and execute your cloud migration in manageable, logical groups of related resources. By grouping applications, servers, and database instances that should move together, you can ensure dependencies are maintained and risks are reduced. These strategic waves allow you to break down large migration projects into smaller, coordinated moves that can be planned and executed efficiently.

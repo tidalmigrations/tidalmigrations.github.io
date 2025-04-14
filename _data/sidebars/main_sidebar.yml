@@ -104,10 +104,13 @@ entries:
       - title: Plan
         output: web
         folderitems:
-          - title: Getting Apps and Resources within your Move Group
+          - title: Migration Waves
+            output: web
+            url: /migration-waves.html
+          - title: Getting Apps and Resources within your Migration Wave
             output: web
             url: /get-all-move-groups.html
-          - title: Exporting Servers from Move Groups
+          - title: Exporting Servers from Migration Waves
             output: web
             url: /exporting-servers-to-csv.html
           - title: Integrating with Jira
