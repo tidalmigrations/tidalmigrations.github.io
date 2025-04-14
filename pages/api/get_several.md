@@ -1,9 +1,9 @@
 ---
 toc: false
-title: Getting Apps and Resources within your Move Group
-keywords: databases, server, apps, movegroups
+title: Getting Apps and Resources within your Migration Wave
+keywords: databases, server, apps, migration, wave
 last_updated: Feb 22, 2018
-summary: "Get all your Move Groups and their associated Applications, Databases and Servers."
+summary: "Get all your Migration Waves and their associated Applications, Database Instances and Servers."
 sidebar: main_sidebar
 redirect_from: getallmovegroups.html
 permalink: get-all-move-groups.html
@@ -16,10 +16,10 @@ Once you have authenticated with the Tidal API, utilising each endpoint is super
 For any additional details regarding the endpoint, checkout the Tidal API documentation.
 (https://[your subdomain].tidal.cloud/docs/)
 
-## Getting all the Move Groups:
+## Getting all the Migration Waves:
 #### GET api/v1/move_groups {#getallmg}
 
-Returns a collection of all the move groups and its applications, database instances, and servers.
+Returns a collection of all the migration waves and its applications, database instances, and servers.
 
 ### Example Request
 
@@ -36,7 +36,7 @@ curl -X GET \
 ```
 ### Example Response
 
-You can access your Applications, Database Instances and Serves within all the move groups.
+You can access your Applications, Database Instances and Serves within all the migration waves.
 
 ```
 [
@@ -46,7 +46,7 @@ You can access your Applications, Database Instances and Serves within all the m
     "notes": "Here is a sample note. It **is** markdown friendly!",
     "created_at": "2018-02-22T05:13:25.591Z",
     "updated_at": "2018-02-22T05:13:25.591Z",
-    "name": "Move Group - Oct 25",
+    "name": "Migration Wave - Oct 25",
     "servers": [
         {
             "id": 23156,
@@ -129,7 +129,7 @@ You can access your Applications, Database Instances and Serves within all the m
         "notes": "Here is a sample note. It **is** markdown friendly!",
         "created_at": "2018-02-22T05:13:26.356Z",
         "updated_at": "2018-02-22T05:13:26.356Z",
-        "name": "Move Group - Nov 25",
+        "name": "Migration Wave - Nov 25",
         "servers": [
             {
                 "id": 23238,
@@ -193,11 +193,11 @@ You can access your Applications, Database Instances and Serves within all the m
 ]
 
 ```
-## Getting a *specific* Move Group:
+## Getting a *specific* Migration Wave:
 
 #### GET api/v1/move_groups/[id]
 
-Returns the selected move group and its applications, database instances, and servers.
+Returns the selected migration wave and its applications, database instances, and servers.
 
 ### Example Request
 
@@ -205,7 +205,7 @@ You will need:
 
 1. Your subdomain -> Refer: [Get Subdomain](https://get.tidal.cloud/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
 2. Your access token -> Refer: [Authentication Guide](index.html).
-3. Your Move Group ID -> Refer to the [above request](#getallmg) to get your move group id.
+3. Your Migration Wave ID -> Refer to the [above request](#getallmg) to get your migration wave id.
 
 ```
 curl -X GET \
@@ -216,7 +216,7 @@ curl -X GET \
 
 ### Example Response
 
-You can access your Applications, Database Instances and Serves within the selected move group.
+You can access your Applications, Database Instances and Serves within the selected migration wave.
 
 ```
 
@@ -226,7 +226,7 @@ You can access your Applications, Database Instances and Serves within the selec
     "notes": "Here is a sample note. It **is** markdown friendly!",
     "created_at": "2018-02-22T05:13:25.591Z",
     "updated_at": "2018-02-22T05:13:25.591Z",
-    "name": "Move Group - Oct 25",
+    "name": "Migration Wave - Oct 25",
     "servers": [
         {
             "id": 23156,
