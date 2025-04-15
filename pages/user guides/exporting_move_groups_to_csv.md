@@ -1,9 +1,9 @@
 ---
 toc: false
-title: Exporting servers from a Move Group to CSV
-keywords: move_groups, servers, csv, rivermeadow, export
+title: Exporting servers from a Migration Wave to CSV
+keywords:  servers, csv, rivermeadow, export, migration, wave
 last_updated: April 17, 2019
-summary: "Exporting servers from a move group to a format that can be used by RiverMeadow."
+summary: "Exporting servers from a migration wave to a format that can be used by RiverMeadow."
 sidebar: main_sidebar
 folder: userguides
 permalink: exporting-servers-to-csv.html
@@ -18,7 +18,7 @@ This guides assumes you have access to a Linux like environment, you will need:
 -   Posix compliant shell
 -   [Curl](https://curl.haxx.se/download.html)
 -   [jq](https://stedolan.github.io/jq/)
--   [A copy of the move group script](https://github.com/tidalmigrations/gists/blob/master/move_group_to_csv.sh)
+-   [A copy of the migration wave script](https://github.com/tidalmigrations/gists/blob/master/migration_wave_to_csv.sh)
 
 
 # Steps
@@ -38,21 +38,21 @@ Once you have gathered this information, you'll need set it as an environment va
     export subdomain="<your subdomain>"
 ```
 
-## 2. Gather Move Group ID
+## 2. Find Migration Wave ID
 
-To find the ID of the move group that you'd like to export, log in to the Tidal Accelerator Platform and from the `Projects` view, select the project that your move group is associated with. In the `Project` view, go to `Migration Waves` tab. You should see a list of move groups that are associated with the selected project. Click on the name of the move group you're interested in. Here, you'll be able to find the ID of the move group at the end of the URL, as shown below:
+To find the ID of the migration wave that you'd like to export, log in to the Tidal Accelerator Platform and from the `Projects` view, select the project that your migration wave is associated with. In the `Project` view, go to `Migration Waves` tab. You should see a list of migration waves that are associated with the selected project. Click on the name of the migration wave you're interested in. Here, you'll be able to find the ID of the migration wave at the end of the URL, as shown below:
 
-{% include image.html file="move_group_id.png" caption="An image highlighting how to find a move group id." %}
+{% include image.html file="migration_wave_id.png" caption="An image highlighting how to find a migration wave id." %}
 
-Once you have this number, like you did in step 1, export the `move_group_id` as an environment variable.
+Once you have this number, like you did in step 1, export the `migration_wave_id` as an environment variable.
 
-    export  move_group_id="<your move group id>"
+    export  migration_wave_id="<your migration wave id>"
 
 
 ## 3. Run the script
 
-You're ready to run the script and export this information to a CSV. Now that you have gathered the required information and saved it in `move_group_to_csv.sh`, you will need to run script and pipe the output to a CSV file:
+You're ready to run the script and export this information to a CSV. Now that you have gathered the required information and saved it in `migration_wave_to_csv.sh`, you will need to run script and pipe the output to a CSV file:
 
-    ./move_group_to_csv.sh > move_group.csv
+    ./migration_wave_to_csv.sh > migration_wave.csv
 
-Now the data you need for your server migration is in the file move_group.csv and can be imported into RiverMeadow.
+Now the data you need for your server migration is in the file migration_wave.csv and can be imported into RiverMeadow.
