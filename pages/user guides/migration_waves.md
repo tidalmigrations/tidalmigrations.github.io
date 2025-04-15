@@ -59,7 +59,9 @@ On this page, you can see the dependant applications, servers and database insta
 {% include image.html file="migration-waves-6.png" %}
 <br/>
 
-By default, it is not possible to stage dependant resources which are already in other migration waves. If you'd like to do this, there is a toggle on the top right of the page labelled 'Allow assignment to multiple migration waves'. 
+By default, it is not possible to stage resources which are already in other migration waves. If you'd like to do this, there is a toggle on the top right of the page labelled 'Allow assignment to multiple migration waves'. 
+
+In most cases, having a record spread across multiple migration waves is unnecessary and confusing. However, there are cases when a record needs to be staged across multiple waves, so we give you the escape hatch through this button.
 
 {% include image.html file="migration-waves-7.png" %}
 <br/>
