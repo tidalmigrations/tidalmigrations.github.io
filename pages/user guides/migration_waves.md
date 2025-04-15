@@ -52,23 +52,28 @@ After clicking this button, you will be taking to a staging view. Here you can s
 {% include image.html file="migration-waves-5.png" %}
 <br/>
 
-The purpose of a migration wave is to allow you to define groups of resources which make logical sense to migrate together. for example - if you choose to migrate a given application, it makes sense to also include that application's servers and database instance in the same migration wave.
+The purpose of a migration wave is to allow you to define groups of resources which make logical sense to migrate together. for example - if you choose to migrate a given application, it makes sense to also include that application's servers and database instances in the same migration wave.
 
-On this page, you can see the dependant applications, servers and database instances of your staged resources. If required, you can use the table along the bottom of the page to add these dependant resources to the migration wave. The pie chart on the top left will be updated as you go, allowing you to see the breakdown of your wave by resource type and environment.
+That's why, in our migration planner, we've made it easy to discover related resources to the currently staged and previously committed records. The planner can be divided into three sections:
+
+1. Changes that are going to be made both with the currently staged items and the selected related resources. We display the total change to the migration wave by resource type and environment.
 
 {% include image.html file="migration-waves-6.png" %}
 <br/>
 
-By default, it is not possible to stage resources which are already in other migration waves. If you'd like to do this, there is a toggle on the top right of the page labelled 'Allow assignment to multiple migration waves'. 
-
-In most cases, having a record spread across multiple migration waves is unnecessary and confusing. However, there are cases when a record needs to be staged across multiple waves, so we give you the escape hatch through this button.
+2. A table displaying the parent resources which you initially selected. Here you'll also find a toggle which allows resources to be committed to multiple migration waves. By default, it is not possible to stage resources which are already in other migration waves. This is because in most cases, having a record spread across multiple migration waves is unnecessary and confusing. However, there are cases when a record needs to be staged across multiple waves, so we give you the escape hatch through this button.
 
 {% include image.html file="migration-waves-7.png" %}
 <br/>
 
-Once you have selected any dependant resources that you'd like to add to the migration wave, select "Confirm and Apply". You will be shown a confirmation message outlining the resources which you're about to add to the migration wave. If you are satisfied, click "OK". 
+3. Along the bottom of the page, you'll find a table where you can toggle across each primary record type and see all the dependant resources of the currently staged and previously committed records. This table will also explain why the resource was suggested, as seen in the "Dependent On" column.
 
 {% include image.html file="migration-waves-8.png" %}
+<br/>
+
+Once you have selected any dependant resources that you'd like to add to the migration wave, select "Confirm and Apply". You will be shown a confirmation message outlining the resources which you're about to add to the migration wave. If you are satisfied, click "OK". 
+
+{% include image.html file="migration-waves-9.png" %}
 <br/>
 
 You will now find that your selected resources have been added to the migration wave.
