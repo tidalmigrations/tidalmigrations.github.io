@@ -66,13 +66,13 @@ Run `./azure_migrate.rb -p` and you should see a list of all the Projects in the
 In summary the 4 variables to set are:
 
 ```
-export AZ_MIGRATE_SUBSCRIPTION= <SUBSCRIPTION_ID>
+export AZ_MIGRATE_SUBSCRIPTION=<SUBSCRIPTION_ID>
 
-export AZ_MIGRATE_RG= <RESOURCE_GROUP>
+export AZ_MIGRATE_RG=<RESOURCE_GROUP>
 
 export AZURE_TOKEN=$(az account get-access-token --query accessToken --output tsv)
 
-export AZ_MIGRATE_PROJECT= <ASSESSMENT_PROJECT_MACHINE_NAME>
+export AZ_MIGRATE_PROJECT=<ASSESSMENT_PROJECT_MACHINE_NAME>
 ```
 
 ### Execute
