@@ -10,10 +10,13 @@ body {
 }
 
 /* Updated header styles */
-h1, h2, h3, h4, h5, h6 {
+[data-theme="light"] h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  color: #212529 !important;
+  color: #212529;
   margin-bottom: 1rem;
+}
+[data-theme="dark"] h1, h2, h3, h4, h5, h6 {
+  color: #f8f9fa;
 }
 
 /* Navigation bar */
@@ -96,7 +99,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
 }
 
-/* --- START dark mode sidebar fix --- */
 [data-theme="dark"] #mysidebar ul li {
   background-color: #23272b;
 }
