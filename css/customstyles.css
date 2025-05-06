@@ -50,8 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Sidebar */
-#mysidebar,
-div#toc {
+#mysidebar {
   background-color: var(--sidebar-background);
   color: var(--sidebar-text-color);
   padding: 10px;
@@ -67,8 +66,7 @@ div#toc {
   margin: 0.5rem 0;
 }
 
-#mysidebar ul li a,
-div#toc ul li a {
+#mysidebar ul li a {
   color: var(--sidebar-text-color);
   padding: 8px 12px;
   display: block;
@@ -77,8 +75,7 @@ div#toc ul li a {
   text-decoration: none;
 }
 
-#mysidebar ul li a:hover,
-div#toc ul li a:hover {
+#mysidebar ul li a:hover {
   background-color: var(--sidebar-hover-background);
   color: var(--sidebar-hover-text-color);
 }
@@ -87,15 +84,6 @@ div#toc ul li a:hover {
   background-color: var(--sidebar-hover-background);
   color: var(--sidebar-hover-text-color);
   font-weight: bold;
-}
-
-div#toc > ul::before {
-  content: "Table of Contents";
-  font-weight: bold;
-  color: var(--sidebar-hover-text-color);
-  text-align: center;
-  display: block;
-  margin-bottom: 10px;
 }
 
 #mysidebar ul li.active > a {
