@@ -1,4 +1,4 @@
-FROM ruby:2.1
+FROM ruby:3.3.4
 MAINTAINER mrafayaleem@gmail.com
 
 RUN apt-get clean \
@@ -8,18 +8,21 @@ RUN apt-get clean \
 RUN apt-get update
 
 RUN apt-get install -y \
-    node \
-    python-pygments \
+    nodejs \
+    python3-pygments \
+    build-essential \
+    libxml2-dev \
+    libxslt-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/
 
 WORKDIR /tmp
 ADD Gemfile /tmp/
 ADD Gemfile.lock /tmp/
-RUN bundle install
+RUN gem install bundler && bundle install
 
 VOLUME /src
 EXPOSE 4000
 
 WORKDIR /src
-ENTRYPOINT ["jekyll", "serve", "-H", "0.0.0.0"]
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "-H", "0.0.0.0"]
