@@ -120,11 +120,45 @@ h1, h2, h3, h4, h5, h6 {
   color: #2f2f2f;
   background-color: #7d98a2;
 } 
+[data-theme="dark"] .nav li a:hover {
+  background-color: #495057;
+  color: #fff;
+}
 [data-theme="dark"] .nav ul li a {
   border: none;
   color: #333;
 }
-/* --- END dark mode sidebar fix --- */
+
+[data-theme="dark"] div#toc ul {
+  background-color: #23272b;
+  color: #e0e0e0;
+}
+[data-theme="dark"] div#toc ul li {
+  color: #e0e0e0;
+}
+[data-theme="dark"] div#toc ul li a {
+  color: #7ab4ff;
+}
+[data-theme="dark"] div#toc ul li a:hover {
+  color: #fff;
+}
+[data-theme="dark"] div#toc > ul::before {
+  color: #b0b0b0;
+}
+[data-theme="dark"] div#toc ul li ul li::before {
+  color: #b0b0b0;
+}
+div#toc ul {
+  background-color: #23272b; /* much darker, subtle background */
+}
+
+[data-theme="light"] div#toc ul {
+  background-color: #f4f4f6; /* lighter than #23272b, but not whitesmoke */
+}
+
+[data-theme="dark"] div#toc ul {
+  background-color: #23272b;
+}
 
 /* Table styles */
 table {
