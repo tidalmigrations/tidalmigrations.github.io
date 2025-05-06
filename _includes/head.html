@@ -18,40 +18,34 @@
 
 <style>
   :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --header-background: #4ABFD3;
-    --header-text-color: #ffffff;
-    --sidebar-background: #ffffff;
-    --sidebar-text-color: #000000;
-    --sidebar-hover-background: #e9ecef;
-    --sidebar-hover-text-color: #0056b3;
-    --table-background: #ffffff;
-    --table-header-background: #343a40;
-    --table-header-text-color: #ffffff;
-    --table-row-background: #f8f9fa;
-  }
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-background: #4ABFD3;
+  --header-text-color: #ffffff;
+  --sidebar-background: #ffffff;
+  --sidebar-text-color: #000000;
+  --sidebar-hover-background: #e9ecef;
+  --sidebar-hover-text-color: #0056b3;
+  --table-background: #ffffff;
+  --table-header-background: #343a40;
+  --table-header-text-color: #ffffff;
+  --table-row-background: #f8f9fa;
+}
 
-  [data-theme="dark"] {
-    --background-color: #212529;
-    --text-color: #f8f9fa;
-    --header-background: #343a40;
-    --header-text-color: #f8f9fa;
-    --sidebar-background: #343a40;
-    --sidebar-text-color: #adb5bd;
-    --sidebar-hover-background: #495057;
-    --sidebar-hover-text-color: #ffffff;
-    --table-background: #343a40;
-    --table-header-background: #495057;
-    --table-header-text-color: #f8f9fa;
-    --table-row-background: #212529;
-  }
-
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-
+[data-theme="dark"] {
+  --background-color: #212529;
+  --text-color: #f8f9fa;
+  --header-background: #343a40;
+  --header-text-color: #f8f9fa;
+  --sidebar-background: #343a40;
+  --sidebar-text-color: #adb5bd;
+  --sidebar-hover-background: #495057;
+  --sidebar-hover-text-color: #ffffff;
+  --table-background: #343a40;
+  --table-header-background: #495057;
+  --table-header-text-color: #f8f9fa;
+  --table-row-background: #212529;
+}
   .navbar-inverse {
     background-color: var(--header-background);
     color: var(--header-text-color);
@@ -60,78 +54,6 @@
   .navbar-inverse .navbar-nav > li > a,
   .navbar-inverse .navbar-brand {
     color: var(--header-text-color);
-  }
-
-  #mysidebar,
-  div#toc {
-    background-color: var(--sidebar-background);
-    color: var(--sidebar-text-color);
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  #mysidebar ul li a,
-  div#toc ul li a {
-    color: var(--sidebar-text-color);
-    padding: 8px 12px;
-    display: block;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-    text-decoration: none;
-  }
-
-  #mysidebar ul li a:hover,
-  div#toc ul li a:hover {
-    background-color: var(--sidebar-hover-background);
-    color: var(--sidebar-hover-text-color);
-  }
-
-  #mysidebar ul li a.active {
-    background-color: var(--sidebar-hover-background);
-    color: var(--sidebar-hover-text-color);
-    font-weight: bold;
-  }
-
-  div#toc > ul::before {
-    content: "Table of Contents";
-    font-weight: bold;
-    color: var(--sidebar-hover-text-color);
-    text-align: center;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  table {
-    background-color: var(--table-background);
-  }
-
-  table th {
-    background-color: var(--table-header-background);
-    color: var(--table-header-text-color);
-  }
-
-  table tr:nth-of-type(odd) {
-    background-color: var(--table-row-background);
-  }
-
-  #search-input {
-    background-color: var(--sidebar-background);
-    color: var(--text-color);
-    border: 1px solid var(--sidebar-hover-background);
-    padding: 0.5em;
-    margin-left: 20px;
-    width: 20em;
-    font-size: 0.8em;
-    box-sizing: border-box;
-    margin-top: 10px;
-  }
-
-  #search-input::placeholder {
-    color: var(--sidebar-text-color);
-    opacity: 0.7;
-  }
-  table tr:nth-of-type(odd) {
-    background-color: var(--table-row-background);
   }
 </style>
 

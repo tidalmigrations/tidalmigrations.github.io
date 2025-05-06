@@ -1,10 +1,10 @@
-/* Modernized typography */
+/* General styles */
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
   margin: 0;
   padding: 0;
 }
@@ -18,85 +18,89 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation bar */
 .navbar-inverse {
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: var(--header-background);
+  color: var(--header-text-color);
 }
-.navbar-inverse .navbar-nav > li > a {
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-brand {
+  color: var(--header-text-color);
   background-color: transparent;
   border: none;
-  color: #007bff;
   font-weight: 500;
   padding: 10px 15px;
   text-decoration: none;
 }
+
 .navbar-inverse .navbar-nav > li > a:hover {
   color: #0056b3;
   text-decoration: underline;
 }
 
-/* Table styles */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1rem;
-  background-color: #ffffff;
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  border-radius: 5px;
 }
-table th {
-  background-color: #343a40;
-  color: #ffffff;
-  padding: 0.75rem;
-  text-align: left;
-  border-bottom: 2px solid #dee2e6;
-}
-table td {
-  padding: 0.75rem;
-  border-top: 1px solid #dee2e6;
-}
-table tr:nth-of-type(odd) {
-  background-color: #f8f9fa;
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover {
+  border-radius: 5px;
 }
 
 /* Sidebar */
-#mysidebar {
-  background-color: #ffffff;
-  border: 1px solid #dee2e6;
-  padding: 15px;
+#mysidebar,
+div#toc {
+  background-color: var(--sidebar-background);
+  color: var(--sidebar-text-color);
+  padding: 10px;
   border-radius: 5px;
 }
+
 #mysidebar ul {
   list-style: none;
   padding: 0;
 }
+
 #mysidebar ul li {
   margin: 0.5rem 0;
 }
-#mysidebar ul li a {
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  color: #007bff;
-  text-decoration: none;
-  padding: 5px 10px;
+
+#mysidebar ul li a,
+div#toc ul li a {
+  color: var(--sidebar-text-color);
+  padding: 8px 12px;
   display: block;
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
-}
-#mysidebar ul li a:hover {
-  background-color: #e9ecef;
-  color: #0056b3;
+  text-decoration: none;
 }
 
-/* Revert left-nav active menu item styles to retain menu state */
+#mysidebar ul li a:hover,
+div#toc ul li a:hover {
+  background-color: var(--sidebar-hover-background);
+  color: var(--sidebar-hover-text-color);
+}
+
 #mysidebar ul li a.active {
-  background-color: #e9ecef;
-  color: #0056b3;
+  background-color: var(--sidebar-hover-background);
+  color: var(--sidebar-hover-text-color);
   font-weight: bold;
-  border-radius: 4px;
 }
 
-/* Adjust active class for navigation items */
+div#toc > ul::before {
+  content: "Table of Contents";
+  font-weight: bold;
+  color: var(--sidebar-hover-text-color);
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
 #mysidebar ul li.active > a {
-  background-color: #e9ecef;
-  color: #0056b3;
+  background-color: var(--sidebar-hover-background);
+  color: var(--sidebar-hover-text-color);
   font-weight: bold;
   border-radius: 4px;
 }
@@ -104,12 +108,59 @@ table tr:nth-of-type(odd) {
 #mysidebar ul li.active {
   background-color: transparent;
 }
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: var(--table-background);
+}
+
+table th {
+  background-color: var(--table-header-background);
+  color: var(--table-header-text-color);
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+}
+
+table td {
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+}
+
+table tr:nth-of-type(odd) {
+  background-color: var(--table-row-background);
+}
+
+/* Search area */
+#search-input {
+  background-color: var(--sidebar-background);
+  color: var(--text-color);
+  border: 1px solid var(--sidebar-hover-background);
+  padding: 0.5em;
+  margin-left: 20px;
+  width: 20em;
+  font-size: 0.8em;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+#search-input::placeholder {
+  color: var(--sidebar-text-color);
+  opacity: 0.7;
+}
+
+/* Additional styles */
 .bs-callout-warning h4 {
   color: #f0ad4e;
 }
+
 .bs-callout-info {
   border-left-color: #5bc0de;
 }
+
 .bs-callout-info h4 {
   color: #5bc0de;
 }
@@ -117,10 +168,12 @@ table tr:nth-of-type(odd) {
 .gi-2x {
   font-size: 2em;
 }
+
 .footer img {
   max-width: 150px;
   margin-top: 10px;
 }
+
 .footerMeta {
   background-color: transparent;
   padding: 10px;
@@ -176,15 +229,13 @@ dt[id] {
   color: gray;
 }
 
-table {
-  background-color: transparent;
-}
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
   color: #777;
   text-align: left;
 }
+
 th {
   text-align: left;
 }
@@ -203,6 +254,7 @@ table col[class*="col-"] {
   display: table-column;
   float: none;
 }
+
 table td[class*="col-"],
 table th[class*="col-"] {
   position: static;
@@ -224,6 +276,7 @@ p.external a {
 #definition-box-container div a.active {
   font-weight: bold;
 }
+
 p.post-meta {
   font-size: 80%;
   color: #777;
@@ -237,45 +290,10 @@ p.post-meta {
   text-transform: uppercase;
 }
 
-/* search area */
-#search-demo-container ul#results-container {
-  list-style: none;
-  font-size: 12px;
-  background-color: white;
-  position: absolute;
-  top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
-  left: 20px;
-  z-index: 10 !important;
-  width: 223px;
-  border-left: 1px solid #dedede;
-}
-
-ul#results-container a {
-  background-color: transparent;
-}
-
-ul#results-container a:hover {
-  color: black;
-}
-
-#search-demo-container a:hover {
-  color: black;
-}
-#search-input {
-  margin-left: 20px;
-  width: 20em;
-  font-size: 0.8em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: 10px;
-  border-color:  #ffffff;
-}
-/* end search */
-
 .filter-options {
   margin-bottom: 20px;
 }
+
 .filter-options button {
   margin: 3px;
 }
@@ -285,6 +303,7 @@ div#toc ul li {
   font-size: 90%;
   list-style: square;
 }
+
 div#toc ul {
   background-color: whitesmoke;
   padding: 5px;
@@ -299,19 +318,6 @@ div#toc ul li ul {
 
 div#toc ul li ul li::before {
   content: "–  ";
-}
-
-div#toc > ul::before {
-  content: "Table of Contents";
-  font-weight: 500;
-  color: #555;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
 }
 
 li.dropdownActive a {
@@ -330,7 +336,6 @@ footer {
   font-size: smaller;
 }
 
-/* FAQ page */
 #accordion .panel-heading {
   font-size: 12px;
 }
@@ -341,7 +346,6 @@ a.accordion-collapsed {
   text-decoration: none;
 }
 
-/* navgoco sidebar styles (customized) */
 .nav,
 .nav ul,
 .nav li {
@@ -350,12 +354,10 @@ a.accordion-collapsed {
 
 .nav ul {
   padding: 0;
-  /*margin: 0 0 0 18px;*/
   margin: 0px;
 }
 
 .nav {
-  /* padding: 4px;*/
   padding: 0px;
   margin: 0px;
 }
@@ -372,9 +374,6 @@ a.accordion-collapsed {
   color: #333;
   display: block;
   outline: none;
-  /*-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;*/
   text-decoration: none;
 }
 
@@ -387,6 +386,7 @@ a.accordion-collapsed {
 .nav li > a > span:after {
   content: "\25be";
 }
+
 .nav li.active > a > span:after {
   content: "\25b4";
 }
@@ -446,19 +446,6 @@ ul#mysidebar {
   border-top: 1px solid whitesmoke;
   padding-left: 10px;
 }
-/* end sidebar */
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  border-radius: 5px;
-}
-
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:focus,
-.navbar-inverse .navbar-nav > .open > a:hover {
-  border-radius: 5px;
-}
 
 span.projectTitle {
   font-family: Helvetica, sans-serif;
@@ -468,9 +455,11 @@ span.projectTitle {
 .footer {
   text-align: right;
 }
+
 .footer-link::after {
   visibility: hidden;
 }
+
 .footer-logo {
   position: relative;
   right: -33px;
@@ -513,9 +502,6 @@ figcaption {
 table.dataTable thead {
   background-color: #444;
 }
-table td {
-  hyphens: auto;
-}
 
 section table tr.success {
   background-color: #dff0d8 !important;
@@ -530,6 +516,7 @@ table tr.testing,
 table tr.testing > td.sorting_1 {
   background-color: #fcf8e3 !important;
 }
+
 section table tr.danger,
 table tr.preference,
 table tr.preference > td.sorting_1 {
@@ -560,6 +547,7 @@ table.request thead tr th {
   text-align: center;
   margin: 5px;
 }
+
 span.myLabel {
   padding-left: 10px;
   padding-right: 10px;
@@ -615,15 +603,19 @@ hr.shaded {
 .fa-6x {
   font-size: 900%;
 }
+
 .fa-7x {
   font-size: 1100%;
 }
+
 .fa-8x {
   font-size: 1300%;
 }
+
 .fa-9x {
   font-size: 1500%;
 }
+
 .fa-10x {
   font-size: 1700%;
 }
@@ -669,6 +661,7 @@ a.fa.fa-envelope-o.mailto {
 ol li ol li {
   list-style-type: lower-alpha;
 }
+
 ol li ul li {
   list-style-type: disc;
 }
@@ -703,14 +696,13 @@ li.activeSeries {
 
 .alert-warning {
   color: #444;
-
 }
 
 div.alert code,
 h2 code {
   background-color: transparent !important;
 }
-/* without this, the links in these notes aren't visible.*/
+
 .alert a {
   text-decoration: underline;
 }
@@ -739,6 +731,7 @@ h2 {
   font-size: 24px;
   line-height: 29px;
 }
+
 span.otherProgrammingLanguages {
   font-style: normal;
 }
@@ -785,7 +778,6 @@ ol.series li {
   display: block;
 }
 
-/* not sure if using this ...*/
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
   border-color: #248ec2 !important;
@@ -795,15 +787,16 @@ ol.series li {
 #mysidebar .nav ul {
   background-color: #fafafa;
 }
+
 .nav ul.series li {
   list-style: decimal;
   font-size: 12px;
-
 }
 
 .nav ul.series li a:hover {
   background-color: gray;
 }
+
 .nav ul.series {
   padding-left: 30px;
 }
@@ -811,12 +804,6 @@ ol.series li {
 .nav ul.series {
   background-color: #fafafa;
 }
-
-/*
-a.dropdown-toggle.otherProgLangs {
-    color: #f7e68f !important;
-}
-*/
 
 span.muted {
   color: #666;
@@ -834,16 +821,15 @@ table code {
 table p {
   margin-top: 12px;
   margin-bottom: 12px;
-
 }
 
 pre,
 table code {
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }
 
 pre {
@@ -880,6 +866,7 @@ dd {
   margin: 0px;
   margin-bottom: 6px;
 }
+
 .panel-heading {
   font-weight: bold;
 }
@@ -999,9 +986,7 @@ span.soft {
   padding: 10px;
 }
 
-/* this part adds an icon after external links, using FontAwesome*/
-a[href^="http://"]:after, a[href^="https://"]:after
-{
+a[href^="http://"]:after, a[href^="https://"]:after {
   content: "\f08e";
   font-family: FontAwesome;
   font-weight: normal;
@@ -1011,7 +996,6 @@ a[href^="http://"]:after, a[href^="https://"]:after
   padding-left: 3px;
 }
 
-/* Strip the outbound icon when this class is present */
 a[href].noCrossRef::after,
 a.no_icon:after {
   content: "" !important;
@@ -1022,25 +1006,24 @@ a.no_icon:after {
   margin-bottom: 10px;
 }
 
-/* algolia search */
-
 .search {
   text-align: left;
 }
+
 .search input {
   font-size: 20px;
   width: 300px;
 }
+
 .results {
   margin: auto;
   text-align: left;
 }
+
 .results ul {
   list-style-type: none;
   padding: 0;
 }
-
-/* algolia */
 
 div.results {
   position: absolute;
@@ -1076,6 +1059,7 @@ span.label.label-default {
 span.label.label-primary {
   background-color: #f0ad4e;
 }
+
 .col-lg-12 .nav li a {
   background-color: white;
 }
@@ -1204,37 +1188,27 @@ div.box.box1 {
 }
 
 #userMap .btn-lg {
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
   font-size: 14px;
 }
 
-/*
- * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
- *
- * [1] IE9
- * [2] IE10+
- */
-/* 1 */
 .ie9 img[src$=".svg"] {
   width: 100%;
 }
-/* 2 */
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   img[src$=".svg"] {
     width: 100%;
-  }
 }
 
 h4.panel-title {
   padding-top: 0px;
   margin-top: 0px;
 }
-
-/*set navbar breakpoint so that it converts to hamburger earlier */
 
 @media (max-width: 1200px) {
   .navbar-header {
