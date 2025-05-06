@@ -122,6 +122,9 @@ body {
   color: #2f2f2f;
   background-color: #7d98a2;
 } 
+[data-theme="dark"] .topnavlinks li a {
+  background-color: #343A40;
+} 
 [data-theme="dark"] .nav li a:hover {
   background-color: #495057;
   color: #fff;
