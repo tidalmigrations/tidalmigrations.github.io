@@ -122,6 +122,10 @@ body {
   color: #2f2f2f;
   background-color: #7d98a2;
 } 
+[data-theme="dark"] #results-container li a {
+  color: #ffffff;
+  background-color: #485c64 ;
+} 
 [data-theme="dark"] .topnavlinks li a {
   background-color: #343A40;
 } 
