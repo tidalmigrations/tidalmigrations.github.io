@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar */
 #mysidebar {
-  background-color: var(--sidebar-background);
   color: var(--sidebar-text-color);
   padding: 0px;
   border-radius: 5px;
