@@ -203,6 +203,22 @@ table tr:nth-of-type(odd) {
   opacity: 0.7;
 }
 
+#search-demo-container {
+  position: relative;
+}
+
+#results-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 /* Additional styles */
 .bs-callout-warning h4 {
   color: #f0ad4e;
