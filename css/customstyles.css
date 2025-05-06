@@ -96,6 +96,36 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
 }
 
+/* --- START dark mode sidebar fix --- */
+[data-theme="dark"] #mysidebar ul li {
+  background-color: #23272b;
+}
+[data-theme="dark"] #mysidebar ul li a {
+  color: #dcdbdb;
+  background-color: #23272b;
+}
+[data-theme="dark"] #mysidebar ul li a:hover,
+[data-theme="dark"] #mysidebar ul li.active > a,
+[data-theme="dark"] #mysidebar ul li a.active {
+  background-color: #495057;
+  color: #fff;
+}
+[data-theme="dark"] #mysidebar ul li {
+  border-bottom: 1px solid #343a40;
+}
+[data-theme="dark"] #mysidebar {
+  color: #e0e0e0;
+}
+[data-theme="dark"] .nav li a {
+  color: #2f2f2f;
+  background-color: #7d98a2;
+} 
+[data-theme="dark"] .nav ul li a {
+  border: none;
+  color: #333;
+}
+/* --- END dark mode sidebar fix --- */
+
 /* Table styles */
 table {
   border-collapse: collapse;
