@@ -1,5 +1,6 @@
 ---
 title: Authentication
+parent: API
 keywords: authentication, login, ping, refresh, token, subdomain
 last_updated: Feb 13, 2018
 summary: "Easily authenticate with the Tidal API"

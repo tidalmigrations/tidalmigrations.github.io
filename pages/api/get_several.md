@@ -1,6 +1,7 @@
 ---
 toc: false
 title: Getting Apps and Resources within your Migration Wave
+parent: API
 keywords: databases, server, apps, migration, wave
 last_updated: Feb 22, 2018
 summary: "Get all your Migration Waves and their associated Applications, Database Instances and Servers."
@@ -28,7 +29,7 @@ You will need:
 1. Your Subdomain -> Refer to [Get Subdomain](https://get.tidal.cloud/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
 2. Your access token -> Refer: [Authentication Guide](index.html)
 
-```
+```bash
 curl -X GET \
   https://[insert your subdomain].tidal.cloud/api/v1/move_groups \
   -H 'authorization: bearer [insert your access_token]' \
@@ -38,7 +39,7 @@ curl -X GET \
 
 You can access your Applications, Database Instances and Serves within all the migration waves.
 
-```
+```json
 [
   {
     "id": 80,
@@ -303,6 +304,4 @@ You can access your Applications, Database Instances and Serves within the selec
 
     ]
 }
-
 ```
-

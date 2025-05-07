@@ -1,6 +1,7 @@
 ---
 toc: false
 title: Using Tidal API with Nmap
+parent: API
 keywords: postman, swagger, docs, requests, nmap
 last_updated: september, 2020
 summary: "How to capture Nmap output in the Tidal API"
@@ -23,7 +24,7 @@ Once you are authenticated and set up,  you can use this API endpoint to capture
 
 This is the shape of the expected payload.
 
-```
+```json
 {
   "nmap_output": {
     "hosts": [
@@ -52,7 +53,7 @@ Send a JSON file with [Tidal Tools](https://guides.tidal.cloud/host-discovery.ht
 
 You could also use cURL, a request would look similar to this:
 
-```
+```bash
 export API_TOKEN=PUT_YOUR_TOKEN_HERE
 export SUBDOMAIN=PUT_YOUR_SUBDOMAIN_HERE
 
