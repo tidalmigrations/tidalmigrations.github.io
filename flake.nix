@@ -15,7 +15,6 @@
           default = pkgs.mkShell {
             buildInputs = [
               pkgs.ruby_3_4
-
             ];
             shellHook = ''
               export PKG_CONFIG_PATH=$PKG_CONFIG_PATH_FOR_TARGET;
