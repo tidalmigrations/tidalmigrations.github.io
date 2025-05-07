@@ -15,7 +15,7 @@ You will need:
 1. Your Subdomain
 2. Your Access Token
 
-```bash
+```
 curl -X GET \
   https://[your subdomain].tidal.cloud/api_docs \
   -H 'authorization: bearer [insert your access_token] \
@@ -29,4 +29,8 @@ This will allow you to access the swagger documentation of the Tidal API.
 
 Paste the documentation and you now have access to all the requests that can be performed in the Tidal API!
 
-{% include image.html file="postman.png" alt="Importing API requests in Postman" %}
+{% include image.html file="postman.png" caption="Importing API requests in Postman" %}
+
+
+
+

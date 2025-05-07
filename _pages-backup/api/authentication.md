@@ -8,7 +8,8 @@ permalink: authenticate.html
 ---
 
 ## Authenticating a request {#getaccess}
-<font size="3"> <i> api/v1/authenticate </i> </font>
+<font size="3"> <i> api/v1/authenticate </i> </font> <br>
+
 
 The purpose of this document is to show you how to modify HTTP requests
 to send authorized requests to the Tidal API.
@@ -41,7 +42,7 @@ requires that requests needing authorization contain an additional HTTP `Authori
 header. There should be two headers present: `Authorization` and `Content-Type`.
 
 
-| Key                 | Value                  |
+| Key                 | Value                  | 
 | --------------------|:----------------------:|
 | `Authorization`     | `bearer` [access_token]|
 | `Content-Type`      | `application/json`     |
@@ -51,7 +52,7 @@ header. There should be two headers present: `Authorization` and `Content-Type`.
 
 The lifetime of `access_token` and `refresh_token` token is 8 hours. The `expires_in` parameter tells you the token expiration time in seconds.
 Once the token is expired, you must re-authenticate. However, it is possible to have permanent access to the API with the use of `refresh_token`.
-The Refresh Token can be used to retrieve a brand new Access Token by utilising the [*api/v1/refresh*](#getrefresh) endpoint.
+The Refresh Token can be used to retrieve a brand new Access Token by utilising the [*api/v1/refresh*](#getrefresh) endpoint. 
 
 The Access Token is generated in *JSON Web Tokens (JWTs)* format. It is used to obtain the user's resources.
 
@@ -65,7 +66,7 @@ The response of the request is:
 ```
 
 ## Utilising the Ping Endpoint {#ping}
-<font size="3"> <i> api/v1/ping </i> </font>
+<font size="3"> <i> api/v1/ping </i> </font> <br>
 
 Verify that you are able to connect to the Tidal API utilising the `api/v1/ping` endpoint.
 This endpoint can also be used to ensure you are authenticated.
@@ -94,8 +95,7 @@ The response of the above request should be the following:
 
 
 ## Refreshing your token {#getrefresh}
-<font size="3"> <i> api/v1/refresh </i> </font>
-
+<font size="3"> <i> api/v1/refresh </i> </font> <br> 
 
 Refresh your access token and generate a new one.
 

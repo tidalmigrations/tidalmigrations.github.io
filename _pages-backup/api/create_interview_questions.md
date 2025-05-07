@@ -39,37 +39,34 @@ You can create a custom field for an application by going to https://[your works
 
 Once we have created a custom field, we need to get its field id. So, to start we need to get a list of all fields for applications:
 
-```sh
-curl -X GET \
-  https\://[your subdomain].tidal.cloud/api/v1/fields\?model_type\=applications \
-  -H authorization\:\ \"Bearer\ [auth token]\" \
-  -H Content-Type\:\ application/json \
-  -o fields.json
-```
+    curl -X GET \
+      https\://[your subdomain].tidal.cloud/api/v1/fields\?model_type\=applications \
+      -H authorization\:\ \"Bearer\ [auth token]\" \
+      -H Content-Type\:\ application/json \
+      -o fields.json
+
 Once we have that, we need to search for our newly created field name. If you have 'jq' installed you can use it to query the json file for your field name
 
-```sh
-jq '.[] | select(.name=="Your Field Name")' fields.json
-```
+    jq '.[] | select(.name=="Your Field Name")' fields.json
 
 Which should give you an output similiar to
-```json
-{  "id": 1,  "name": "Total users",  "model_type": "applications",
-  "field_type": "number",
-  "options": null,
-  "created_at": "2018-09-05T18:22:44.080Z",
-  "updated_at": "2018-09-05T18:22:44.080Z",
-  "field_category": "Service Management",
-  "unit": "other",
-  "aggregation": "Sum",
-  "measurable": null,
-  "pack_id": null,
-  "intended_type": null,
-  "internal_type": "custom",
-  "currency_id": null,
-  "field_options": []
-}
-```
+
+    {  "id": 1,  "name": "Total users",  "model_type": "applications",
+      "field_type": "number",
+      "options": null,
+      "created_at": "2018-09-05T18:22:44.080Z",
+      "updated_at": "2018-09-05T18:22:44.080Z",
+      "field_category": "Service Management",
+      "unit": "other",
+      "aggregation": "Sum",
+      "measurable": null,
+      "pack_id": null,
+      "intended_type": null,
+      "internal_type": "custom",
+      "currency_id": null,
+      "field_options": []
+    }
+
 ## Custom Question
 
 ### Get a question number

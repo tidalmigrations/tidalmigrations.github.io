@@ -15,6 +15,7 @@
           default = pkgs.mkShell {
             buildInputs = [
               pkgs.ruby_3_4
+              pkgs.rubyPackages_3_4.jekyll
             ];
             shellHook = ''
               export PKG_CONFIG_PATH=$PKG_CONFIG_PATH_FOR_TARGET;
