@@ -1,0 +1,10 @@
+[build.environment]
+  NODE_VERSION = "16"
+  RUBY_VERSION = "3.3.4"
+
+[build]
+  command = "bundle install && bundle exec jekyll build"
+  publish = "_site"
+
+[[plugins]]
+  package = "@netlify/plugin-ruby-bundler"
