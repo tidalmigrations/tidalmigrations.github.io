@@ -1,14 +1,5 @@
 source "https://rubygems.org"
 
-<<<<<<< HEAD
-# Pinning problematic gems to compatible versions
-gem "commonmarker", "~> 0.23.8"
-gem "unf_ext", "~> 0.0.7.7"
-gem "eventmachine", "~> 1.2.5"
-gem "http_parser.rb", "~> 0.6.0"
-gem "racc", "~> 1.5.2"
-
-=======
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -27,20 +18,16 @@ gem "minima", "~> 2.0"
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
->>>>>>> 85e0d30 (chore: move over a beginning template for up-to-date docs)
 group :jekyll_plugins do
-  gem 'github-pages', '~> 232'
+  gem 'github-pages'
   gem 'jekyll-feed'
   gem 'jekyll-redirect-from'
   gem 'jekyll-sitemap'
 end
 
-<<<<<<< HEAD
-
-=======
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
+platforms :mingw, :x64_mingw, :mswin do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end
@@ -52,9 +39,4 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 # kramdown v1, comment out this line.
 gem "kramdown-parser-gfm"
 
-# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
-# do not have a Java counterpart.
-gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-
 gem "just-the-docs", "~> 0.10.1"
->>>>>>> 85e0d30 (chore: move over a beginning template for up-to-date docs)
