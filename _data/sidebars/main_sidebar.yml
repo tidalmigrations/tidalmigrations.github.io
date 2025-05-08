@@ -7,81 +7,81 @@ entries:
         folderitems:
           - title: Layering Discovery Techniques
             output: web
-            url: index.html
+            url: /index.html
           - title: Setup Tidal Tools
             output: web
-            url: tidal-tools.html
+            url: /tidal-tools.html
           - title: Setup Tidal Tools on AWS
             output: web
-            url: tidal-tools-aws.html
+            url: /tidal-tools-aws.html
           - title: Setup Tidal Tools on GCP
             output: web
-            url: tidal-tools-gcp.html
+            url: /tidal-tools-gcp.html
           - title: Tidal Tools Autocompletion
             output: web
-            url: autocompletion.html
+            url: /autocompletion.html
           - title: Tidal Offline
             output: web
-            url: tidal-offline.html
+            url: /tidal-offline.html
 
       - title: Discover
         output: web
         folderitems:
           - title: Importing Data From Excel
             output: web
-            url: import-from-excel.html
+            url: /import-from-excel.html
           - title: Bulk Editing Records
             output: web
-            url: bulk-edits.html
+            url: /bulk-edits.html
           - title: Tidal Discover
             output: web
-            url: discover.html
+            url: /discover.html
           - title: Public URL Discovery
             output: web
-            url: public-urls.html
+            url: /public-urls.html
           - title: Tidal Analyze
             output: web
-            url: analyze.html
+            url: /analyze.html
           - title: Sync your Server Inventory
             output: web
-            url: sync-servers.html
+            url: /sync-servers.html
           - title: Gathering Machine Stats
             output: web
-            url: machine_stats.html
+            url: /machine_stats.html
           - title: Host discovery with Nmap
             output: web
-            url: host-discovery.html
+            url: /host-discovery.html
           - title: Integrating with vSphere
             output: web
-            url: vsphere.html
+            url: /vsphere.html
           - title: Integrating with Ansible Tower
             output: web
-            url: ansible-tower.html
+            url: /ansible-tower.html
           - title: Integrating with Azure Migrate
             output: web
-            url: azure-migrate.html          
+            url: /azure-migrate.html          
           - title: Windows DNS Zonefile Export
             output: web
-            url: windows-zone-export.html
+            url: /windows-zone-export.html
           - title: Tidal Tools Virtual Machine Image
             output: web
-            url: tidal-discovery-vm.html
+            url: /tidal-discovery-vm.html
 
       - title: Assess
         output: web
         folderitems:
           - title: Code Analysis Overview
             output: web
-            url: code-analysis-overview.html
+            url: /code-analysis-overview.html
           - title: Performing Code Analysis
             output: web
-            url: analyze-source-code.html
+            url: /analyze-source-code.html
           - title: HTTP Web Log Analysis
             output: web
-            url: analyze-logs.html
+            url: /analyze-logs.html
           - title: Application Interview Best Practices
             output: web
-            url: interviews.html
+            url: /interviews.html
           - title: Creating interview questions
             output: web
             url: /create-interview-questions.html
@@ -146,17 +146,17 @@ entries:
         folderitems:
           - title: General Troubleshooting
             output: web
-            url: general-troubleshooting.html
+            url: /general-troubleshooting.html
           - title: Tidal Tools Troubleshooting
             output: web
-            url: troubleshooting.html
+            url: /troubleshooting.html
           - title: Troubleshooting Ansible Tower Integration
             output: web
-            url: troubleshoot-ansible.html
+            url: /troubleshoot-ansible.html
 
       - title: Downloads
         output: web
         folderitems:
           - title: Downloads
             output: web
-            url: downloads.html
+            url: /downloads.html

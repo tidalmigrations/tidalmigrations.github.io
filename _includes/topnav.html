@@ -13,8 +13,34 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <!-- toggle sidebar button -->
-                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
-                <!-- entries without drop-downs appear here -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>               
+                <li>
+                  <a id="theme-toggle-link" href="#" onclick="toggleTheme()">
+                    <i id="theme-icon" class="fa fa-toggle-off"></i> Darkmode
+                  </a>
+                </li>
+                <script>
+                  function toggleTheme() {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+
+                    // Update the icon
+                    const themeIcon = document.getElementById('theme-icon');
+                    themeIcon.className = newTheme === 'dark' ? 'fa fa-toggle-on' : 'fa fa-toggle-off';
+                  }
+
+                  // Initialize theme on page load
+                  document.addEventListener('DOMContentLoaded', () => {
+                    const savedTheme = localStorage.getItem('theme') || 'light';
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+
+                    // Set the correct icon
+                    const themeIcon = document.getElementById('theme-icon');
+                    themeIcon.className = savedTheme === 'dark' ? 'fa fa-toggle-on' : 'fa fa-toggle-off';
+                  });
+                </script>
                 <li>
                     <!--start search-->
                     <div id="search-demo-container">
@@ -35,7 +61,6 @@
                     </script>
                     <!--end search-->
                 </li>
-
 {% assign topnav = site.data[page.topnav] %}
 {% assign topnav_dropdowns = site.data[page.topnav].topnav_dropdowns %}
 

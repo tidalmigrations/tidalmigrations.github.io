@@ -1,4 +1,14 @@
-version: '2'
+# Docker Compose file for the web server
+# This file is used to build and run the web server for the Tidal documentation site.
+#
+# to run the server, use the command:
+# docker-compose up
+# to stop the server, use the command:
+# docker-compose down
+# to rebuild the server, use the command:
+# docker-compose build
+# to view the logs, use the command:
+# docker-compose logs -f  
 services:
   server:
     build:

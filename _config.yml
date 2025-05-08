@@ -3,10 +3,10 @@ repository: tomjoht/documentation-theme-jekyll
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Tidal
+topnav_title: Tidal.cloud Guides
 # this appears on the top navigation bar next to the home button
 
-site_title: Tidal
+site_title: Tidal.cloud Guides
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Tidal SW Inc
