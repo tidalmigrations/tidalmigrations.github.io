@@ -38,13 +38,15 @@ them with:
 tidal analyze web my_urls.txt --upload
 ```
 
-{% include tip.html content="You can also utilize the standard output of URLs
+{: .tip }
+You can also utilize the standard output of URLs
 and FQDNs from [Tidal Discover](discover.html) as input. `tidal discover
-my_plan.yml | tidal analyze web --upload`" %}
+my_plan.yml | tidal analyze web --upload`
 
-{% include callout.html content="Are you running this behind a firewall or in a
+{: .highlight }
+Are you running this behind a firewall or in a
 private network? No problem, drop the `--upload` flag, continue on and then
-checkout the Uploading to your account section below." type="primary" %}
+checkout the Uploading to your account section below.
 
 ## Uploading to Tidal API
 
