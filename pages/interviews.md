@@ -1,10 +1,10 @@
 ---
 toc: false
 title: Application Interview Best Practices
+hidden: true
 keywords: assessment, interview, application
 last_updated: January, 2021
 summary: "Best practices when performing application assessment interviews"
-sidebar: main_sidebar
 folder: userguides
 permalink: interviews.html
 ---
