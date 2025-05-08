@@ -4,7 +4,4 @@
 
 [build]
   command = "bundle install && bundle exec jekyll build"
-    publish = "_site"
-
-[[plugins]]
-  package = "@netlify/plugin-ruby-bundler"
+  publish = "_site"
