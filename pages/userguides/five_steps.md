@@ -109,10 +109,10 @@ will show `https://[your workspace].tidal.cloud/apps/111/overview`  Here, `111` 
 
 I can now analyze the source code with:
 
-```
+```bash
 cd /path/to/source-code
 tidal analyze code --app-id 111 .
 ```
+
 To find additional information about this feature, visit the
 [guide](analyze-source-code.html) on analyzing your source code.
-
