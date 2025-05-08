@@ -4,8 +4,6 @@ title: Layering Discovery Techniques
 keywords: sync, import, discover, analyze, source code, discovery plan
 last_updated: April 23, 2020
 summary: "A quick guide on the various discovery techniques and how to layer them together to quickly and accurately discover your environment"
-sidebar: main_sidebar
-folder: userguides
 permalink: index.html
 ---
 
