@@ -87,7 +87,7 @@ GEM
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
-    http_parser.rb (0.8.0)
+    http_parser.rb (0.6.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jekyll (3.10.0)
@@ -224,7 +224,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.7)
-    racc (1.6.2)
+    racc (1.5.2)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -251,7 +251,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.8.2)
+    unf_ext (0.0.7.7)
     unicode-display_width (1.8.0)
     webrick (1.9.1)
 
@@ -259,13 +259,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  commonmarker (~> 0.23.9)
-  eventmachine (~> 1.2.6)
+  commonmarker (~> 0.23.8)
+  eventmachine (~> 1.2.5)
   github-pages (~> 232)
+  http_parser.rb (~> 0.6.0)
   jekyll-feed
   jekyll-redirect-from
   jekyll-sitemap
-  unf_ext (~> 0.0.8.1)
+  racc (~> 1.5.2)
+  unf_ext (~> 0.0.7.7)
 
 BUNDLED WITH
    2.6.8
