@@ -1,0 +1,265 @@
+{
+  "servers": [
+    {
+      "host_name": "trpewrcapbiz01",
+      "fqdn": "trpewrcapbiz01.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "1",
+      "zone": "Logic",
+      "ram_allocated_gb": 4,
+      "ram_used_gb": 2,
+      "cpu_count": 2,
+      "storage_used_gb": 42.28,
+      "storage_allocated_gb": 80.0,
+      "environment": "Production",
+      "cluster_host_name": "rrfedtogcls",
+      "custom_fields_tcp_port": 11441,
+      "custom_fields_database_software": "SQL 2008 SP3",
+      "custom_fields_version": "10.0.5538.0",
+      "enivronment_id": 1,
+      "cluster_id": 48337,
+      "role": "No Access",
+      "virtual": true,
+      "cluster": {
+        "host_name": "rrfedtogcls"
+      },
+      "custom_fields": {
+        "tcp_port": 11441,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz02",
+      "fqdn": "trpewrcapbiz02.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "2",
+      "zone": "Logic",
+      "ram_allocated_gb": 4,
+      "ram_used_gb": 2,
+      "cpu_count": 2,
+      "storage_used_gb": 41.57,
+      "storage_allocated_gb": 80.0,
+      "environment": "Production",
+      "cluster_host_name": "rrfedtogcls0",
+      "custom_fields_tcp_port": 11442,
+      "custom_fields_database_software": "SQL 2008 SP3",
+      "custom_fields_version": "10.0.5538.0",
+      "enivronment_id": 2,
+      "cluster_id": 48338,
+      "role": "Read Only",
+      "virtual": false,
+      "cluster": {
+        "host_name": "rrfedtogcls0"
+      },
+      "custom_fields": {
+        "tcp_port": 11442,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz03",
+      "fqdn": "trpewrcapbiz03.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "3",
+      "zone": "Logic",
+      "ram_allocated_gb": 4,
+      "ram_used_gb": 2,
+      "cpu_count": 2,
+      "storage_used_gb": 42.15,
+      "storage_allocated_gb": 80.0,
+      "environment": "Production",
+      "cluster_host_name": "rrfedtogcls1",
+      "custom_fields_tcp_port": 11443,
+      "custom_fields_database_software": "SQL 2008 SP3",
+      "custom_fields_version": "10.0.5538.0",
+      "enivronment_id": 3,
+      "cluster_id": 48339,
+      "role": "Administrator",
+      "virtual": true,
+      "cluster": {
+        "host_name": "rrfedtogcls1"
+      },
+      "custom_fields": {
+        "tcp_port": 11443,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz04",
+      "fqdn": "trpewrcapbiz04.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "4",
+      "zone": "Logic",
+      "ram_allocated_gb": 4,
+      "ram_used_gb": 2,
+      "cpu_count": 2,
+      "storage_used_gb": 64.17,
+      "storage_allocated_gb": 80.0,
+      "environment": "Production",
+      "cluster_host_name": "rrfedtogcls11",
+      "custom_fields_tcp_port": 11444,
+      "custom_fields_database_software": "SQL 2008 SP3",
+      "custom_fields_version": "10.0.5538.0",
+      "enivronment_id": 4,
+      "cluster_id": 48340,
+      "role": "Virtual Machine Power User",
+      "virtual": false,
+      "cluster": {
+        "host_name": "rrfedtogcls11"
+      },
+      "custom_fields": {
+        "tcp_port": 11444,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz05",
+      "fqdn": "trpewrcapbiz05.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "5",
+      "zone": "Logic",
+      "ram_allocated_gb": 4,
+      "ram_used_gb": 2,
+      "cpu_count": 4,
+      "storage_used_gb": 42.45,
+      "storage_allocated_gb": 80.0,
+      "environment": "Production",
+      "cluster_host_name": "rrfedtogcls12",
+      "custom_fields_tcp_port": 11446,
+      "custom_fields_database_software": "SQL 2008 R2 SP2",
+      "custom_fields_version": "10.50.4042.0",
+      "enivronment_id": 5,
+      "cluster_id": 48341,
+      "role": "Virtual Machine User",
+      "virtual": false,
+      "cluster": {
+        "host_name": "rrfedtogcls12"
+      },
+      "custom_fields": {
+        "tcp_port": 11446,
+        "database_software": "SQL 2008 R2 SP2",
+        "database_version": "10.50.4042.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz06",
+      "fqdn": "trpewrcapbiz06.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "6",
+      "zone": "Logic",
+      "ram_allocated_gb": 4,
+      "ram_used_gb": 2,
+      "cpu_count": 4,
+      "storage_used_gb": 42.26,
+      "storage_allocated_gb": 80.0,
+      "environment": "Production",
+      "cluster_host_name": "rrfedtogcls13",
+      "custom_fields_tcp_port": 11448,
+      "custom_fields_database_software": "SQL 2012 SP2",
+      "custom_fields_version": "11.0.5343.0",
+      "enivronment_id": 6,
+      "cluster_id": 48342,
+      "role": "Resource Pool Administrator",
+      "virtual": false,
+      "cluster": {
+        "host_name": "rrfedtogcls13"
+      },
+      "custom_fields": {
+        "tcp_port": 11448,
+        "database_software": "SQL 2012 SP2",
+        "database_version": "11.0.5343.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz07",
+      "fqdn": "trpewrcapbiz07.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "7",
+      "zone": "Data",
+      "ram_allocated_gb": 4,
+      "ram_used_gb": 2,
+      "cpu_count": 2,
+      "storage_used_gb": 52.69,
+      "storage_allocated_gb": 80.0,
+      "environment": "Production",
+      "cluster_host_name": "rrfedtogcls14",
+      "custom_fields_tcp_port": 11442,
+      "custom_fields_database_software": "SQL 2008 SP3",
+      "custom_fields_version": "10.0.5538.0",
+      "enivronment_id": 7,
+      "cluster_id": 48343,
+      "role": "Database Consumer",
+      "virtual": true,
+      "cluster": {
+        "host_name": "rrfedtogcls14"
+      },
+      "custom_fields": {
+        "tcp_port": 11442,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz12",
+      "fqdn": "trpewrcapbiz12.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "8",
+      "zone": "Data",
+      "ram_allocated_gb": 2,
+      "ram_used_gb": 0.5,
+      "cpu_count": 4,
+      "storage_used_gb": 38.22,
+      "storage_allocated_gb": 40.0,
+      "environment": "Development",
+      "cluster_host_name": "rrfedtogcls17",
+      "custom_fields_tcp_port": 11443,
+      "custom_fields_database_software": "SQL 2008 SP3",
+      "custom_fields_version": "10.0.5538.0",
+      "enivronment_id": 8,
+      "cluster_id": 48344,
+      "role": "Network Consumer",
+      "virtual": false,
+      "cluster": {
+        "host_name": "rrfedtogcls17"
+      },
+      "custom_fields": {
+        "tcp_port": 11443,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      }
+    },
+    {
+      "host_name": "trpewrcapbiz14",
+      "fqdn": "trpewrcapbiz14.com",
+      "description": "This is a general description for this server. The server has several functions. One function is to serve several applications. Another is to store some databases.",
+      "assigned_id": "9",
+      "zone": "Data",
+      "ram_allocated_gb": 2,
+      "ram_used_gb": 0.5,
+      "cpu_count": 4,
+      "storage_used_gb": 39.93,
+      "storage_allocated_gb": 40.0,
+      "environment": "Development",
+      "cluster_host_name": "rrfedtogcls18",
+      "custom_fields_tcp_port": 11444,
+      "custom_fields_database_software": "SQL 2008 SP3",
+      "custom_fields_version": "10.0.5538.0",
+      "enivronment_id": 9,
+      "cluster_id": 48345,
+      "role": "VMware Consolidated Backup User",
+      "virtual": true,
+      "cluster": {
+        "host_name": "rrfedtogcls18"
+      },
+      "custom_fields": {
+        "tcp_port": 11444,
+        "database_software": "SQL 2008 SP3",
+        "database_version": "10.0.5538.0"
+      }
+    }
+  ]
+}
