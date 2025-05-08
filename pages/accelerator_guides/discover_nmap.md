@@ -1,6 +1,6 @@
 ---
 title: Host discovery with Nmap
-parent: User Guides
+parent: Accelerator Guides
 keywords: nmap, ip, address, api, services
 last_updated: September 2020
 summary: "How to use nmap to scan your network"

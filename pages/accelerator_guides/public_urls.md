@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: User Guides
+parent: Accelerator Guides
 title: Public URL Discovery
 keywords: urls, discover
 last_updated: November, 2022

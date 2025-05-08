@@ -1,6 +1,6 @@
 ---
 title: Exporting IP Addresses
-parent: User Guides
+parent: Accelerator Guides
 keywords: export, ip, address, api
 last_updated: February 2020
 summary: "How to export all your IP addresses"

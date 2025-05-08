@@ -1,6 +1,6 @@
 ---
 title: Get All IP addresses for applications by their tag
-parent: User Guides
+parent: Accelerator Guides
 keywords: ip, address, tags, export
 last_updated: February 2020
 summary: "How to use the API to retrieve all IP addresses for all applications with a given tag."

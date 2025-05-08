@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: User Guides
+parent: Accelerator Guides
 title: Financial Impact
 keywords: financial, analysis, impact, costs, cloud, visualize, analyze, business, case
 last_updated: September, 2024

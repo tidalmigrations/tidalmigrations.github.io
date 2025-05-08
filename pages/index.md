@@ -7,7 +7,7 @@ summary: "A quick guide on the various discovery techniques and how to layer the
 permalink: index.html
 ---
 
-{% include_relative userguides/five_steps.md %}
+{% include_relative accelerator_guides/five_steps.md %}
 
 ---
 

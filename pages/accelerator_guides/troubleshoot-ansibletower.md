@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Ansible Tower Integration
-parent: User Guides
+parent: Accelerator Guides
 keywords: ansible tower, troubleshoot, integration
 last_updated: August, 2018
 summary: "Troubleshoot any issues that arise when configuring Ansible Tower"

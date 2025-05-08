@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: User Guides
+parent: Accelerator Guides
 title: Bulk Editing Records
 keywords: discovery, edits, data, portfolio, bulk, actions
 last_updated: April, 2025

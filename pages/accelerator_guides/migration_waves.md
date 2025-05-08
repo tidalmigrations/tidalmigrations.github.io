@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: User Guides
+parent: Accelerator Guides
 title: Migration Waves
 keywords: migration, migrate, cloud, group, move, plan, execute
 last_updated: April, 2025

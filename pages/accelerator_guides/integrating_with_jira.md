@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: User Guides
+parent: Accelerator Guides
 title: Integrating with Jira
 keywords: tasks, migrations, integration
 last_updated: February, 2023

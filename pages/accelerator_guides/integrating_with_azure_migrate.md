@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: User Guides
+parent: Accelerator Guides
 title: Integrating with Microsoft Azure Migrate
 keywords: sync, import, discover,discovery plan
 last_updated: November, 2022

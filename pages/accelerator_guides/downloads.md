@@ -1,6 +1,6 @@
 ---
 title: Downloads
-parent: User Guides
+parent: Accelerator Guides
 last_updated: March 10, 2021
 permalink: downloads.html
 ---
