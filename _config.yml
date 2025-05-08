@@ -45,6 +45,9 @@ callouts:
   note:
     title: Note
     color: purple
+  tip:
+    title: tip
+    color: purple
   info:
     title: Info
     color: yellow
