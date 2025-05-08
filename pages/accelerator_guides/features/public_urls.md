@@ -1,12 +1,10 @@
 ---
 toc: false
-parent: Accelerator Guides
+parent: Features
 title: Public URL Discovery
 keywords: urls, discover
 last_updated: November, 2022
 summary: "Discover your organizations public URLs"
-sidebar: main_sidebar
-folder: userguides
 permalink: public-urls.html
 ---
 
@@ -30,7 +28,7 @@ In this case the IP address is `205.210.17.179` and the ASN is `AS20940`.
 
 If you don’t own it, you can try analyzing another domain.
 
-{: .tip } 
+{: .tip }
 If you don’t own any domains directly yourself, you can skip
 to the last step here and try simply searching the domain name in the
 Public URLs search in Tidal.

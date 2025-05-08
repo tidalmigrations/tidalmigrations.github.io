@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Accelerator Guides
+parent: Third Party Integrations
 title: Integrating with Jira
 keywords: tasks, migrations, integration
 last_updated: February, 2023

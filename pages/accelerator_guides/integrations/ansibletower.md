@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Accelerator Guides
+parent: Third Party Integrations
 title: Integrating with Ansible Tower
 keywords: sync, import, discover, analyze, source code, discovery plan
 last_updated: July, 2018

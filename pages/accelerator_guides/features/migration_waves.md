@@ -1,12 +1,10 @@
 ---
 toc: false
-parent: Accelerator Guides
+parent: Features
 title: Migration Waves
 keywords: migration, migrate, cloud, group, move, plan, execute
 last_updated: April, 2025
 summary: "Organize your cloud migration into strategic waves of related resources for phased deployment"
-sidebar: main_sidebar
-folder: userguides
 permalink: migration-waves.html
 ---
 

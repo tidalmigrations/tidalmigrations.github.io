@@ -1,6 +1,6 @@
 ---
 title: Importing Data from Excel
-parent: Accelerator Guides
+parent: Features
 keywords: excel, import, apps, data, servers, clusters, database instances
 last_updated: November, 2022
 summary: "Easily import your Excel spreadsheets into Tidal"

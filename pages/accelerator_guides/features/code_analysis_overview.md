@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Accelerator Guides
+parent: Features
 title: Code Analysis Overview
 keywords: code, analyze, source code
 last_updated: Novemvber, 2023
