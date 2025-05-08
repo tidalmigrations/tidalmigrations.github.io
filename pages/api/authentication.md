@@ -27,7 +27,7 @@ You will need:
 2. Username
 3. Password
 
-```
+```bash
   curl -X POST \
   https://[your subdomain].tidal.cloud/api/v1/authenticate \
   -H 'content-type: application/json' \
@@ -58,7 +58,7 @@ The Access Token is generated in *JSON Web Tokens (JWTs)* format. It is used to 
 
 The response of the request is:
 
-```
+```json
 {"access_token":"[access_token]",
 "refresh_token":"[refresh_token]",
 "expires_in":28800,
@@ -76,7 +76,7 @@ You will need:
 1. Your subdomain -> Refer to [Get Subdomain](https://get.tidal.cloud/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
 2. Your access token -> Refer: [api/v1/authenticate](#getaccess)
 
-```
+```bash
 curl -X GET \
   https://[insert your subdomain].tidal.cloud/api/v1/ping \
   -H 'authorization: bearer [insert your access token]' \
@@ -87,7 +87,7 @@ This will allow you to successfully connect to the Tidal API!
 
 The response of the above request should be the following:
 
-```
+```json
 {
     "authenticated": true
 }
@@ -106,7 +106,7 @@ You will need:
 2. Your access token -> Refer: [api/v1/authenticate](#getaccess)
 3. Your refresh token -> Refer: [api/v1/authenticate](#getaccess)
 
-```
+```bash
 curl -X POST \
   https://[insert your subdomain].tidal.cloud/api/v1/refresh \
   -H 'authorization: bearer [insert your access token]' \
@@ -116,7 +116,7 @@ curl -X POST \
 
 The response of the request is:
 
-```
+```json
 {
     "access_token": "[acess_token]",
     "scope": "offline_access",

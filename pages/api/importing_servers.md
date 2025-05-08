@@ -34,7 +34,7 @@ You will need:
 2. Your authentication access token -> Refer to [Authentication Guide](index.html)
 3. Your Server Data -> *A JSON object of your servers. The object should be a list with each element in the list being a server object.*
 
-```
+```bash
 curl -X POST \
   https://[insert your subdomain].tidal.cloud/api/v1/servers/import \
   -H 'authorization: bearer [insert your access_token]' \
@@ -46,7 +46,7 @@ This will allow you to import your server to the Tidal API!
 
 The response of the above request should be the following:
 
-```
+```json
 [
     {
         "id": 24016,
@@ -90,7 +90,7 @@ You will need:
 2. Your authentication access token -> Refer to [Authentication Guide](index.html)
 3. Your Server Data -> *A JSON object of your servers. The object should be a list with each element in the list being a server object.*
 
-```
+```bash
 curl -X POST \
   https://[insert your subdomain].tidal.cloud/api/v1/servers/import \
   -H 'authorization: bearer [insert your access_token]' \
@@ -144,7 +144,7 @@ This will allow you to import your servers to the Tidal API!
 
 The response of the above request should be the following:
 
-```
+```json
 [
     {
         "id": 24018,

@@ -192,7 +192,6 @@ You can access your Applications, Database Instances and Serves within all the m
         ]
     }
 ]
-
 ```
 ## Getting a *specific* Migration Wave:
 
@@ -208,7 +207,7 @@ You will need:
 2. Your access token -> Refer: [Authentication Guide](index.html).
 3. Your Migration Wave ID -> Refer to the [above request](#getallmg) to get your migration wave id.
 
-```
+```bash
 curl -X GET \
   https://[insert your subdomain].tidal.cloud/api/v1/move_groups/[insert move_group id] \
   -H 'authorization: bearer [insert your access_token]' \
@@ -219,8 +218,7 @@ curl -X GET \
 
 You can access your Applications, Database Instances and Serves within the selected migration wave.
 
-```
-
+```json
 {
     "id": 80,
     "communications": "This can be used to track the number of contacts that *have* and *need* to be contacted.",
