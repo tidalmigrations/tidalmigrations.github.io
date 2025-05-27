@@ -1,6 +1,6 @@
 ---
 title: Exporting a Zonefile from Windows DNS
-parent: Tidal Tools
+parent: Discover
 keywords: zonefile, discovery bind, zone files, dns
 last_updated: March 9th, 2021
 summary: "This will cover how to export DNS records from a Windows Server that is resolving DNS queries for your environment."

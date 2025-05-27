@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Features
+parent: Discover
 title: Public URL Discovery
 keywords: urls, discover
 last_updated: November, 2022

@@ -1,6 +1,6 @@
 ---
 title: Tidal Virtual Machine Image
-parent: Accelerator Guides
+parent: Discover
 keywords: vm, virtual, machine, image, ova, ovf, aws, ami, ubuntu, windows, server, vmware, virtualbox
 last_updated: August, 2022
 summary: "Tidal virtual image for your migration discovery"

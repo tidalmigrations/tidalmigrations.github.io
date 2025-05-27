@@ -1,6 +1,6 @@
 ---
 title: Integrating with ServiceNow
-parent: Third Party Integrations
+parent: Discover
 keywords: servicenow, data, integration, apps, servers, databases
 last_updated: October, 2021
 summary: "Easily integrate your Tidal workspace with ServiceNow"

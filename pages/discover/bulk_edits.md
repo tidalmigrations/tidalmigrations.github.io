@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Features
+parent: Discover
 title: Bulk Editing Records
 keywords: discovery, edits, data, portfolio, bulk, actions
 last_updated: April, 2025

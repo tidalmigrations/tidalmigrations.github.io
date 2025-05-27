@@ -1,6 +1,6 @@
 ---
 title: Tidal Analyze Web
-parent: Tidal Tools
+parent: Discover
 keywords: analyze, applications, domains, URLs, upload
 last_updated: April 23, 2020
 summary: "Analyze your applications and determine their technologies and network data."

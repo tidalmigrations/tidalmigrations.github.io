@@ -1,6 +1,6 @@
 ---
 title: Gather Machine Stats
-parent: Tidal Tools
+parent: Discover
 keywords: machine, stats, process, cron, job, windows, unix
 last_updated: April, 2022
 summary: "Gather machine stats from remote environments"

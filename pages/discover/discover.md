@@ -1,6 +1,6 @@
 ---
 title: Tidal Discover
-parent: Tidal Tools
+parent: Discover
 keywords: discover, discovery plan, bind, zone files, dns
 last_updated: April 24, 2018
 summary: "Discovering your applications domains and URLs"

@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Third Party Integrations
+parent: Discover
 title: Integrating with Microsoft Azure Migrate
 keywords: sync, import, discover,discovery plan
 last_updated: November, 2022

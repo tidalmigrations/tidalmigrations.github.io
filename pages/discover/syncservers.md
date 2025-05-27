@@ -1,6 +1,6 @@
 ---
 title: Sync your Server Inventory (and other resources)
-parent: Tidal Tools
+parent: Discover
 keywords: servers, sync, transform, apps, database instances, tidal tools
 last_updated: September 19, 2022
 summary: "Sync your data with Tidal"
