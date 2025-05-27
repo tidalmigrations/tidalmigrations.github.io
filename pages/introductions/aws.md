@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Tidal Tools on AWS
-parent: Tidal Tools
+parent: Introductions
 keywords: aws, marketplace, tidal tools
 last_updated: April 23, 2020
 summary: Configure and use Tidal Tools on AWS

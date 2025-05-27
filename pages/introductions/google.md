@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Tidal Tools on Google Cloud Platform
-parent: Tidal Tools
+parent: Introductions
 keywords: Google, marketplace, tidal tools, gcp
 last_updated: November 2, 2020
 summary: Configure and use Tidal Tools from the Google Cloud Marketplace

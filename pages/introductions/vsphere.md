@@ -1,6 +1,6 @@
 ---
 title: Integrate Tidal with vSphere
-parent: Tidal Tools
+parent: Introductions
 keywords: vsphere, login, configure, sync, environment
 last_updated: August, 2022
 permalink: vsphere.html
