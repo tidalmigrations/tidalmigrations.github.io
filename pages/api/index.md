@@ -1,6 +1,7 @@
 ---
 toc: false
 title: API
+nav_order: 5
 keywords: introduction API
 last_updated: Feb 22, 2018
 summary: "Get started using the Tidal API"

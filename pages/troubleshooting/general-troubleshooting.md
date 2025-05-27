@@ -1,6 +1,6 @@
 ---
-title: General Troubleshooting
-parent: Tidal Tools
+title: Troubleshooting
+nav_order: 6
 keywords: troubleshooting, faq
 last_updated: Apr 13, 2020
 summary: If you are having problems check here and see if these solutions can help.

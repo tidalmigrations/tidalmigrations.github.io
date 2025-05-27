@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot and diagnose Tidal Tools problems
-parent: Tidal Tools
+parent: Troubleshooting
 keywords: tidal doctor, yaml, docker, linux, windows, log, log file, powershell, powershell ise, fedora
 last_updated: Feb 27, 2020
 summary: |
