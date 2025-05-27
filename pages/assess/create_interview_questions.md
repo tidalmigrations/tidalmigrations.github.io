@@ -1,7 +1,7 @@
 ---
 toc: false
 title: Creating Interview Questions
-parent: API
+parent: Assess
 keywords: apps, interview, questions
 last_updated: Sep 11, 2018
 summary: "Create new interview questions with the Tidal API"

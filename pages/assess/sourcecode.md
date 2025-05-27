@@ -1,6 +1,6 @@
 ---
 title: Performing Source Code Analysis
-parent: Tidal Tools
+parent: Assess
 keywords: source, assessment, readiness, analyze, code, application
 last_updated: January, 2023
 summary: "Use Tidal Tools to analyze your application source code for cloud migration and modernization opportunities."

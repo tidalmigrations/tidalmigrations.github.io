@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Features
+parent: Assess
 title: Cloud Instance Recommendations
 keywords: vm, ec2, instance, cloud, recommendation, cpu usage
 last_updated: September, 2024

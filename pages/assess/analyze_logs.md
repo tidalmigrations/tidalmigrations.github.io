@@ -1,6 +1,6 @@
 ---
 title: Analyze your HTTP Web Logs
-parent: Tidal Tools
+parent: Assess
 keywords: source, assessment, readiness, analyze
 last_updated: May, 2023
 summary: "Analyze HTTP web logs to see insights on an applications usage patterns over time."

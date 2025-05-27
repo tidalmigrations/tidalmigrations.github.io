@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Features
+parent: Assess
 title: Organizing your application assessments into projects
 keywords: discover, assessment, projects, applications
 last_updated: November, 2022
