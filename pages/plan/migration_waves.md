@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Features
+parent: Plan
 title: Migration Waves
 keywords: migration, migrate, cloud, group, move, plan, execute
 last_updated: April, 2025

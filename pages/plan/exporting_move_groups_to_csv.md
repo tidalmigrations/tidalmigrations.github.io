@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Accelerator Guides
+parent: Plan
 title: Exporting servers from a Migration Wave to CSV
 keywords:  servers, csv, rivermeadow, export, migration, wave
 last_updated: April 17, 2019

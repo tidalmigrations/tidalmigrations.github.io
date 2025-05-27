@@ -1,7 +1,7 @@
 ---
 toc: false
 title: Getting Apps and Resources within your Migration Wave
-parent: API
+parent: Plan
 keywords: databases, server, apps, migration, wave
 last_updated: Feb 22, 2018
 summary: "Get all your Migration Waves and their associated Applications, Database Instances and Servers."

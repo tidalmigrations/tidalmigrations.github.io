@@ -1,6 +1,6 @@
 ---
 toc: false
-parent: Third Party Integrations
+parent: Plan
 title: Integrating with Jira
 keywords: tasks, migrations, integration
 last_updated: February, 2023
