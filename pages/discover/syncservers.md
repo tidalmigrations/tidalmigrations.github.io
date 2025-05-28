@@ -6,8 +6,6 @@ last_updated: September 19, 2022
 summary: "Sync your data with Tidal"
 permalink: sync-servers.html
 ---
-# Syncing your Server Inventory (and other resources)
-
 ## What is Syncing?
 
 Syncing is a process that creates and updates your inventories in your Tidal Workspace. This is useful if you

@@ -2,7 +2,8 @@
 title: Performing Source Code Analysis
 parent: Assess
 keywords: source, assessment, readiness, analyze, code, application
-last_updated: January, 2023
+last_updated: January, 202
+permalink: analyze-source-code.html
 summary: "Use Tidal Tools to analyze your application source code for cloud migration and modernization opportunities."
 ---
 
@@ -17,7 +18,7 @@ for more information on its capabilities](/code-analysis-overview.html).
 
 ## What You Need to Get Started
 
-1. [Install](tidal-tools.html#install), and [authenticate](tidal-tools.html#connecting-to-the-api) Tidal Tools with your [Tidal Accelerator](tidalcloud.com/accelerator) Workspace.
+1. [Install](tidal-tools.html#install), and [authenticate](tidal-tools.html#connecting-to-the-api) Tidal Tools with your [Tidal Accelerator](https://tidalcloud.com/accelerator) Workspace.
 
 2. You will need the ID of the application you are going to perform the source code analysis on. You can find it in the URL bar when looking at an application in Accelerator. ex. If you are viewing an application in Tidal, the URL will show `https://[your workspace].tidal.cloud/apps/111/overview` in this case 111 is the application ID.
 
@@ -99,7 +100,7 @@ Need to run code analysis on an entire set of applications all from one machine?
 
 ### Why do I need Docker?
 
-You need to install Docker to complete the source code analysis. This is because the analysis uses several system-dependent software libraries. 
+You need to install Docker to complete the source code analysis. This is because the analysis uses several system-dependent software libraries.
 By using Docker, the analysis can use those libraries without requiring you to install any other dependencies.
 
 ### What information is collected?

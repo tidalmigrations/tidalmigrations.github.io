@@ -29,7 +29,7 @@ via [`tidal sync servers`](sync-servers.html).  Tidal sync supports many server
 inventory management tools such as VMWare and HyperV with more possible via
 scripting ([ask us](https://tidalcloud.com/contact)).
 
-If you have VM Ware's vSphere, [`tidal sync vsphere`](#vsphere-sync) will
+If you have VM Ware's vSphere, [`tidal sync vsphere`](vsphere.html) will
 handle everying with just read-only credentials required.
 
 
@@ -53,7 +53,7 @@ In Windows, we use WinRM to Invoke-Command across your servers, and for *NIX we
 leverage ansible. Both of these approaches output JSON which is securely sent
 to your Tidal instance using the tidal command.
 
-Checkout this [guide](sync_hyper-v.html) for a quick and clean approach to
+Checkout this [guide](vsphere.html) for a quick and clean approach to
 gathering server usage statistics. See the
 [machine_stats](https://github.com/tidalmigrations/machine_stats) repository
 for more implementation details.
@@ -115,4 +115,4 @@ tidal analyze code --app-id 111 .
 ```
 
 To find additional information about this feature, visit the
-[guide](analyze-source-code.html) on analyzing your source code.
+[guide](code-analysis-overview.html) on analyzing your source code.
