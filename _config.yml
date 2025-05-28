@@ -64,6 +64,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - vendor/
+  - book/
   - README.md
 
 gh_edit_link: true # show or hide edit this page link
