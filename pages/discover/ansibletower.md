@@ -2,6 +2,7 @@
 toc: false
 parent: Discover
 title: Integrating with Ansible Tower
+layout: pages
 keywords: sync, import, discover, analyze, source code, discovery plan
 last_updated: July, 2018
 summary: "A walk through on how to integrate Tidal with Ansible Tower."

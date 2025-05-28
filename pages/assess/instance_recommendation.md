@@ -2,6 +2,7 @@
 toc: false
 parent: Assess
 title: Cloud Instance Recommendations
+layout: pages
 keywords: vm, ec2, instance, cloud, recommendation, cpu usage
 last_updated: September, 2024
 summary: "A step by step guide to generating accurate cloud instance recommendations for your server inventory. We will walk you through organizing your server inventory into projects and migration waves, then gathering the required data for your servers. Plus, learn how you can gather CPU utilization data over time to generate recommendations that become more accurate as you learn more about the workload of your servers."

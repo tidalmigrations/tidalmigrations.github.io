@@ -1,5 +1,6 @@
 ---
 title: Exporting a Zonefile from Windows DNS
+layout: pages
 parent: Discover
 keywords: zonefile, discovery bind, zone files, dns
 last_updated: March 9th, 2021

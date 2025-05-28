@@ -2,6 +2,7 @@
 toc: false
 parent: Plan
 title: Integrating with Jira
+layout: pages
 keywords: tasks, migrations, integration
 last_updated: February, 2023
 sidebar: main_sidebar
@@ -27,18 +28,18 @@ authorize Tidal.
 From within Tidal Accelerator:
 
 1.  Select Integration Sync under the Discovery Tool's menu section
-    
+
     {% include image.html file="tasks-step-1.png" %}
-    
+
 2.  Scroll down until you see the Jira section and click on "Enable
     Integration"
-    
+
     {% include image.html file="tasks-step-2.png" %}
-        
+
 3.  Follow Jira's steps to give Tidal read access to your Jira account
-    
+
     {% include image.html file="tasks-step-3.png" %}
-            
+
 4.  Finally, if everything has gone according to plan, you should be
     taken back to the integrations page on Tidal Accelerator. You
     should also see a date stamp, confirming when you enabled the

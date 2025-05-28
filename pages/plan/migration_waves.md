@@ -2,6 +2,7 @@
 toc: false
 parent: Plan
 title: Migration Waves
+layout: pages
 keywords: migration, migrate, cloud, group, move, plan, execute
 last_updated: April, 2025
 summary: "Organize your cloud migration into strategic waves of related resources for phased deployment"
@@ -16,19 +17,19 @@ Migration waves exist in projects, and function as a way to break a large projec
 
 ## Creating migration waves
 
-To create a migration wave, first navigate to the project where you'd like to create this wave. 
+To create a migration wave, first navigate to the project where you'd like to create this wave.
 
 On the project page, you should see a tab called "Migration Waves".
 
 {% include image.html file="migration-waves-1.png" %}
 <br/>
 
-In this tab, you will see all existing waves of this project. To create a new wave, click "Create Wave". 
+In this tab, you will see all existing waves of this project. To create a new wave, click "Create Wave".
 
 {% include image.html file="migration-waves-2.png" %}
 <br/>
 
-Enter a name and - optionally - a time frame for the migration wave. 
+Enter a name and - optionally - a time frame for the migration wave.
 
 {% include image.html file="migration-waves-3.png" %}
 <br/>
@@ -70,7 +71,7 @@ That's why, in our migration planner, we've made it easy to discover related res
     {% include image.html file="migration-waves-8.png" %}
     <br/>
 
-Once you have selected any dependant resources that you'd like to add to the migration wave, select "Confirm and Apply". You will be shown a confirmation message outlining the resources which you're about to add to the migration wave. If you are satisfied, click "OK". 
+Once you have selected any dependant resources that you'd like to add to the migration wave, select "Confirm and Apply". You will be shown a confirmation message outlining the resources which you're about to add to the migration wave. If you are satisfied, click "OK".
 
 {% include image.html file="migration-waves-9.png" %}
 <br/>

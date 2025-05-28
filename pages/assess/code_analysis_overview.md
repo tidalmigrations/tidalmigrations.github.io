@@ -2,6 +2,7 @@
 toc: false
 parent: Assess
 title: Code Analysis Overview
+layout: pages
 keywords: code, analyze, source code
 last_updated: Novemvber, 2023
 summary: "What code analysis does and its compatibility"

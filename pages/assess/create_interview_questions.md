@@ -1,6 +1,7 @@
 ---
 toc: false
 title: Creating Interview Questions
+layout: pages
 parent: Assess
 keywords: apps, interview, questions
 last_updated: Sep 11, 2018

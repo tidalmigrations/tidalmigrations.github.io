@@ -1,5 +1,6 @@
 ---
 title: Tidal Tools Autocompletion
+layout: pages
 parent: Introductions
 keywords: autocomplete, tab, linux, macos, bash
 last_updated: April 24, 2018

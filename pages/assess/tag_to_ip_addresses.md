@@ -1,5 +1,6 @@
 ---
 title: Get All IP addresses for applications by their tag
+layout: pages
 parent: Assess
 keywords: ip, address, tags, export
 last_updated: February 2020

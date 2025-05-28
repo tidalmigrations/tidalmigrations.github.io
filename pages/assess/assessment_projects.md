@@ -2,6 +2,7 @@
 toc: false
 parent: Assess
 title: Organizing your application assessments into projects
+layout: pages
 keywords: discover, assessment, projects, applications
 last_updated: November, 2022
 summary: "Group applications into projects to better scope your migrations and get more tailored insights"

@@ -1,5 +1,6 @@
 ---
 title: Tidal Discover
+layout: pages
 parent: Discover
 keywords: discover, discovery plan, bind, zone files, dns
 last_updated: April 24, 2018
@@ -142,7 +143,7 @@ Here is some brief information regarding the keys defined in the *my_plan.yaml* 
 
 {: .note }
 > `networks`, `name` and `tcp_ports` are required keys that you must include.
-> 
+>
 > Specify one or more of `path_to_bind`, `zonefiles` **or** `dns_service` in your Discovery file.
 
 Be sure to verify the outputted FQDNs that you'd want to analyze.

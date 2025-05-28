@@ -2,6 +2,7 @@
 toc: false
 parent: Assess
 title: Financial Impact
+layout: pages
 keywords: financial, analysis, impact, costs, cloud, visualize, analyze, business, case
 last_updated: September, 2024
 summary: "Build your business case by visualizing the financial impact of your migration"
@@ -16,11 +17,11 @@ Tidal Accelerator empowers you to construct a compelling business case by visual
 
 Tidal's financial impact reports are generated based on projects. If you haven't set up a project before, you can check out our [guide](https://guides.tidal.cloud/assessment-projects.html) on setting up an assessment project.
 
-Your financial impact report can be divided into two parts. The first is the project-wide overview, which includes summaries and visuals for the entire project. 
+Your financial impact report can be divided into two parts. The first is the project-wide overview, which includes summaries and visuals for the entire project.
 
 {% include image.html file="financial-impact-1.png" %}
 
-The second is a drill-down section for each application in this project. 
+The second is a drill-down section for each application in this project.
 
 {% include image.html file="financial-impact-2.png" %}
 
@@ -35,7 +36,7 @@ For all apps, we also include the estimated migration cost in the projected clou
 
 ## Current and Cloud Costs
 
-Arguably the most important data you'll be dealing with is the current cost and cloud cost for your apps. For the most part, 'cloud costs' refers to _rehost_ costs, however we do allow you to visualize and compare ROIs for alternative cloud migration transition types. More on that [later](#roi-comparison). 
+Arguably the most important data you'll be dealing with is the current cost and cloud cost for your apps. For the most part, 'cloud costs' refers to _rehost_ costs, however we do allow you to visualize and compare ROIs for alternative cloud migration transition types. More on that [later](#roi-comparison).
 
 Current costs can be found in the 'Financial' category of the application overview. All currency fields which are in this category are counted towards the total annual current cost for this app.
 
@@ -81,7 +82,7 @@ This system allow you to group costs in the cost breakdown table, as described [
 
 ## Customizing the Calculation
 
-Do you have a cost which is not covered by existing fields? Maybe you pay a license cost for this app, for example. That's easy to add, simply navigate to settings -> fields and create a new custom field by clicking the '+ New' button. The category you choose for this field determines whether it is a current or a cloud cost. For a current cost, select the 'Financial' category, and for a cloud cost, select the 'Cloud Financial Estimates' category. You can also set a financial classification at this point as described [here](#financial-classification). The appropriate classification in this example would be 'License'. 
+Do you have a cost which is not covered by existing fields? Maybe you pay a license cost for this app, for example. That's easy to add, simply navigate to settings -> fields and create a new custom field by clicking the '+ New' button. The category you choose for this field determines whether it is a current or a cloud cost. For a current cost, select the 'Financial' category, and for a cloud cost, select the 'Cloud Financial Estimates' category. You can also set a financial classification at this point as described [here](#financial-classification). The appropriate classification in this example would be 'License'.
 
 {% include image.html file="financial-impact-6.png" %}
 
@@ -97,7 +98,7 @@ To be included in an application's current or cloud costs, the field must have c
 
 Building on what you've learned so far, you can leverage our financial classification system for further granularity over your application's current and cloud costs.
 
-On the cost breakdown table, which can be found in the application drill-down (or on the application itself) under 'Cost Breakdown', you can see your applications's costs grouped by financial classification. 
+On the cost breakdown table, which can be found in the application drill-down (or on the application itself) under 'Cost Breakdown', you can see your applications's costs grouped by financial classification.
 
 {% include image.html file="financial-impact-9.png" %}
 
@@ -111,7 +112,7 @@ The application record's financial impact view also has a 'Detailed Cost Breakdo
 
 ## ROI Comparison
 
-Part of building your cloud migration business case is comparing and contrasting different [6R](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) approaches to cloud migration. Tidal Accelerator's financial impact report includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the application drill-down under 'Recommendation Details'. To populate this, on the application record under 'Alternative Transition Estimates' you will find the following possible fields; 'Repurchase Cost', 'Replatform Cost', 'Rehost Cost', and 'Transformative Cost'. 
+Part of building your cloud migration business case is comparing and contrasting different [6R](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) approaches to cloud migration. Tidal Accelerator's financial impact report includes a visual comparing the ROI of different possible migration strategies (also known as transition types). This can be found in the application drill-down under 'Recommendation Details'. To populate this, on the application record under 'Alternative Transition Estimates' you will find the following possible fields; 'Repurchase Cost', 'Replatform Cost', 'Rehost Cost', and 'Transformative Cost'.
 
 {% include image.html file="financial-impact-10.png" %}
 

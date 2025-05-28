@@ -1,5 +1,6 @@
 ---
 title: Getting Started with Tidal Tools
+layout: pages
 parent: Introductions
 keywords: install, login, connect, configuration, proxy, environment
 last_updated: April 23, 2020

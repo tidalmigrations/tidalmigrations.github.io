@@ -1,6 +1,7 @@
 ---
 toc: false
 title: Using Tidal API with Nmap
+layout: pages
 parent: API
 keywords: postman, swagger, docs, requests, nmap
 last_updated: september, 2020

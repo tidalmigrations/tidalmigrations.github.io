@@ -1,5 +1,6 @@
 ---
 title: Host discovery with Nmap
+layout: pages
 parent: Discover
 keywords: nmap, ip, address, api, services
 last_updated: September 2020

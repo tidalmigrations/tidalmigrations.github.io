@@ -1,6 +1,7 @@
 ---
 toc: false
 title: Using Tidal API with Postman
+layout: pages
 parent: API
 keywords: postman, swagger, docs, requests, routes
 last_updated: Feb 22, 2018

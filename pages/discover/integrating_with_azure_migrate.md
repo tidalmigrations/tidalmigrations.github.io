@@ -2,6 +2,7 @@
 toc: false
 parent: Discover
 title: Integrating with Microsoft Azure Migrate
+layout: pages
 keywords: sync, import, discover,discovery plan
 last_updated: November, 2022
 summary: "A walk through on how to synchronize data from Microsoft Azure Migrate with Tidal Platform."

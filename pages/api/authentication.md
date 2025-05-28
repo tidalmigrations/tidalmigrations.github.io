@@ -1,5 +1,6 @@
 ---
 title: Authentication
+layout: pages
 parent: API
 keywords: authentication, login, ping, refresh, token, subdomain
 last_updated: Feb 13, 2018

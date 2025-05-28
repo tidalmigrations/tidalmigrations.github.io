@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting
+layout: pages
 nav_order: 6
 keywords: troubleshooting, faq
 last_updated: Apr 13, 2020

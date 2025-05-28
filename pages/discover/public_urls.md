@@ -2,6 +2,7 @@
 toc: false
 parent: Discover
 title: Public URL Discovery
+layout: pages
 keywords: urls, discover
 last_updated: November, 2022
 summary: "Discover your organizations public URLs"

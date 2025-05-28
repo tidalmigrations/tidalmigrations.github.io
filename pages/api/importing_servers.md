@@ -1,5 +1,6 @@
 ---
 title: Importing Servers
+layout: pages
 parent: API
 keywords: servers, import, multiple, endpoint, zone
 last_updated: Feb 22, 2018

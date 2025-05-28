@@ -1,5 +1,6 @@
 ---
 title: Tidal Virtual Machine Image
+layout: pages
 parent: Discover
 keywords: vm, virtual, machine, image, ova, ovf, aws, ami, ubuntu, windows, server, vmware, virtualbox
 last_updated: August, 2022

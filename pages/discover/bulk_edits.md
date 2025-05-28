@@ -2,6 +2,7 @@
 toc: false
 parent: Discover
 title: Bulk Editing Records
+layout: pages
 keywords: discovery, edits, data, portfolio, bulk, actions
 last_updated: April, 2025
 summary: "Efficiently manage your data by performing actions on multiple records simultaneously"
@@ -52,7 +53,7 @@ Under the 'Bulk Actions' menu, click 'Assign to Application'.
 {% include image.html file="assign-servers-2.png" %}
 <br>
 
-Select the application that you'd like to assign your selected servers to. Once you've made your selection, click 'Assign'. 
+Select the application that you'd like to assign your selected servers to. Once you've made your selection, click 'Assign'.
 
 {% include image.html file="assign-servers-3.png" %}
 <br>
@@ -126,7 +127,7 @@ All records in the merged environment will be added to the target environment, a
 
 Tags are a great way to group and organize your records. You can apply tags in bulk to applications, servers and databases instances. For the purposes of this guide, we'll work with applications.
 
-First, navigate to the "Applications" view and select the applications that you'd like to apply your tag to. 
+First, navigate to the "Applications" view and select the applications that you'd like to apply your tag to.
 
 {% include image.html file="apply-tags-1.png" %}
 <br>
@@ -136,7 +137,7 @@ Once you've made your selection, open the "Bulk Actions" menu and click "Apply T
 {% include image.html file="apply-tags-2.png" %}
 <br>
 
-Select a tag from the drop-down list. 
+Select a tag from the drop-down list.
 
 {: .note }
 You can create a new tag directly in this drop-down. Simply enter the desired tag name, and the option to create this tag will appear.

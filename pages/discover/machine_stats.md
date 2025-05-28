@@ -1,5 +1,6 @@
 ---
 title: Gather Machine Stats
+layout: pages
 parent: Discover
 keywords: machine, stats, process, cron, job, windows, unix
 last_updated: April, 2022
@@ -24,7 +25,7 @@ plan data replication time, or other migration metrics on an app-by-app basis.
 {: .tip }
 As your cloud migration will likely take place
 over many months or years, it's important to have current resource requirements
-throughout your journey. To accomplish this, setup `machine_stats` in a [cron job](#run-machine-stats-on-a-cron-job) 
+throughout your journey. To accomplish this, setup `machine_stats` in a [cron job](#run-machine-stats-on-a-cron-job)
 or [Scheduled Task](#run-machine-stats-in-a-scheduled-task) and synchronize your data on a _daily_ basis to Tidal
 Migrations.
 
@@ -107,7 +108,7 @@ Running this will prompt you for a username. Alternatively, you can provide this
 ```powershell
 ./runner.ps1 -UserName <username> | Out-File <path-to-result-file>
 ```
-#### Pipe Machine Stats Output to Tidal Platform 
+#### Pipe Machine Stats Output to Tidal Platform
 
 On a machine with Tidal Tools installed and which is connected to the internet, you can execute Machine Stats and pipe its output to Tidal Tools with the following command.
 ```powershell
@@ -144,11 +145,11 @@ To capture point-in-time CPU utilization data, you can use the `-CPUUtilizationO
 ```powershell
 ./runner.ps1 -CPUUtilizationOnlyValue -CPUUtilizationTimeout 1
 ```
-sssh-0cconfigYou can use the `-Measurements` flag along with `tidal request` to upload the result to Tidal Accelerator. 
+sssh-0cconfigYou can use the `-Measurements` flag along with `tidal request` to upload the result to Tidal Accelerator.
 ```powershell
 ./runner.ps1 -CPUUtilizationOnlyValue -CPUUtilizationTimeout 1 -Measurements | tidal request -X POST /api/v1/measurements/import
 ```
-When run in a scheduled task (as outlined in the following section), it's possible to use machine stats to continuously capture CPU utilization data for a given server over time. 
+When run in a scheduled task (as outlined in the following section), it's possible to use machine stats to continuously capture CPU utilization data for a given server over time.
 
 sssh-0cconfig#### Run Machine Stats in a Scheduled Task
 
@@ -218,7 +219,7 @@ Note that this does not collect CPU utilization by default. To include point-in-
 <path-to-machine-stats>/windows/runner.ps1 -NoWinRM -CPUUtilizationOnlyValue -CPUUtilizationTimeout 1
 ```
 
-As with the default behavior, this approach can be used with Tidal Tools, both in a single invocation or running in a scheduled task to gather information over time. You can upload the result file to Tidal Tools, or pipe the result directly, as covered in [this section](#run-machine-stats-for-windows). 
+As with the default behavior, this approach can be used with Tidal Tools, both in a single invocation or running in a scheduled task to gather information over time. You can upload the result file to Tidal Tools, or pipe the result directly, as covered in [this section](#run-machine-stats-for-windows).
 
 ### How Many Subjects Can I Scan At Once?
 
@@ -315,7 +316,7 @@ On an online server with `tidal tools` installed, you can upload this result fil
 ```bash
 tidal sync servers <path-to-result-file>
 ```
-#### Pipe Machine Stats Output to Tidal Platform 
+#### Pipe Machine Stats Output to Tidal Platform
 
 Execute `machine-stats` and pipe its output to Tidal Tools:
 ```bash
@@ -381,7 +382,7 @@ PATH=<full-path>
 ```
 You can get the value for `<full-path>` by running `echo $PATH`.
 
-The `*/5` means that cron will execute this script every 5 minutes. You can customize this to set the sampling interval of your choosing. 
+The `*/5` means that cron will execute this script every 5 minutes. You can customize this to set the sampling interval of your choosing.
 
 Your results should appear in the existing `<path-to-results-directory>` that you specified in the `run-machine-stats.sh` script. Each result filename will contain a timestamp of when the invocation occurred.
 

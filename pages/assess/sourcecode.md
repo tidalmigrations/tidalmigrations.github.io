@@ -1,5 +1,6 @@
 ---
 title: Performing Source Code Analysis
+layout: pages
 parent: Assess
 keywords: source, assessment, readiness, analyze, code, application
 last_updated: January, 202

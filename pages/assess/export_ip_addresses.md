@@ -1,5 +1,6 @@
 ---
 title: Exporting IP Addresses
+layout: pages
 parent: Assess
 keywords: export, ip, address, api
 last_updated: February 2020

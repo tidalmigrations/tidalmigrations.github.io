@@ -1,5 +1,6 @@
 ---
 title: Analyze your HTTP Web Logs
+layout: pages
 parent: Assess
 keywords: source, assessment, readiness, analyze
 last_updated: May, 2023

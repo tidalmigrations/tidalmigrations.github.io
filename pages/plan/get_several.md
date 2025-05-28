@@ -1,6 +1,7 @@
 ---
 toc: false
 title: Getting Apps and Resources within your Migration Wave
+layout: pages
 parent: Plan
 keywords: databases, server, apps, migration, wave
 last_updated: Feb 22, 2018

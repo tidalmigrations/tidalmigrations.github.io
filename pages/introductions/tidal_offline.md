@@ -1,5 +1,6 @@
 ---
 title: Using Tidal Software Offline
+layout: pages
 parent: Introductions
 keywords: tools, tidal-tools, tidal, offline, airgap, discovery
 last_updated: November, 2021

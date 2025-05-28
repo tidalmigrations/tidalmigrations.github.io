@@ -1,6 +1,7 @@
 ---
 toc: false
 title: Importing Applications
+layout: pages
 parent: API
 keywords: apps, import, request, data
 last_updated: Feb 13, 2018

@@ -1,5 +1,6 @@
 ---
 title: Sync your Server Inventory
+layout: pages
 parent: Discover
 keywords: servers, sync, transform, apps, database instances, tidal tools
 last_updated: September 19, 2022
@@ -220,7 +221,7 @@ To synchronize your Database Instances data, It must have the following JSON for
 ```
 {
   "database_instances" : [
-    {    
+    {
       "name": "720 TASK DB",
       "database_size_mb": 1870,
       "database_path": "C:\\system\\databases\\720_TASK_DB",

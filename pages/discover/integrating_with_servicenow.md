@@ -1,5 +1,6 @@
 ---
 title: Integrating with ServiceNow
+layout: pages
 parent: Discover
 keywords: servicenow, data, integration, apps, servers, databases
 last_updated: October, 2021
@@ -8,7 +9,7 @@ sidebar: main_sidebar
 permalink: integrate-with-servicenow.html
 ---
 
-Prepare your ServiceNow instance by importing our custom-made update set, then creating an OAuth endpoint. Once this is set up, you can send your existing apps, servers and databases to your ServiceNow instance. All relationships between these entities will be preserved, and can be viewed in ServiceNow.  
+Prepare your ServiceNow instance by importing our custom-made update set, then creating an OAuth endpoint. Once this is set up, you can send your existing apps, servers and databases to your ServiceNow instance. All relationships between these entities will be preserved, and can be viewed in ServiceNow.
 
 
 {: .note }
@@ -35,7 +36,7 @@ You can find the Tidal ServiceNow update set [here](https://github.com/tidalmigr
 
 {% include image.html file="update-set-step2.png" %}
 
-- Click 'Browse' and find the update set XML file on your computer. Once this is done, click 'Upload'. 
+- Click 'Browse' and find the update set XML file on your computer. Once this is done, click 'Upload'.
 
 {% include image.html file="update-set-step3.png" %}
 
@@ -100,7 +101,7 @@ In order for your Tidal workspace to communicate with your ServiceNow instance, 
     - Username
     - Password
 
-  Note: The username and password here are for your ServiceNow instance. If you don't know them, go to the ServiceNow developer page and find 'Manage instance password'. 
+  Note: The username and password here are for your ServiceNow instance. If you don't know them, go to the ServiceNow developer page and find 'Manage instance password'.
 
 - Hit 'Create Connection' to connect this workspace to your ServiceNow instance. This action will automatically push all of your current apps, servers and databases over to your ServiceNow instance.
 
@@ -110,6 +111,5 @@ In order for your Tidal workspace to communicate with your ServiceNow instance, 
 
   {% include image.html file="integrate-tidal-step2.png" %}
 
-  
-  From this point on, any changes made to your Tidal workspace will be automatically synced over to your ServiceNow instance.  
-  
+
+  From this point on, any changes made to your Tidal workspace will be automatically synced over to your ServiceNow instance.

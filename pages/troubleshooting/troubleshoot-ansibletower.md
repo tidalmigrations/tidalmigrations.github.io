@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Ansible Tower Integration
+layout: pages
 parent: Troubleshooting
 keywords: ansible tower, troubleshoot, integration
 last_updated: August, 2018

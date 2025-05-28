@@ -1,5 +1,6 @@
 ---
 title: Tidal Analyze Web
+layout: pages
 parent: Discover
 keywords: analyze, applications, domains, URLs, upload
 last_updated: April 23, 2020

@@ -2,6 +2,7 @@
 toc: false
 parent: Plan
 title: Exporting servers from a Migration Wave to CSV
+layout: pages
 keywords:  servers, csv, rivermeadow, export, migration, wave
 last_updated: April 17, 2019
 summary: "Exporting servers from a migration wave to a format that can be used by RiverMeadow."

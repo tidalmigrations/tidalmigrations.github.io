@@ -1,5 +1,6 @@
 ---
 title: Importing Data from Excel
+layout: pages
 parent: Discover
 keywords: excel, import, apps, data, servers, clusters, database instances
 last_updated: November, 2022
@@ -36,7 +37,7 @@ You can always update a dependency after importing too.
 You should have one sheet or file per type of record.
 
 There are several default columns values included for each record type,
-however if you have additional information on your inventory that would like to include, you can create custom fields for a record (Check step 3). 
+however if you have additional information on your inventory that would like to include, you can create custom fields for a record (Check step 3).
 Remember to add those fields before importing the data.
 
 ## How to import your data
@@ -64,7 +65,7 @@ The Tags option can be used to generate multiple tags and associate them with th
 
 ### Importing Servers
 
-There are no required fields when importing Servers. 
+There are no required fields when importing Servers.
 
 Default fields:
 - Host Name (*)
