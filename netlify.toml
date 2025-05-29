@@ -1,6 +1,6 @@
 [build.environment]
   NODE_VERSION = "22"
-  RUBY_VERSION = "3.3.4"
+  RUBY_VERSION = "3.4.3"
 
 [build]
   command = "bundle install && bundle exec jekyll build"

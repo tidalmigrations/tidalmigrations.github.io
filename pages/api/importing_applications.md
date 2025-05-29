@@ -1,6 +1,8 @@
 ---
 toc: false
 title: Importing Applications
+layout: pages
+parent: API
 keywords: apps, import, request, data
 last_updated: Feb 13, 2018
 summary: "Easily import your applications with the Tidal API"
@@ -33,7 +35,7 @@ There are various parameters you can define about your application in the body:
 *Name, Description, URL, Custom fields (custom fields can include any arbitrary data, as a set of key/value pairs), Transition Overview, Transition Plan Complete, and Transition
 Type.*
 
-```
+```bash
 curl -X POST \
   https://[insert your subdomain].tidal.cloud/api/v1/apps/import \
   -H 'authorization: bearer [insert your access_token] \
@@ -63,7 +65,7 @@ This will allow you to import your application to the Tidal API!
 
 The response of the above request should be the following:
 
-```
+```json
 [
     {
         "id": 7291,
