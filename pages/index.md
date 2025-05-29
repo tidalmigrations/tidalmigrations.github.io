@@ -1,5 +1,6 @@
 ---
 title: Layering Discovery Techniques
+layout: pages
 keywords: sync, import, discover, analyze, source code, discovery plan
 nav_exclude: true
 last_updated: April 23, 2020
