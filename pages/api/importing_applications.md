@@ -13,7 +13,7 @@ permalink: import-apps.html
 
 Tidal's API includes the import endpoint to help you import your applications.
 Before using the endpoint, you must authenticate to the Tidal API:
-[Authentication Guide](index.html)
+[Authentication Guide](authenticate.html#getaccess)
 
 ## Start using the endpoint!
 
@@ -27,7 +27,7 @@ A request to import an application into the Tidal API looks like this:
 ### You will need:
 
 1. Your subdomain -> Refer to [Get Subdomain](https://get.tidal.cloud/workspaces) & type in your email in the prompt bar. Afterwards, you will receive an email with all of your workspaces.
-2. Your authentication access token -> Refer to [Authentication Guide](index.html)
+2. Your authentication access token -> Refer to [Authentication Guide](authenticate.html#getaccess)
 3. Your Application Data -> *A JSON object of your applications. The object should be a list with each element in the list being an application object.*
 
 There are various parameters you can define about your application in the body:
