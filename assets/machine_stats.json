@@ -1,0 +1,21 @@
+{
+    "servers": [
+        {
+            "cpu_count": 4,
+            "cpu_name": "Intel Core i5-4430",
+            "fqdn": "airbnbapp1.ca-central-1.compute.internal",
+            "host_name": "airbnbapp1",
+            "ip_addresses": [
+                "172.31.9.62",
+                "172.17.0.1",
+                "fe80::4ee:9cff:fe97:418f"
+            ],
+            "operating_system": "Ubuntu",
+            "operating_system_version": "18.04",
+            "ram_allocated_gb": 32,
+            "ram_used_gb": 16,
+            "storage_allocated_gb": 512,
+            "storage_used_gb": 149
+        }
+    ]
+}
