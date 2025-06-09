@@ -1,3 +1,9 @@
 _site
 .sass-cache
 .jekyll-metadata
+.direnv
+bin
+cache
+extensions
+gems
+specifications
