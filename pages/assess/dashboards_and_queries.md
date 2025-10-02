@@ -40,7 +40,7 @@ Navigate back to the dashboard page, and you will see your query saved as a card
 
 ## Creating Dashboards
 
-You will have a 'main' dashboard by default, but you can also create new named dashboards. Simply click on the '+' button next to the 'main' dashboard tab.
+You will have a 'main' dashboard by default, but you can also create new named dashboards. Click on the '+' button next to the 'main' dashboard tab.
 
 {% include image.html file="create-dashboards-1.PNG" %}
 <br>
