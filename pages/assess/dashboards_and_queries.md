@@ -33,7 +33,7 @@ To save, click 'Save Filter' in the bottom right of the filter drawer. Give this
 {% include image.html file="create-queries-3.PNG" %}
 <br>
 
-Navigate back to the dashboard page and you will see your query saved as a card listing filters which are applied, as well as the search value and tags if you have set them.
+Navigate back to the dashboard page, and you will see your query saved as a card listing the filters that are applied, as well as the search value and tags (if you have set them).
 
 {% include image.html file="create-queries-4.PNG" %}
 <br>
