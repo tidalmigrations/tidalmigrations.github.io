@@ -12,7 +12,7 @@ In Tidal Accelerator, you can save complex queries built with our advanced filte
 
 For example, you may want to track all applications in the 'production' environment that have a complete transition plan but have not yet been migrated. You can save this as a query, so that you can apply this query with a single click whenever you'd like, rather than needing to manually filter for these values each time you want to work with this subset of applications.
 
-You can then take this further by creating multiple dashboards, and sharing those dashboards with your other team members.
+You can then take this further by creating multiple dashboards and sharing them with your other team members.
 
 ## Creating Queries
 
