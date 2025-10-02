@@ -23,7 +23,7 @@ From the Dashboard, click 'New Query' and select a record type.
 {% include image.html file="create-queries-1.PNG" %}
 <br>
 
-You will be taken to the record page, with the advanced filter query open. Here you can build your query by selecting filters. Note that queries allow you to save all configuration from a record view, so you can also set a search value, as well as tags.
+You will be taken to the record page, with the advanced filter sidebar open. Here you can build your query by selecting filters. Note that queries allow you to save all configuration from a record view, so you can also set a search value, as well as tags.
 
 {% include image.html file="create-queries-2.PNG" %}
 <br>
