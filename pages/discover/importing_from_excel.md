@@ -87,7 +87,6 @@ The following server fields are present in Accelerator by default.
 
 **(*)** Associative fields.
 * _Host Name_, This field is used to identify the server and to create association with Databases and Applications,
-* _Cluster -> Host Name_, This field is used to indicate that the Server that belongs to a virtual machine cluster with _Host Name_.
 * _Database Instances -> Name_, If a server is hosting a Database (or multiple), this field should contain the **name**(s) of such database(s).
 * _Environment -> Name_, This field is used to represent the server's environment.
 
