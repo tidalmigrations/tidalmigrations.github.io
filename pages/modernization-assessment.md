@@ -24,12 +24,6 @@ If you have a fresh workspace, you can use this demo data to try out the Moderni
 After extracting the demo data, you will find the following contents:
 1. demo-records - a directory containing three spreadsheets: servers, database instances and applications for your workspace.
 2. sct-results - a directory containing two AWS Schema Conversion Tool result sets.
-3. nopCommerce - an open-source ASP.NET eCommerce app.
-4. machine_stats.json - a sample output of Machine Stats, which can be uploaded to Accelerator using Tidal Tools.
-
-{: .note }
-While we include the nopCommerce codebase in the zip file, if you'd prefer, you can also clone it with git using the following command:
-`git clone --branch release-4.80.6 --single-branch git@github.com:nopSolutions/nopCommerce.git`
 
 ## Software
 
