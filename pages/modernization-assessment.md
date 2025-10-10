@@ -33,7 +33,7 @@ Tidal software for your toolkit to support your Modernization Assessment:
   - Note that Tidal Tools requires [Docker](https://docs.docker.com/get-docker/) to be installed on your machine.
 3. Machine Stats - (Optional) Scan your servers and output a result which can be uploaded to Accelerator.
   - [Machine Stats for Unix-like Systems](https://pypi.org/project/machine-stats/) Detailed guides [here](https://guides.tidal.cloud/machine_stats.html#unix-like-systems).
-  - [Machine Stats for Windows](https://pypi.org/project/machine-stats/) Detailed guides [here](https://guides.tidal.cloud/machine_stats.html#windows).
+  - [Machine Stats for Windows](https://github.com/tidalmigrations/machine_stats/tree/master/windows) Detailed guides [here](https://guides.tidal.cloud/machine_stats.html#windows).
 
 # Modernization Assessment
 
