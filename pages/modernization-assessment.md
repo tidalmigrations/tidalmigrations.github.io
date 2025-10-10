@@ -235,7 +235,7 @@ Navigate to the 'Migration Plan' tab of the application record. You will find th
 
 When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended steps.
 
-## Step 8: Download Modernization Presentation
+## Step 8: Download the Modernization Presentation
 
 Tidal Accelerator can create a comprehensive Modernization Assessment PowerPoint presentation using the data you have provided. This slide deck comes equipped with speaker notes to help guide your presentation.
 
