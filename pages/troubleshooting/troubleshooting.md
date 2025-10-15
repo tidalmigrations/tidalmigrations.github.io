@@ -202,6 +202,14 @@ must escape the backslash character with another backslash (which is the escape
 character), so the string must be as the following: `C:\\Program Files\\Tidal
 Software\\tidal`.
 
+### Source Code Analysis is slow when the source code is stored on Windows {#windows-source-code-analysis}
+
+When running Tidal Source Code Analysis on codebases that are stored in a Windows filesystem, you might notice that the process is quite slow - especially on larger codebases.
+
+The root cause of this issue is that since Source Code Analysis is running in a Linux container, accessing the Windows file system from within this container is very time-consuming.
+
+For analyzing larger codebases on Windows, we recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about), and hosting the source code inside your WSL environment.
+
 ## Linux troubleshooting {#linux}
 
 ### Manage Docker as a non-root user {#docker-non-root}
