@@ -100,6 +100,9 @@ You can learn more about the modernization potential of your applications by ana
 
 Tidal Code Analysis is performed using our command-line software utility Tidal Tools. The software is available to download [here](https://get.tidal.sh/), and you can learn more about getting started with the tool in our guide [here](https://guides.tidal.cloud/tidal-tools.html).
 
+{: .note }
+Tidal Source Code Analysis uses Docker under the hood. There is a [known issue](/troubleshooting.html#windows-source-code-analysis) with Docker where scanning a codebase hosted on a Windows file system will be very time consuming. If you are on Windows, we recommend hosting the sourse code which you will analyze on [WSL](https://learn.microsoft.com/en-us/windows/wsl/about).
+
 Once you have Tidal Tools installed, run the following command and follow the prompts to authenticate with Accelerator.
 
 `tidal login`
