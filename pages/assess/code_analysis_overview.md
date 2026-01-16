@@ -20,6 +20,7 @@ Analyzes an application's source code for various patterns that are useful in as
 |                              C# |      ✅     |         ✅        |           ✅          |           ✅          |           ✅          |
 |                            Java |      ✅     |         ✅        |           ✅          |           ✅          |           ✅          |
 |                      JavaScript |      ✅     |         ✅        |           ✅          |           ✅          |           ✅          |
+|                            Ruby |      ✅     |         ✅        |           ✅          |           ✅          |           ✅          |
 |                          Python |      ✅     |         ➖        |           ✅          |           ✅          |           ✅          |
 |                           COBOL |      ✅     |         ➖        |           ✅          |           ➖          |           ➖          |
 |                             PHP |      ✅     |         ➖        |           ✅          |           ➖          |           ➖          |
