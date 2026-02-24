@@ -36,9 +36,11 @@ You can always update a dependency after importing too.
 
 You should have one sheet or file per type of record.
 
+{: .tip }
 There are several default columns values included for each record type,
-however if you have additional information on your inventory that would like to include, you can create custom fields for a record (Check step 3).
+however if you have additional information on your inventory that would like to include, you can [create custom fields](./custom_fields.html) for a record (Check step 3).
 Remember to add those fields before importing the data.
+{% include image.html file="import_custom_fields.png" %}
 
 ## How to import your data
 
@@ -58,7 +60,6 @@ Remember to add those fields before importing the data.
 
 {: .tip }
 The Tags option can be used to generate multiple tags and associate them with the record. You can use this to track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)
-
 
 ### Importing Servers
 

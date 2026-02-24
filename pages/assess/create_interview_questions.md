@@ -35,7 +35,7 @@ Our interview questions are tightly coupled with our application fields. So, bef
 
 ### Create a custom field
 
-You can create a custom field for an application by going to https://[your workspace].tidal.cloud/fields/applications and clicking on the 'New Application Field' button. Note: we don't limit the type of field (dropdown, text, number, currency, checkbox) that can be used in interview questions.
+You can create a [custom field](./custom_fields.html) for an application by going to https://[your workspace].tidal.cloud/fields/applications and clicking on the 'New Application Field' button. Note: we don't limit the type of field (dropdown, text, number, currency, checkbox) that can be used in interview questions.
 
 ### Get a custom field id
 
