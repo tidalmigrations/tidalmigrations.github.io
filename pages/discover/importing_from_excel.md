@@ -38,7 +38,7 @@ You should have one sheet or file per type of record.
 
 {: .tip }
 There are several default columns values included for each record type,
-however if you have additional information on your inventory that would like to include, you can [create custom fields](./custom_fields.html) for a record (Check step 3).
+however if you have additional information on your inventory that would like to include, you can [create custom fields](./custom-fields.html) for a record (Check step 3).
 Remember to add those fields before importing the data.
 {% include image.html file="import_custom_fields.png" %}
 
