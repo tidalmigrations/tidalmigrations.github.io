@@ -2,7 +2,7 @@
 title: Creating Custom Fields
 layout: pages
 parent: Discover
-keywords: analyze, applications, domains, URLs, upload
+keywords: custom fields, field types, applications, servers, database instances, settings
 last_updated: February, 2026
 summary: "Learn how to create custom fields in Tidal Accelerator to enhance your data analysis."
 sidebar: main_sidebar
