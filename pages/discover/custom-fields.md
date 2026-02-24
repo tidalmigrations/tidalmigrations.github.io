@@ -7,7 +7,7 @@ last_updated: February, 2026
 summary: "Learn how to create custom fields in Tidal Accelerator to enhance your data analysis."
 sidebar: main_sidebar
 folder: userguides
-permalink: custom_fields.html
+permalink: custom-fields.html
 ---
 
 Tidal Accelerator enables you to capture unique business data across your portfolio by adding custom fields to any record, including servers, applications, and database instances. These custom data points allow you to track the specific metrics your organization needs to make informed migration decisions.
