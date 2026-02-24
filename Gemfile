@@ -19,6 +19,7 @@ gem "minima", "~> 2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem 'jekyll-commonmark-ghpages'
   gem 'github-pages'
   gem 'jekyll-feed'
   gem 'jekyll-redirect-from'
@@ -39,4 +40,4 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 # kramdown v1, comment out this line.
 gem "kramdown-parser-gfm"
 
-gem "just-the-docs", "~> 0.10.1"
+gem "just-the-docs", "~> 0.12.0"

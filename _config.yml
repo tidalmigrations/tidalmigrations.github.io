@@ -25,8 +25,10 @@ favicon_ico: "/assets/favicon.ico"
 
 # Build settings
 markdown: kramdown
+
 theme: just-the-docs
 plugins:
+  - jekyll-commonmark-ghpages
   - just-the-docs
   - jekyll-feed
   - jekyll-redirect-from
