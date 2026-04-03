@@ -113,20 +113,6 @@ This message shows that your installation appears to be working correctly.
 …
 ```
 
-To explicitly check that your Docker installation is able to communicate with
-Tidal container registry run the command `docker run
-gcr.io/tidal-1529434400027/hello-world`. You should see the output similar to
-the following:
-
-```
-Unable to find image 'gcr.io/tidal-1529434400027/hello-world:latest' locally
-latest: Pulling from tidal-1529434400027/hello-world
-9e91b00c0251: Pull complete
-Digest: sha256:b60c2de90e0b5c4f7e74b84ca888e2fec1d288d47c99e48bd612e0eefeb604c5
-Status: Downloaded newer image for gcr.io/tidal-1529434400027/hello-world:latest
-Hello from Tidal!
-```
-
 Another option is to run `tidal doctor` and check the Docker section of the output.
 
 ### Docker networking issues {#docker-networking}
@@ -134,7 +120,7 @@ Another option is to run `tidal doctor` and check the Docker section of the outp
 Sometimes [Docker has issues with DNS](https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues) and you may see an error like:
 
 ```
-Error response from daemon: Get https://gcr.io/v2/: proxyconnect tcp: dial tcp: lookup http on 192.168.65.1:53: no such host
+Error response from daemon: Get https://public.ecr.aws/: proxyconnect tcp: dial tcp: lookup http on 192.168.65.1:53: no such host
 ```
 
 If so you can [update the DNS server used by docker](https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues) to `8.8.8.8`, as Docker recommends, to solve the issue.
@@ -145,7 +131,7 @@ If so you can [update the DNS server used by docker](https://docs.docker.com/doc
 If you need a proxy to access the internet and see an error that looks similar this:
 
 ```
-Error response from daemon: Get https://gcr.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+Error response from daemon: Get https://public.ecr.aws/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
 ```
 
 You may need to configure Docker to use your proxy server. You can follow the steps that Docker provides to do that on [Windows](https://docs.docker.com/docker-for-windows/#proxies) or [Linux](https://docs.docker.com/network/proxy/), depending on where you are running docker.
