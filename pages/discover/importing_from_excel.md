@@ -56,10 +56,13 @@ Remember to add those fields before importing the data.
 
    {% include image.html file="import_step2.png" %}
 
+   {: .tip }
+   If you have done this step before, Tidal Accelerator will remember your spreadsheet header mappings. This is shared across the entire workspace - as long as one member of your team has performed this step for a given spreadsheet, this will be automatically filled out the next time a spreadsheet with the same header columns is uploaded.
+
 4. Click submit to import the data.
 
-{: .tip }
-The Tags option can be used to generate multiple tags and associate them with the record. You can use this to track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)
+   {: .tip }
+   The Tags option can be used to generate multiple tags and associate them with the record. You can use this to track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)
 
 ### Importing Servers
 
