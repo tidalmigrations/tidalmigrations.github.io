@@ -61,9 +61,6 @@ Remember to add those fields before importing the data.
 
 4. Click submit to import the data.
 
-   {: .tip }
-   The Tags option can be used to generate multiple tags and associate them with the record. You can use this to track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)
-
 ### Importing Servers
 
 When importing servers, the only required field is 'Host Name'. The Host Name is the name that your server is identified with throughout Accelerator.
