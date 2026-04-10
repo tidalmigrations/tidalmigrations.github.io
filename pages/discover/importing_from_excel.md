@@ -16,7 +16,7 @@ host names uniqueness.
 
 You can import your Excel spreadsheets into Tidal by visiting:
 
-``https://your_workspace.tidal.cloud/import/``
+`https://your_workspace.tidal.cloud/import/`
 
 ## Preparing your Spreadsheet
 
@@ -46,27 +46,28 @@ Remember to add those fields before importing the data.
 
 1. Select the data type you wish to import.
 
-    {% include image.html file="import_step0.png" %}
+   {% include image.html file="import_step0.png" %}
 
 2. Select the sheet in your file that you want to import data from.
 
-    {% include image.html file="import_step1.png" %}
+   {% include image.html file="import_step1.png" %}
 
 3. Map the columns of your sheet to the fields from the drop down. If you have a column that is not present as a field and you want to import it, you can create a custom field, then map the spreadsheet column to your new field. Custom fields can be created in the importer by clicking 'Create Custom Field'.
 
-    {% include image.html file="import_step2.png" %}
+   {% include image.html file="import_step2.png" %}
+
+   {: .tip }
+   If you have done this step before, Tidal Accelerator will remember your spreadsheet header mappings. This is shared across the entire workspace - as long as one member of your team has performed this step for a given spreadsheet, this will be automatically filled out the next time a spreadsheet with the same header columns is uploaded.
 
 4. Click submit to import the data.
-
-{: .tip }
-The Tags option can be used to generate multiple tags and associate them with the record. You can use this to track any type of categorical data. Additionally you can search and filter for records based on tags. Multiple tags can be associated based on one column of data, they are parsed and split on any commas (,)
 
 ### Importing Servers
 
 When importing servers, the only required field is 'Host Name'. The Host Name is the name that your server is identified with throughout Accelerator.
 
 The following server fields are present in Accelerator by default.
-- Host Name (*)
+
+- Host Name (\*)
 - FQDN
 - Assigned ID
 - Zone
@@ -78,43 +79,46 @@ The following server fields are present in Accelerator by default.
 - Storage Allocated (GB)
 - Storage Used (GB)
 - Description
-- IP Addresses -> Address (*)
-- Database Instances -> Name (*)
-- Environment -> Name (*)
-- Cluster -> Host Name (*)
+- IP Addresses -> Address (\*)
+- Database Instances -> Name (\*)
+- Environment -> Name (\*)
+- Cluster -> Host Name (\*)
 - Tags
 - Operating System Version
 - Operating System
 
-**(*)** Associative fields.
-* _Host Name_, This field is used to identify the server and to create association with Databases and Applications,
-* _Database Instances -> Name_, If a server is hosting a Database (or multiple), this field should contain the **name**(s) of such database(s).
-* _Environment -> Name_, This field is used to represent the server's environment.
+**(\*)** Associative fields.
+
+- _Host Name_, This field is used to identify the server and to create association with Databases and Applications,
+- _Database Instances -> Name_, If a server is hosting a Database (or multiple), this field should contain the **name**(s) of such database(s).
+- _Environment -> Name_, This field is used to represent the server's environment.
 
 ### Importing Databases
 
 When importing database instances, the only required field is 'Name'. The Name is how your database instance is identified throughout Accelerator.
 
 The following database instance fields are present in Accelerator by default.
-- Name (*)
+
+- Name (\*)
 - Description
 - Database Size (MB)
 - Database Path
-- Server -> Host Name (*)
-- Environment -> Name (*)
+- Server -> Host Name (\*)
+- Environment -> Name (\*)
 - Tags
 
-**(*)** Associative fields.
-* _Name_, When you are importing other records, Applications and Servers, and you provide a set of dependent databases with them, the Name field for Database Instances is used to identify those databases and associate the databases as dependencies for those other records. This is helpful when you have some existing dependencies, between Databases and Servers or Applications, in your Excel files and want to capture and leverage them.
-* _Server -> Host Name_, represents the server hosting a Database. This field should contain the **Host Name** of such server.
-* _Environment -> Name_, This field is used to associate a Database to an environment.
+**(\*)** Associative fields.
 
+- _Name_, When you are importing other records, Applications and Servers, and you provide a set of dependent databases with them, the Name field for Database Instances is used to identify those databases and associate the databases as dependencies for those other records. This is helpful when you have some existing dependencies, between Databases and Servers or Applications, in your Excel files and want to capture and leverage them.
+- _Server -> Host Name_, represents the server hosting a Database. This field should contain the **Host Name** of such server.
+- _Environment -> Name_, This field is used to associate a Database to an environment.
 
 ### Importing Applications
 
 When importing applications, the only required field is 'Name'. The Name is how your application is identified throughout Accelerator.
 
 The following application fields are present in Accelerator by default.
+
 - Name
 - Description
 - URLs
@@ -134,16 +138,17 @@ The following application fields are present in Accelerator by default.
 - Business Continuity Plan
 - Can Run On Linux
 - End Of Support Date
-- Servers -> Host Name (*)
-- Database Instances -> Name (*)
-- Environment -> Name (*)
+- Servers -> Host Name (\*)
+- Database Instances -> Name (\*)
+- Environment -> Name (\*)
 - Customers
 - Tags
 - Technical Lead
 - Business Owner
 
-**(*)** Associative fields.
+**(\*)** Associative fields.
 In order to properly map your inventory you must use the following fields.
-* _Servers -> Host Name_, represents the server hosting the Application. This field should contain the **Host Name** of such server(s).
-* _Database Instances -> Name_, This field should contain the **Name** of the database(s) associated to the Application.
-* _Environment -> Name_, This field is used to associate an Application to an environment.
+
+- _Servers -> Host Name_, represents the server hosting the Application. This field should contain the **Host Name** of such server(s).
+- _Database Instances -> Name_, This field should contain the **Name** of the database(s) associated to the Application.
+- _Environment -> Name_, This field is used to associate an Application to an environment.
