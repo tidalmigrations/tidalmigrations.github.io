@@ -113,6 +113,24 @@ This message shows that your installation appears to be working correctly.
 …
 ```
 
+To explicitly check that your Docker installation is able to communicate with
+Tidal's container registry run the command `docker run
+public.ecr.aws/tidal-cloud/code-analyzer`. You should see the output similar to
+the following:
+
+```
+Unable to find image 'public.ecr.aws/tidal-cloud/code-analyzer:latest' locally
+latest: Pulling from tidal-cloud/code-analyzer
+Digest: sha256:04ebaf9bab53378333226ec0232868fb31e9845621195e9f27e3eb926745c1a5
+Status: Downloaded newer image for public.ecr.aws/tidal-cloud/code-analyzer:latest
+error: the following required arguments were not provided:
+  <DIRECTORY>
+
+Usage: code-analyzer <DIRECTORY>
+
+For more information, try '--help'.
+```
+
 Another option is to run `tidal doctor` and check the Docker section of the output.
 
 ### Docker networking issues {#docker-networking}
