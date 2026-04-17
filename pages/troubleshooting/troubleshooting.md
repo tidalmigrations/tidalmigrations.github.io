@@ -114,21 +114,27 @@ This message shows that your installation appears to be working correctly.
 ```
 
 To explicitly check that your Docker installation is able to communicate with
-Tidal's container registry run the command `docker run
-public.ecr.aws/tidal-cloud/code-analyzer`. You should see the output similar to
-the following:
+Tidal's container registry run the command `docker run public.ecr.aws/tidal-cloud/hello-world:latest`. 
+You should see the output similar to the following:
 
 ```
-Unable to find image 'public.ecr.aws/tidal-cloud/code-analyzer:latest' locally
-latest: Pulling from tidal-cloud/code-analyzer
-Digest: sha256:04ebaf9bab53378333226ec0232868fb31e9845621195e9f27e3eb926745c1a5
-Status: Downloaded newer image for public.ecr.aws/tidal-cloud/code-analyzer:latest
-error: the following required arguments were not provided:
-  <DIRECTORY>
-
-Usage: code-analyzer <DIRECTORY>
-
-For more information, try '--help'.
+Unable to find image 'public.ecr.aws/tidal-cloud/hello-world:latest' locally
+latest: Pulling from tidal-cloud/hello-world
+6a0ac1617861: Pull complete
+ab3405d00363: Pull complete
+Digest: sha256:13ab79694af019b932dee4dfe7ff4ddcf6acfc89d64efd0829bb41f30ce47609
+Status: Downloaded newer image for public.ecr.aws/tidal-cloud/hello-world:latest
+                  _.====.._
+                ,:._       ~-_
+                    `\        ~-_
+                      |          `.
+                    ,/             ~-_
+           -..__..-''                 ~~--..__...----...
+ _____ _     _       _      _                _                _
+|_   _(_) __| | __ _| |    / \   ___ ___ ___| | ___ _ __ __ _| |_ ___  _ __
+  | | | |/ _` |/ _` | |   / _ \ / __/ __/ _ \ |/ _ \ '__/ _` | __/ _ \| '__|
+  | | | | (_| | (_| | |  / ___ \ (_| (_|  __/ |  __/ | | (_| | || (_) | |
+  |_| |_|\__,_|\__,_|_| /_/   \_\___\___\___|_|\___|_|  \__,_|\__\___/|_|
 ```
 
 Another option is to run `tidal doctor` and check the Docker section of the output.
