@@ -24,8 +24,8 @@ If you have a fresh workspace, you can use this demo data to try out the Moderni
 After extracting the demo data, you will find the following contents:
 1. demo-records - a directory containing three spreadsheets: servers, database instances and applications for your workspace.
 2. sct-results - a directory containing two AWS Schema Conversion Tool result sets.
-3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis
-4. equinox-project - a sample codebase suitable for analysis on Windows systems 
+3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis.
+4. equinox-project - a sample codebase suitable for analysis on Windows systems.
 
 ## Software
 
