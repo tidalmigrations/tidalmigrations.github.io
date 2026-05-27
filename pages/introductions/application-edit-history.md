@@ -25,13 +25,13 @@ The history drawer displays edits in chronological order. Each entry shows who m
 
 ## Inspecting an Edit
 
-To see the full details of an edit, click **Inspect Edit**. This opens an inspection modal with a side-by-side diff of all changes included in that edit.
+To see the full details of an edit, click **Inspect Edit**. This opens an inspection modal with a side-by-side comparison of all fields which changed as a result of that edit action.
 
 {% include image.html file="edit-history3.png" %}
 
 ## Reverting a Change
 
-From the inspection modal, click **Revert Edits** to undo the edits. The attributes which were changed will be restored to their prior values, shown as **Before** in the inspection modal.
+From the inspection modal, click **Revert Edits** to undo the edit action. The fields which were changed will be restored to their prior values, shown as **Before** in the inspection modal.
 
 Edits that are the result of a revert are marked with a **Reverted on** badge in the history timeline, showing when the revert took place.
 
