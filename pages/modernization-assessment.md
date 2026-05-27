@@ -24,6 +24,8 @@ If you have a fresh workspace, you can use this demo data to try out the Moderni
 After extracting the demo data, you will find the following contents:
 1. demo-records - a directory containing three spreadsheets: servers, database instances and applications for your workspace.
 2. sct-results - a directory containing two AWS Schema Conversion Tool result sets.
+3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis
+4. equinox-project - a sample codebase suitable for analysis on Windows systems 
 
 ## Software
 
@@ -100,8 +102,10 @@ You can learn more about the modernization potential of your applications by ana
 
 Tidal Code Analysis is performed using our command-line software utility Tidal Tools. The software is available to download [here](https://get.tidal.sh/), and you can learn more about getting started with the tool in our guide [here](https://guides.tidal.cloud/tidal-tools.html).
 
+For demo purposes, we have included the `nop-commerce` project in the demo data download. You can analyze this to get familiar with the process, if you don't have another codebase handy.
+
 {: .note }
-Tidal Source Code Analysis uses Docker under the hood. There is a [known issue](/troubleshooting.html#windows-source-code-analysis) with Docker where scanning a codebase hosted on a Windows file system will be very time consuming. If you are on Windows, we recommend hosting the sourse code which you will analyze on [WSL](https://learn.microsoft.com/en-us/windows/wsl/about).
+Tidal Source Code Analysis uses Docker under the hood. There is a [known issue](/troubleshooting.html#windows-source-code-analysis) with Docker where scanning a large codebase hosted on a Windows file system will be very time consuming. If you are on Windows, we recommend hosting the source code which you will analyze on [WSL](https://learn.microsoft.com/en-us/windows/wsl/about). For demo purposes, we have also included the equinox-project codebase in the demo data download, which can be analyzed on Windows systems in a timely fashion.
 
 Once you have Tidal Tools installed, run the following command and follow the prompts to authenticate with Accelerator.
 
