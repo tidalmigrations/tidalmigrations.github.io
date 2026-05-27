@@ -31,7 +31,7 @@ To see the full details of an edit, click **Inspect Edit**. This opens an inspec
 
 ## Reverting a Change
 
-From the inspection modal, click **Revert** to revert the edit. The attributes which were changed will be restored to their prior values, shown as 'Before' in the inspection modal.
+From the inspection modal, click **Revert** to revert the edit. The attributes which were changed will be restored to their prior values, shown as **Before** in the inspection modal.
 
 Edits that are the result of a revert are marked with a **Reverted on** badge in the history timeline, showing when the revert took place.
 
