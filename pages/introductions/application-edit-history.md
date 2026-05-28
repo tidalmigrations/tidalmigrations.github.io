@@ -19,7 +19,7 @@ To view the edit history for an application, open the application record and cli
 
 ## Viewing Edits
 
-The history drawer displays edits in chronological order. Each entry shows who made the change and when. If a single edit modified multiple attributes, a summary is shown with a subsection of changes.
+The history drawer displays edits in reverse chronological order. Each entry shows who made the change and when. If a single edit modified multiple attributes, a summary is shown with a subsection of changes.
 
 {% include image.html file="edit-history2.png" %}
 
