@@ -36,6 +36,11 @@ You can always update a dependency after importing too.
 
 You should have one sheet or file per type of record.
 
+Your spreadsheet must have a header row naming each column, and that header row must be the first row of the sheet. The importer reads this row to build the list of columns you map to Tidal fields.
+
+{: .note }
+Do not leave blank or title rows above the header row.
+
 {: .tip }
 There are several default columns values included for each record type,
 however if you have additional information on your inventory that would like to include, you can [create custom fields](./custom-fields.html) for a record (Check step 3).
