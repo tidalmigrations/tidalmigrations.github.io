@@ -36,10 +36,19 @@ You can always update a dependency after importing too.
 
 You should have one sheet or file per type of record.
 
-Your spreadsheet must have a header row naming each column, and that header row must be the first row of the sheet. The importer reads this row to build the list of columns you map to Tidal fields.
+Your spreadsheet must have a header row naming each column, and that header row must be the first row of the sheet. Do not leave blank or title rows above this header row. The importer reads this row to build the list of columns you map to Tidal fields.
 
-{: .note }
-Do not leave blank or title rows above the header row.
+Here is an representation of how your spreadsheet should look. The columns here are for illustrative purposes only, yours can have as many as you need.
+
+```
++----------------+---------------------------+------------+-------------+------------------+------+
+| Name           | Description               | Tech Lead  | Environment | Data Sensitivity | COTS |
++----------------+---------------------------+------------+-------------+------------------+------+
+| Inventory App  | Tracks warehouse stock    | J. Smith   | Production  | High             | Yes  |
+| HR Portal      | Employee self-service hub | A. Chen    | Staging     | Medium           | Yes  |
+| Payment Gateway| Processes transactions    | M. Johnson | Production  | High             | No   |
++----------------+---------------------------+------------+-------------+------------------+------+
+```
 
 {: .tip }
 There are several default columns values included for each record type,
