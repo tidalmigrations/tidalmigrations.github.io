@@ -1,9 +1,9 @@
 ---
 toc: false
-title: Summarize your Apps
+title: Summarize your Applications
 layout: pages
 parent: Assess
-keywords: apps, description, insights, summarize, documents, ai, accelerator
+keywords: applications, description, insights, summarize, documents, ai, accelerator
 last_updated: September, 2026
 summary: "Use Accelerator to automatically generate a description and key insights for your applications, drawing on the data saved to each application and the documents you upload to it."
 permalink: summarize-apps.html
