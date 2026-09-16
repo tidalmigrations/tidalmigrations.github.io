@@ -32,15 +32,15 @@ You can generate a description directly from the application. Accelerator will a
 
 1. Navigate to the overview page of the application you wish to summarize
 
-   {% include image.html file="summarize-apps-1.png" %}
+   {% include image.html file="summarize-apps-1.png" alt="screenshot of the application overview" %}
 
 2. In the General Information card, click 'Edit'.
 
-   {% include image.html file="summarize-apps-2.png" %}
+   {% include image.html file="summarize-apps-2.png" alt="screenshot of the location of the edit button" %}
 
 3. Under the description field, click 'Generate Description'.
 
-   {% include image.html file="summarize-apps-3.png" %}
+   {% include image.html file="summarize-apps-3.png" alt="screenshot of the location of the 'generate description' button" %}
 
 The description will be generated for you to review and edit. When you are satisfied, click 'Save' to save the new description to the application.
 
@@ -52,15 +52,15 @@ Like the description, insights take into account both the data on the applicatio
 
 1. Navigate to the overview page of the application you wish to summarize
 
-   {% include image.html file="summarize-apps-1.png" %}
+   {% include image.html file="summarize-apps-1.png" alt="screenshot of the application overview" %}
 
 2. In the General Information card, click 'Edit'.
 
-   {% include image.html file="summarize-apps-2.png" %}
+   {% include image.html file="summarize-apps-2.png" alt="screenshot of the location of the edit button" %}
 
 3. Under the Insights field, click 'Generate Insights'.
 
-   {% include image.html file="summarize-apps-4.png" %}
+   {% include image.html file="summarize-apps-4.png" alt="screenshot of the location of the 'generate insights' button" %}
 
 The insights will be generated for you to review and edit. When you are satisfied, click 'Save' to save the new insights to the application.
 
