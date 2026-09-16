@@ -22,6 +22,8 @@ When you ask Accelerator to summarize an application, it draws on two sources of
 
 Accelerator combines these sources to produce a summary that reflects everything it knows about the app. The more complete and accurate your application data is, the more useful the generated summary will be.
 
+These summarizations are powered by an LLM, which can make mistakes, so the result must be checked carefully before being saved to the application record.
+
 ## Generating a description
 
 The description is a written summary of the application. It gives you a readable overview of what the application is and what it does, based on the data on the application record and any documents uploaded to it.
