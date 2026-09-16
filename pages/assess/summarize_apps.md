@@ -46,9 +46,9 @@ The description will be generated for you to review and edit. When you are satis
 
 ## Generating insights
 
-Application insights are key, bullet-point takeaways about the application. Where the description gives you a narrative overview, insights highlight the most important points at a glance.
+Application insights are key, bullet-point takeaways about the application.
 
-Like the description, insights take into account both the data on the application record and any documents uploaded to the app.
+When generating these insights, Accelerator takes into account both the data on the application record and any documents uploaded to the app.
 
 1. Navigate to the overview page of the application you wish to summarize
 
