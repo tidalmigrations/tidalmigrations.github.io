@@ -11,14 +11,14 @@ permalink: transition-type-recommendations.html
 
 Tidal Accelerator can recommend a transition type for each application: a 6R-style disposition such as rehost, replatform, refactor, or retire, once enough assessment evidence exists in your project or portfolio.
 
-The recommended value is called 'Recommended Transition Type'. It is produced by Accelerator's transition type recommendation engine and is distinct from the transition type you choose yourself on the application Migration Plan.
+This is saved to the application record as 'Recommended Transition Type'. It is produced by Accelerator's transition type recommendation engine and is distinct from the transition type you choose yourself on the application Migration Plan.
 
 {: .note }
 Looking for cloud instance (VM to EC2 or Azure VM) sizing instead? See [Cloud Instance Recommendations](instance-recommendation.html).
 
 ## What it is
 
-After you gather assessment data for applications in a scoped project (or leave them at portfolio level with no project), Accelerator scores each application along two axes:
+After you gather assessment data for applications in a project, Accelerator scores each application along two axes:
 
 - Business value: signals such as interview and financial fields that indicate how valuable the application is to the business.
 - Migration complexity: signals such as operating system, dependency mapping, and (when enabled) source code analysis that indicate how complex the application is to migrate or modernize.
@@ -50,9 +50,9 @@ Please do not confuse Transition Type Recommendations with:
 
 ## Where do I start?
 
-### 1. Scope apps in a project (recommended)
+### 1. Add your applications to a project (recommended)
 
-Group the applications you want scored together into a scoped [assessment project](assessment-projects.html). Apps in a scoped project are recommended relative to their project peers. Apps with no project are scored at the portfolio level.
+Group the applications you want scored together into an [assessment project](assessment-projects.html). Apps in a project are recommended relative to their project peers. Apps with no project are scored at the portfolio level.
 
 When you create or edit a project, set the primary focus (for example savings, agility, and modernization-related goals). Focus influences how recommendation regions are oriented for that project.
 
@@ -63,41 +63,41 @@ The engine waits until enough of your portfolio or project is assessment-ready. 
 - [Application interview](interviews.html) and business-value signals
 - Operating system information on related servers
 - Dependency mapping (or explicitly marking dependency mapping as not applicable where appropriate)
-- [Source code analysis](analyze-source-code.html), unless source code analysis is disabled on the project
+- [Source code analysis](analyze-source-code.html), unless it is [disabled on the project](assessment-projects.html#bypass-source-code-analysis-requirement)
 
-You generally need a meaningful set of applications in scope, with enough attributes completed per app, before recommendations appear. If recommendations are not ready yet, the assessment experience historically surfaces a readiness explanation (popup or progress) listing what is still incomplete.
+You generally need a meaningful set of applications in scope, with enough attributes completed per app, before recommendations appear. If recommendations are not ready yet, click the `?` icon to see what you're missing.
 
 {: .note }
 By default, source code analysis must be complete before an application receives a recommendation. You can lift this requirement for a project with the [Bypass Source Code Analysis Requirement](assessment-projects.html#bypass-source-code-analysis-requirement) setting, which lets applications receive a recommendation sooner, based on less evidence.
 
 {: .note }
-Exact readiness thresholds are internal to the product. Use the in-app readiness and progress indicators as the source of truth for what to finish next.
+Use the in-app readiness and progress indicators as the source of truth for what to finish next.
 
 ### 3. Wait for background computation
 
-When assessment data changes, Accelerator recomputes recommendations in the background (via a recommendation job). Recomputation can take a short time; a scheduled cleanup run also refreshes recommendations periodically.
+When assessment data changes, Accelerator recomputes recommendations in the background.
 
 ### 4. Review Recommended Transition Type
 
-Once readiness gates are met, each eligible application receives a 'Recommended Transition Type'. Review it alongside your interview notes and architecture judgment, then set the user-selected 'Transition Type' on the Migration Plan when your team agrees.
+Once readiness gates are met, each eligible application receives a 'Recommended Transition Type', which you can find in the 'Transition Planning' section of the application record. Review it alongside your interview notes and architecture judgment, then set 'Transition Type' when your team agrees.
 
-Optional: after you set Transition Type to rehost, replatform, or refactor, Accelerator can fill 'Recommended Steps' for planning detail.
+After you set Transition Type to rehost, replatform, or refactor, Accelerator will fill 'Recommended Steps' for planning detail.
 
 ## How to customize recommendation behavior in a project
 
-Projects expose settings that steer recommendations without changing raw inventory data:
+Projects expose settings that steer recommendations without changing raw inventory data.
 
 ### Project focus (savings, agility, modernization)
 
-On the project create or edit experience, set the primary focus of the project, for example emphasizing cost savings, agility, and modernization themes (operating system, middleware, application frameworks). These focus choices adjust how disposition regions are applied for apps in that project. See [Organizing your application assessments into projects](assessment-projects.html#creating-a-project).
+When creating or editing a project, set the primary focus of the project, for example emphasizing cost savings, agility, and modernization themes (operating system, middleware, application frameworks). These focus choices adjust how disposition regions are applied for apps in that project. For more detail see [Organizing your application assessments into projects](assessment-projects.html#creating-a-project).
 
 ### Recommendation weights (business value vs migration complexity)
 
-Each project stores recommendation weights: the relative emphasis of business value versus migration complexity when composing the score used with the disposition map. By default, projects use a balanced emphasis between the two.
+Each project has its own recommendation weights: the relative emphasis of business value versus migration complexity when composing the score used with the disposition map. By default, projects use a balanced emphasis between the two.
 
 You can adjust these weights, and the finer-grained signals that feed each axis, on the project's Settings tab. See [6R Recommendation](assessment-projects.html#6r-recommendation) for the business value and migration complexity balance, and [Migration Complexity](assessment-projects.html#migration-complexity) and [Business Criticality](assessment-projects.html#business-criticality) for the underlying signals.
 
-Changing focus or weights triggers recommendation recomputation for apps in that project after the background job runs.
+Changing these settings triggers a re-calculation of recommended transition type for apps in that project.
 
 ## Which transition types can be auto-recommended?
 

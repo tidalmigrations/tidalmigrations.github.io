@@ -236,7 +236,7 @@ These insights are generated using a large language model; therefore, please rev
 Accelerator can generate a list of recommended 'next steps' for your application migration, based on the selected transition type of the application.
 
 {: .note }
-'Recommended Steps' are not the same as 'Recommended Transition Type'. The 6R recommendation engine suggests a disposition first; after you set Transition Type yourself, Accelerator can generate Recommended Steps for rehost, replatform, or refactor. See [Transition Type Recommendations (6R)](transition-type-recommendations.html).
+'Recommended Steps' are not the same as 'Recommended Transition Type'. The 6R recommendation engine suggests a transition type first in the 'Recommended Transition Type' field. After you set 'Transition Type' yourself, Accelerator can generate Recommended Steps for rehost, replatform, or refactor. See [Transition Type Recommendations (6R)](transition-type-recommendations.html).
 
 Navigate to the 'Migration Plan' tab of the application record. You will find the fields 'Transition Type' and 'Recommended Steps' in the 'Transition Planning' section.
 
