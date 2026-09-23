@@ -38,6 +38,9 @@ You will then be brought to a new page that allows you to set out some goals for
 
 It's OK to skip the fields you are unsure about. You can always come back to this page and adjust the details as things evolve.
 
+Project focus (for example savings, agility, and modernization goals) also influences [Transition Type Recommendations (6R)](transition-type-recommendations.html) for applications in the project. You can further tune how business value and migration complexity are balanced via project recommendation weights — see [How to customize recommendation behavior in a project](transition-type-recommendations.html#how-to-customize-recommendation-behavior-in-a-project).
+
+
 ## Bulk assign applications to a project
 You also have the ability to bulk assign the applications you selected to a project. Simply navigate to the `Applications` tab under the `Inventory` menu or manually visit `https://my_workspace.tidal.cloud/applications`, select the applications you want to assign by clicking the checkboxes, and then click the `Project Assign` button.
 
