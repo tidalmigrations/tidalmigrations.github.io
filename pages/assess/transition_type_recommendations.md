@@ -68,6 +68,9 @@ The engine waits until enough of your portfolio or project is assessment-ready. 
 You generally need a meaningful set of applications in scope, with enough attributes completed per app, before recommendations appear. If recommendations are not ready yet, the assessment experience historically surfaces a readiness explanation (popup or progress) listing what is still incomplete.
 
 {: .note }
+By default, source code analysis must be complete before an application receives a recommendation. You can lift this requirement for a project with the [Bypass Source Code Analysis Requirement](assessment-projects.html#bypass-source-code-analysis-requirement) setting, which lets applications receive a recommendation sooner, based on less evidence.
+
+{: .note }
 Exact readiness thresholds are internal to the product. Use the in-app readiness and progress indicators as the source of truth for what to finish next.
 
 ### 3. Wait for background computation
@@ -90,16 +93,9 @@ On the project create or edit experience, set the primary focus of the project, 
 
 ### Recommendation weights (business value vs migration complexity)
 
-Each project stores recommendation weights: the relative emphasis of business value versus migration complexity when composing the score used with the disposition map.
+Each project stores recommendation weights: the relative emphasis of business value versus migration complexity when composing the score used with the disposition map. By default, projects use a balanced emphasis between the two.
 
-- Weights are percentages that must sum to 100.
-- By default, projects use a balanced emphasis between business value and migration complexity.
-- Adjusting the balance tilts recommendations toward value-led or complexity-led dispositions for that project's apps.
-
-Projects may also expose related weight groups used when computing the underlying business-value and migration-complexity scores (for example how revenue versus person-hours-saved contribute to business value). Treat those as advanced project tuning; prefer changing recommendation weights and focus first.
-
-{: .note }
-Confirm the exact UI path with your Tidal contact if you do not see recommendation weight controls on the project form in your workspace build. The product supports these settings at the project level (including defaults via the projects API); label placement in the UI can vary by release.
+You can adjust these weights, and the finer-grained signals that feed each axis, on the project's Settings tab. See [6R Recommendation](assessment-projects.html#6r-recommendation) for the business value and migration complexity balance, and [Migration Complexity](assessment-projects.html#migration-complexity) and [Business Criticality](assessment-projects.html#business-criticality) for the underlying signals.
 
 Changing focus or weights triggers recommendation recomputation for apps in that project after the background job runs.
 
