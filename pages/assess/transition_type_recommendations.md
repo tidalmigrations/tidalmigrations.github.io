@@ -14,7 +14,7 @@ Tidal Accelerator can recommend a transition type for each application: a 6R-sty
 The recommended value is called 'Recommended Transition Type'. It is produced by Accelerator's transition type recommendation engine and is distinct from the transition type you choose yourself on the application Migration Plan.
 
 {: .note }
-Looking for cloud instance (VM to EC2 or Azure VM) sizing instead? See [Cloud Instance Recommendations](instance-recommendation.html). That is a different feature.
+Looking for cloud instance (VM to EC2 or Azure VM) sizing instead? See [Cloud Instance Recommendations](instance-recommendation.html).
 
 ## What it is
 
