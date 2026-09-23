@@ -14,7 +14,7 @@ Tidal Accelerator analyzes your servers and generates data-driven cloud instance
 Instance recommendation is currently available for Azure and Amazon Web Services.
 
 {: .note }
-Looking for **6R / transition type** (disposition) recommendations for applications instead? See [Transition Type Recommendations (6R)](transition-type-recommendations.html). Cloud instance recommendations size servers; they do not choose rehost vs replatform vs refactor.
+Looking for 6R or transition type (disposition) recommendations for applications instead? See [Transition Type Recommendations (6R)](transition-type-recommendations.html). Cloud instance recommendations size servers, they do not choose rehost vs replatform vs refactor.
 
 ## How does it work?
 
