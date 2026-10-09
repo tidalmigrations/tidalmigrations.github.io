@@ -80,7 +80,7 @@ You can open up any project's details section by clicking the name of that proje
 
 You can find more information about the project in various tabs.
 
-For AWS Migration Acceleration Program (MAP) projects, you can also generate a MAP Funding Request for a given project. See [Generating a MAP Funding Request](map-funding-request.html).
+For AWS Migration Acceleration Program (MAP) projects, you can also generate a MAP funding request. See [Generating an AWS MAP Funding Request](map-funding-request.html).
 
 ## Insights
 
