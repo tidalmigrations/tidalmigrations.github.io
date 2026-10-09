@@ -41,12 +41,12 @@ estimate link into 'AWS Calculator URL', and click 'Save'.
 
 2. Click the 'MAP Funding Request' button.
 
-{% include image.html file="map-funding-request-2.png" alt="the MAP Funding Request button on the project view" %}
+   {% include image.html file="map-funding-request-2.png" alt="the MAP Funding Request button on the project view" %}
 
-Accelerator fetches the funding request data for the project and displays it for
-you to validate and review. Several values in this data are derived from the project's AWS
-Calculator link, so review all data points carefully to ensure that they line up with what
-you expect given the data in your Accelerator workspace.
+Accelerator fetches the funding request data for the project and displays it in
+a validation modal. Several values are derived from your saved AWS Calculator link
+and inventory, so review each section carefully to ensure the figures match
+expectations.
 
 {% include image.html file="map-funding-request-3.png" alt="the MAP Funding Request validation modal" %}
 
