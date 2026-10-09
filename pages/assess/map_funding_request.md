@@ -17,7 +17,7 @@ with an AWS calculator URL.
 ## Before you begin
 
 To create a MAP funding request, you must first organize your apps into a project.
-If you haven't done this yet, see see the [Projects](assessment-projects.html) guide.
+If you haven't done this yet, see the [Projects](assessment-projects.html) guide.
 
 You will then need to save an AWS Calculator link to the project. Several of the
 pricing values in the funding request are derived from this calculator link, so
@@ -34,9 +34,9 @@ section of the Project overview. This will enable the 'MAP funding Request' butt
 
 1. Navigate to the project you want to generate the request for.
 
-1. Click the 'MAP Funding Request' button.
+2. Click the 'MAP Funding Request' button.
 
-   {% include image.html file="![alt text](image.png).png" alt="the MAP Funding Request button on the project view" %}
+{% include image.html file="map-funding-request-2.png" alt="the MAP Funding Request button on the project view" %}
 
 Accelerator fetches the funding request data for the project and displays it for
 you to validate and review. Several values in this data are derived from the project's AWS
