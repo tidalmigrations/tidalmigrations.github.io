@@ -52,23 +52,42 @@ expectations.
 
 ## Reviewing and editing the data
 
-The modal shows every value that will be included in the funding request JSON,
-grouped into sections. You can review each section and edit the values before
-you download.
+The modal displays all fields included in the AWS funding request JSON, grouped
+into sections:
 
-Most fields are editable. The workload profiles are shown for reference and are
-read only. The sections that hold lists, such as services and excluded costs,
-allow you to add and remove rows as needed.
+- **Assessment Output**: Engagement metadata, including the assessment initial date,
+  completion date, six-month expiry date, assessment method ('SELF SERVICE'), and
+  applicable compliance frameworks.
+- **Assessment Scope**: Scope metrics across the estate, including total assets in
+  scope, compute servers, storage volume (in whole terabytes), database instances,
+  Assessed Scope ARR, and Committed Migration Scope ARR.
+- **Pricing Output**: Cloud cost forecasts and financial comparisons derived from
+  your AWS Calculator estimate, including annual on-demand pricing, 1-year and 3-year
+  discounted plans, upfront costs, on-premises annual TCO, and estimated savings percentage.
+- **Services**: Line items for each AWS service in your pricing estimate (such as EC2
+  instances and EBS volumes). You can edit row values, delete rows with 'Remove', or
+  add new lines with '+ Add row'.
+- **Excluded Costs**: Optional costs excluded from cloud pricing (such as retained
+  systems or third-party licensing). You can add rows with '+ Add row' or delete rows
+  with 'Remove'.
+- **Workload Profiles**: A summary of assessed workload types, migration strategies,
+  and target AWS services. These rows are read-only in this modal; to make changes,
+  update your profiles on the project's 'Workload Profiles' tab before opening the
+  request.
 
 {% include image.html file="map-funding-request-4.png" alt="editing values in the MAP Funding Request modal" %}
 
 {: .note }
-Edits you make here apply to the downloaded file only. They do not change the
-underlying project, application, or server records.
+Edits made in this modal apply to the downloaded file only. They do not alter the
+underlying project, application, or server records in Tidal Accelerator.
 
 ## Downloading the JSON
 
-When you are satisfied with the data, click 'Download' to save it as a JSON
-file.
+When you are satisfied with the data, click 'Download' to save the request as a
+JSON file.
 
 {% include image.html file="map-funding-request-5.png" alt="downloading the MAP Funding Request as JSON" %}
+
+The downloaded file adheres to the AWS `AssessmentOutput` v2 schema and is ready
+for submission to AWS (such as uploading to AWS Transform / ATX) for MAP deal
+qualification.
