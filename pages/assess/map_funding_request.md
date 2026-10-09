@@ -3,9 +3,9 @@ toc: false
 parent: Assess
 title: Generating an AWS MAP Funding Request
 layout: pages
-keywords: map, funding, request, aws, calculator, json, assessment, accelerator, aws
+keywords: map, funding, request, aws, calculator, json, assessment, accelerator
 last_updated: October, 2026
-summary: "Review, edit, and download the AWS MAP Funding Request data for a project as JSON."
+summary: "Review, edit, and download the AWS MAP funding request data for a project as JSON."
 sidebar: main_sidebar
 permalink: map-funding-request.html
 ---
