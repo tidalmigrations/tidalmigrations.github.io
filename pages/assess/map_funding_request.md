@@ -10,9 +10,9 @@ sidebar: main_sidebar
 permalink: map-funding-request.html
 ---
 
-Tidal Accelerator can step you through the process of assembling an AWS MAP
-funding request, by combining data that you've gathered in your workspace
-with an AWS calculator URL.
+Tidal Accelerator can step you through assembling an AWS Migration Acceleration
+Program (MAP) funding request by combining inventory data gathered in your
+workspace with an AWS Pricing Calculator estimate.
 
 ## Before you begin
 
