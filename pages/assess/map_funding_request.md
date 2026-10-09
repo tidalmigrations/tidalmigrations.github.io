@@ -16,12 +16,16 @@ workspace with an AWS Pricing Calculator estimate.
 
 ## Before you begin
 
-To create a MAP funding request, you must first organize your apps into a project.
-If you haven't done this yet, see the [Projects](assessment-projects.html) guide.
+Before generating a funding request, ensure your project has the required data:
 
-You will then need to save an AWS Calculator link to the project. Several of the
-pricing values in the funding request are derived from this calculator link, so
-it must be present before you can begin.
+- **In-scope applications and servers**: Group your migration scope into a project.
+  If you have not done this yet, see the [Projects](assessment-projects.html) guide.
+- **Project start date**: Set an initial date for the project under the 'Overview'
+  tab. Accelerator uses this as the assessment initial date.
+- **AWS Calculator URL**: Save a shareable AWS Pricing Calculator estimate link
+  to the project. Several pricing metrics and service lines are derived from this
+  estimate.
+- **Workload profiles**: Generate and review them on the project's 'Workload Profiles' tab first.
 
 {: .important }
 The 'MAP Funding Request' button stays disabled until an AWS Calculator link is
