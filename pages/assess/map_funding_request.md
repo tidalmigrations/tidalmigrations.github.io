@@ -28,9 +28,10 @@ Before generating a funding request, ensure your project has the required data:
 - **Workload profiles**: Generate and review them on the project's 'Workload Profiles' tab first.
 
 {: .important }
-The 'MAP Funding Request' button stays disabled until an AWS Calculator link is
-saved to the project. Add the link to the project first, by saving it in the 'MAP Funding Request'
-section of the Project overview. This will enable the 'MAP funding Request' button for the project.
+The 'MAP Funding Request' button remains disabled until an AWS Calculator link
+is saved to the project. To add the link, navigate to the 'Overview' tab of your
+project, scroll to the 'MAP Funding Request' card, click 'Edit', paste your
+estimate link into 'AWS Calculator URL', and click 'Save'.
 
 {% include image.html file="map-funding-request-1.png" alt="the project overview with the AWS Calculator link saved" %}
 
