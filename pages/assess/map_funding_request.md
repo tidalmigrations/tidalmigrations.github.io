@@ -91,3 +91,60 @@ JSON file.
 The downloaded file adheres to the AWS `AssessmentOutput` v2 schema and is ready
 for submission to AWS (such as uploading to AWS Transform / ATX) for MAP deal
 qualification.
+
+## Where the data comes from
+
+The table below outlines how Tidal Accelerator populates each field in the
+`AssessmentOutput` v2 funding request schema:
+
+| Field | Description | Source |
+|---|---|---|
+| `assessment_output.compliance_frameworks` | Compliance frameworks in scope, or NONE | Project compliance frameworks, comma-joined; `"NONE"` when empty |
+| `assessment_output.assessment_method` | How the assessment was conducted | Constant `"SELF_SERVICE"` |
+| `assessment_output.output_status` | Status of this assessment output | Constant `"FINAL"` |
+| `assessment_output.assessment_version` | Report version | Constant `"1"` |
+| `assessment_output.is_current` | Whether this is the active output | Constant `true`, emitted as `"Yes"` |
+| `assessment_output.assessment_initial_date` | Date the assessment started | Project start date (`start_date`) |
+| `assessment_output.assessment_completion_date` | Date the assessment completed | Generation date |
+| `assessment_output.assessment_expiry_date` | Completion date plus six months | Generation date + 6 months |
+| `assessment_output.assessor_org` | Organization that performed the assessment | Client organization name |
+| `workload_profiles[].workload_type` | Category of workload assessed | Workload classification rules |
+| `workload_profiles[].migration_strategy` | Dominant 7R strategy for the workload | Most-voted strategy across candidate records |
+| `workload_profiles[].target_aws_service` | Primary AWS migration target | Most-voted target within the winning strategy |
+| `workload_profiles[].primary_assessment_tool` | Tool that produced the assessment | Constant `"Tidal Accelerator"` |
+| `workload_profiles[].source_environment` | Where the workload runs now | Constant `"ON_PREMISES"` |
+| `workload_profiles[].source_platform_detail` | Source OS and platform breakdown | Distinct OS names and versions of the workload type's servers, or `"Unknown"` |
+| `workload_profiles[].assessment_completeness` | How complete the assessment is | Chosen by the user when generating workload profiles |
+| `workload_profiles[].tool_version` | Version of the assessment tool | Current Tidal Accelerator release version |
+| `assessment_scope.scope_type` | Scope type (full or partial) | Constant `"FULL"` |
+| `assessment_scope.total_assets_in_scope` | Count of in-scope assets | Sum of compute servers and database instances |
+| `assessment_scope.scope_agreed_with_customer` | Scope agreed with the customer | Constant `true`, emitted as `"Yes"` |
+| `assessment_scope.assessed_scope_arr` | Customer ARR for the assessed scope | 'Assessed Scope ARR' from project custom fields (default 0) |
+| `assessment_scope.committed_migration_scope_arr` | ARR the customer committed to migrate | 'Committed Migration Scope ARR' from project custom fields (default 0) |
+| `assessment_scope.total_compute_assets_in_scope` | Count of in-scope compute assets | Count of servers in the project |
+| `assessment_scope.total_storage_assets_in_scope` | Count of in-scope storage assets | Sum of allocated server storage in GB divided by 1024, rounded to whole TB |
+| `assessment_scope.total_databases_assets_in_scope` | Count of in-scope database assets | Count of database instances linked to the project's applications and servers |
+| `partial_scope_components[].component_type` | Type of scope component | Not populated; `scope_type` is always `"FULL"` |
+| `pricing_output.on_demand_annual` | Annual on-demand cost | Calculator monthly total multiplied by 12 |
+| `pricing_output.estimated_1yr_total_after_discounts` | Annual cost under a 1-year commitment | 'Forecasted 1-year Total After Discounts' from project custom fields (default 0) |
+| `pricing_output.estimated_3yr_total_after_discounts` | Annual cost under a 3-year commitment | 'Forecasted 3-year Total After Discounts' from project custom fields (default 0) |
+| `pricing_output.tco_on_premises_annual` | On-premises annual TCO | Sum of current annual on-premises costs across project applications |
+| `pricing_output.tco_savings_percentage` | TCO savings percentage (0 to 100) | `total_savings` divided by `tco_on_premises_annual` multiplied by 100, rounded to 2 decimal places (0 with no baseline) |
+| `pricing_output.total_aws_resources` | Total in-scope AWS resources | 'Number of AWS (Target) Resources' from project custom fields (default 0) |
+| `pricing_output.calculator_estimate_url` | AWS Pricing Calculator estimate URL | 'AWS Calculator URL' from project custom fields |
+| `pricing_output.pricing_snapshot_date` | Date the pricing estimate was generated | Creation timestamp (`createdOn`) from the calculator estimate |
+| `pricing_output.multi_region` | Whether pricing covers multiple regions | `true` if calculator services span more than one region; otherwise `false` |
+| `pricing_output.currency` | Currency code for all monetary values | Constant `"USD"` |
+| `pricing_output.total_upfront_costs` | One-time upfront costs across all services | Total upfront cost from the calculator estimate |
+| `pricing_output.total_savings` | Savings subtracted from Qualified ARR | `tco_on_premises_annual` minus `estimated_3yr_total_after_discounts`, clamped at 0 |
+| `pricing_output.services[].service_name` | Service identity from calculator | Service name from the calculator estimate |
+| `pricing_output.services[].resource_type` | Instance family, bundle, or instance type | Calculator component instance type |
+| `pricing_output.services[].region` | AWS region for this service line | Calculator region name |
+| `pricing_output.services[].effective_monthly_cost` | Amortized monthly cost | Calculator monthly service cost |
+| `pricing_output.services[].resource_count` | Number of resources for this line | Calculator component workload count |
+| `pricing_output.excluded_costs[].category` | Exclusion category identifier | Not populated from inventory; can be added in the modal |
+| `pricing_output.excluded_costs[].description` | What is excluded and why | Not populated from inventory; can be added in the modal |
+| `pricing_output.excluded_costs[].annual_cost` | Annual excluded cost | Not populated from inventory; can be added in the modal |
+| `assessment_artifacts[].artifact_id` | Identifier of the assessment artifact | Not populated; section is `null` |
+| `assessment_artifacts[].artifact_category` | Category of the artifact | Not populated; section is `null` |
+| `assessment_artifacts[].artifact_version` | Version of the artifact | Not populated; section is `null` |
