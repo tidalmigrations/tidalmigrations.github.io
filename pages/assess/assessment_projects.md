@@ -80,6 +80,8 @@ You can open up any project's details section by clicking the name of that proje
 
 You can find more information about the project in various tabs.
 
+For AWS Migration Acceleration Program (MAP) projects, you can also generate a MAP Funding Request for a given project. See [Generating a MAP Funding Request](map-funding-request.html).
+
 ## Insights
 
 Finally, after filling in all the information about your project and adding some applications to it, you can get a birds eye view of your project by clicking on the `Insights` tab. This will lead you to our insights page, where you can get an overview of your financial highlights, assessment overview, migration ROI, application resource utilization, security vulnerabilities, and technology breakdown.
