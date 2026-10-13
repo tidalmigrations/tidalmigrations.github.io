@@ -119,19 +119,19 @@ The table below outlines how Tidal Accelerator populates each field in the
 | `assessment_scope.scope_type` | Scope type (full or partial) | Constant `"FULL"` |
 | `assessment_scope.total_assets_in_scope` | Count of in-scope assets | Sum of compute servers and database instances |
 | `assessment_scope.scope_agreed_with_customer` | Scope agreed with the customer | Constant `true`, emitted as `"Yes"` |
-| `assessment_scope.assessed_scope_arr` | Customer ARR for the assessed scope | 'Assessed Scope ARR' from project custom fields (default 0) |
-| `assessment_scope.committed_migration_scope_arr` | ARR the customer committed to migrate | 'Committed Migration Scope ARR' from project custom fields (default 0) |
+| `assessment_scope.assessed_scope_arr` | Customer ARR for the assessed scope | 'Assessed Scope ARR' from 'MAP Funding Request' section of the project overview (default 0) |
+| `assessment_scope.committed_migration_scope_arr` | ARR the customer committed to migrate | 'Committed Migration Scope ARR' from 'MAP Funding Request' section of the project overview (default 0) |
 | `assessment_scope.total_compute_assets_in_scope` | Count of in-scope compute assets | Count of servers in the project |
 | `assessment_scope.total_storage_assets_in_scope` | Count of in-scope storage assets | Sum of allocated server storage in GB divided by 1024, rounded to whole TB |
 | `assessment_scope.total_databases_assets_in_scope` | Count of in-scope database assets | Count of database instances linked to the project's applications and servers |
 | `partial_scope_components[].component_type` | Type of scope component | Not populated; `scope_type` is always `"FULL"` |
 | `pricing_output.on_demand_annual` | Annual on-demand cost | Calculator monthly total multiplied by 12 |
-| `pricing_output.estimated_1yr_total_after_discounts` | Annual cost under a 1-year commitment | 'Forecasted 1-year Total After Discounts' from project custom fields (default 0) |
-| `pricing_output.estimated_3yr_total_after_discounts` | Annual cost under a 3-year commitment | 'Forecasted 3-year Total After Discounts' from project custom fields (default 0) |
+| `pricing_output.estimated_1yr_total_after_discounts` | Annual cost under a 1-year commitment | 'Forecasted 1-year Total After Discounts' from 'MAP Funding Request' section of the project overview (default 0) |
+| `pricing_output.estimated_3yr_total_after_discounts` | Annual cost under a 3-year commitment | 'Forecasted 3-year Total After Discounts' from 'MAP Funding Request' section of the project overview (default 0) |
 | `pricing_output.tco_on_premises_annual` | On-premises annual TCO | Sum of current annual on-premises costs across project applications |
 | `pricing_output.tco_savings_percentage` | TCO savings percentage (0 to 100) | `total_savings` divided by `tco_on_premises_annual` multiplied by 100, rounded to 2 decimal places (0 with no baseline) |
-| `pricing_output.total_aws_resources` | Total in-scope AWS resources | 'Number of AWS (Target) Resources' from project custom fields (default 0) |
-| `pricing_output.calculator_estimate_url` | AWS Pricing Calculator estimate URL | 'AWS Calculator URL' from project custom fields |
+| `pricing_output.total_aws_resources` | Total in-scope AWS resources | 'Number of AWS (Target) Resources' from 'MAP Funding Request' section of the project overview (default 0) |
+| `pricing_output.calculator_estimate_url` | AWS Pricing Calculator estimate URL | 'AWS Calculator URL' from 'MAP Funding Request' section of the project overview |
 | `pricing_output.pricing_snapshot_date` | Date the pricing estimate was generated | Creation timestamp (`createdOn`) from the calculator estimate |
 | `pricing_output.multi_region` | Whether pricing covers multiple regions | `true` if calculator services span more than one region; otherwise `false` |
 | `pricing_output.currency` | Currency code for all monetary values | Constant `"USD"` |
@@ -145,6 +145,6 @@ The table below outlines how Tidal Accelerator populates each field in the
 | `pricing_output.excluded_costs[].category` | Exclusion category identifier | Not populated from inventory; can be added in the modal |
 | `pricing_output.excluded_costs[].description` | What is excluded and why | Not populated from inventory; can be added in the modal |
 | `pricing_output.excluded_costs[].annual_cost` | Annual excluded cost | Not populated from inventory; can be added in the modal |
-| `assessment_artifacts[].artifact_id` | Identifier of the assessment artifact | Not populated; section is `null` |
-| `assessment_artifacts[].artifact_category` | Category of the artifact | Not populated; section is `null` |
-| `assessment_artifacts[].artifact_version` | Version of the artifact | Not populated; section is `null` |
+| `assessment_artifacts[].artifact_id` | Identifier of the assessment artifact | Populated automatically based on the project name |
+| `assessment_artifacts[].artifact_category` | Category of the artifact | Constant `ASSESSMENT` |
+| `assessment_artifacts[].artifact_version` | Version of the artifact | Current timestamp |
