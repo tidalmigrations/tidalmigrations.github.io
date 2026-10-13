@@ -5,7 +5,7 @@ title: Generating an AWS MAP Funding Request
 layout: pages
 keywords: map, funding, request, aws, calculator, json, assessment, accelerator
 last_updated: October, 2026
-summary: "Review, edit, and download the AWS MAP funding request data for a project as JSON."
+summary: "What an AWS MAP funding request is, when to generate one, and how to review, edit, and download it for a project as JSON."
 sidebar: main_sidebar
 permalink: map-funding-request.html
 ---
@@ -13,6 +13,36 @@ permalink: map-funding-request.html
 Tidal Accelerator can step you through assembling an AWS Migration Acceleration
 Program (MAP) funding request by combining inventory data gathered in your
 workspace with an AWS Pricing Calculator estimate.
+
+## What is a MAP funding request, and why generate one?
+
+The AWS Migration Acceleration Program (MAP) is AWS's program for supporting
+customers who are migrating and modernizing workloads on AWS. A MAP funding
+request is the structured summary of your assessed scope - your applications,
+servers, workload profiles, and projected AWS costs - that AWS and delivery
+partners use to qualify an engagement and align it to MAP.
+
+Typically you generate a funding request **after** you have assessed your estate
+in Accelerator (for example, following an Application Modernization Assessment,
+or AMA). Once you understand what you have and what it will cost on AWS, the
+funding request packages that evidence so you can pursue support for the next
+phases of your migration and modernization journey, rather than reconstructing
+the business case by hand.
+
+In short:
+
+- **When**: after you have grouped your migration scope into a project and have
+  a cost estimate, when you want to move from assessment into a funded
+  migration or modernization phase.
+- **Why**: to produce a consistent, AWS-ready summary of your scope and
+  projected costs that supports qualifying the work for MAP.
+- **What you get**: a JSON file conforming to the AWS funding request schema,
+  ready to share with your AWS team or delivery partner.
+
+{: .note }
+Eligibility, funding amounts, and program terms are determined by AWS and your
+AWS contacts. This guide covers how to produce the funding request data in
+Accelerator; it does not determine or promise funding.
 
 ## Before you begin
 
@@ -26,6 +56,12 @@ Before generating a funding request, ensure your project has the required data:
   to the project. Several pricing metrics and service lines are derived from this
   estimate.
 - **Workload profiles**: Generate and review them on the project's 'Workload Profiles' tab first.
+  A workload profile is a summary of a group of similar workloads in your scope -
+  the type of workload (such as VMware, databases, or Windows servers), the
+  migration strategy you intend to apply (one of the AWS 7Rs, such as rehost or
+  replatform), and the AWS service you plan to move it to. AWS uses these
+  profiles to understand the shape of your estate, so a funding request includes
+  them.
 
 {: .important }
 The 'MAP Funding Request' button remains disabled until an AWS Calculator link
@@ -71,7 +107,8 @@ into sections:
   systems or third-party licensing). You can add rows with '+ Add row' or delete rows
   with 'Remove'.
 - **Workload Profiles**: A summary of assessed workload types, migration strategies,
-  and target AWS services. These rows are read-only in this modal; to make changes,
+  and target AWS services (see [Before you begin](#before-you-begin) for what a workload profile is).
+  These rows are read-only in this modal; to make changes,
   update your profiles on the project's 'Workload Profiles' tab before opening the
   request.
 
@@ -91,6 +128,14 @@ JSON file.
 The downloaded file adheres to the AWS `AssessmentOutput` v2 schema and is ready
 for submission to AWS (such as uploading to AWS Transform / ATX) for MAP deal
 qualification.
+
+### Next steps
+
+Share the downloaded funding request with your AWS team or delivery partner to
+support qualifying the engagement for MAP and planning the next phases of your
+migration and modernization. Your AWS contacts determine eligibility and any
+funding; this file provides the assessed scope and projected costs they need to
+have that conversation.
 
 ## Where the data comes from
 
