@@ -70,6 +70,7 @@ exclude:
   - vendor/
   - book/
   - README.md
+  - AGENTS.md
   - gems/
 
 gh_edit_link: true # show or hide edit this page link
