@@ -23,7 +23,7 @@ To run a Modernization Assessment, follow this sequence. Key steps are covered i
 3. Once the customer returns the spreadsheets, import them into Tidal Accelerator ([Step 1](#step-1)).
 4. Conduct, and where authorized record, an application owner interview to validate and complete the business context for each application ([Step 2](#step-2)).
 5. Use Tidal Tools to run source code analysis when the code is available, then generate insights and review them critically ([Step 3](#step-3) and [Step 7](#step-7)).
-6. Confirm each application's transition type and recommended steps, then download and review the Modernization Assessment presentation ([Step 7](#step-7) and [Step 8](#step-8)).
+6. Set each application's transition type and estimated migration cost, then download and review the presentation ([Step 7](#step-7) and [Step 8](#step-8)).
 
 ## Resources
 
@@ -208,7 +208,10 @@ You can now navigate back to the project, and you should see the applications li
 For more details about creating and working with projects, see our documentation [here](https://guides.tidal.cloud/assessment-projects.html#assessment-projects).
 
 
-## Step 6: Generate Cloud Instance Targets
+## Step 6: Generate Cloud Instance Targets (Optional) {#step-6}
+
+{: .note }
+Cloud instance targets suit applications you plan to rehost. Not every migration maps to cloud instances, and generating them requires server sizing data. If you don't plan to rehost an application, or you choose not to collect sizing data for its servers, you can skip this step and enter a Forecasted Cost for the application in [Step 7](#step-7) instead.
 
 Once we have enough data about your servers in Tidal Accelerator, we automatically generate cloud instance target recommendations. These recommendations are based on the resources allocated to your servers, such as RAM, storage and CPU. For more details on how we generate cloud instance targets, please refer to [this guide](https://guides.tidal.cloud/instance-recommendation.html#how-does-it-work).
 
@@ -229,11 +232,45 @@ Details about all cloud instance targets for servers in your project are aggrega
 
 You can set a cloud region for the entire project, and override this for specific servers. Whenever relevant details about your servers change (for example, the amount of RAM allocated is updated), we automatically regenerate a cloud instance target for that server. This way, as you discover more data about your servers, the cloud instance target recommendations become more and more accurate over time.
 
-## Step 7: Set Application Insights and Recommended Steps (Optional) {#step-7}
+## Step 7: Set Transition Type, Migration Costs and Insights {#step-7}
 
-Now that we have sufficient data about your applications, servers and database instances, you can generate insights and recommended steps for your applications. Doing this is optional; however, these datapoints appear in the Modernization Assessment PowerPoint presentation, so it is recommended that you complete this step.
+With your inventory in place, you can now set the fields that you, rather than the customer, provide as part of the assessment. These include your chosen transition type and cost estimates, some of which Tidal Accelerator needs to score each application in the Modernization Assessment presentation.
 
-### Application Insights
+### Transition Type (Required)
+
+The transition type is the strategy you have chosen for the application, such as rehost, replatform or refactor. It is one of the criteria for the [MVA recommendation](#mva-recommendation).
+
+Navigate to the 'Migration Plan' tab of the application record. You will find the fields 'Transition Type' and 'Recommended Steps' in the 'Transition Planning' section.
+
+{% include image.html file="ama16.PNG" %}
+<br>
+
+When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended next steps for your application migration. These appear in the Modernization Assessment presentation.
+
+{: .note }
+'Recommended Steps' are not the same as 'Recommended Transition Type'. The 6R recommendation engine suggests a transition type first in the 'Recommended Transition Type' field, which you can use to inform your decision on what the Transition Type of the application should be. See [Transition Type Recommendations (6R)](transition-type-recommendations.html).
+
+### Estimated Migration Cost (Required)
+
+The estimated one-time cost of migrating the application. Without it, Tidal Accelerator cannot calculate an [ROI](#roi-potential) for the application.
+
+You will find this field in the 'Cloud Financial Estimates' section of the 'Migration Plan' tab.
+
+### Forecasted Cost (Annually) (Required without cloud instance targets)
+
+The forecasted annual cost of running the application in the cloud. To calculate ROI, the application needs an estimated cloud cost from either this field or the cloud instance targets of its servers.
+
+- If the application's servers have cloud instance targets ([Step 6](#step-6)), leave this field blank.
+- If they don't, for example because you plan to refactor the application rather than rehost it, enter a forecasted cost.
+
+You will find this field in the 'Cloud Financial Estimates' section of the 'Migration Plan' tab.
+
+{: .warning }
+If you enter a Forecasted Cost for an application whose servers also have cloud instance targets, both are added together and the application's cloud cost is counted twice.
+
+### Application Insights (Recommended)
+
+Insights appear in the Modernization Assessment presentation, so it is recommended that you set them.
 
 Tidal Accelerator provides a seamless, AI-driven approach to generating application insights. Navigate to the application page, and you will find the field 'Insights' in the 'General Information' section. Edit this section, and you will be shown a button labelled 'Generate Insights'. Click this to automatically populate insights for this application based on the data that you've provided so far.
 
@@ -241,20 +278,6 @@ These insights are generated using a large language model; therefore, please rev
 
 {% include image.html file="ama15.PNG" %}
 <br>
-
-### Recommended Steps
-
-Accelerator can generate a list of recommended 'next steps' for your application migration, based on the selected transition type of the application.
-
-{: .note }
-'Recommended Steps' are not the same as 'Recommended Transition Type'. The 6R recommendation engine suggests a transition type first in the 'Recommended Transition Type' field. After you set 'Transition Type' yourself, Accelerator can generate Recommended Steps for rehost, replatform, or refactor. See [Transition Type Recommendations (6R)](transition-type-recommendations.html).
-
-Navigate to the 'Migration Plan' tab of the application record. You will find the fields 'Transition Type' and 'Recommended Steps' in the 'Transition Planning' section.
-
-{% include image.html file="ama16.PNG" %}
-<br>
-
-When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended steps.
 
 ## Step 8: Download the Modernization Presentation {#step-8}
 
@@ -282,7 +305,7 @@ Business criticality is determined by data on the application record itself, suc
 
 ### ROI Potential
 
-ROI potential is calculated by looking at the application's current cost, based on 'Annual Hosting Costs' and 'Annual Staff Costs' in the 'Financial' section of the application overview. We then look at 'Forecasted Cost' and 'Estimated Migration Cost', found in the 'Cloud Financial Estimates' section of the application migration plan page.
+ROI potential is calculated by looking at the application's current cost, based on 'Annual Hosting Costs' and 'Annual Staff Costs' in the 'Financial' section of the application overview. We then look at the application's cloud cost, based on 'Forecasted Cost (Annually)' or the cloud instance targets of its servers, and 'Estimated Migration Cost', found in the 'Cloud Financial Estimates' section of the application migration plan page.
 
 Incidentally, this same data is used to generate many of the visuals found on the [Financial Impact](https://guides.tidal.cloud/financial-impact.html) page, which can be viewed at both the application and project level.
 
