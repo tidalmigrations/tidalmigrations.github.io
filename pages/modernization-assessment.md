@@ -4,28 +4,41 @@ title: Modernization Assessment
 layout: pages
 nav_exclude: true
 keywords: demo, data, resources, lab, hands-on
-last_updated: June 2025
+last_updated: November 2026
 permalink: modernization-assessment.html
 ---
 
 # Introduction
 
-Tidal's AWS Modernization Assessment (AMA) program provides organizations with a no-cost assessment capability for rapidly identifying suitable application candidates for the Modernization Viability Assessment as part of the modernization pathway to AWS.
+The AWS Application Modernization Assessment (AMA) program provides organizations with a no-cost assessment capability for rapidly identifying suitable application candidates for the Modernization Viability Assessment as part of the modernization pathway to AWS.
 
 This guide will walk you through the process of conducting a Modernization Assessment and show you how to download your ready-made Modernization Assessment PowerPoint presentation.
 
+## Quick start
+
+To run a Modernization Assessment, follow this sequence. Key steps are covered in more detail later in this guide.
+
+1. Choose up to 10 applications and identify the servers and databases that support them.
+2. Send the customer the discovery template spreadsheets (see [Resources](#resources)) to complete before the interview.
+3. Once the customer returns the spreadsheets, import them into Tidal Accelerator ([Step 1](#step-1)).
+4. Conduct, and where authorized record, an application owner interview to validate and complete the business context for each application ([Step 2](#step-2)).
+5. Use Tidal Tools to run source code analysis when the code is available ([Step 3](#step-3)).
+6. Create a project and assign the in-scope applications to it.
+7. Set each application's transition type and estimated migration cost, then generate insights and review them critically ([Step 7](#step-7)).
+8. Download and review the presentation ([Step 8](#step-8)).
+
 ## Resources
 
-As we step through the process of completing a Modernization Assessment, you can optionally use demo data to familiarize yourself with the features. Download the [demo-data](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/demo-data.zip) zip file and extract it to your location of choice.
+Use the discovery templates to collect initial information about the applications from your customer before the interview. Download the [modernization-assessment-templates](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/modernization-assessment-templates.zip) zip file and extract it to your location of choice.
 
-{: .note }
-If you have a fresh workspace, you can use this demo data to try out the Modernization Assessment features. Then, you can clear all the data from the workspace to create a blank slate for your actual assessment. Note that performing this action will clear all data in the workspace and cannot be undone. Navigate to `<your-workspace>.tidal.cloud/preferences` and select 'Remove all data'.
+After extracting the templates, you will find three spreadsheets:
+1. applications-template.xlsx - applications in scope for the assessment.
+2. servers-template.xlsx - servers that host those applications and their databases.
+3. databases-template.xlsx - database instances used by those applications.
 
-After extracting the demo data, you will find the following contents:
-1. demo-records - a directory containing three spreadsheets: servers, database instances and applications for your workspace.
-2. sct-results - a directory containing two AWS Schema Conversion Tool result sets.
-3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis.
-4. equinox-project - a sample codebase suitable for analysis on Windows systems.
+For more information about each of these fields, see [Discovery fields](#discovery-fields).
+
+If you would like to see a completed assessment first, see [Practice with a completed assessment](#practice).
 
 ## Software
 
@@ -39,7 +52,7 @@ Tidal software for your toolkit to support your Modernization Assessment:
 
 # Modernization Assessment
 
-## Step 1: Import Data from Spreadsheets
+## Step 1: Import Data from Spreadsheets {#step-1}
 
 First, we will import your servers, database instances and applications from spreadsheets into Tidal Accelerator.
 
@@ -61,7 +74,7 @@ For more details on uploading spreadsheets to Tidal Accelerator, including how t
 {: .note }
 The file type of spreadsheets that you upload to Accelerator must be .xlsx
 
-## Step 2: Conduct Application Owner Interviews
+## Step 2: Conduct Application Owner Interviews {#step-2}
 
 Application owner interviews enable you to obtain the most up-to-date information on your applications, directly from the source—the application owner. This is critical to ensuring you have the best possible data and allows you to fill in gaps that might be present in the data imported from spreadsheets.
 
@@ -96,13 +109,13 @@ If you have recorded a video of the interview via screen capture, you can upload
 {: .note }
 Notes that you capture during the interview can be accessed by clicking the 'Notes' button in the toolbar at the top of the application page.
 
-## Step 3: Perform Source Code Analysis
+## Step 3: Perform Source Code Analysis {#step-3}
 
 You can learn more about the modernization potential of your applications by analyzing their source code. Tidal Code Analysis provides insight into application language composition, as well as the application's currency, via dependency analysis. This data is also surfaced as visuals on the Portfolio Insights and Project Insights pages.
 
 Tidal Code Analysis is performed using our command-line software utility Tidal Tools. The software is available to download [here](https://get.tidal.sh/), and you can learn more about getting started with the tool in our guide [here](https://guides.tidal.cloud/tidal-tools.html).
 
-For demo purposes, we have included the `nop-commerce` project in the demo data download. You can analyze this to get familiar with the process, if you don't have another codebase handy.
+For demo purposes, we have included the `nop-commerce` project in the [demo data download](#practice). You can analyze this to get familiar with the process, if you don't have another codebase handy.
 
 {: .note }
 Tidal Source Code Analysis uses Docker under the hood. There is a [known issue](/troubleshooting.html#windows-source-code-analysis) with Docker where scanning a large codebase hosted on a Windows file system will be very time consuming. If you are on Windows, we recommend hosting the source code which you will analyze on [WSL](https://learn.microsoft.com/en-us/windows/wsl/about). For demo purposes, we have also included the equinox-project codebase in the demo data download, which can be analyzed on Windows systems in a timely fashion.
@@ -176,7 +189,7 @@ To upload additional reports, click the 'Upload SCT Analysis' button in the top 
 You can compare results and make a decision on which database technology to target by selecting the target database technology for the schema.
 
 
-## Step 5: Organize your resources into a Project
+## Step 5: Organize your resources into a Project {#step-5}
 
 When managing numerous applications during cloud migration, organizing them into project groups streamlines progress tracking, aligns assessment goals, and enables parallel execution across teams. Assigning your applications to a project also unlocks advanced features in Accelerator, such as financial impact, cloud instance target recommendations, and the modernization presentation.
 
@@ -197,7 +210,10 @@ You can now navigate back to the project, and you should see the applications li
 For more details about creating and working with projects, see our documentation [here](https://guides.tidal.cloud/assessment-projects.html#assessment-projects).
 
 
-## Step 6: Generate Cloud Instance Targets
+## Step 6: Generate Cloud Instance Targets (Optional) {#step-6}
+
+{: .note }
+Cloud instance targets suit applications you plan to rehost. Not every migration maps to cloud instances, and generating them requires server sizing data. If you don't plan to rehost an application, or you choose not to collect sizing data for its servers, you can skip this step and enter a Forecasted Cost for the application in [Step 7](#step-7) instead.
 
 Once we have enough data about your servers in Tidal Accelerator, we automatically generate cloud instance target recommendations. These recommendations are based on the resources allocated to your servers, such as RAM, storage and CPU. For more details on how we generate cloud instance targets, please refer to [this guide](https://guides.tidal.cloud/instance-recommendation.html#how-does-it-work).
 
@@ -218,11 +234,45 @@ Details about all cloud instance targets for servers in your project are aggrega
 
 You can set a cloud region for the entire project, and override this for specific servers. Whenever relevant details about your servers change (for example, the amount of RAM allocated is updated), we automatically regenerate a cloud instance target for that server. This way, as you discover more data about your servers, the cloud instance target recommendations become more and more accurate over time.
 
-## Step 7: Set Application Insights and Recommended Steps (Optional)
+## Step 7: Set Transition Type, Migration Costs and Insights {#step-7}
 
-Now that we have sufficient data about your applications, servers and database instances, you can generate insights and recommended steps for your applications. Doing this is optional; however, these datapoints appear in the Modernization Assessment PowerPoint presentation, so it is recommended that you complete this step.
+With your inventory in place, you can now set the fields that you, rather than the customer, provide as part of the assessment. These include your chosen transition type and cost estimates, some of which Tidal Accelerator needs to score each application in the Modernization Assessment presentation.
 
-### Application Insights
+### Transition Type (Required)
+
+The transition type is the strategy you have chosen for the application, such as rehost, replatform or refactor. It is one of the criteria for the [MVA recommendation](#mva-recommendation).
+
+Navigate to the 'Migration Plan' tab of the application record. You will find the fields 'Transition Type' and 'Recommended Steps' in the 'Transition Planning' section.
+
+{% include image.html file="ama16.PNG" %}
+<br>
+
+When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended next steps for your application migration. These appear in the Modernization Assessment presentation.
+
+{: .note }
+'Recommended Steps' are not the same as 'Recommended Transition Type'. The 6R recommendation engine suggests a transition type first in the 'Recommended Transition Type' field, which you can use to inform your decision on what the Transition Type of the application should be. See [Transition Type Recommendations (6R)](transition-type-recommendations.html).
+
+### Estimated Migration Cost (Required)
+
+The estimated one-time cost of migrating the application. Without it, Tidal Accelerator cannot calculate an [ROI](#roi-potential) for the application.
+
+You will find this field in the 'Cloud Financial Estimates' section of the 'Migration Plan' tab.
+
+### Forecasted Cost (Annually) (Required without cloud instance targets)
+
+The forecasted annual cost of running the application in the cloud. To calculate ROI, the application needs an estimated cloud cost from either this field or the cloud instance targets of its servers.
+
+- If the application's servers have cloud instance targets ([Step 6](#step-6)), leave this field blank.
+- If they don't, for example because you plan to refactor the application rather than rehost it, enter a forecasted cost.
+
+You will find this field in the 'Cloud Financial Estimates' section of the 'Migration Plan' tab.
+
+{: .warning }
+If you enter a Forecasted Cost for an application whose servers also have cloud instance targets, both are added together and the application's cloud cost is counted twice.
+
+### Application Insights (Recommended)
+
+Insights appear in the Modernization Assessment presentation, so it is recommended that you set them.
 
 Tidal Accelerator provides a seamless, AI-driven approach to generating application insights. Navigate to the application page, and you will find the field 'Insights' in the 'General Information' section. Edit this section, and you will be shown a button labelled 'Generate Insights'. Click this to automatically populate insights for this application based on the data that you've provided so far.
 
@@ -231,21 +281,7 @@ These insights are generated using a large language model; therefore, please rev
 {% include image.html file="ama15.PNG" %}
 <br>
 
-### Recommended Steps
-
-Accelerator can generate a list of recommended 'next steps' for your application migration, based on the selected transition type of the application.
-
-{: .note }
-'Recommended Steps' are not the same as 'Recommended Transition Type'. The 6R recommendation engine suggests a transition type first in the 'Recommended Transition Type' field. After you set 'Transition Type' yourself, Accelerator can generate Recommended Steps for rehost, replatform, or refactor. See [Transition Type Recommendations (6R)](transition-type-recommendations.html).
-
-Navigate to the 'Migration Plan' tab of the application record. You will find the fields 'Transition Type' and 'Recommended Steps' in the 'Transition Planning' section.
-
-{% include image.html file="ama16.PNG" %}
-<br>
-
-When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended steps.
-
-## Step 8: Download the Modernization Presentation
+## Step 8: Download the Modernization Presentation {#step-8}
 
 Tidal Accelerator can create a comprehensive Modernization Assessment PowerPoint presentation using the data you have provided. This slide deck comes equipped with speaker notes to help guide your presentation.
 
@@ -271,7 +307,7 @@ Business criticality is determined by data on the application record itself, suc
 
 ### ROI Potential
 
-ROI potential is calculated by looking at the application's current cost, based on 'Annual Hosting Costs' and 'Annual Staff Costs' in the 'Financial' section of the application overview. We then look at 'Forecasted Cost' and 'Estimated Migration Cost', found in the 'Cloud Financial Estimates' section of the application migration plan page.
+ROI potential is calculated by looking at the application's current cost, based on 'Annual Hosting Costs' and 'Annual Staff Costs' in the 'Financial' section of the application overview. We then look at the application's cloud cost, based on 'Forecasted Cost (Annually)' or the cloud instance targets of its servers, and 'Estimated Migration Cost', found in the 'Cloud Financial Estimates' section of the application migration plan page.
 
 Incidentally, this same data is used to generate many of the visuals found on the [Financial Impact](https://guides.tidal.cloud/financial-impact.html) page, which can be viewed at both the application and project level.
 
@@ -289,3 +325,86 @@ The Scope Refinement Summary slide in the presentation illustrates the process o
 
 {% include image.html file="ama19.PNG" %}
 <br>
+
+## Discovery fields {#discovery-fields}
+
+The tables below describe the fields in each discovery template. The name field for each record type is the only 'hard' requirement. Relationship fields, such as 'server host names', are only required if the relationship exists, for example if the application runs on servers that are in the servers template. Optional fields improve the results of the assessment, and you can fill them in later, either from the application owner interview or from tools such as [Machine Stats](machine_stats.html).
+
+If you don't know the value of a field, leave it blank rather than entering `0`.
+
+### Servers
+
+| Template Column          | Field Label              | Notes                                                                                                                                                                  | AMA role                                                                                                                                                                                                                              |
+| ------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| host name                | Host Name                | The name that identifies the server in Tidal Accelerator. Applications and databases are linked to servers by this name, so use the same value in all three templates. | Links the server to its applications and databases, so that it counts as one of their dependent servers.                                                                                                                              |
+| description              | Description              | A short description of the server and its role.                                                                                                                        | None.                                                                                                                                                                                                                                 |
+| fqdn                     | FQDN                     | The fully qualified domain name of the server.                                                                                                                         | None.                                                                                                                                                                                                                                 |
+| environment name         | Environment              | The environment the server runs in, such as Production or Development.                                                                                                 | Used to generate a cloud instance target.                                                                                                                                                                                             |
+| assigned id              | Assigned ID              | An identifier the customer already uses for the server, such as an asset or CMDB ID.                                                                                   | None.                                                                                                                                                                                                                                 |
+| ram allocated (gb)       | RAM Allocated (GB)       | The memory allocated to the server. Can be collected with Machine Stats.                                                                                               | Used to generate a cloud instance target, which is one option for determining the forecasted cloud cost used in [ROI potential](#roi-potential).                                                                                      |
+| storage allocated (gb)   | Storage Allocated (GB)   | The disk space allocated to the server. Can be collected with Machine Stats.                                                                                           | Used to generate a cloud instance target.                                                                                                                                                                                             |
+| logical cpu count        | Logical CPU Count        | The number of logical CPU cores. Can be collected with Machine Stats.                                                                                                  | Used to generate a cloud instance target.                                                                                                                                                                                             |
+| cpu name                 | CPU Name                 | The CPU model. Can be collected with Machine Stats.                                                                                                                    | Used to generate a cloud instance target.                                                                                                                                                                                             |
+| operating system         | Operating System         | The operating system running on the server. Can be collected with Machine Stats.                                                                                       | Identifies Windows servers, which count towards the Microsoft licensing check in the [MVA recommendation](#mva-recommendation). Also used in [ease of modernization](#ease-of-modernization) and to generate a cloud instance target. |
+| operating system version | Operating System Version | The version of the operating system. Can be collected with Machine Stats.                                                                                              | Helps Tidal Accelerator match the server to a known operating system.                                                                                                                                                                 |
+
+### Database Instances
+
+| Template Column      | Field Label        | Notes                                                                                                                                                                       | AMA role                                                                                                                                                                   |
+| -------------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                 | Name               | The name that identifies the database instance in Tidal Accelerator. Applications are linked to databases by this name, so use the same value in the applications template. | Links the database to the applications that use it.                                                                                                                        |
+| server host name     | Server             | The host name of the server that hosts the database. Use the same value as Host Name in the servers template.                                                               | Adds the server to the dependent servers of each application that uses the database, so its operating system counts towards the [MVA recommendation](#mva-recommendation). |
+| description          | Description        | A short description of the database and its contents.                                                                                                                       | None.                                                                                                                                                                      |
+| environment name     | Environment        | The environment the database runs in, such as Production or Development.                                                                                                    | None.                                                                                                                                                                      |
+| database path        | Database Path      | The file system path where the database files are located.                                                                                                                  | None.                                                                                                                                                                      |
+| database size (mb)   | Database Size (MB) | The total size of the database, in megabytes.                                                                                                                               | None.                                                                                                                                                                      |
+| database engine name | Database Engine    | The database management system, such as Oracle or SQL Server.                                                                                                               | Identifies SQL Server databases, which count towards the Microsoft licensing check in the [MVA recommendation](#mva-recommendation).                                       |
+| database version     | Database Version   | The version of the database engine.                                                                                                                                         | None.                                                                                                                                                                      |
+
+### Applications
+
+| Template Column          | Field Label              | Notes                                                                                                                                                       | AMA role                                                                                                                                                                                                                                                                                                            |
+| ------------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                     | Name                     | The name that identifies the application in Tidal Accelerator.                                                                                              | Shown as the title of the application in the Modernization Assessment presentation.                                                                                                                                                                                                                                 |
+| server host names        | Servers                  | The host names of the servers that host the application, separated by commas. Use the same values as Host Name in the servers template.                     | Links the application to its servers. Their number and operating systems are used in [ease of modernization](#ease-of-modernization), Windows servers count towards the [MVA recommendation](#mva-recommendation), and their cloud instance targets provide the cloud cost used in [ROI potential](#roi-potential). |
+| database instance names  | Database Instances       | If the application uses databases, the names of the database instances it uses, separated by commas. Use the same values as Name in the databases template. | Links the application to its databases. SQL Server databases count towards the [MVA recommendation](#mva-recommendation), and the servers that host them are added to the application's dependent servers.                                                                                                          |
+| description              | Description              | A short summary of what the application does and who uses it.                                                                                               | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| urls                     | URLs                     | The web addresses used to access the application.                                                                                                           | None.                                                                                                                                                                                                                                                                                                               |
+| business owner name      | Business Owner           | The name of the business stakeholder responsible for the application.                                                                                       | Shown on the application's slide in the Modernization Assessment presentation.                                                                                                                                                                                                                                      |
+| regulated requirements   | Regulated Requirements   | Whether the application is subject to regulatory compliance requirements.                                                                                   | If set, the application's [business criticality](#business-criticality) is set to the highest value (5).                                                                                                                                                                                                            |
+| person hours saved       | Person Hours Saved       | The estimated number of person-hours the application saves each year.                                                                                       | Used to calculate [business criticality](#business-criticality).                                                                                                                                                                                                                                                    |
+| technical lead name      | Technical Lead           | The name of the technical contact responsible for the application.                                                                                          | None.                                                                                                                                                                                                                                                                                                               |
+| annual hosting costs     | Annual Hosting Costs     | The current yearly cost of hosting the application.                                                                                                         | Part of the application's current cost, used to calculate [ROI potential](#roi-potential).                                                                                                                                                                                                                          |
+| total users              | Total Users              | The number of people who use the application.                                                                                                               | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| annual staff costs       | Annual Staff Costs       | The current yearly cost of staff to maintain and support the application.                                                                                   | Part of the application's current cost, used to calculate [ROI potential](#roi-potential).                                                                                                                                                                                                                          |
+| revenue                  | Revenue                  | The revenue generated by or attributed to the application.                                                                                                  | Used to calculate [business criticality](#business-criticality).                                                                                                                                                                                                                                                    |
+| environment name         | Environment              | The environment the application runs in, such as Production or Development.                                                                                 | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| frequency of deployments | Frequency Of Deployments | How often new versions of the application are deployed.                                                                                                     | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| uptime requirements      | Uptime Requirements      | The level of availability the application requires.                                                                                                         | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| data sensitivity         | Data Sensitivity         | The sensitivity of the data the application handles.                                                                                                        | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| source code controlled   | Source Code Controlled   | Whether the application's source code is in version control.                                                                                                | Shown on the application's slide in the Modernization Assessment presentation.                                                                                                                                                                                                                                      |
+| source code location     | Source Code Location     | The repository or path where the application's source code is stored.                                                                                       | Tells you where to run source code analysis ([Step 3](#step-3)), which is used in [ease of modernization](#ease-of-modernization).                                                                                                                                                                                  |
+| continuous delivery      | Continuous Delivery      | Whether the application is deployed through a continuous delivery pipeline.                                                                                 | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| can run on linux         | Can Run On Linux         | Whether the application can run on Linux.                                                                                                                   | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| PII                      | PII                      | Whether the application handles personally identifiable information.                                                                                        | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| legal holds              | Legal Holds              | Whether the application's data is subject to legal holds.                                                                                                   | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| COTS                     | COTS                     | Whether the application is a commercial off-the-shelf product.                                                                                              | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| business continuity plan | Business Continuity Plan | Whether the application has a formal business continuity plan.                                                                                              | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+| end of support date      | End Of Support Date      | The date the application or its underlying technology stops being supported.                                                                                | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
+
+## Practice with a completed assessment {#practice}
+
+This section is optional. The demo data is a sample completed assessment that you can use to explore the features in this guide.
+
+Download the [demo-data](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/demo-data.zip) zip file and extract it to your location of choice.
+
+{: .note }
+If you have a fresh workspace, you can use this demo data to try out the Modernization Assessment features. Then, you can clear all the data from the workspace to create a blank slate for your actual assessment. Note that performing this action will clear all data in the workspace and cannot be undone. Navigate to `<your-workspace>.tidal.cloud/preferences` and select 'Remove all data'.
+
+After extracting the demo data, you will find the following contents:
+1. demo-records - a directory containing three spreadsheets: servers, database instances and applications for your workspace.
+2. sct-results - a directory containing two AWS Schema Conversion Tool result sets.
+3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis.
+4. equinox-project - a sample codebase suitable for analysis on Windows systems.
+
+If you'd like to see a quick example of a completed assessment, you can download this [example Modernization Assessment presentation](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/example-modernization-presentation.pptx).
