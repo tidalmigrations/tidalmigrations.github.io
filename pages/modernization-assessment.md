@@ -22,8 +22,10 @@ To run a Modernization Assessment, follow this sequence. Key steps are covered i
 2. Send the customer the discovery template spreadsheets (see [Resources](#resources)) to complete before the interview.
 3. Once the customer returns the spreadsheets, import them into Tidal Accelerator ([Step 1](#step-1)).
 4. Conduct, and where authorized record, an application owner interview to validate and complete the business context for each application ([Step 2](#step-2)).
-5. Use Tidal Tools to run source code analysis when the code is available, then generate insights and review them critically ([Step 3](#step-3) and [Step 7](#step-7)).
-6. Set each application's transition type and estimated migration cost, then download and review the presentation ([Step 7](#step-7) and [Step 8](#step-8)).
+5. Use Tidal Tools to run source code analysis when the code is available ([Step 3](#step-3)).
+6. Create a project and assign the in-scope applications to it.
+7. Set each application's transition type and estimated migration cost, then generate insights and review them critically ([Step 7](#step-7)).
+8. Download and review the presentation ([Step 8](#step-8)).
 
 ## Resources
 
@@ -187,7 +189,7 @@ To upload additional reports, click the 'Upload SCT Analysis' button in the top 
 You can compare results and make a decision on which database technology to target by selecting the target database technology for the schema.
 
 
-## Step 5: Organize your resources into a Project
+## Step 5: Organize your resources into a Project {#step-5}
 
 When managing numerous applications during cloud migration, organizing them into project groups streamlines progress tracking, aligns assessment goals, and enables parallel execution across teams. Assigning your applications to a project also unlocks advanced features in Accelerator, such as financial impact, cloud instance target recommendations, and the modernization presentation.
 
