@@ -4,28 +4,39 @@ title: Modernization Assessment
 layout: pages
 nav_exclude: true
 keywords: demo, data, resources, lab, hands-on
-last_updated: June 2025
+last_updated: November 2026
 permalink: modernization-assessment.html
 ---
 
 # Introduction
 
-Tidal's AWS Modernization Assessment (AMA) program provides organizations with a no-cost assessment capability for rapidly identifying suitable application candidates for the Modernization Viability Assessment as part of the modernization pathway to AWS.
+The AWS Application Modernization Assessment (AMA) program provides organizations with a no-cost assessment capability for rapidly identifying suitable application candidates for the Modernization Viability Assessment as part of the modernization pathway to AWS.
 
 This guide will walk you through the process of conducting a Modernization Assessment and show you how to download your ready-made Modernization Assessment PowerPoint presentation.
 
+## Quick start
+
+To run a Modernization Assessment, follow this sequence. Key steps are covered in more detail later in this guide.
+
+1. Choose up to 10 applications and identify the servers and databases that support them.
+2. Send the customer the discovery template spreadsheets (see [Resources](#resources)) to complete before the interview.
+3. Once the customer returns the spreadsheets, import them into Tidal Accelerator ([Step 1](#step-1)).
+4. Conduct, and where authorized record, an application owner interview to validate and complete the business context for each application ([Step 2](#step-2)).
+5. Use Tidal Tools to run source code analysis when the code is available, then generate insights and review them critically ([Step 3](#step-3) and [Step 7](#step-7)).
+6. Confirm each application's transition type and recommended steps, then download and review the Modernization Assessment presentation ([Step 7](#step-7) and [Step 8](#step-8)).
+
 ## Resources
 
-As we step through the process of completing a Modernization Assessment, you can optionally use demo data to familiarize yourself with the features. Download the [demo-data](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/demo-data.zip) zip file and extract it to your location of choice.
+Use the discovery templates to collect initial information about the applications from your customer before the interview. Download the [modernization-assessment-templates](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/modernization-assessment-templates.zip) zip file and extract it to your location of choice.
 
-{: .note }
-If you have a fresh workspace, you can use this demo data to try out the Modernization Assessment features. Then, you can clear all the data from the workspace to create a blank slate for your actual assessment. Note that performing this action will clear all data in the workspace and cannot be undone. Navigate to `<your-workspace>.tidal.cloud/preferences` and select 'Remove all data'.
+After extracting the templates, you will find three spreadsheets:
+1. applications-template.xlsx - applications in scope for the assessment.
+2. servers-template.xlsx - servers that host those applications and their databases.
+3. databases-template.xlsx - database instances used by those applications.
 
-After extracting the demo data, you will find the following contents:
-1. demo-records - a directory containing three spreadsheets: servers, database instances and applications for your workspace.
-2. sct-results - a directory containing two AWS Schema Conversion Tool result sets.
-3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis.
-4. equinox-project - a sample codebase suitable for analysis on Windows systems.
+For more information about each of these fields, see [Discovery fields](#discovery-fields).
+
+If you would like to see a completed assessment first, see [Practice with a completed assessment](#practice).
 
 ## Software
 
@@ -39,7 +50,7 @@ Tidal software for your toolkit to support your Modernization Assessment:
 
 # Modernization Assessment
 
-## Step 1: Import Data from Spreadsheets
+## Step 1: Import Data from Spreadsheets {#step-1}
 
 First, we will import your servers, database instances and applications from spreadsheets into Tidal Accelerator.
 
@@ -61,7 +72,7 @@ For more details on uploading spreadsheets to Tidal Accelerator, including how t
 {: .note }
 The file type of spreadsheets that you upload to Accelerator must be .xlsx
 
-## Step 2: Conduct Application Owner Interviews
+## Step 2: Conduct Application Owner Interviews {#step-2}
 
 Application owner interviews enable you to obtain the most up-to-date information on your applications, directly from the source—the application owner. This is critical to ensuring you have the best possible data and allows you to fill in gaps that might be present in the data imported from spreadsheets.
 
@@ -96,13 +107,13 @@ If you have recorded a video of the interview via screen capture, you can upload
 {: .note }
 Notes that you capture during the interview can be accessed by clicking the 'Notes' button in the toolbar at the top of the application page.
 
-## Step 3: Perform Source Code Analysis
+## Step 3: Perform Source Code Analysis {#step-3}
 
 You can learn more about the modernization potential of your applications by analyzing their source code. Tidal Code Analysis provides insight into application language composition, as well as the application's currency, via dependency analysis. This data is also surfaced as visuals on the Portfolio Insights and Project Insights pages.
 
 Tidal Code Analysis is performed using our command-line software utility Tidal Tools. The software is available to download [here](https://get.tidal.sh/), and you can learn more about getting started with the tool in our guide [here](https://guides.tidal.cloud/tidal-tools.html).
 
-For demo purposes, we have included the `nop-commerce` project in the demo data download. You can analyze this to get familiar with the process, if you don't have another codebase handy.
+For demo purposes, we have included the `nop-commerce` project in the [demo data download](#practice). You can analyze this to get familiar with the process, if you don't have another codebase handy.
 
 {: .note }
 Tidal Source Code Analysis uses Docker under the hood. There is a [known issue](/troubleshooting.html#windows-source-code-analysis) with Docker where scanning a large codebase hosted on a Windows file system will be very time consuming. If you are on Windows, we recommend hosting the source code which you will analyze on [WSL](https://learn.microsoft.com/en-us/windows/wsl/about). For demo purposes, we have also included the equinox-project codebase in the demo data download, which can be analyzed on Windows systems in a timely fashion.
@@ -218,7 +229,7 @@ Details about all cloud instance targets for servers in your project are aggrega
 
 You can set a cloud region for the entire project, and override this for specific servers. Whenever relevant details about your servers change (for example, the amount of RAM allocated is updated), we automatically regenerate a cloud instance target for that server. This way, as you discover more data about your servers, the cloud instance target recommendations become more and more accurate over time.
 
-## Step 7: Set Application Insights and Recommended Steps (Optional)
+## Step 7: Set Application Insights and Recommended Steps (Optional) {#step-7}
 
 Now that we have sufficient data about your applications, servers and database instances, you can generate insights and recommended steps for your applications. Doing this is optional; however, these datapoints appear in the Modernization Assessment PowerPoint presentation, so it is recommended that you complete this step.
 
@@ -245,7 +256,7 @@ Navigate to the 'Migration Plan' tab of the application record. You will find th
 
 When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended steps.
 
-## Step 8: Download the Modernization Presentation
+## Step 8: Download the Modernization Presentation {#step-8}
 
 Tidal Accelerator can create a comprehensive Modernization Assessment PowerPoint presentation using the data you have provided. This slide deck comes equipped with speaker notes to help guide your presentation.
 
@@ -289,3 +300,25 @@ The Scope Refinement Summary slide in the presentation illustrates the process o
 
 {% include image.html file="ama19.PNG" %}
 <br>
+
+## Discovery fields {#discovery-fields}
+
+{: .warning }
+TODO: Add a table describing the fields in the discovery templates. For each field, include its purpose and whether it is required to import, a priority for discovery, or optional.
+
+## Practice with a completed assessment {#practice}
+
+This section is optional. The demo data is a sample completed assessment that you can use to explore the features in this guide.
+
+Download the [demo-data](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/demo-data.zip) zip file and extract it to your location of choice.
+
+{: .note }
+If you have a fresh workspace, you can use this demo data to try out the Modernization Assessment features. Then, you can clear all the data from the workspace to create a blank slate for your actual assessment. Note that performing this action will clear all data in the workspace and cannot be undone. Navigate to `<your-workspace>.tidal.cloud/preferences` and select 'Remove all data'.
+
+After extracting the demo data, you will find the following contents:
+1. demo-records - a directory containing three spreadsheets: servers, database instances and applications for your workspace.
+2. sct-results - a directory containing two AWS Schema Conversion Tool result sets.
+3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis.
+4. equinox-project - a sample codebase suitable for analysis on Windows systems.
+
+If you'd like to see a quick example of a completed assessment, you can download this [example Modernization Assessment presentation](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/example-modernization-presentation.pptx).
