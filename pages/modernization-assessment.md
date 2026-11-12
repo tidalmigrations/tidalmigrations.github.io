@@ -10,20 +10,20 @@ permalink: modernization-assessment.html
 
 # Introduction
 
-The AWS Application Modernization Assessment (AMA) program provides organizations with a no-cost assessment capability for rapidly identifying suitable application candidates for the Modernization Viability Assessment as part of the modernization pathway to AWS.
+The AWS Application Modernization Assessment (AMA) program provides organizations with a no-cost assessment capability for rapidly identifying suitable application candidates for the Modernization Viability Assessment (MVA) as part of the modernization pathway to AWS.
 
-This guide will walk you through the process of conducting a Modernization Assessment and show you how to download your ready-made Modernization Assessment PowerPoint presentation.
+This guide will walk you through the process of conducting an AMA and show you how to download your ready-made AMA PowerPoint presentation.
 
 ## Quick start
 
-To run a Modernization Assessment, follow this sequence. Key steps are covered in more detail later in this guide.
+To run an AMA, follow this sequence. Key steps are covered in more detail later in this guide.
 
 1. Choose up to 10 applications and identify the servers and databases that support them.
 2. Send the customer the discovery template spreadsheets (see [Resources](#resources)) to complete before the interview.
 3. Once the customer returns the spreadsheets, import them into Tidal Accelerator ([Step 1](#step-1)).
 4. Conduct, and where authorized record, an application owner interview to validate and complete the business context for each application ([Step 2](#step-2)).
 5. Use Tidal Tools to run source code analysis when the code is available ([Step 3](#step-3)).
-6. Create a project and assign the in-scope applications to it.
+6. Create a project and assign the in-scope applications to it ([Step 5](#step-5)).
 7. Set each application's transition type and estimated migration cost, then generate insights and review them critically ([Step 7](#step-7)).
 8. Download and review the presentation ([Step 8](#step-8)).
 
@@ -236,7 +236,7 @@ You can set a cloud region for the entire project, and override this for specifi
 
 ## Step 7: Set Transition Type, Migration Costs and Insights {#step-7}
 
-With your inventory in place, you can now set the fields that you, rather than the customer, provide as part of the assessment. These include your chosen transition type and cost estimates, some of which Tidal Accelerator needs to score each application in the Modernization Assessment presentation.
+With your inventory in place, you can now set the fields that you provide as part of the assessment. These include your chosen transition type and cost estimates, some of which Tidal Accelerator needs to score each application in the Modernization Assessment presentation.
 
 ### Transition Type (Required)
 
