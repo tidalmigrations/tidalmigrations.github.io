@@ -36,7 +36,7 @@ After extracting the templates, you will find three spreadsheets:
 2. Database Discovery.xlsx
 3. Application Discovery.xlsx
 
-These spreadsheets each include an example row, and certain cells have notes which will help you understand what is required for that datapoint. For a handy reference for the fields in each of these discovery spreadsheets, see [Discovery fields](#discovery-fields).
+These spreadsheets each include an example row, and each header has a note which will help you understand what is required for that datapoint. For a handy reference for the fields in each of these discovery spreadsheets, see [Discovery fields](#discovery-fields).
 
 If you would like to see a completed assessment first, see [Practice with a completed assessment](#practice).
 
