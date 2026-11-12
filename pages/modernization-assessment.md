@@ -12,7 +12,7 @@ permalink: modernization-assessment.html
 
 The AWS Application Modernization Assessment (AMA) program provides organizations with a no-cost assessment capability for rapidly identifying suitable application candidates for the Modernization Viability Assessment (MVA) as part of the modernization pathway to AWS.
 
-This guide will walk you through the process of conducting an AMA and show you how to download your ready-made AMA PowerPoint presentation.
+This guide will walk you through the process of conducting an AMA and show you how to download your ready-made Modernization Presentation.
 
 ## Quick start
 
@@ -36,7 +36,7 @@ After extracting the templates, you will find three spreadsheets:
 2. Database Discovery.xlsx
 3. Application Discovery.xlsx
 
-These spreadsheets each include a single row of demo data, and certain cells have notes which will help you understand what is required for that datapoint. For a handy reference for the fields in each of these discovery spreadsheets, see [Discovery fields](#discovery-fields).
+These spreadsheets each include an example row, and certain cells have notes which will help you understand what is required for that datapoint. For a handy reference for the fields in each of these discovery spreadsheets, see [Discovery fields](#discovery-fields).
 
 If you would like to see a completed assessment first, see [Practice with a completed assessment](#practice).
 
@@ -191,7 +191,7 @@ You can compare results and make a decision on which database technology to targ
 
 ## Step 5: Organize your resources into a Project {#step-5}
 
-When managing numerous applications during cloud migration, organizing them into project groups streamlines progress tracking, aligns assessment goals, and enables parallel execution across teams. Assigning your applications to a project also unlocks advanced features in Accelerator, such as financial impact, cloud instance target recommendations, and the modernization presentation.
+When managing numerous applications during cloud migration, organizing them into project groups streamlines progress tracking, aligns assessment goals, and enables parallel execution across teams. Assigning your applications to a project also unlocks advanced features in Accelerator, such as financial impact, cloud instance target recommendations, and the Modernization Presentation.
 
 First, navigate to 'Projects' in the navigation sidebar, then click 'Add Project'.
 
@@ -236,7 +236,7 @@ You can set a cloud region for the entire project, and override this for specifi
 
 ## Step 7: Set Transition Type, Migration Costs and Insights {#step-7}
 
-With your inventory in place, you can now set the fields that you provide as part of the assessment. These include your chosen transition type and cost estimates, some of which Tidal Accelerator needs to score each application in the Modernization Assessment presentation.
+With your inventory in place, you can now set the fields that you provide as part of the assessment. These include your chosen transition type and cost estimates, some of which Tidal Accelerator needs to score each application in the Modernization Presentation.
 
 ### Transition Type (Required)
 
@@ -247,7 +247,7 @@ Navigate to the 'Migration Plan' tab of the application record. You will find th
 {% include image.html file="ama16.PNG" %}
 <br>
 
-When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended next steps for your application migration. These appear in the Modernization Assessment presentation.
+When you set a transition type of 'refactor', 'rehost', or 'replatform', we will automatically generate a series of recommended next steps for your application migration. These appear in the Modernization Presentation.
 
 {: .note }
 'Recommended Steps' are not the same as 'Recommended Transition Type'. The 6R recommendation engine suggests a transition type first in the 'Recommended Transition Type' field, which you can use to inform your decision on what the Transition Type of the application should be. See [Transition Type Recommendations (6R)](transition-type-recommendations.html).
@@ -272,7 +272,7 @@ If you enter a Forecasted Cost for an application whose servers also have cloud 
 
 ### Application Insights (Recommended)
 
-Insights appear in the Modernization Assessment presentation, so it is recommended that you set them.
+Insights appear in the Modernization Presentation, so it is recommended that you set them.
 
 Tidal Accelerator provides a seamless, AI-driven approach to generating application insights. Navigate to the application page, and you will find the field 'Insights' in the 'General Information' section. Edit this section, and you will be shown a button labelled 'Generate Insights'. Click this to automatically populate insights for this application based on the data that you've provided so far.
 
@@ -283,7 +283,7 @@ These insights are generated using a large language model; therefore, please rev
 
 ## Step 8: Download the Modernization Presentation {#step-8}
 
-Tidal Accelerator can create a comprehensive Modernization Assessment PowerPoint presentation using the data you have provided. This slide deck comes equipped with speaker notes to help guide your presentation.
+Tidal Accelerator can create a comprehensive PowerPoint Modernization Presentation using the data you have provided. This slide deck comes equipped with speaker notes to help guide your presentation.
 
 To download your presentation, navigate to the project and click 'Modernization Presentation'.
 
@@ -328,9 +328,9 @@ The Scope Refinement Summary slide in the presentation illustrates the process o
 
 ## Discovery fields {#discovery-fields}
 
-The tables below describe the fields in each discovery template. The name field for each record type is the only 'hard' requirement. 
+The tables below describe the fields in each discovery template. Each record's identifier ('name', or 'host name' for servers) is the only field the import requires.
 
-Relationship fields, such as 'server host names', are only required if the relationship exists, for example if the application runs on servers that are in the servers template. This should be a comma-separated list of names which match the associated record's name exactly.
+Relationship fields, such as 'server host names', are only required if the relationship exists, for example if the application runs on servers that are in the servers template. Where a record can link to several others, separate the names with commas. Each name must exactly match the identifier of the related record.
 
 Optional fields improve the results of the assessment, but you can fill them in later, either from the application owner interview or from tools such as [Machine Stats](machine_stats.html). The more of these the customer is able to provide at this point, the better, but their absence should not block a prospecting motion.
 
@@ -369,12 +369,12 @@ If you don't know the value of a field, leave it blank rather than entering `0`.
 
 | Template Column          | Field Label              | Notes                                                                                                                                                       | AMA role                                                                                                                                                                                                                                                                                                            |
 | ------------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name                     | Name                     | The name that identifies the application in Tidal Accelerator.                                                                                              | Shown as the title of the application in the Modernization Assessment presentation.                                                                                                                                                                                                                                 |
+| name                     | Name                     | The name that identifies the application in Tidal Accelerator.                                                                                              | Shown as the title of the application in the Modernization Presentation.                                                                                                                                                                                                                                            |
 | server host names        | Servers                  | The host names of the servers that host the application, separated by commas. Use the same values as Host Name in the servers template.                     | Links the application to its servers. Their number and operating systems are used in [ease of modernization](#ease-of-modernization), Windows servers count towards the [MVA recommendation](#mva-recommendation), and their cloud instance targets provide the cloud cost used in [ROI potential](#roi-potential). |
 | database instance names  | Database Instances       | If the application uses databases, the names of the database instances it uses, separated by commas. Use the same values as Name in the databases template. | Links the application to its databases. SQL Server databases count towards the [MVA recommendation](#mva-recommendation), and the servers that host them are added to the application's dependent servers.                                                                                                          |
 | description              | Description              | A short summary of the application and its purpose.                                                                                                         | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
 | urls                     | URLs                     | The web addresses used to access the application.                                                                                                           | None.                                                                                                                                                                                                                                                                                                               |
-| business owner name      | Business Owner           | The name of the business stakeholder responsible for the application.                                                                                       | Shown on the application's slide in the Modernization Assessment presentation.                                                                                                                                                                                                                                      |
+| business owner name      | Business Owner           | The name of the business stakeholder responsible for the application.                                                                                       | Shown on the application's slide in the Modernization Presentation.                                                                                                                                                                                                                                                 |
 | regulated requirements   | Regulated Requirements   | Whether the application is subject to regulatory compliance requirements.                                                                                   | If set, the application's [business criticality](#business-criticality) is set to the highest value (5).                                                                                                                                                                                                            |
 | person hours saved       | Person Hours Saved       | The estimated number of person-hours the application saves each year.                                                                                       | Used to calculate [business criticality](#business-criticality).                                                                                                                                                                                                                                                    |
 | technical lead name      | Technical Lead           | The name of the technical contact responsible for the application.                                                                                          | None.                                                                                                                                                                                                                                                                                                               |
@@ -386,7 +386,7 @@ If you don't know the value of a field, leave it blank rather than entering `0`.
 | frequency of deployments | Frequency Of Deployments | How often new versions of the application are deployed.                                                                                                     | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
 | uptime requirements      | Uptime Requirements      | The level of availability the application requires.                                                                                                         | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
 | data sensitivity         | Data Sensitivity         | The sensitivity of the data the application handles.                                                                                                        | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
-| source code controlled   | Source Code Controlled   | Whether the application's source code is in version control.                                                                                                | Shown on the application's slide in the Modernization Assessment presentation.                                                                                                                                                                                                                                      |
+| source code controlled   | Source Code Controlled   | Whether the application's source code is in version control.                                                                                                | Shown on the application's slide in the Modernization Presentation.                                                                                                                                                                                                                                                 |
 | source code location     | Source Code Location     | The repository or path where the application's source code is stored.                                                                                       | Tells you where to run source code analysis ([Step 3](#step-3)), which is used in [ease of modernization](#ease-of-modernization).                                                                                                                                                                                  |
 | continuous delivery      | Continuous Delivery      | Whether the application is deployed through a continuous delivery pipeline.                                                                                 | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
 | can run on linux         | Can Run On Linux         | Whether the application can run on Linux.                                                                                                                   | Used when generating [insights](#step-7).                                                                                                                                                                                                                                                                           |
@@ -411,4 +411,4 @@ After extracting the demo data, you will find the following contents:
 3. nop-commerce - a sample codebase for you to analyze with Tidal Code Analysis.
 4. equinox-project - a sample codebase suitable for analysis on Windows systems.
 
-If you'd like to see a quick example of a completed assessment, you can download this [example Modernization Assessment presentation](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/example-modernization-presentation.pptx).
+If you'd like to see a quick example of a completed assessment, you can download this [example Modernization Presentation](https://s3.ca-central-1.amazonaws.com/tidal.assets.public/demo-data/example-modernization-presentation.pptx).
