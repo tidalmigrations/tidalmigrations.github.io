@@ -158,7 +158,7 @@ Portfolio Insights data is refreshed every 12 hours and may be outdated. To upda
 
 ## Step 4: Upload AWS Schema Conversion Tool Results
 
-Running AWS Schema Conversion Tool (SCT) on your database instances can help you uncover valuable insights into the best modernization path for your databases. Accelerator facilitates this by helping you configure SCT and hosting the analysis results directly alongside your database records. You can visualize the results of the analyses and decide which database technology is the best fit when migrating your database to the cloud.
+Running [AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Reference.html#CHAP_Reference.InteractiveMode) (SCT) on your database instances can help you uncover valuable insights into the best modernization path for your databases. Accelerator facilitates this by helping you configure SCT and hosting the analysis results directly alongside your database records. You can visualize the results of the analyses and decide which database technology is the best fit when migrating your database to the cloud.
 
 To scan your database using SCT, you must provide the appropriate database driver (JDBC) for your target database instance. Accelerator helps simplify this process by generating a cURL command to download the appropriate JDBC driver for your database.
 
