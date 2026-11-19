@@ -23,9 +23,10 @@ To run an AMA, follow this sequence. Key steps are covered in more detail later 
 3. Once the customer returns the spreadsheets, import them into Tidal Accelerator ([Step 1](#step-1)).
 4. Conduct, and where authorized record, an application owner interview to validate and complete the business context for each application ([Step 2](#step-2)).
 5. Use Tidal Tools to run source code analysis when the code is available ([Step 3](#step-3)).
-6. Create a project and assign the in-scope applications to it ([Step 5](#step-5)).
-7. Set each application's transition type and estimated migration cost, then generate insights and review them critically ([Step 7](#step-7)).
-8. Download and review the presentation ([Step 8](#step-8)).
+6. (Optional) Run AWS Schema Conversion Tool on the databases and upload the results ([Step 4](#step-4)).
+7. Create a project and assign the in-scope applications to it ([Step 5](#step-5)).
+8. Set each application's transition type and estimated migration cost, then generate insights and review them critically ([Step 7](#step-7)).
+9. Download and review the presentation ([Step 8](#step-8)).
 
 ## Resources
 
@@ -156,7 +157,7 @@ You can visualize source code analysis results for all applications in the works
 Portfolio Insights data is refreshed every 12 hours and may be outdated. To update the data immediately, navigate to the 'Preferences' page under 'Settings' in the navigation sidebar. Navigate to the section titled 'Sync Business Analytics' and click 'Trigger sync'.
 
 
-## Step 4: Upload AWS Schema Conversion Tool Results
+## Step 4: Upload AWS Schema Conversion Tool Results (Optional) {#step-4}
 
 Running [AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Reference.html#CHAP_Reference.InteractiveMode) (SCT) on your database instances can help you uncover valuable insights into the best modernization path for your databases. Accelerator facilitates this by helping you configure SCT and hosting the analysis results directly alongside your database records. You can visualize the results of the analyses and decide which database technology is the best fit when migrating your database to the cloud.
 
